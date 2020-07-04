@@ -33,10 +33,12 @@ subtitle = ""
   description = "90%"  
 
 [[feature]]
-  icon = "js"
-  icon_pack = "fab"
-  name = "JavaScript"
-  description = "90%"  
+  icon = "typescript"
+  icon_pack = "custom"
+  name = "Typescript"
+  description = "90%"
+
+
 # [[feature]]
 #  icon = "camera-retro"
 #  icon_pack = "fas"
