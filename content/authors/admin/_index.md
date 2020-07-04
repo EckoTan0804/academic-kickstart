@@ -15,7 +15,7 @@ role: Computer Science Student
 # Organizations/Affiliations
 organizations:
 - name: Karlsruhe Institute of Technology
-  url: ""
+  url: "http://www.kit.edu/english/index.php"
 
 # Short bio (displayed in user profile at end of posts)
 bio: Keep It Simple Stupid!
