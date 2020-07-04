@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Computer Science Master Student
+role: Computer Science Student
 
 # Organizations/Affiliations
 organizations:
