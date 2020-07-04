@@ -25,22 +25,9 @@ date_format = "Jan 2006"
   date_start = "2018-06"
   date_end = "2020-01"
   description = """
-  Responsibilities include:
-  
   * Collaboration in an internationally distributed Scrum team
   * Development of a cloud-based Document Management System (DMS) using Polymer, Vue.js, TypeScript, JavaScript, and Amazon Web Services (AWS)
   * Creation of automated tests with Jest and Cypress
   
   """
-
-<!-- [[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
-  -->
-
 +++
