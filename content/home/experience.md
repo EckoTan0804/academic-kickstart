@@ -22,8 +22,8 @@ date_format = "Jan 2006"
   company = "abas Software GmbH"
   company_url = "https://abas-erp.com/en"
   location = "Karlsruhe, Germany"
-  date_start = "2018-06"
-  date_end = "2020-01"
+  date_start = "2018-06-25"
+  date_end = "2020-01-20"
   description = """
   * Collaboration in an internationally distributed Scrum team
   * Development of a cloud-based Document Management System (DMS) using Polymer, Vue.js, TypeScript, JavaScript, and Amazon Web Services (AWS)
