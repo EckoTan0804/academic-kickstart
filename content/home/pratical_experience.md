@@ -25,10 +25,10 @@ date_format = "Jan 2006"
   date_start = "2017-10-01"
   date_end = "2018-02-28"
   description = """
-    * Programming language: Java 
-    * Framework: leJos Ev3
-    * Methodology: Scrum
-    * 2nd place in the final race
+  * Programming language: Java 
+  * Framework: leJos Ev3
+  * Methodology: Scrum
+  * 2nd place in the final race
   
   """
 
@@ -40,10 +40,10 @@ date_format = "Jan 2006"
   date_start = "2016-10-01"
   date_end = "2017-04-30"
   description = """
-    * Programming language: Java, Python 
-    * Methodology: Waterfall model
-    * Main development of the Android application
-    * Open source Frameworks: okhttp3, gson
+  * Programming language: Java, Python 
+  * Methodology: Waterfall model
+  * Main development of the Android application
+  * Open source Frameworks: okhttp3, gson
   
   """
 +++
