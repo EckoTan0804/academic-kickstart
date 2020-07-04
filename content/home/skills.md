@@ -25,7 +25,18 @@ subtitle = ""
   icon_pack = "fab"
   name = "Java"
   description = "90%"  
-  
+
+[[feature]]
+  icon = "js"
+  icon_pack = "fab"
+  name = "JavaScript"
+  description = "90%"  
+
+[[feature]]
+  icon = "js"
+  icon_pack = "fab"
+  name = "JavaScript"
+  description = "90%"  
 # [[feature]]
 #  icon = "camera-retro"
 #  icon_pack = "fas"
