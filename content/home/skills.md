@@ -38,6 +38,11 @@ subtitle = ""
   name = "Typescript"
   description = "90%"
 
+[[feature]]
+  icon = "CSharp"
+  icon_pack = "custom"
+  name = "C#"
+  description = "80%"
 
 # [[feature]]
 #  icon = "camera-retro"
