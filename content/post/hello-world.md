@@ -5,6 +5,8 @@ draft: true
 summary: First post
 tags: ["Hello world"]
 categories: ["Others"]
+featured: true
+reading_time: true
 ---
 
 ## Heading 2
