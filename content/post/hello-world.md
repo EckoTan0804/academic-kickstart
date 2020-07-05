@@ -5,7 +5,8 @@ draft: true
 summary: First post
 tags: ["Hello world"]
 categories: ["Others"]
-featured: true
+toc: true
+disable_comment: true
 reading_time: true
 ---
 
