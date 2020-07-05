@@ -9,6 +9,13 @@ toc: true
 disable_comment: true
 reading_time: true
 summary: "First post"
+featured: true
+lastmod: true
+commentable: false
+
+header: 
+  image: "hello_world.png"
+  caption: "Hello World!"
 ---
 
 ## Heading 2
@@ -129,6 +136,7 @@ sequenceDiagram
 
 
 
+
 ## Code highlighting
 
 ```python
@@ -192,7 +200,5 @@ Here's some important information...
 
 
 
-## Table of Content
 
-{{% toc %}}
 
