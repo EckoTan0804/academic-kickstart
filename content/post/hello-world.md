@@ -1,13 +1,14 @@
 ---
 title: "Hello World"
 date: 2020-07-04T17:43:52+02:00
-draft: true
-summary: First post
+draft: false
+authors: ["admin"]
 tags: ["Hello world"]
 categories: ["Others"]
 toc: true
 disable_comment: true
 reading_time: true
+summary: "First post"
 ---
 
 ## Heading 2
@@ -148,6 +149,17 @@ $$
 {\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}
 $$
 
+$$
+\begin{aligned}
+x &= (3 * 4) + 5 \\\\
+&= 12 + 5 \\\\
+&= 17
+\end{aligned}
+$$
+
+
+
+
 
 ## Table
 
@@ -182,5 +194,5 @@ Here's some important information...
 
 ## Table of Content
 
-[TOC]
+{{% toc %}}
 
