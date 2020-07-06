@@ -1,5 +1,6 @@
 ---
 title: Notes
+layout: docs
 
 # View.
 #   1 = List
