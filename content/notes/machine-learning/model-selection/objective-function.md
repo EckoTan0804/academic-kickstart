@@ -3,7 +3,7 @@ title: "Objective Function"
 date: 2020-07-06
 draft: false
 authors: ["admin"]
-tags: ["ML", "model selection"]
+tags: ["ML", "Model Selection"]
 categories: ["Machine Learning"]
 toc: true
 disable_comment: true
@@ -11,8 +11,15 @@ reading_time: true
 summary: "Objective function overview"
 featured: true
 lastmod: true
+type: docs
+
+menu: 
+    machine-learning:
+        parent: Model selection
+        weight: 1
 ---
 
+## How does the objective function look like?
 
 Objective function:
 
