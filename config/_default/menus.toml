@@ -18,11 +18,21 @@
   url = "/notes/"
   weight = 3
 
-# [[main]]
-#   name = "Publications"
-#   url = "#featured"
-#   weight = 40
+  
+################################
+# Notes
+################################
 
+# Python 
+[[python]]
+  name = "Python Basics"
+  weight = 10
+  identifier = "py-basics"
+
+[[python]]
+  name = "Best Practice"
+  weight = 20
+  identifier = "py-best-practice"
 
 
 # Link to a PDF of your resume/CV from the menu.

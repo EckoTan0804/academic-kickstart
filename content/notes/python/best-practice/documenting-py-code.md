@@ -32,7 +32,7 @@ header:
 # Menu
 menu: 
     python:
-        parent: Best Pracice
+        parent: py-best-practice
         weight: 2
 ---
 

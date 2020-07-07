@@ -105,3 +105,9 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   [[related.indices]]
     name = "authors"
     weight = 20.0
+
+
+[[menu.python]]
+  name = "Python Basics"
+  weight = 10
+  identifier = "py-basics"

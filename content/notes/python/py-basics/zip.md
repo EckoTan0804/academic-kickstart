@@ -32,7 +32,7 @@ header:
 # Menu
 menu: 
     python:
-        parent: Python Basics
+        parent: py-basics
         weight: 2
 ---
 
