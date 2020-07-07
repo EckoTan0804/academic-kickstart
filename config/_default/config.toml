@@ -111,3 +111,8 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "Python Basics"
   weight = 10
   identifier = "py-basics"
+
+[[menu.python]]
+  name = "Best Practice"
+  weight = 20
+  identifier = "py-best-practice"
