@@ -3,7 +3,7 @@
 title: "Customizing the Order of Left Menu Items"
 date: 2020-07-07
 draft: false
-type: docs # page type
+# type: docs # page type
 authors: ["admin"]
 tags: ["hugo-academic"]
 categories: ["Blog customization"]
@@ -115,3 +115,4 @@ menu:
     weight: 1
 ```
 
+That's it! Now the menu is exactly what we want!
