@@ -13,7 +13,7 @@ toc: true # Show table of contents?
 profile: false  # Show author profile?
 
 reading_time: true # Show estimated reading time?
-summary: ""
+summary: "Step by step left side-menu customization"
 share: false  # Show social sharing links?
 featured: true
 lastmod: true

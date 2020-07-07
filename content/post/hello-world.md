@@ -8,7 +8,7 @@ categories: ["Others"]
 toc: true
 disable_comment: true
 reading_time: true
-summary: "First post"
+summary: "The very FIRST post"
 featured: true
 lastmod: true
 commentable: false
