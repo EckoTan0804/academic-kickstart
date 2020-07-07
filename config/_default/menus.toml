@@ -18,6 +18,12 @@
   url = "/notes/"
   weight = 3
 
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+# [[main]]
+#    name = "CV"
+#    url = "files/cv.pdf"
+#    weight = 70
   
 ################################
 # Notes
@@ -35,9 +41,15 @@
   identifier = "py-best-practice"
 
 
-# Link to a PDF of your resume/CV from the menu.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# [[main]]
-#    name = "CV"
-#    url = "files/cv.pdf"
-#    weight = 70
+################################
+# Courses
+################################
+[[example]]
+  name = "Example Topic"
+  weight = 10
+  identifier = "example-topic"
+
+[[example]]
+  name = "Another Topic"
+  weight = 20
+  identifier = "another-topic"

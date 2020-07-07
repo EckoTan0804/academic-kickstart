@@ -106,7 +106,11 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
     name = "authors"
     weight = 20.0
 
+################################
+# Notes
+################################
 
+# Python 
 [[menu.python]]
   name = "Python Basics"
   weight = 10
@@ -116,3 +120,18 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "Best Practice"
   weight = 20
   identifier = "py-best-practice"
+
+
+
+################################
+# Courses
+################################
+[[menu.example]]
+  name = "Example Topic"
+  weight = 10
+  identifier = "example-topic"
+
+[[menu.example]]
+  name = "Another Topic"
+  weight = 20
+  identifier = "another-topic"
