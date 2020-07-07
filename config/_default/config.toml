@@ -10,7 +10,8 @@ title = "Haobin Tan"
 
 # The URL of your site.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "https://eckotan0804.github.io/"
+# baseurl = "https://eckotan0804.github.io/" # github.io deployment
+baseurl = "https://haobin-tan.netlify.app/" # Netlify deployment
 
 # Enter a copyright notice to display in the site footer.
 # To display a copyright symbol, type `&copy;`. For current year, type `{year}`.
