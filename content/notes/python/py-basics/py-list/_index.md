@@ -42,4 +42,4 @@ menu:
         weight: 3
 ---
 
-## [Change Value in List Based on Conditions](/notes/python/py-basics/py-list/change-values-in-list/)
+### [Change Value in List Based on Conditions](/notes/python/py-basics/py-list/change-values-in-list/)
