@@ -40,7 +40,7 @@ Parameters
 - `key` − This is the Key to be searched in the dictionary.
 - `default` − This is the Value to be returned in case key does not exist.
 
-See: [Python dictionary get() Method](https://www.tutorialspoint.com/python/dictionary_get.htm)
+See: [Python dictionary `get()` Method](https://www.tutorialspoint.com/python/dictionary_get.htm)
 
 We can use `dict.get(key, init_value)` for initializing key-value pair in dictionary
 
