@@ -123,6 +123,31 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "py-best-practice"
 
 
+# Rechnerstruktur
+[[menu.rechner-struktur]]
+  name = "Grundlagen"
+  weight = 10
+  identifier = "grundlagen"
+
+[[menu.rechner-struktur]]
+  name = "Prozessortechniken"
+  weight = 20
+  identifier = "prozessor-techniken"
+
+[[menu.rechner-struktur]]
+  name = "Multiprozessoren"
+  weight = 30
+  identifier = "multiprozessoren"
+
+[[menu.rechner-struktur]]
+  name = "Weitere Rechnerstrukturen"
+  weight = 40
+  identifier = "weitere-rechnerstrukturen"
+
+[[menu.rechner-struktur]]
+  name = "Übung Zusammenfassung"
+  weight = 50
+  identifier = "uebung-zusammenfassung"
 
 ################################
 # Courses

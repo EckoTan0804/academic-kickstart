@@ -41,6 +41,32 @@
   identifier = "py-best-practice"
 
 
+# Rechnerstruktur
+[[rechner-struktur]]
+  name = "Grundlagen"
+  weight = 10
+  identifier = "grundlagen"
+
+[[rechner-struktur]]
+  name = "Prozessortechniken"
+  weight = 20
+  identifier = "prozessor-techniken"
+
+[[rechner-struktur]]
+  name = "Multiprozessoren"
+  weight = 30
+  identifier = "multiprozessoren"
+
+[[rechner-struktur]]
+  name = "Weitere Rechnerstrukturen"
+  weight = 40
+  identifier = "weitere-rechnerstrukturen"
+
+[[rechner-struktur]]
+  name = "Übung Zusammenfassung"
+  weight = 50
+  identifier = "uebung-zusammenfassung"
+
 ################################
 # Courses
 ################################
