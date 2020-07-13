@@ -34,7 +34,7 @@ header:
 menu: 
     machine-learning:
         parent: Regression
-        weight: 1
+        weight: 2
 ---
 
 
