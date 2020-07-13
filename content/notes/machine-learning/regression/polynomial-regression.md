@@ -33,7 +33,7 @@ header:
 # Menu
 menu: 
     machine-learning:
-        parent: Regression
+        parent: regression
         weight: 2
 ---
 

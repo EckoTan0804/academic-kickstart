@@ -29,6 +29,44 @@
 # Notes
 ################################
 
+# ML
+
+[[machine-learning]]
+  name = "ML Fundamentals"
+  weight = 20
+  identifier = "ml-fundamentals"
+
+[[machine-learning]]
+  name = "Model Selection"
+  weight = 20
+  identifier = "model-selection"
+
+[[machine-learning]]
+  name = "Regression"
+  weight = 30
+  identifier = "regression"
+
+[[machine-learning]]
+  name = "Classification"
+  weight = 40
+  identifier = "classification"
+
+[[machine-learning]]
+  name = "Decision Trees"
+  weight = 50
+  identifier = "decision-tree"
+
+[[machine-learning]]
+  name = "Ensemble Learning"
+  weight = 60
+  identifier = "ensemble-learning"
+
+[[machine-learning]]
+  name = "Non-Parametric"
+  weight = 60
+  identifier = "non-parametric"
+
+
 # Python 
 [[python]]
   name = "Python Basics"

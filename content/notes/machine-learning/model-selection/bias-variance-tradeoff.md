@@ -32,7 +32,7 @@ header:
 # Menu
 menu: 
     machine-learning:
-        parent: Model selection
+        parent: model-selection
         weight: 2
 ---
 

@@ -31,7 +31,7 @@ header:
 
 menu: 
     machine-learning:
-        parent: Model selection
+        parent: model-selection
         weight: 3
 ---
 
