@@ -28,12 +28,6 @@ editable: false  # Allow visitors to edit the page? Supported by the Page, Post,
 header:
   caption: ""
   image: ""
-
-# Menu
-# menu: 
-#     machine-learning:
-#         parent: classification
-#         weight: 2
 ---
 
 
