@@ -1,4 +1,40 @@
-# Logistic Regression
+---
+# Basic info
+title: "Logistic Regression"
+date: 2020-07-13
+draft: false
+# type: docs # page type
+authors: ["admin"]
+tags: ["ML", "Classification"]
+categories: ["Machine Learning"]
+toc: true # Show table of contents?
+
+# Advanced settings
+profile: false  # Show author profile?
+
+reading_time: true # Show estimated reading time?
+summary: "Logistic Regression overview"
+share: false  # Show social sharing links?
+featured: true
+lastmod: true
+
+comments: false  # Show comments?
+disable_comment: true
+commentable: false  # Allow visitors to comment? Supported by the Page, Post, and Docs content types.
+
+editable: false  # Allow visitors to edit the page? Supported by the Page, Post, and Docs content types.
+
+# Optional header image (relative to `static/img/` folder).
+header:
+  caption: ""
+  image: ""
+
+# Menu
+# menu: 
+#     machine-learning:
+#         parent: classification
+#         weight: 2
+---
 
 💡 **Use regression algorithm for classification**
 
@@ -55,7 +91,7 @@ $c(\boldsymbol{\theta})=\left\{\begin{array}{cc}-\log (\hat{p}) & y=1 \\ -\log (
 
 Simply the average cost over all training instances (Combining the expressions of two different cases above into one single expression):
 
-$\begin{aligned} J(\boldsymbol{\theta}) &=-\frac{1}{m} \sum_{i=1}^{m}\left[y^{(i)} \log \left(\hat{p}^{(i)}\right)+\left(1-y^{(i)}\right) \log \left(1-\hat{p}^{(i)}\right)\right] \\ &=\frac{1}{m} \sum_{i=1}^{m}\left[-y^{(i)} \log \left(\hat{p}^{(i)}\right)-\left(1-y^{(i)}\right) \log \left(1-\hat{p}^{(i)}\right)\right] \end{aligned}$
+$\begin{aligned} J(\boldsymbol{\theta}) &=-\frac{1}{m} \sum_{i=1}^{m}\left[y^{(i)} \log \left(\hat{p}^{(i)}\right)+\left(1-y^{(i)}\right) \log \left(1-\hat{p}^{(i)}\right)\right] \\\\ &=\frac{1}{m} \sum_{i=1}^{m}\left[-y^{(i)} \log \left(\hat{p}^{(i)}\right)-\left(1-y^{(i)}\right) \log \left(1-\hat{p}^{(i)}\right)\right] \end{aligned}$
 
 > - $y^{(i)} =1:-y^{(i)} \log \left(\hat{p}^{(i)}\right)-\left(1-y^{(i)}\right) \log \left(1-\hat{p}^{(i)}\right)=-\log \left(\hat{p}^{(i)}\right)$
 > - $y^{(i)} =0:-y^{(i)} \log \left(\hat{p}^{(i)}\right)-\left(1-y^{(i)}\right) \log \left(1-\hat{p}^{(i)}\right)=-\log \left(1-\hat{p}^{(i)}\right)$
@@ -64,7 +100,12 @@ $\begin{aligned} J(\boldsymbol{\theta}) &=-\frac{1}{m} \sum_{i=1}^{m}\left[y^{(i
 ### Training 
 
 - No closed-form equation 🤪
+
 - But it is convex so Gradient Descent (or any other optimization algorithm) is guaranteed to find the global minimum     
+
 - Partial derivatives of the cost function with regards to the $j$-th model parameter $\theta_j$:
 
-    $\frac{\partial}{\partial \theta_{j}} J(\boldsymbol{\theta})=\frac{1}{m} \displaystyle \sum_{i=1}^{m}\left(\sigma\left(\boldsymbol{\theta}^{T} \mathbf{x}^{(l)}\right)-y^{(i)}\right) x_{j}^{(i)}$
+    $$
+    \frac{\partial}{\partial \theta_{j}} J(\boldsymbol{\theta})=\frac{1}{m} \displaystyle \sum_{i=1}^{m}\left(\sigma\left(\boldsymbol{\theta}^{T} \mathbf{x}^{(l)}\right)-y^{(i)}\right) x_{j}^{(i)}
+    $$
+    
