@@ -37,10 +37,6 @@ menu:
         weight: 6
 ---
 
-## Tutorials
-
-{{< youtube y-N0Dsc9LmU >}}
-
 
 
 ## Dynamic Scheduling
@@ -59,6 +55,8 @@ Road analogy:
 
 
 ## Tumasulo's Algorithm
+
+{{< youtube y-N0Dsc9LmU >}}
 
 🎯 Goal: High Floating-Point (FP) performance without special compilers
 
@@ -234,14 +232,138 @@ When Functional Unit (FU) has produced the result , write it on CDB and from the
     - For centralized Register File: sequential access if only 1 port 🤪
 
 - **Bypassing / forwarding**
-  - A result is directly forwarded from execution unit to multiple RSs via **CDB**
-
+  
+- A result is directly forwarded from execution unit to multiple RSs via **CDB**
+  
 - **In-order issue/dispatch**
 
 - **Out-of-order execution**
 
 - **Out-of-order instruction retiring/completion** (No precise exception)
 
+
+
 ## Tumasulo Example
 
 {{< youtube YH2fFu-35L8 >}}
+
+
+
+## Tomasulo with Memory Accesses
+
+{{< youtube Zwh3VKU1d_o >}}
+
+### Dynamic Scheduling of Memory Access
+
+- Loads and stores to **different** address can be executed **out-of-order**
+
+- Loads and stores accessing **same** address cause **hazards**
+
+  - Read-After-Write (RAW)
+
+    ```assembly
+    # R0 always has the value 0
+    S.D F5, 1000(R0) # store the value of register F5 in addr (R0+1000)
+    L.D F0, 1000(R0)
+    ```
+
+  - Write-After-Read (WAR)
+
+    ```assembly
+    L.D F0, 1000(R0)
+    S.D F5, 1000(R0)
+    ```
+
+  - Write-After-Write (WAW)
+
+    ```assembly
+    S.D F5, 1000(R0)
+    S.D F5, 1000(R0)
+    ```
+
+- Problem: Hazard is known **ONLY AFTER** effective address calculation 🤪
+
+  - Example
+
+    ```assembly
+    S.D F5, 1000(R0)
+    L.D F0, 1000(R1)
+    ```
+
+    If `R1=0`, then hazard occurs. Otherwise not.
+
+  - Effective addresses of earlier memory accesses must have been computed!
+
+### Extend Tomasulo Algorithm with Memory Access (MA)
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-14%2022.29.55.png" alt="截屏2020-07-14 22.29.55" style="zoom:80%;" />
+
+- Memory hierarchy 
+  - address unit
+  - load and store buffers
+  - memory unit
+
+- General process
+  1. If `load` or `store` instruction is retrieved from the head of the Instruction Queue, it is sent to the address unit
+  2. The address unit then 
+     1. calculates the effective address 
+     2. provided there is no hazard
+     3. places the `load` or `store` in one of the load or store buffers, 
+        - when the value loaded by a `load` is returned from memory, it will by placed on the CDB and from there to any waiting RS and register file
+
+#### Load and Store Execution
+
+- `load` and `store` execution consist of 2 steps:
+
+  1. effective address (EA) calculation
+  2. memory access (MA)
+
+- Each` load` and `store` buffers has field `A`
+  - EA calculated in 1st step
+
+    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-14%2022.45.38.png" alt="截屏2020-07-14 22.45.38" style="zoom:67%;" />
+
+  - Store buffer has a `val` field which can also be RS producing this value
+    - So a `store` can be placed in a store buffer before the value to be stored is available
+
+- RS can also be waiting for load buffer
+
+  E.g.: 
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-14%2022.49.26.png" alt="截屏2020-07-14 22.49.26" style="zoom: 67%;" />
+
+  The RS is waiting for load buffer 2.
+
+#### Load and Store Issue
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-14%2022.50.56.png" alt="截屏2020-07-14 22.50.56" style="zoom:67%;" />
+
+- `load`
+
+  1. Address unit calculates EA
+
+  2. EA is compared to `A` field of all active **store** buffers
+
+     - If match -> RAW hazard
+
+       -> `load` won't be sent to load buffer until conflicting store completes
+
+- `store`
+  - Similar but must check for conflict in both **load** buffers (WAR) and store buffers (WAW)
+
+**Example**
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-14%2022.55.38.png" alt="截屏2020-07-14 22.55.38" style="zoom:67%;" />
+
+- `L.D F1, 1000(R0)` is sent to the address unit
+  - At this point in time, store buffer 1 is active and wants to write to address 1000
+  - store buffer 2 is active and wants to write to address 1004
+- The address unit calculates the EA 1000
+- Since store buffer 1 wants to write to the same address (1000) -> There is a conflict
+  - The `load` will NOT be sent to one of the free load buffers until the `store` in store buffer 1 completes
+
+{{% alert note %}} 
+
+ `load` and `store` do NOT have to be sent in-order from the load and store buffers to the memory unit but can be freely reordered
+
+{{% /alert %}}
