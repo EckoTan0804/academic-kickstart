@@ -318,7 +318,7 @@ When Functional Unit (FU) has produced the result , write it on CDB and from the
   1. effective address (EA) calculation
   2. memory access (MA)
 
-- Each` load` and `store` buffers has field `A`
+- Each `load` and `store` buffers has field `A`
   - EA calculated in 1st step
 
     <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-14%2022.45.38.png" alt="截屏2020-07-14 22.45.38" style="zoom:67%;" />
