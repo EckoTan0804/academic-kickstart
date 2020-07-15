@@ -36,6 +36,16 @@ menu:
         weight: 2
 ---
 
+{{% alert warning %}} 
+
+
+
+In SS20 ist VHDL NICHT in Vorlesungsinhalt und daher NICHT klausurrelevant! 
+
+
+
+{{% /alert %}}
+
 **VHDL** = **V**HSIC **HDL** = **V**ery-High-Speed Integrated Circuits **H**ardware **D**escription **L**anguage
 
 Reference:
