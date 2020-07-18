@@ -79,7 +79,7 @@ menu:
 
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-15%2023.06.28.png" alt="截屏2020-07-15 23.06.28" style="zoom:80%;" />
 
-  - `Empty`: Ist im moment dieser Platz des RS Operation eingetragen?
+  - `Empty`: Ist im moment dieser Platz frie (also keine RS Operation eingetragen)?
   - `InFU `: Befindet die Operation schon in Ausführungseinheit?
   - `Op`: Welche Operation handelt sich?
   - `Dest`: Zielregister
@@ -124,7 +124,7 @@ menu:
   - Register R2
     - Im moment befindet sich kein Wert
     - Daher nicht gültig (`valid = 0`)
-    - `RS1`: Der neue Wert wird von RS1 berechnet
+    - `RS=1`: Der neue Wert wird von RS1 berechnet
 
 #### Reservation Stations (Reservierungstabelle)
 
