@@ -48,3 +48,4 @@ header:
 - [7 Gestalt principles of visual perception: cognitive psychology for UX](https://www.usertesting.com/blog/gestalt-principles)
 - [Gestalt principles in UI design.](https://medium.muz.li/gestalt-principles-in-ui-design-6b75a41e9965)
 
+- [How to Apply Gestalt Principles to Your Designs for Maximum Impact](https://visme.co/blog/gestalt-design-principles/)
