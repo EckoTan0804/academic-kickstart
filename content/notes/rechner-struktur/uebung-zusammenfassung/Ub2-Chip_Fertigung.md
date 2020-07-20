@@ -34,6 +34,8 @@ menu:
     rechner-struktur:
         parent: uebung-zusammenfassung
         weight: 1
+
+weight: 120
 ---
 
 

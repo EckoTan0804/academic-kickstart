@@ -34,6 +34,8 @@ menu:
     rechner-struktur:
         parent: uebung-zusammenfassung
         weight: 8
+
+weight: 150
 ---
 
 **Befehlspipelining**

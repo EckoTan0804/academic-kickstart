@@ -34,6 +34,8 @@ menu:
     rechner-struktur:
         parent: uebung-zusammenfassung
         weight: 9
+
+weight: 151
 ---
 
 SS19, Übungsblatt 5, Aufgabe 3

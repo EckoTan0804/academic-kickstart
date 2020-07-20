@@ -34,6 +34,8 @@ menu:
     rechner-struktur:
         parent: uebung-zusammenfassung
         weight: 6
+
+weight: 140
 ---
 
 ## Blockdiagramm und Strukturformel

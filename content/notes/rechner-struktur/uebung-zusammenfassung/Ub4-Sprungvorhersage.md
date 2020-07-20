@@ -34,6 +34,8 @@ menu:
     rechner-struktur:
         parent: uebung-zusammenfassung
         weight: 7
+
+weight: 141
 ---
 
 - Fu ̈llung der Pipeline sicherstellen

@@ -34,6 +34,8 @@ menu:
     rechner-struktur:
         parent: uebung-zusammenfassung
         weight: 4
+
+weight: 131
 ---
 
 ## Leistungsaufnahme
