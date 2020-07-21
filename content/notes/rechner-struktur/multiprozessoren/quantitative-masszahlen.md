@@ -39,6 +39,69 @@ menu:
 weight: 32
 ---
 
+## 👍 TL;DR
+
+- **Parallelitätsgrad $PG(t)$**: \#parallel bearbeitete Tasks
+
+- **Parallelindex $I$** (Mittlerer Grad)
+  $$
+  I = \frac{\text{Sum von parallel bearbeitete Tasks}}{\text{Zeit}} =\frac{\displaystyle \sum\_{i=1}^m i \cdot t\_i}{\displaystyle \sum\_{i=1}^m t\_i}
+  $$
+
+- $P(1)$: \#auszuführenden Einheitsoperationen auf 1-Prozessor-System
+
+- $P(n)$: \#auszuführenden Einheitsoperationen auf n-Prozessor-System
+
+- $T(1)$: Ausführungszeit auf einem 1-Prozessor-System (in Takten)
+
+- $T(n)$: Ausführungszeit auf einem n-Prozessor-System (in Takten)
+
+Es gilt: 
+
+- $T(1) = P(1)$
+- $T(n) \leq P(n)$
+
+### Quantitative Maßzahlen
+
+- **Beschleunigung (Speedup)**
+  $$
+  S(n) = \frac{T(1)}{T(n)} \in [1, n]
+  $$
+
+- **Effizienz**
+  $$
+  E(n) = \frac{S(n)}{n} \in [\frac{1}{n}, 1]
+  $$
+
+- **Mehraufwand**
+  $$
+  R(n) = \frac{P(n)}{P(1)} \geq 1
+  $$
+
+- **Auslastung (Utility)**
+  $$
+  U(n) = \frac{I(n)}{n} = R(n) \times E(n) = \frac{P(n)}{n \times T(n)}
+  $$
+
+Es gilt:
+
+- $1 \leq S(n) \leq I(n) \leq n$
+
+- $\frac{1}{n} \leq E(n) \leq U(n) \leq 1$
+
+### Gesetz von Amdahl
+
+Sei $a$ Anteil des Programmteils, der **nur sequentiell** ausgeführt werden kann
+$$
+T(n) = T(1) \times \frac{1-a}{n} + T(1) \times a
+$$
+
+$$
+S(n) \to \frac{1}{a}
+$$
+
+
+
 ## Parallelitätsprofil
 
 - **misst** die entstehende Parallelität in einem parallelen Programm bzw. bei der Ausführung auf einem Parallelrechner.
@@ -73,8 +136,8 @@ weight: 32
 
 ### Definitionen
 
-- $P(1)$: Anzahl der auszuführenden (Einheits-) Operationen (Tasks) des Programms auf einem Einprozessorsystem.
-- $P(n)$: Anzahl der auszuführenden (Einheits-) Operationen (Tasks) des Programms auf einem Multiprozessorsystem mit $n$ Prozessoren.
+- $P(1)$: Anzahl der auszuführenden Einheitsoperationen (Tasks) des Programms auf einem Einprozessorsystem.
+- $P(n)$: Anzahl der auszuführenden Einheitsoperationen (Tasks) des Programms auf einem Multiprozessorsystem mit $n$ Prozessoren.
 - $T(1)$: Ausführungszeit auf einem Einprozessorsystem in Schritten (oder Takten).
 - $T(n)$: Ausführungszeit auf einem Multiprozessorsystem mit $n$ Prozessoren in Schritten (oder Takten).
 
