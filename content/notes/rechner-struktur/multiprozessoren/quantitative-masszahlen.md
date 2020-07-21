@@ -83,6 +83,12 @@ Es gilt:
   U(n) = \frac{I(n)}{n} = R(n) \times E(n) = \frac{P(n)}{n \times T(n)}
   $$
 
+- **Parallelindex**
+  $$
+  I(n) = \frac{P(n)}{T(n)}
+  $$
+  
+
 Es gilt:
 
 - $1 \leq S(n) \leq I(n) \leq n$
