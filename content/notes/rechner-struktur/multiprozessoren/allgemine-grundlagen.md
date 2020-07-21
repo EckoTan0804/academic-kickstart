@@ -46,6 +46,8 @@ weight: 30
 
 ### Multiprozessor mit gemeinsamem Speicher
 
+- **Globaler Speicher** $\Leftrightarrow$ **Gemeinsamer Adressraum**
+
 - **UMA**: **U**niform **M**emory **A**ccess
 
 - Bsp: **symmetrischer Multiprozessor (SMP), Multicore-Prozessor**
@@ -60,6 +62,8 @@ weight: 30
 
 ### Multiprozessor mit verteiltem Speicher
 
+- **Verteilter Speicher** ⇔ **Verteilter Adressraum**
+
 - **NORMA**: **No** **R**emote **M**emory **A**ccess
 - Bsp: Cluster
 
@@ -67,11 +71,15 @@ weight: 30
 
 ### Multiprozessor mit verteiltem gemeinsamen Speicher
 
+- **Verteilter Speicher** ⇔ **Gemeinsamer Adressraum**
 - **NUMA**: **N**on-**U**niform **M**emory **A**ccess
-- CC-NUMA: **C**ache-**C**oherent **N**on-**U**niform **M**emory **A**ccess
+- **CC-NUMA**: **C**ache-**C**oherent **N**on-**U**niform **M**emory **A**ccess
   - Globaler Adressraum: Zugriff auf *entfernten* Speicher über load / store Operationen
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-10%2022.13.31.png" alt="截屏2020-07-10 22.13.31" style="zoom: 67%;" />
 
 
 
+## Konfigurationen von Multiprozessoren
+
+![截屏2020-07-21 17.46.16](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-21%2017.46.16.png)
