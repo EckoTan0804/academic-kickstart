@@ -87,7 +87,6 @@ Es gilt:
   $$
   I(n) = \frac{P(n)}{T(n)}
   $$
-  
 
 Es gilt:
 
@@ -120,7 +119,7 @@ $$
   
 - **Parallelitätsgrad $PG(t)$**: Anzahl der Tasks, die zu einem Zeitpunkt parallel bearbeitet werden können
   
-- **Parallelindex $I$** (Mittlerer Grad des Parallelismus)
+- **Parallelindex $I$**:Mittlerer Grad des Parallelismus, d.h., die Anzahl der parallelen Operationen pro Zeiteinheit.
 
   - Kontinuierlich
     $$
