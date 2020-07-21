@@ -80,7 +80,7 @@ Es gilt:
 
 - **Auslastung (Utility)**
   $$
-  U(n) = \frac{I(n)}{n} = R(n) \times E(n) = \frac{P(n)}{n \times T(n)}
+  U(n) = \frac{I(n)}{n} = \frac{P(n)}{n \times T(n)} = R(n) \times E(n) 
   $$
 
 - **Parallelindex**
@@ -201,10 +201,26 @@ $$
   $$
   *"Anzahl der auszuführenden Operationen eines parallelen Programms ist **größer** als diejenige des vergleichbaren sequentiellen Programms"*
 
+### Parallelindex
+
+$$
+I(n) = \frac{P(n)}{T(n)}
+$$
+
+- Mittlerer Grad der Parallelität (Anzahl der parallelen Operationen pro
+
+  Zeiteinheit)
+
 ### Auslastung
 
 $$
-U(n) = \frac{I(n)}{n} = R(n) \times E(n) = \frac{P(n)}{n \times T(n)}
+\begin{aligned}
+U(n) &:= \frac{I(n)}{n} \\\\
+&= \frac{P(n)}{n \times T(n)} \\\\
+&= \frac{P(n)}{P(1)} \cdot \frac{P(1)}{n \times T(n)}\\\\
+&\overset{P(1)=T(1)}{=} \underbrace{\frac{P(n)}{P(1)}}\_{=R(n)} \cdot \underbrace{\frac{\frac{T(1)}{ T(n)}}{n}}\_{=E(n)}\\\\
+&= R(n) \times E(n) \\\\
+\end{aligned}
 $$
 
 - Entspricht dem normierten Parallelindex
