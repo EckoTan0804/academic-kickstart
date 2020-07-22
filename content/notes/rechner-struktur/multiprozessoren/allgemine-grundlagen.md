@@ -1,7 +1,6 @@
 ---
 # Basic info
-title: "Allgemeine Grundlagen"
-linktitle: "Grundlage"
+title: "Parallele Architekturmodelle"
 date: 2020-07-08
 draft: false
 type: docs # page type
@@ -42,9 +41,7 @@ weight: 30
 
 
 
-## Parallele Architekturmodelle
-
-### Multiprozessor mit gemeinsamem Speicher
+## Multiprozessor mit gemeinsamem Speicher
 
 - **Globaler Speicher** $\Leftrightarrow$ **Gemeinsamer Adressraum**
 
@@ -60,7 +57,7 @@ weight: 30
 >
 > More see: [Uniform memory access](https://en.wikipedia.org/wiki/Uniform_memory_access)
 
-### Multiprozessor mit verteiltem Speicher
+## Multiprozessor mit verteiltem Speicher
 
 - **Verteilter Speicher** ⇔ **Verteilter Adressraum**
 
@@ -69,7 +66,7 @@ weight: 30
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-10%2022.11.55.png" alt="截屏2020-07-10 22.11.55" style="zoom: 67%;" />
 
-### Multiprozessor mit verteiltem gemeinsamen Speicher
+## Multiprozessor mit verteiltem gemeinsamen Speicher
 
 - **Verteilter Speicher** ⇔ **Gemeinsamer Adressraum**
 - **NUMA**: **N**on-**U**niform **M**emory **A**ccess
