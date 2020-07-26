@@ -58,21 +58,21 @@ weight: 33
 
 #### Latenz (latency)
 
-- Übertragungszeit einer Nachricht $T\_{msg}$
+- **Übertragungszeit** einer Nachricht $T\_{msg}$
 
   - die Zeit, die für das Verschicken einer Nachricht von einer bestimmten Länge zwischen zwei Prozessoren benötigt wird
 
-- Besteht aus
+  - Besteht aus
 
-  - **Startzeit $t\_s$ (Message Startup Time)**
+    - **Startzeit $t\_s$ (Message Startup Time)**
 
-    Die Zeit, die benötigt wird, um die Kommunikation zu initiieren
+      Die Zeit, die benötigt wird, um die Kommunikation zu initiieren
 
-  - **Transferzeit $t\_w$** pro übertragenem Datenwort
+    - **Transferzeit $t\_w$** pro übertragenem Datenwort
 
-    hängt von der physikalischen Bandbreite des Kommunikationsmediums ab.
+      hängt von der physikalischen Bandbreite des Kommunikationsmediums ab.
 
-  - Voraussetzung: Verbindungsnetz ist **konfliktfrei**
+    - Voraussetzung: Verbindungsnetz ist **konfliktfrei**
 
 - **Software overhead**
 
@@ -265,7 +265,7 @@ Übertragungspipeline:
 
 ![截屏2020-07-24 22.02.34](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-24%2022.02.34.png)
 
-End-to-end packet latency = Sender OH + Time of flight + Transmission time + Routing time + Receiver OH
+**End-to-end packet latency = Sender OH + Time of flight + Transmission time + Routing time + Receiver OH**
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-24%2022.04.04.png" alt="截屏2020-07-24 22.04.04" style="zoom:80%;" />
 
@@ -455,7 +455,7 @@ $$
 - <span style="color:green">Disjunkte Bereiche des linearen Netzwerkes können gleichzeitig genutzt werden</span>
 - <span style="color:red">Mehrere Schritte notwendig, um eine Nachricht zwischen zwei nicht benachbarte Knoten zu verschicken</span>
 
-#####k-dimensionales Gitter mit N Knoten 
+##### k-dimensionales Gitter mit N Knoten 
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-25%2012.10.37.png" alt="截屏2020-07-25 12.10.37" style="zoom:80%;" />
 
