@@ -533,7 +533,7 @@ Endknoten eines linearen Feldes verbindet sich miteinander
 
 - Adressierung der Knoten: n-stellige k-äre Zahl der Form $a\_0, a\_1, \dots, a\_{n-1}$
 
-  - Jede Stelle $0 \leq a\_i > K$ stellt die Position des Knotens in der entsprechenden $i$-ten Dimension dar, mit $0 \leq i \leq n-1$ 
+  - Jede Stelle $0 \leq a\_i < K$ stellt die Position des Knotens in der entsprechenden $i$-ten Dimension dar, mit $0 \leq i \leq n-1$ 
 
   - Ein Nachbarknoten in der $i$-ten Dimension zu einem Knoten mit Adresse $a\_0, a\_1, \dots, a\_{n-1}$ kanan erreicht werden mit 
     $$
