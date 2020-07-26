@@ -279,7 +279,7 @@ Übertragungspipeline:
   - Untere Grenze der Zeit, ein Bit vom Sender zum Empfänger zu senden
     - Circuit Switching
       - Festgelegter Weg
-      - Ist bestimmt durch durch die logische Übertragungspipeline
+      - Ist bestimmt durch durch die logische Übertragungspipeline,  die von der Netzwerktopologie, der Anzahl der Links und der Schaltelemente, die das Bit zu passieren hat und der Zykluszeit und Komplexität der Schaltelemente
     - Packet Switching
       - berücksichtigt auch Schaltzeit, d. h. den Overhead, der durch die Schaltstrategie verursacht wird
 
