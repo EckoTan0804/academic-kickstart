@@ -652,17 +652,21 @@ $p$ Eingänge des Netzes können gleichzeitig auf $p$ Ausgänge geschaltet we
 ##### Permutationen
 
 - **Mischpermutation $M$ (Perfect Shuffle)**
+  
+  Kreisverschiebung der Adressbits
   $$
   M(a\_n, a\_{n-1}, \dots, a\_2, a\_1) = (a\_{n-1}, \dots, a\_2, a\_1, a\_n)
-  $$
+$$
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-25%2019.10.35.png" alt="截屏2020-07-25 19.10.35" style="zoom:80%;" />
-
+  
 - **Kreuzpermutation $K$ (Butterfly)**
+  
+  Vertauschen des hochwertigsten mit dem niedrigwertigsten Adressbit
   $$
   K(a\_n, a\_{n-1}, \dots, a\_2, a\_1) = (a\_1, a\_{n-1}, \dots, a\_2,  a\_n)
-  $$
+$$
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-25%2019.11.21.png" alt="截屏2020-07-25 19.11.21" style="zoom:80%;" />
-
+  
 - **Tauschpermutation $T$ (Butterfly)**
 
   **Negation** des niedrigwertigen Bits
@@ -671,3 +675,33 @@ $p$ Eingänge des Netzes können gleichzeitig auf $p$ Ausgänge geschaltet we
   $$
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-25%2019.12.45.png" alt="截屏2020-07-25 19.12.45" style="zoom:80%;" />
 
+- **Umkehrpermutation $U$**
+
+  Spiegelung aller Adreßbits um die Mitte der Adressbitfolge
+  $$
+  U\left(a\_{n}, a\_{n-1}, \ldots, a\_{2}, a\_{1}\right)=\left(a\_{1}, a\_{2}, \ldots, a\_{n-1}, a\_{n}\right)
+  $$
+  - $n=2$ und $n=3$: dasselbe Grundmuster wie bei der Kreuzpermutation!
+
+  - $n \geq 4$: unterscheiden sich Umkehr- und Kreuzpermutation
+
+    ![截屏2020-07-27 21.23.47](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-27%2021.23.47.png)
+
+##### Mehrstufige Permutationsnetzwerke
+
+- jeweils aus einem bestimmten Grundmuster aufgebaut 
+
+- oft mit einer der eben vorgestellen Permutationen
+
+- statt Zweierschalter auch vollwertige Crossbar-Switche als Schaltelemente
+
+- Bsp:
+
+  - Omega-Netzwerk (Mischpermutation)
+
+  ![截屏2020-07-27 21.48.42](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-27%2021.48.42.png)
+
+  - Switching-Banyan-Netzwerk (Kreuzpermutation)
+
+  ![截屏2020-07-27 21.49.20](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-27%2021.49.20.png)
+  - Benes-Netzwerk (rekursiver Aufbau)
