@@ -1,7 +1,7 @@
 ---
 # Basic info
 title: "Cache"
-date: 2020-07-16
+date: 2020-07-27
 draft: false
 # type: docs # page type
 authors: ["admin"]
@@ -41,7 +41,7 @@ Ein technologisch einheitlicher Speicher mit kurzer Zugriffszeit und großer Kap
 
 **🔧 Lösung: Hierarchische Anordnung verschiedener Speicher und Verschiebung der Information zwischen den Schichten (Speicherhierarchie)**
 
-##Speicherhierarchie
+## Speicherhierarchie
 
 
 zum **Ausgleich** der unterschiedlichen Zugriffszeiten der CPU und des Hauptspeichers.
@@ -73,9 +73,9 @@ von Unten nach Oben:
 
 + Abnehmende Zugriffszeit
 
-##Cache Speicher
+## Cache Speicher
 
-###Problem : 
+### Problem : 
 
 + die Buszykluszeit moderner Prozessoren ist **kuerzer** als die Zykluszeit preiswerter, großer DRAM-Bausteine
 
@@ -86,7 +86,7 @@ von Unten nach Oben:
 
     --------> nur **kleine** Speicher können so aufgebaut werden
 
-###Lösung des Problems:
+### Lösung des Problems:
 
 **zwischen** den **Prozessor** und den relativ langsamen, aber billigen **Hauptspeicher** aus DRAM-Bausteinen legt man einen **kleinen, schnellen Speicher** aus **SRAM- Bausteinen**, den sogenannten **Cache-Speicher.**
 
@@ -96,7 +96,7 @@ von Unten nach Oben:
 
 ### 2 Arten (siehe Folien14 s10)
 
-####1. On-Chip-Cache: integriert auf dem Prozessorchip
+#### 1. On-Chip-Cache: integriert auf dem Prozessorchip
 
 + **Sehr kurze Zugriffszeiten** (wie die der
   prozessorinternen Register)
@@ -104,22 +104,22 @@ von Unten nach Oben:
 + Aus technologischen Gründen **begrenzte Kapazität**
 
 
-####2. Off-Chip-Cache: prozessorextern
+#### 2. Off-Chip-Cache: prozessorextern
 
 
 ### Nutzen
 
-1. **Verbesserung der Zugriffszeit des Hauptspeichers eines Prozessors ** durch einen Cache **zur Vermeidung von Wartezyklen** (CPU-Cache, Befehls- und Daten-Cache).
+1. **Verbesserung der Zugriffszeit des Hauptspeichers eines Prozessors** durch einen Cache **zur Vermeidung von Wartezyklen** (CPU-Cache, Befehls- und Daten-Cache).
 
 2. Verbesserung der Zugriffszeit von Plattenspeichern durch einen Cache (**Plattencache**)
 
-###CPU-Cache-Speicher
+### CPU-Cache-Speicher
 
-####Definition
+#### Definition
 
 ein **kleiner**, **schneller** **Pufferspeicher**, in dem **Kopien derjenigen Teile des Hauptsspeichers bereitgehalten werden**, auf die mit hoher Wahrscheinlichkeit von der CPU als nächstes zugegriffen wird.
 
-####Wieso kommt es zur einer Leistungssteigerung?
+#### Wieso kommt es zur einer Leistungssteigerung?
 
 Ein CPU-Cache-Speicher bezieht seine Effizienz im wesentlichen **aus der Lokalitätseigenschaft von Programmen (locality of reference)**, 
 
@@ -136,7 +136,7 @@ d.h. es werden bestimmte Speicherzellen bevorzugt und wiederholt angesprochen (z
   Ein zukünftiger Zugriff wird mit großer Wahrscheinlichkeit **in der Nähe** des bisherigen Zugriffs liegen (Tabellen, Arrays).
 
 
-####Funktionsweise
+#### Funktionsweise
 
 > Cache工作原理：
 >
@@ -169,9 +169,7 @@ d.h. es werden bestimmte Speicherzellen bevorzugt und wiederholt angesprochen (z
 >
 >     遵循局部性原理（locality of reference， Lokalitätseigenschaft von Programmen）的程序在运行时，Cache命中率也会很高。
 
-​	
-
-####Lseszugriff(siehe Folien14 s16)
+#### Lseszugriff(siehe Folien14 s16)
 
 Vor jedem Lesezugriff prüft der μP, ob das Datum im Cache steht.
 
@@ -183,13 +181,13 @@ Vor jedem Lesezugriff prüft der μP, ob das Datum im Cache steht.
 
   das Datum wird **mit Wartezyklen aus dem Arbeitsspeicher gelesen** und **gleichzeitig in den Cache eingefügt.** 
 
-####Schreibzugriffe
+#### Schreibzugriffe
 
 + Liegt beim Schreiben ein **Cache-Miss (write miss)** vor, wird **das Datum sowohl in den Arbeitsspeicher als auch in den Cache geschrieben**.
 
 + Liegt beim Schreiben jedoch ein **Cache-Hit (write hit)** vor, d.h. **ein im Cache stehendes Datum wird durch den Prozessor verändert**    
 
-####---> verschiedene Organisationsformen:
+**---> verschiedene Organisationsformen:**
 
 1. **Durchschreibverfahren: (write through policy)**
 
@@ -229,7 +227,7 @@ Vor jedem Lesezugriff prüft der μP, ob das Datum im Cache steht.
    >
    > 即CPU只向Cache写入，并用标记加以注明，**直到Cache中被写过的块要被进入的信息块取代时，才一次写入主存。**这种方式考虑到写入的往往是中间结果，每次写入主存速度慢而且不必要。其特点是速度快，避免了不必要的冗余写操作，但结构上较复杂。
 
-###Konsistenzprobleme
+### Konsistenzprobleme
 
 ---
 
@@ -239,7 +237,7 @@ Ebenfalls können andere Systemkomponenten Daten im Hauptspeicher ändern, **w
 (z. B. muss die **Cache-Steuerung über jede Datenänderung im Hauptspeicher informiert werden**).
 
 
-###Begriffe
+### Begriffe
 
 1. **Hit-Rate**
 
@@ -259,10 +257,10 @@ Ebenfalls können andere Systemkomponenten Daten im Hauptspeicher ändern, **w
    - $t\_{Hit}$ : Zugriffszeit des Caches
    - $t\_{Miss}$ : Zugriffszeit ohne den Cache
 
-###Aufbau eines Cache-Speichers (Folien14 s27)
+### Aufbau eines Cache-Speichers (Folien14 s27)
 
 
-####Grob Struktur
+#### Grob Struktur
 
 Ein Cache-Speicher besteht aus zwei Speicher-Einheiten:
 
@@ -274,7 +272,7 @@ Ein Cache-Speicher besteht aus zwei Speicher-Einheiten:
 
   enthält **die Adressen dieser Daten im Arbeitsspeicher**
 
-####Daten   
+#### Daten   
 
 + **Jeder Dateneintrag** besteht aus **einem ganzen Datenblock**(*一行*) (**cache-line**, bis 64 Byte).
 
@@ -298,7 +296,7 @@ Ein Cache-Speicher besteht aus zwei Speicher-Einheiten:
 
 + Die **Statusbits** sagen aus, **ob die Daten im Cache gültig sind.**
 
-####Komparator
+#### Komparator
 
 ermittelt, ob das zu einer auf dem Adressbus liegende Adresse gehörende Datum auch **im Cache** abgelegt worden ist, durch **Adressvergleich mit den Adressen im Adressspeicher**
 
