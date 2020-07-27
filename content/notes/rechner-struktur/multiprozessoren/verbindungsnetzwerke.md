@@ -630,16 +630,23 @@ Geeignet für Anwendungen mit **variablen und nicht regulären Kommunikationsm
 $p$ Eingänge des Netzes können gleichzeitig auf $p$ Ausgänge geschaltet werden und somit wird eine Permutation der Eingänge erzeugt.
 
 - **Einstufige Permutationsnetze**
-  - enthalten eine *einzelne* Spalte von Zweierschaltern
-
+  
+- enthalten eine *einzelne* Spalte von Zweierschaltern
+  
 - **Mehrstufige Permutationsnetze**
   - enthalten *mehrere* solcher Spalten
 
   - Spalten: Stufen des Permutationsnetzwerkes
 
 - **reguläre Permutationsnetzwerke**
-  - $p$ Eingänge, $p$ Ausgänge und $k$ Stufen mit jeweils $p/2$ Zweierschaltern, wobei die Zahl $p$ normalerweise eine Zweierpotenz ist
+  
+  - $p$ Eingänge
+  - $p$ Ausgänge 
+  - $k$ Stufen mit jeweils $p/2$ Zweierschaltern, 
+  
+  (wobei die Zahl $p$ normalerweise eine Zweierpotenz ist)
 - **Irreguläre Permutationsnetzwerke**
+  
   - weisen gegenüber der vollen regulären Struktur Lücken auf
 
 ##### Permutationen
