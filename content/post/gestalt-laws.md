@@ -1,7 +1,7 @@
 ---
 # Basic info
 title: "Gestalt Laws"
-date: 2020-07-016
+date: 2020-07-16
 draft: false
 # type: docs # page type
 authors: ["admin"]
