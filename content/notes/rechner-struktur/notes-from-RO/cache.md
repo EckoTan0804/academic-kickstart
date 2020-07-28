@@ -38,13 +38,9 @@ menu:
 weight: 500
 ---
 
-
-
-
-
 Immer größer werdende Lücke zwischen Verarbeitungsgeschwindigkeit von Prozessoren und Zugriffsgeschwindigkeit der DRAM-Speicherchips des Hauptspeichers
 
-Ein technologisch einheitlicher Speicher mit kurzer Zugriffszeit und großer Kapazität ist aus Kostengründen i. A. nicht realisierbar。
+Ein technologisch einheitlicher Speicher mit kurzer Zugriffszeit und großer Kapazität ist aus Kostengründen i. A. nicht realisierbar。🤪
 
 **🔧 Lösung: Hierarchische Anordnung verschiedener Speicher und Verschiebung der Information zwischen den Schichten (Speicherhierarchie)**
 
@@ -63,26 +59,11 @@ zum **Ausgleich** der unterschiedlichen Zugriffszeiten der CPU und des Hauptspei
 
   **Vergrößerung** des tatsächlich vorhandenen Hauptspeichers (z. B. bei gleichzeitiger Bearbeitung mehrerer Prozesse)
 
-| Speicherhierarchie                                     |      |
-| ------------------------------------------------------ | ---- |
-| Register                                               |      |
-| on-chip Cache                                          |      |
-| secondary level Cache (SRAM)                           |      |
-| Arbeitsspeicher (DRAM)                                 |      |
-| Sekundärspeicher(Platten, elektronishe Massenspeicher) |      |
-| Archivspeicher(Platten, Bänder, optische Platten)      |      |
-
-von Unten nach Oben:
-
-+ Zunehmende Kosten/Byte 
-
-+ Abnehmende Kapazität
-
-+ Abnehmende Zugriffszeit
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-28%2022.55.46.png" alt="截屏2020-07-28 22.55.46" style="zoom:80%;" />
 
 ## Cache Speicher
 
-### Problem : 
+### Problem 
 
 + die Buszykluszeit moderner Prozessoren ist **kuerzer** als die Zykluszeit preiswerter, großer DRAM-Bausteine
 
@@ -93,28 +74,27 @@ von Unten nach Oben:
 
     --------> nur **kleine** Speicher können so aufgebaut werden
 
-### Lösung des Problems:
+### Lösung des Problems
 
-**zwischen** den **Prozessor** und den relativ langsamen, aber billigen **Hauptspeicher** aus DRAM-Bausteinen legt man einen **kleinen, schnellen Speicher** aus **SRAM- Bausteinen**, den sogenannten **Cache-Speicher.**
+Zwischen den **Prozessor** und den relativ langsamen, aber billigen **Hauptspeicher** aus DRAM-Bausteinen legt man einen **kleinen, schnellen Speicher aus SRAM- Bausteinen**, den sogenannten **Cache-Speicher.**
 
-**Prozessor <---> Cache Speicher(besteht aus SRAM)<--> Hauptspeicher** 
+![截屏2020-07-28 22.57.50](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-28 22.57.50.png)
 
 **Auf den Cache-Speicher soll der Prozessor fast so schnell wie auf seine Register zugreifen können.**
 
-### 2 Arten (siehe Folien14 s10)
+#### 2 Arten
 
-#### 1. On-Chip-Cache: integriert auf dem Prozessorchip
+![截屏2020-07-28 22.59.42](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-28%2022.59.42.png)
 
-+ **Sehr kurze Zugriffszeiten** (wie die der
-  prozessorinternen Register)
+- **On-Chip-Cache**: integriert auf dem Prozessorchip
+  - **Sehr kurze Zugriffszeiten** (wie die der
+    prozessorinternen Register)
+  - Aus technologischen Gründen **begrenzte Kapazität**
 
-+ Aus technologischen Gründen **begrenzte Kapazität**
+- **Off-Chip-Cache**: prozessorextern
 
 
-#### 2. Off-Chip-Cache: prozessorextern
-
-
-### Nutzen
+#### Nutzen
 
 1. **Verbesserung der Zugriffszeit des Hauptspeichers eines Prozessors** durch einen Cache **zur Vermeidung von Wartezyklen** (CPU-Cache, Befehls- und Daten-Cache).
 
@@ -122,11 +102,11 @@ von Unten nach Oben:
 
 ### CPU-Cache-Speicher
 
-#### Definition
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-28%2023.20.22.png" alt="截屏2020-07-28 23.20.22" style="zoom:80%;" />
 
-ein **kleiner**, **schneller** **Pufferspeicher**, in dem **Kopien derjenigen Teile des Hauptsspeichers bereitgehalten werden**, auf die mit hoher Wahrscheinlichkeit von der CPU als nächstes zugegriffen wird.
+CPU-Cache-Speicher: ein kleiner, schneller Pufferspeicher, in dem **Kopien derjenigen Teile des Hauptsspeichers bereitgehalten werden**, auf die mit hoher Wahrscheinlichkeit von der CPU als nächstes zugegriffen wird.
 
-#### Wieso kommt es zur einer Leistungssteigerung?
+**Leistungssteigerung**: 
 
 Ein CPU-Cache-Speicher bezieht seine Effizienz im wesentlichen **aus der Lokalitätseigenschaft von Programmen (locality of reference)**, 
 
@@ -143,7 +123,7 @@ d.h. es werden bestimmte Speicherzellen bevorzugt und wiederholt angesprochen (z
   Ein zukünftiger Zugriff wird mit großer Wahrscheinlichkeit **in der Nähe** des bisherigen Zugriffs liegen (Tabellen, Arrays).
 
 
-#### Funktionsweise
+### Funktionsweise
 
 > Cache工作原理：
 >
@@ -158,8 +138,8 @@ d.h. es werden bestimmte Speicherzellen bevorzugt und wiederholt angesprochen (z
 > - 不相等 
 >
 >   --> CPU所需的数据或指令不在Cache中（未命中），需要到内存中提取:
->
-> 存储器控制电路从内存中取出数据或指令传送给CPU，**同时在Cache中拷贝一份副本**。（为了防止CPU以后在访问同一信息时又会出现不命中的情况，从而降低CPU访问速度相对较慢的内存的概率）。
+>  
+>   存储器控制电路从内存中取出数据或指令传送给CPU，**同时在Cache中拷贝一份副本**。（为了防止CPU以后在访问同一信息时又会出现不命中的情况，从而降低CPU访问速度相对较慢的内存的概率）。
 >
 >
 > 换而言之，Cache命中率越高，系统性能越好 --> 这要求任何时刻cache控制器都要知道cache中存储的是什么指令、数据。  
@@ -176,75 +156,77 @@ d.h. es werden bestimmte Speicherzellen bevorzugt und wiederholt angesprochen (z
 >
 >     遵循局部性原理（locality of reference， Lokalitätseigenschaft von Programmen）的程序在运行时，Cache命中率也会很高。
 
-#### Lseszugriff(siehe Folien14 s16)
+#### Lseszugriff
 
-Vor jedem Lesezugriff prüft der μP, ob das Datum im Cache steht.
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-28%2023.26.14.png" alt="截屏2020-07-28 23.26.14" style="zoom:67%;" />
 
-+ Wenn ja: **Treffer (read hit)**
+Vor jedem Lesezugriff prüft der Mikroprozessor, ob das Datum im Cache steht.
 
-  das Datum kann **ohne Wartezyklen** aus dem Cache entnommen werden. 
-
-+ Wenn nein: **kein Treffer (read miss)**
-
-  das Datum wird **mit Wartezyklen aus dem Arbeitsspeicher gelesen** und **gleichzeitig in den Cache eingefügt.** 
++ <span style="color:green">Wenn ja: **Treffer (read hit)** </span>
+- das Datum kann **ohne Wartezyklen** aus dem Cache entnommen werden. 👏
+  
++ <span style="color:red">Wenn nein: **kein Treffer (read miss)** </span>
+- Das Datum wird **mit Wartezyklen aus dem Arbeitsspeicher gelesen** und **gleichzeitig in den Cache eingefügt.** 
 
 #### Schreibzugriffe
 
-+ Liegt beim Schreiben ein **Cache-Miss (write miss)** vor, wird **das Datum sowohl in den Arbeitsspeicher als auch in den Cache geschrieben**.
++ Liegt beim Schreiben ein <span style="color:red">**Cache-Miss (write miss)**</span> vor, wird **das Datum sowohl in den Arbeitsspeicher als auch in den Cache geschrieben**.
 
-+ Liegt beim Schreiben jedoch ein **Cache-Hit (write hit)** vor, d.h. **ein im Cache stehendes Datum wird durch den Prozessor verändert**    
++ Liegt beim Schreiben jedoch ein <span style="color:green">**Cache-Hit (write hit)**</span> vor, d.h. **ein im Cache stehendes Datum wird durch den Prozessor verändert**    
 
-**---> verschiedene Organisationsformen:**
+  Dann existieren verschiedene Organisationsformen:
+  + **Durchschreibverfahren: (write through policy)**
 
-1. **Durchschreibverfahren: (write through policy)**
+    ![截屏2020-07-28 23.29.52](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-28%2023.29.52.png)
 
-   Ein Datum wird von der CPU **immer gleichzeitig** in den **Cache-** und in den **Arbeitsspeicher** geschrieben.
+    Ein Datum wird von der CPU **immer gleichzeitig** in den **Cache-** und in den **Arbeitsspeicher** geschrieben.
 
-   + Vorteil: **garantierte Konsistenz** zwischen Cache- und Arbeitsspeicher.
+    + Vorteil: **garantierte Konsistenz** zwischen Cache- und Arbeitsspeicher.
 
-   + Nachteil: Schreibzugriffe **benötigen immer die langsame Zykluszeit** des Hauptspeichers und belasten den Systembus.
+    + Nachteil: Schreibzugriffe **benötigen immer die langsame Zykluszeit** des Hauptspeichers und belasten den Systembus.
 
-   > 1．直写式（write through）
-   >
-   > 即CPU在向Cache写入数据的同时，也把数据写入主存以保证Cache和主存中相应单元数据的一致性，其特点是简单可靠，但由于CPU每次更新时都要对主存写入，速度必然受影响。
+    > 直写式（write through）
+    >
+    > 即CPU在向Cache写入数据的同时，也把数据写入主存以保证Cache和主存中相应单元数据的一致性，其特点是简单可靠，但由于CPU每次更新时都要对主存写入，速度必然受影响。
 
-2. **Gepuffertes Durchschreibverfahren: (buffered write through policy)**
+  + **Gepuffertes Durchschreibverfahren: (buffered write through policy)**
 
-   Zur Milderung des Nachteils beim Durchschreibverfahren wird ein kleiner **Schreib-Puffer** verwendet, der **die zu schreibenden Daten temporär aufnimmt.**
+    - Zur Milderung des Nachteils beim Durchschreibverfahren wird ein kleiner **Schreib-Puffer** verwendet, der die zu schreibenden Daten temporär aufnimmt.
 
-   Diese Daten werden dann **automatisch vom Cache- Controller in den Hauptspeicher übertragen**, **während der Prozessor parallel dazu mit weiteren Operationen fortfährt.**
+    - Diese Daten werden dann automatisch vom Cache- Controller in den Hauptspeicher übertragen, während der Prozessor parallel dazu mit weiteren Operationen fortfährt.
 
-   > 2．缓写式（post write）
-   >
-   > 即CPU在更新Cache时不直接更新主存中的数据，而是把更新的数据送入一个缓存器暂存，在适当的时候再把缓存器中的内容写入主存。在这种方式下，CPU不必等待主存写入而造成的时延，在一定程度上提高了速度，但由于缓存器只有有限的容量，只能锁存一次写入的数据，如果是连续写入，CPU仍需要等待。
+    > 缓写式（post write）
+    >
+    > 即CPU在更新Cache时不直接更新主存中的数据，而是把更新的数据送入一个缓存器暂存，在适当的时候再把缓存器中的内容写入主存。在这种方式下，CPU不必等待主存写入而造成的时延，在一定程度上提高了速度，但由于缓存器只有有限的容量，只能锁存一次写入的数据，如果是连续写入，CPU仍需要等待。
 
-3. **Rückschreib-Verfahren: (write back policy)**
+  + **Rückschreib-Verfahren: (write back policy)**
 
-   Ein Datum wird von der CPU **nur in den Cachespeicher geschrieben** und durch ein **spezielles Bit** (*altered bit, modified bit, dirty bit*) gekennzeichnet.
+    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-28%2023.34.34.png" alt="截屏2020-07-28 23.34.34" style="zoom:80%;" />
 
-   **Der Arbeitsspeicher wird nur geändert, wenn ein so gekennzeichnetes Datum aus dem Cache verdrängt wird.**
+    - Ein Datum wird von der CPU **nur in den Cachespeicher geschrieben** und durch ein **spezielles Bit** (*altered bit, modified bit, dirty bit*) gekennzeichnet.
 
-   + Vorteil:
-     auch Schreibzugriffe können **mit der schnellen Cache-Zykluszeit abgewickelt** werden.
+    - **Der Arbeitsspeicher wird nur geändert, wenn ein so gekennzeichnetes Datum aus dem Cache verdrängt wird.**
 
-   + Nachteil:
-     **Konsistenzprobleme** zwischen Cache- und Hauptspeicherspeicher .
+    + Vorteil: auch Schreibzugriffe können **mit der schnellen Cache-Zykluszeit abgewickelt** werden.
+    + Nachteil: **[Konsistenzprobleme](#konsistenzprobleme)** zwischen Cache- und Hauptspeicherspeicher.
 
-   > 3．回写式（write back）
-   >
-   > 即CPU只向Cache写入，并用标记加以注明，**直到Cache中被写过的块要被进入的信息块取代时，才一次写入主存**。这种方式考虑到写入的往往是中间结果，每次写入主存速度慢而且不必要。其特点是速度快，避免了不必要的冗余写操作，但结构上较复杂。
-
-### Konsistenzprobleme
-
----
-
-Ebenfalls können andere Systemkomponenten Daten im Hauptspeicher ändern, **während die CPU noch mit den alten Daten im Cachespeicher arbeitet.**
-
---> **aufwendige Verfahren bei der Cache-Steuerung zur Verhinderung solcher Inkonsistenzen sind erforderlich** 
-(z. B. muss die **Cache-Steuerung über jede Datenänderung im Hauptspeicher informiert werden**).
+    > 回写式（write back）
+    >
+    > 即CPU只向Cache写入，并用标记加以注明，**直到Cache中被写过的块要被进入的信息块取代时，才一次写入主存**。这种方式考虑到写入的往往是中间结果，每次写入主存速度慢而且不必要。其特点是速度快，避免了不必要的冗余写操作，但结构上较复杂。
 
 
-### Begriffe
+
+## Konsistenzprobleme
+
+- Andere Systemkomponenten, z. B. DMA-Controller, finden nun unter Umständen <span style="color:red">„veraltete Daten“</span> im Hauptspeicher vor, die von der CPU längst geändert, jedoch noch nicht in den Hauptspeicher übertragen wurden.
+
+- Ebenfalls können andere Systemkomponenten Daten im Hauptspeicher ändern, **während die CPU noch mit den alten Daten im Cachespeicher arbeitet.**
+
+  --> **aufwendige Verfahren bei der Cache-Steuerung zur Verhinderung solcher Inkonsistenzen sind erforderlich** 
+  (z. B. muss die **Cache-Steuerung über jede Datenänderung im Hauptspeicher informiert werden**).
+
+
+## Begriffe
 
 1. **Hit-Rate**
 
@@ -253,7 +235,6 @@ Ebenfalls können andere Systemkomponenten Daten im Hauptspeicher ändern, **w
    \text{Hit-Rate} = \text{Anzahl Treffer} / \text{Anzahl Zugriffe}
    $$
    
-
 2. **mittlere Zugriffszeit**
 
    Die **mittlere Zugriffszeit** berechnet sich annähernd wie folgt:
@@ -264,10 +245,9 @@ Ebenfalls können andere Systemkomponenten Daten im Hauptspeicher ändern, **w
    - $t\_{Hit}$ : Zugriffszeit des Caches
    - $t\_{Miss}$ : Zugriffszeit ohne den Cache
 
-### Aufbau eines Cache-Speichers (Folien14 s27)
+## Aufbau eines Cache-Speichers 
 
-
-#### Grob Struktur
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-28%2023.38.55.png" alt="截屏2020-07-28 23.38.55" style="zoom:80%;" />
 
 Ein Cache-Speicher besteht aus zwei Speicher-Einheiten:
 
@@ -279,83 +259,90 @@ Ein Cache-Speicher besteht aus zwei Speicher-Einheiten:
 
   enthält **die Adressen dieser Daten im Arbeitsspeicher**
 
-#### Daten   
+### Cache-Zeile   
 
-+ **Jeder Dateneintrag** besteht aus **einem ganzen Datenblock**(*一行*) (**cache-line**, bis 64 Byte).
++ **Jeder Dateneintrag** besteht aus **einem ganzen Datenblock** (**cache-line**, bis 64 Byte).
 
 + Mit jedem Datum, auf das der Prozessor zugreift, wird die **Umgebung miteingelagert** *(Hoffnung auf Lokalität von Programmen)*.
 
 + Im **Adressspeicher** wird **die Basisadresse jedes Blocks** abgelegt
 
-+ Jede Cache-Zeile enthält **ein (Adress-, Daten-)Paar und Statusbits**.
++ Jede Cache-Zeile (markiert mit rotem Rechteck in dem obigen Bild) enthält **ein (Adress-, Daten-)Paar und Statusbits**.
 
-  **eine Cache-Zeile**:
+  | Adressspeicher（Tag）                      | Statusbits    | Daten |
+| ------------------------------------------ | ------------- | ----- |
+  | Adresse(Adress der Daten in HauptSpeicher) | valid + dirty | Daten |
+  
++ Ein **(Daten)-Block** ist eine zusammengehörende Reihe von Speicherzellen (Cache-line).
+  
++ Dazugehörig wird ein **Adressetikett (Cache-Tag)** im Adress-Speicher ablegt.
+  
++ enthält die Adresse des aktuellen Blocks im Hauptspeicher
+  
++ Die **Statusbits** sagen aus, ob die Daten im Cache gültig sind.
 
-  | Adressspeicher（Tag）                      | Statusbits    | Daten |      |
-  | ------------------------------------------ | ------------- | ----- | ---- |
-  | Adresse(Adress der Daten in HauptSpeicher) | valid + dirty | Daten |      |
+### Komparator
 
-+ Ein **(Daten)-Block** ist eine **zusammengehörende Reihe
-  von Speicherzellen (Cache-line).**
+- ermittelt, ob das zu einer auf dem Adressbus liegende Adresse gehörende Datum auch **im Cache** abgelegt worden ist, durch **Adressvergleich mit den Adressen im Adressspeicher**
 
-+ Dazugehörig wird ein **Adressetikett (Cache-Tag)， enthält die Adresse des aktuellen Blocks im Hauptspeicher，** im
-  **Adress-Speicher** ablegt.
+- Dieser Adressvergleich muss **sehr schnell gehen (möglichst in einem Taktzyklus)**, da sonst der Cachespeicher effektiv **langsamer** wäre als der Arbeitsspeicher.
 
-+ Die **Statusbits** sagen aus, **ob die Daten im Cache gültig sind.**
+#### Drei Techniken für den Adressvergleich 􏰂$\to$ 3 Cache-Typen
 
-#### Komparator
+##### Voll-Assoziativer Cache 
 
-ermittelt, ob das zu einer auf dem Adressbus liegende Adresse gehörende Datum auch **im Cache** abgelegt worden ist, durch **Adressvergleich mit den Adressen im Adressspeicher**
+- **Assoziative Abbildung**
 
-Dieser Adressvergleich muss **sehr schnell gehen (möglichst in einem Taktzyklus)**, da sonst der Cachespeicher effektiv **langsamer** wäre als der Arbeitsspeicher.
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-28%2023.56.30.png" alt="截屏2020-07-28 23.56.30" style="zoom:70%;" />
 
-### Drei Techniken für den Adressvergleich 􏰂---> 3 Cache-Typen:
+- Vollparalleler Vergleich aller Adressen im Adressspeicher in einem einzigen Taktzyklus\
 
-#### 1. Voll-Assoziativer Cache(Folien14 s33 & s35)
+- Bsp
 
-**werden heute nur für sehr kleine auf dem Chip integrierte Caches mit 32 bis 128 Einträgen verwendet.**
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-28%2023.57.39.png" alt="截屏2020-07-28 23.57.39" style="zoom:80%;" />
 
-Vollparalleler Vergleich aller Adressen im Adressspeicher in einem einzigen Taktzyklus
-
-+ **Vorteile**:
-
-  + ein Datum kann an beliebiger Stelle im Cache abgelegt werden
-  + Optimale Cache-Ausnutzung, völlig freie Wahl der Strategie bei
+- **Vorteile**:
+  - ein Datum kann an beliebiger Stelle im Cache abgelegt werden
+  - Optimale Cache-Ausnutzung, völlig freie Wahl der Strategie bei
     Verdrängungen
 
-+ **Nachteile**:
-
-  + **Hoher Hardwareaufwand** (für jede Cache-Zeile ein Vergleicher) 􏰂 
+- **Nachteile**:
+  - **Hoher Hardwareaufwand** (für jede Cache-Zeile ein Vergleicher) 􏰂 
     --> nur für **sehr kleine** Cachespeicher realisierbar
 
-  + Die große Flexibilität der Abbildungsvorschrift erfordert eine weitere Hardware, welche die Ersetzungsstrategie (**welcher Block soll überschrieben werden, wenn der Cache voll ist**) realisiert.
+  - Die große Flexibilität der Abbildungsvorschrift erfordert eine weitere Hardware, welche die Ersetzungsstrategie (**welcher Block soll überschrieben werden, wenn der Cache voll ist**) realisiert.
 
-  > 全相连映像方式Cache
-  >
-  > 任意主存单元的数据或指令可以存放到Cache的任意单元中去，两者之间的对应关系不存在任何限制。
-  >
-  > + 在Cache中，用于**存放数据或指令的静态存储器SRAM**称为 **内容Cache（Daten Cache，Daten Speicher）**
-  > + 用于存放**数据或指令在内存中所在单元的地址**的静态存储器称为 **标识Cache（tag Cache，Tag Speicher）**
-  >
-  > 假设主存地址是16位，每个存储单元8位（64k * 8 Organisation）。假设内容Cache的容量是 128 Byte， 即有128个单元（128行），每个单元（每行）的宽度为8位；表示Cache（Tag Cache）也应该由128个单元（128 行），为了存放主存单元的地址，Tag Cache每个单元（每行）的宽度应为16位。
-  >
-  > 当CPU要访问内存时， 它送出的16位地址先与Tag Cache中的128个地址比较。
-  >
-  >    + 若所需数据或指令的**地址在Tag Cache中**   
-  >      --> 命中！  
-  >      --> 从内容Cache与之对应的单元（行）中读出数据或指令传给CPU
+> 全相连映像方式Cache
+>
+> 任意主存单元的数据或指令可以存放到Cache的任意单元中去，两者之间的对应关系不存在任何限制。
+>
+> + 在Cache中，用于**存放数据或指令的静态存储器SRAM**称为 **内容Cache（Daten Cache，Daten Speicher）**
+> + 用于存放**数据或指令在内存中所在单元的地址**的静态存储器称为 **标识Cache（tag Cache，Tag Speicher）**
+>
+> 假设主存地址是16位，每个存储单元8位（64k * 8 Organisation）。假设内容Cache的容量是 128 Byte， 即有128个单元（128行），每个单元（每行）的宽度为8位；表示Cache（Tag Cache）也应该由128个单元（128 行），为了存放主存单元的地址，Tag Cache每个单元（每行）的宽度应为16位。
+>
+> 当CPU要访问内存时， 它送出的16位地址先与Tag Cache中的128个地址比较。
+>
+>    + 若所需数据或指令的**地址在Tag Cache中**   
+>      --> 命中！  
+>      --> 从内容Cache与之对应的单元（行）中读出数据或指令传给CPU
 
-  >    + 若所需数据或指令的**地址不在Tag Cache中**     
-  >      --> 从主存中读出所需的数据或指令传给CPU，同时在Cache中存一份副本（**即将数据或指令写入内容Cache，并将该数据或指令所在的内存单元的地址写入Tag Cache**）
-  >
-  >    显然，对于全相连映像Cache，Cache中存储的数据越多，命中率越高。但增加Cache容量带来的问题是：每次访问内存都要进行大量的地址比较，既耗时效率也低。
+>    + 若所需数据或指令的**地址不在Tag Cache中**     
+>      --> 从主存中读出所需的数据或指令传给CPU，同时在Cache中存一份副本（**即将数据或指令写入内容Cache，并将该数据或指令所在的内存单元的地址写入Tag Cache**）
+>
+>    显然，对于全相连映像Cache，Cache中存储的数据越多，命中率越高。但增加Cache容量带来的问题是：每次访问内存都要进行大量的地址比较，既耗时效率也低。
 
-  > 另一方面，若Cache容量太小，如16个单元（行），由于命中率太低，CPU就要频繁的等待操作系统将Cache中的信息换入换出，因为在向Cache中写入新信息之前，必须将Cache中已有的信息保存在主存中。
+> 另一方面，若Cache容量太小，如16个单元（行），由于命中率太低，CPU就要频繁的等待操作系统将Cache中的信息换入换出，因为在向Cache中写入新信息之前，必须将Cache中已有的信息保存在主存中。
 
-#### 2. Direct-mapped-Cache（Folien14 s37，38 & 41）
+#####  Direct-mapped-Cache（Folien14 s37，38 & 41）
 
+- Beim Direct Mapped Cache erhält jede Stelle des Hauptspeichers einen **eindeutigen und festen Platz im Cache**（kommt auf den **Index** an）
 
-Beim Direct Mapped Cache erhält jede Stelle des Hauptspeichers einen **eindeutigen und festen Platz im Cache**（kommt auf den **Index** an）
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-29%2000.03.43.png" alt="截屏2020-07-29 00.03.43" style="zoom:80%;" />
+
++ Adressierung
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-29%2000.04.26.png" alt="截屏2020-07-29 00.04.26" style="zoom:80%;" />
 
 + **Nachteil**
 
@@ -370,14 +357,14 @@ Beim Direct Mapped Cache erhält jede Stelle des Hauptspeichers einen **eindeuti
 + **Merkmale**
 
   + **Einfache** Hardware-Realisierung (nur **ein Vergleicher** und **ein Tag-Speicher**)  
-
-  + Der **Zugriff** erfolgt **schnell**, weil das Tag-Feld **parallel** mit dem zugehörigen Block gelesen werden kann
-
++ Der **Zugriff** erfolgt **schnell**, weil das Tag-Feld **parallel** mit dem zugehörigen Block gelesen werden kann
   + Es ist **keine Ersetzungsstrategie erforderlich**, weil die direkte Zuordnung keine Alternativen zulässt
-
-  + Auch wenn an anderer Stelle im Cache noch Platz ist, erfolgt **wegen der direkten Zuordnung eine Ersetzung**
-
++ Auch wenn an anderer Stelle im Cache noch Platz ist, erfolgt **wegen der direkten Zuordnung eine Ersetzung**
   + Bei einem abwechselnden Zugriff auf Speicherblöcke, deren Adressen den **gleichen Index-Teil** haben, erfolgt **laufendes Überschreiben** des gerade geladenen Blocks. 
+
++ Bsp
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-29%2000.06.07.png" alt="截屏2020-07-29 00.06.07" style="zoom:80%;" />
 
 > 直接映像Cache与全相连映像Cache完全相反，它只需要做一次地址比较即可确定是否命中。
 > 在这种Cache结构中，地址分为两部分：
@@ -410,33 +397,33 @@ Beim Direct Mapped Cache erhält jede Stelle des Hauptspeichers einen **eindeuti
 >
 > 这就是直接映像Cache的缺点：**尽管地址比较的次数是一次，但 不同的内存单元却肯恩共有相同的Cache索引，不同的Cache标识使得Cache仍未命中，仍需访问主存。**
 
-#### 3. n-way-set-assoziativer Cache
+##### n-way-set-assoziativer Cache
 
----
+- 💡 Kompromiss zwischen direct-mapped-Cache und vollassoziativen Cache.
 
-####  Kompromiss zwischen direct-mapped-Cache und vollassoziativen Cache.
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-29%2000.07.58.png" alt="截屏2020-07-29 00.07.58" style="zoom:80%;" />
 
-Zum Auffinden eines Datums müssen **alle n Tags mit demselben Index parallel verglichen werden**
+- Verbesserte Trefferrate 👏
 
---------> der Aufwand **steigt** mit der Zahl n;
-für große n nähert sich der Aufwand den voll-assoziativen Caches
+  (da hier eine Auswahl möglich ist (der zu verdrängende Eintrag kann unter n ausgewählt werden))
 
-+ Verbesserte Trefferrate, da hier eine Auswahl möglich ist (der zu verdrängende Eintrag kann unter n ausgewählt
+- Zum Auffinden eines Datums müssen **alle n Tags mit demselben Index parallel verglichen werden**
+  - der Aufwand **steigt** mit der Zahl n;
+    (für große n nähert sich der Aufwand den voll-assoziativen Caches_
 
+- Ersetzungssstrategie
 
-#### Ersetzungssstrategie(notwendig nur bei voll- oder n-fach satzassoziativer Cachespeicherorganisation)
+  Ersetzungsstrategie gibt an, welcher Teil des Cachespeichers nach einem Cache-Miss durch eine neu geladene Speicherportion überschrieben wird.
 
-Ersetzungsstrategie gibt an, welcher Teil des Cachespeichers nach einem Cache-Miss durch eine neu geladene Speicherportion überschrieben wird.
+  - **Zyklisch** (der zuerst eingelagerte Eintrag wird auch wieder
+    verdrängt, FIFO-Strategie)
 
-+ **Zyklisch** (der zuerst eingelagerte Eintrag wird auch wieder
-  verdrängt, FIFO-Strategie)
+  - **LRU-Strategie** (least recently used) der am längsten nicht mehr benutzte Eintrag wird entfernt.
 
-+ **LRU-Strategie** (least recently used) der am längsten nicht mehr benutzte Eintrag wird entfernt.
+  - **Zufällig** (durch Zufallsgenerator)
 
-+ **Zufällig** (durch Zufallsgenerator)
-
-Meist wird die sehr einfache Strategie gewählt:
-Die am längsten nicht benutzte Speicherportion wird ersetzt (**LRU-Strategie, Least Recently Used**).
+  Meist wird die sehr einfache Strategie gewählt:
+  Die am längsten nicht benutzte Speicherportion wird ersetzt (**LRU-Strategie, Least Recently Used**).
 
 > 组相连映像Cache
 >
@@ -457,12 +444,16 @@ Die am längsten nicht benutzte Speicherportion wird ersetzt (**LRU-Strategie, L
 > 从例子中可以看出，在组相连映像Cache中，比较的次数与相关联的程度有关。
 > **n路组相连映像比较次数为n**
 > **组的数目越多，性能越高。**但用作标识Cache的SRAM容量也相应增加了，从而加大了成本。8、16路组相连映像Cache中所增加的成本与提高的命中率相比是不划算的；而且增加组的数目，也增加了Tag的比较次数。**目前绝大多数Cache系统实现的时4路**。
->
-> 
 
-### Ursachen für die Fehlzugriffe
+##### Zusammenfassung von drei Typen
 
----
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-29%2000.15.02.png" alt="截屏2020-07-29 00.15.02" style="zoom: 70%;" />
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-29%2000.16.11.png" alt="截屏2020-07-29 00.16.11" style="zoom:70%;" />
+
+
+
+## Ursachen für die Fehlzugriffe
 
 1. **Erstzugriff (compulsory - obligatorisch)**: 
 
@@ -482,51 +473,49 @@ Die am längsten nicht benutzte Speicherportion wird ersetzt (**LRU-Strategie, L
 
    --> **Kollisionsfehlzugriffe (collision misses)** oder **Interferenzfehlzugriffe (interference misses).**
 
-   
-
-### Erzielbare Cache-Trefferquoten
-
----
-
-1. **Je größer** der Cachespeicher, **desto größer** die Trefferquote
-
-   > Eine Cache-Trefferquote von circa **94%** kann bei einem
-   > **64 kByte** großen Cachespeicher erreicht werden
-
-2. **Getrennte** Daten- und Befehls-Cachespeicher sind bei sehr kleinen Cachespeichergrößen vorteilhaft
-
-3. Bei Cachespeichergrößen **ab 64 KByte** sind **Direct Mapped Cachespeicher** mit ihrer Trefferquote nur **wenig schlechter als Cachespeicher mit Assoziativität 2 oder 4.**
 
 
 
-**Voll-assoziative Cachespeicher werden heute nur für sehr kleine auf dem Chip integrierte Caches mit 32 bis 128 Einträgen verwendet.**
+## Erzielbare Cache-Trefferquoten
 
-**Bei größeren Cachespeichern findet sich zur Zeit ein Trend zur Direct Mapped Organisation oder 2 - 8 fach assoziativer Organisation.**  
+- **Je größer** der Cachespeicher, **desto größer** die Trefferquote
 
-### Anbindung des Caches an den Systembus (Folien15 s35) 
+  > Eine Cache-Trefferquote von circa **94%** kann bei einem **64 kByte** großen Cachespeicher erreicht werden
 
----
+- **Getrennte** Daten- und Befehls-Cachespeicher sind bei sehr kleinen Cachespeichergrößen vorteilhaft
 
-#### 1. Cache-Controller
+- Bei Cachespeichergrößen **ab 64 KByte** sind **Direct Mapped Cachespeicher** mit ihrer Trefferquote nur **wenig schlechter als Cachespeicher mit Assoziativität 2 oder 4.**
 
-#### Cache-Controller =  Tag-RAM + Steuerung + Tag-Komparator
+- Voll-assoziative Cachespeicher werden heute nur für sehr kleine auf dem Chip integrierte Caches mit 32 bis 128 Einträgen verwendet.
 
-+ **auf einem Chip integriert**(Da dieser sehr schnell sein muß)
+- Bei größeren Cachespeichern findet sich zur Zeit ein Trend zur Direct Mapped Organisation oder 2 - 8 fach assoziativer Organisation.  
+
+
+
+
+## Anbindung des Caches an den Systembus
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-29%2000.19.15.png" alt="截屏2020-07-29 00.19.15" style="zoom:80%;" />
+
+### Cache-Controller
+
+**Cache-Controller =  Tag-RAM + Steuerung + Tag-Komparator**
+
++ **auf einem Chip integriert **(Da dieser sehr schnell sein muß)
 
 + Cache-Controller **übernimmt die Steuerung der Treiber zum Systembus** (Systembuszugriff **nur bei Cache-Miss**, sonst ist der Systembus für andere Komponenten frei), sowie der Systembussignale zur Einfügung von Wartezyklen bei Cache-Miss (READY, HOLD, HOLDA, ...)
 
 
-#### 2. Cachespeicher 
+###  Cachespeicher 
 
-selbst ist **seperat** mit **SRAM-Bausteinen aufgebaut.**
-
-
-### Verwendung mehrerer Caches(Folien15 s34)
-
----
+- selbst ist **seperat** mit **SRAM-Bausteinen aufgebaut.**
 
 
-#### 1. First-Level-Cache (On-Chip-Cache)
+## Verwendung mehrerer Caches
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-28 22.59.42.png" alt="截屏2020-07-28 22.59.42" style="zoom:80%;" />
+
+### 1. First-Level-Cache (On-Chip-Cache)
 
 Häufig **getrennte** On-Chip-Caches**(Harvard-Architektur**) : 
 
@@ -550,7 +539,7 @@ Häufig **getrennte** On-Chip-Caches**(Harvard-Architektur**) :
 
 + Aus technologischen Gründen **begrenzte Kapazität**
 
-#### 2. Secondary- Level-Cache (On-Board-Cache, 64 - 1024 KByte groß)  
+### 2. Secondary- Level-Cache (On-Board-Cache, 64 - 1024 KByte groß)  
 
 
 + Außerhalb des Prozessor-Chips(**prozessorextern**)
@@ -560,9 +549,8 @@ Häufig **getrennte** On-Chip-Caches**(Harvard-Architektur**) :
 + Der Secondary-Level-Cache kann **parallel zum Hauptspeicher an den Bus angeschlosssen werden (Look-Aside-Cache)**. Er sorgt dafür, dass bei einem First-Level-Cache-Miss **die Daten schnell nachgeladen** werden können
 
 
-### Cache-Kohärenzproblem
 
----
+## Cache-Kohärenzproblem
 
 + **Gültigkeitsproblem**, das beim Zugriff mehrerer Verarbeitungselemente (z. B. Prozessoren) auf Speicherworte des Hauptspeichers entsteht.
 
@@ -585,12 +573,9 @@ Häufig **getrennte** On-Chip-Caches**(Harvard-Architektur**) :
 > + 每个独立的运算，假如它造成数据值的改变，所有进程都可以看到一致的改变结果
 > + 在每次运算之后，不同的进程可能会看到不同的值（这也就是没有一致性的行为）
 
-<br>
-<br>
 
-### Bus-Schnüffeln (Bus-Snooping)
 
----
+## Bus-Schnüffeln (Bus-Snooping)
 
 In **Mehrprozessorsystemen**, bei denen mehrere Prozessoren mit lokalen Cachespeichern an einen **gemeinsamen Bus/Hauptspeicher** angeschlossen sind, verwendet man das sogenannte **Bus-Schnüffeln**
 
@@ -633,7 +618,9 @@ Bei **Adressübereinstimmung** am Bus geschieht folgendes:
 >
 > --> 然后刚才被跳过的BusTransaktion重新执行。
 
-## Fragen, die sich ein Speicherhierarchie-Designer stellen muss。
+
+
+## Fragen, die sich ein Speicherhierarchie-Designer stellen muss
 
 
 ### 1.Block-Abbildungsstrategie
