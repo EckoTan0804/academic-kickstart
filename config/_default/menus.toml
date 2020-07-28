@@ -105,6 +105,11 @@
   weight = 50
   identifier = "uebung-zusammenfassung"
 
+[[rechner-struktur]]
+  name = "Notes von Rechnerorganisation"
+  weight = 60
+  identifier = "notes-von-ro"
+
 ################################
 # Courses
 ################################
