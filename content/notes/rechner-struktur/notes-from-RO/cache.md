@@ -1,11 +1,11 @@
 ---
 # Basic info
 title: "Cache"
-date: 2020-07-27
+date: 2020-07-28
 draft: false
-# type: docs # page type
+type: docs # page type
 authors: ["admin"]
-tags: ["Computer Structure", "Cache"]
+tags: ["Rechner Organisation"]
 categories: ["Computer Structure"]
 toc: true # Show table of contents?
 
@@ -13,7 +13,7 @@ toc: true # Show table of contents?
 profile: false  # Show author profile?
 
 reading_time: true # Show estimated reading time?
-summary: "How does cache work in computer structure?"
+summary: ""
 share: false  # Show social sharing links?
 featured: true
 lastmod: true
@@ -26,9 +26,16 @@ editable: false  # Allow visitors to edit the page? Supported by the Page, Post,
 
 # Optional header image (relative to `static/img/` folder).
 header:
-  image: ""
   caption: ""
-  
+  image: ""
+
+# Menu
+menu: 
+    rechner-struktur:
+        parent: notes-von-ro
+        weight: 1
+
+weight: 500
 ---
 
 
@@ -225,7 +232,7 @@ Vor jedem Lesezugriff prüft der μP, ob das Datum im Cache steht.
 
    > 3．回写式（write back）
    >
-   > 即CPU只向Cache写入，并用标记加以注明，**直到Cache中被写过的块要被进入的信息块取代时，才一次写入主存。**这种方式考虑到写入的往往是中间结果，每次写入主存速度慢而且不必要。其特点是速度快，避免了不必要的冗余写操作，但结构上较复杂。
+   > 即CPU只向Cache写入，并用标记加以注明，**直到Cache中被写过的块要被进入的信息块取代时，才一次写入主存**。这种方式考虑到写入的往往是中间结果，每次写入主存速度慢而且不必要。其特点是速度快，避免了不必要的冗余写操作，但结构上较复杂。
 
 ### Konsistenzprobleme
 
@@ -407,7 +414,7 @@ Beim Direct Mapped Cache erhält jede Stelle des Hauptspeichers einen **eindeuti
 
 ---
 
-####Kompromiss zwischen direct-mapped-Cache und vollassoziativen Cache.
+####  Kompromiss zwischen direct-mapped-Cache und vollassoziativen Cache.
 
 Zum Auffinden eines Datums müssen **alle n Tags mit demselben Index parallel verglichen werden**
 
