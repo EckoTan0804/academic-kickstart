@@ -45,11 +45,10 @@ Let
 
 $$
 \boldsymbol{\Phi}\_{X}=\left[\begin{array}{c}
-                                            \boldsymbol{\phi}\left(\boldsymbol{x}\_{1}\right)^{T} \\
-                                            \vdots \\
+                                            \boldsymbol{\phi}\left(\boldsymbol{x}\_{1}\right)^{T} \\\\
+                                            \vdots \\\\
                                             \boldsymbol{\phi}\left(\boldsymbol{x}\_{N}\right)^{T}
 \end{array}\right] \in \mathbb{R}^{N \times d} , \qquad \left( \boldsymbol{\Phi}\_{X}^T = \left[ \boldsymbol{\phi}(x\_1), \dots, \boldsymbol{\phi}(x\_N)\right] \in \mathbb{R}^{d \times N} \right)
-\vdots \\
 $$
 
 then the following identities hold:
@@ -66,7 +65,6 @@ then the following identities hold:
   [\boldsymbol{K}]\_{ij}=\boldsymbol{\phi}\left(\boldsymbol{x}\_{i}\right)^{T} \boldsymbol{\phi}(\boldsymbol{x}\_{j}) = \langle \boldsymbol{\phi}(\boldsymbol{x}\_{i}), \boldsymbol{\phi}(\boldsymbol{x}\_{j}) \rangle = k\left(\boldsymbol{x}\_{i}, \boldsymbol{x}\_{j}\right)
   $$
   
-
 - **Kernel vector**
 
   $$
