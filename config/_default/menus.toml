@@ -110,6 +110,27 @@
   weight = 60
   identifier = "notes-von-ro"
 
+# Deep Learning
+[[deep-learning]]
+  name = "Neural Network Basics"
+  weight = 10
+  identifier = "nn-basics"
+
+[[deep-learning]]
+  name = "Optimization Algorithms"
+  weight = 20
+  identifier = "optimization-algo"
+
+[[deep-learning]]
+  name = "CNN"
+  weight = 30
+  identifier = "cnn"
+
+[[deep-learning]]
+  name = "RNN"
+  weight = 40
+  identifier = "rnn"
+
 ################################
 # Courses
 ################################
