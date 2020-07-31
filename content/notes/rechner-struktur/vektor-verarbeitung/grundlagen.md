@@ -61,7 +61,7 @@ Es ergibt sich der neue Wert für `Y[i]` aus der Multiplikation von a mit `X[i]
 
 In **MIPS-Notation**:
 
-<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-31%2022.26.15.png" alt="截屏2020-07-31 22.26.15" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-31%2022.26.15.png" alt="截屏2020-07-31 22.26.15" style="zoom: 67%;" />
 
 Analyse:
 
