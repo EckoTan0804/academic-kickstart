@@ -96,9 +96,9 @@
   identifier = "multiprozessoren"
 
 [[rechner-struktur]]
-  name = "Weitere Rechnerstrukturen"
+  name = "Vektorverarbeitung"
   weight = 40
-  identifier = "weitere-rechnerstrukturen"
+  identifier = "vektor-verarbeitung"
 
 [[rechner-struktur]]
   name = "Übung Zusammenfassung"

@@ -177,38 +177,38 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "multiprozessoren"
 
 [[menu.rechner-struktur]]
-  name = "Weitere Rechnerstrukturen"
+  name = "Vektorverarbeitung"
   weight = 40
-  identifier = "weitere-rechnerstrukturen"
+  identifier = "vektor-verarbeitung"
 
 [[menu.rechner-struktur]]
   name = "Übung Zusammenfassung"
   weight = 50
   identifier = "uebung-zusammenfassung"
 
-[[rechner-struktur]]
+[[menu.rechner-struktur]]
   name = "Notes von Rechnerorganisation"
   weight = 60
   identifier = "notes-von-ro"
 
 
 # Deep Learning
-[[deep-learning]]
+[[menu.deep-learning]]
   name = "Neural Network Basics"
   weight = 10
   identifier = "nn-basics"
 
-[[deep-learning]]
+[[menu.deep-learning]]
   name = "Optimization Algorithms"
   weight = 20
   identifier = "optimization-algo"
 
-[[deep-learning]]
+[[menu.deep-learning]]
   name = "CNN"
   weight = 30
   identifier = "cnn"
 
-[[deep-learning]]
+[[menu.deep-learning]]
   name = "RNN"
   weight = 40
   identifier = "rnn"
