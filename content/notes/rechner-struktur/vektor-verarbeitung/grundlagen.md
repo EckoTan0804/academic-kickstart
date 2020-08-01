@@ -5,7 +5,7 @@ summary: ""
 weight: 40
 
 # Basic metadata
-title: "Grundlage"
+title: "Grundlagen"
 date: 2020-07-31
 draft: false
 type: docs # page type
@@ -21,7 +21,6 @@ reading_time: true # Show estimated reading time?
 summary: ""
 share: false  # Show social sharing links?
 featured: true
-lastmod: true
 
 comments: false  # Show comments?
 disable_comment: true
@@ -50,19 +49,18 @@ Einfaches Bsp:
 Y = a * X + Y
 ```
 
-- Wobei:
-  - `a`: eine Konstante
-  - `X`, `Y`: Vektoren
+Wobei:
 
-- Bildet die innere Schleife des Linpack-Benchmarks und wird auch als **SAXPY (Single Precision a x X plus Y)** bzw. **DAXPY (Double Precision a x X plus Y)** bezeichnet.
+- `a`: eine Konstante
+- `X`, `Y`: Vektoren
 
-- $\forall i, i = \text{Anzahl der Elemente des Vektors X und des Vektors Y}$
+$\forall i, i = \text{Anzahl der Elemente des Vektors X und des Vektors Y}$
 
-  Es ergibt sich der neue Wert für `Y[i]` aus der Multiplikation von a mit `X[i]` und der Addition des Zwischenergebnisses mit `Y[i]`
+Es ergibt sich der neue Wert für `Y[i]` aus der Multiplikation von a mit `X[i]` und der Addition des Zwischenergebnisses mit `Y[i]`
 
 In **MIPS-Notation**:
 
-<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-31%2022.26.15.png" alt="截屏2020-07-31 22.26.15" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-31%2022.26.15.png" alt="截屏2020-07-31 22.26.15" style="zoom:80%;" />
 
 Analyse:
 

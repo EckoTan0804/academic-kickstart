@@ -16,7 +16,6 @@ reading_time: true # Show estimated reading time?
 summary: ""
 share: false  # Show social sharinsg links?
 featured: true
-lastmod: true
 
 comments: false  # Show comments?
 disable_comment: true
