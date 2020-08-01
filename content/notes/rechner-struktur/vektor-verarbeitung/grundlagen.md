@@ -183,11 +183,11 @@ Technik, um die Zugriffsgeschwindigkeit auf den Hauptspeicher stärker an die V
     j = i \bmod n
     $$
 
-  - 
-
   - Zuteilung
+
     - der Adressen $A\_0, A\_n, A\_{2n},\dots$ auf die Speicherbank $M\_0$
     - der Adressen $A\_1, A\_{n+1}, A\_{2n+1},\dots$ auf die Speicherbank $M\_1$
     - etc.
+
   - $n$-fache Verschränkung: nach einer gewissen Anlaufzeit werden in jedem Speicherzyklus $n$ Speicherworte geliefert.
 
