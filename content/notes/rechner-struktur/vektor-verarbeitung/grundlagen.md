@@ -50,14 +50,15 @@ Einfaches Bsp:
 Y = a * X + Y
 ```
 
-Wobei:
+- Wobei:
+  - `a`: eine Konstante
+  - `X`, `Y`: Vektoren
 
-- `a`: eine Konstante
-- `X`, `Y`: Vektoren
+- Bildet die innere Schleife des Linpack-Benchmarks und wird auch als **SAXPY (Single Precision a x X plus Y)** bzw. **DAXPY (Double Precision a x X plus Y)** bezeichnet.
 
-$\forall i, i = \text{Anzahl der Elemente des Vektors X und des Vektors Y}$
+- $\forall i, i = \text{Anzahl der Elemente des Vektors X und des Vektors Y}$
 
-Es ergibt sich der neue Wert für `Y[i]` aus der Multiplikation von a mit `X[i]` und der Addition des Zwischenergebnisses mit `Y[i]`
+  Es ergibt sich der neue Wert für `Y[i]` aus der Multiplikation von a mit `X[i]` und der Addition des Zwischenergebnisses mit `Y[i]`
 
 In **MIPS-Notation**:
 
