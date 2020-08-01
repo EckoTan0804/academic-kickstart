@@ -18,7 +18,6 @@ reading_time: true # Show estimated reading time?
 summary: "Overview of Kernel Methods" 
 share: false  # Show social sharing links?
 featured: true
-lastmod: true
 
 comments: false  # Show comments?
 disable_comment: true
