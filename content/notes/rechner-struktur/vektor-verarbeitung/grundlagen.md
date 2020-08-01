@@ -97,6 +97,12 @@ Analyse:
 - Die Pipeline-Verarbeitung wird mit einem Vektorbefehl für zwei Felder von Gleitpunktzahlen durchgeführt.
 - Die bei den Gleitpunkteinheiten skalarer Prozessoren nötigen Adressrechnungen entfallen.
 
+### Vektorbefehle
+
+![截屏2020-08-01 12.44.22](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-01%2012.44.22.png)
+
+![截屏2020-08-01 12.44.43](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-01%2012.44.43.png)
+
 ### Pipelining
 
 - Taktdauer = Dauer der **längsten** Teilverarbeitungszeit zuzüglich der Stufentransferzeit
