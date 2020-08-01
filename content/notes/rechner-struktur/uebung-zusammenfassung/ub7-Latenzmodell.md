@@ -221,7 +221,7 @@ $$
 
 ### Teilaufgabe (b)
 
-**Berechnen Sie die end-to-end Latenz, falls als Switching-Strategie *packet switching im store-and-forward Modus * verwendet wird.**
+**Berechnen Sie die end-to-end Latenz, falls als Switching-Strategie *packet switching im store-and-forward Modus* verwendet wird.**
 
 Bei **packet switching im store-and-forward Modus**
 
