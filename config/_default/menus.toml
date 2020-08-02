@@ -131,6 +131,53 @@
   weight = 40
   identifier = "rnn"
 
+
+# NLP
+[[natural-language-processing]]
+  name = "Regular Expressions, Text Normalization, and Edit Distance"
+  weight = 10
+  identifier = "re-tn-ed"
+
+[[natural-language-processing]]
+  name = "Language Modeling with N-Grams"
+  weight = 20
+  identifier = "LM-N-gram"
+
+[[natural-language-processing]]
+  name = "Naive Bayes Classification and Sentiment"
+  weight = 30
+  identifier = "navie-bayes"
+
+[[natural-language-processing]]
+  name = "Logistic Regression"
+  weight = 40
+  identifier = "logistic-reg"
+
+[[natural-language-processing]]
+  name = "Vector Semantics and Embeddings"
+  weight = 50
+  identifier = "vector-semantics-embeddings"
+
+[[natural-language-processing]]
+  name = "Neural Nets and Neural Language Models"
+  weight = 60
+  identifier = "nn-LM"
+
+[[natural-language-processing]]
+  name = "Part-of-Speech Tagging"
+  weight = 70
+  identifier = "POS-tagging"
+
+[[natural-language-processing]]
+  name = "Sequence Processing with Recurrent Networks"
+  weight = 80
+  identifier = "sequence-processing-rnn"
+
+[[natural-language-processing]]
+  name = "Encoder-Decoder Models, Attention, and Contextual Embeddings"
+  weight = 90
+  identifier = "encoder-decoder"
+
 ################################
 # Courses
 ################################
