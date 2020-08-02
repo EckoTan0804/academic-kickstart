@@ -41,6 +41,12 @@ menu:
 
 ---
 
+{{% alert note %}} 
+
+TL;DR und Beispiele siehe [Übungszusammenfassung]({{< relref "../uebung-zusammenfassung/ub9-vektorrechner.md" >}})
+
+{{% /alert %}}
+
 ## Einführung
 
 Einfaches Bsp:
@@ -119,11 +125,12 @@ Analyse:
 
   (Die Ergebnisse einer Pipeline werden **SOFORT** der nächsten Pipeline zur Verfügung gestellt.)
 
-- Bsp
+- Bsp 1
 
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-31%2023.20.45.png" alt="截屏2020-07-31 23.20.45" style="zoom:80%;" />
 
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-31%2023.21.38.png" alt="截屏2020-07-31 23.21.38" style="zoom:67%;" />
+
 
 #### Typ von Pipeline
 
