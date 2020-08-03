@@ -10,7 +10,7 @@ date: 2020-08-02
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["NLP", "Regular Expressions"]
+tags: ["NLP", "Language models"]
 categories: ["NLP"]
 toc: true # Show table of contents?
 
@@ -40,6 +40,7 @@ menu:
         weight: 1
 
 ---
+
 **Language models (LMs)**: Model that assign probabilities to sequence of words
 
 **N-gram**: a sequence of N words
