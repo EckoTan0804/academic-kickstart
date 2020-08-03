@@ -43,15 +43,15 @@ menu:
 
 
 
-**Extrinsic evaluation**
+## **Extrinsic evaluation**
 
 - Best way to evaluate the performance of a language model
 
 - Embed LM in an application and measure how much the application improves
 - For speech recognition, we can compare the performance of two language models by running the speech recognizer twice, once with each language model, and seeing which gives the more accurate transcription.
-- 🔴 Problem: running big NLP systems end-to-end is often very expensive
+- 🔴 <span style="color:red">Problem: running big NLP systems end-to-end is often very expensive</span>
 
-**Intrinsic evaluation**: 
+## **Intrinsic evaluation**
 
 - measures the quality of a model independent of any application.
 
@@ -73,7 +73,7 @@ menu:
     3. then compare how well the two trained models fit the test set.
        - "Fit the test set" means: whichever model assigns a **higher probability** to the test set—meaning it more accurately predicts the test set—is a **better** model.
 
-### Perplexity
+## Perplexity
 
 Instead of raw probability as our metric for evaluating language models, in practice we use **perplexity**.
 
@@ -98,7 +98,7 @@ What we generally use for word sequence in perplexity computation is the ENTIRE 
 - the begin- and end-sentence markers `<s>` and `</s>` in the probability computation. 
 - the end-of-sentence marker `</s>` (but not the beginning-of-sentence marker `<s>`) in the total count of word tokens *N*.
 
-#### Another aspect 
+### Another aspect 
 
 We can also think about perpleixty as the **weighted average branching factor** of a language.
 
