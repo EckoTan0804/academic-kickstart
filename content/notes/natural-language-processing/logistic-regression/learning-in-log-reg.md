@@ -40,3 +40,15 @@ menu:
         weight: 2
 
 ---
+
+Logistic regression is an instance of supervised classification in which we know the correct label $y$ (either 0 or 1) for each observation $x$.
+
+The system produces/predicts $\hat{y}$, the estimate for the true $y$. We want to learn parameters ($w$ and $b$) that make $\hat{y}$ for each training observation **as close as possible** to the true $y$. 💪
+
+This requires two components:
+
+- **loss function**: also called **cost function**, a metric measures the distance between the system output and the gold output
+  - The loss function that is commonly used for logistic regression and also for neural networks is **[cross-entropy loss]({{< relref "cross-entropy.md" >}})**
+- **Optimization algorithm** for iteratively updating the weights so as to minimize this loss function
+  - Standard algorithm: [**gradient descent**]({{< relref "gradient-descent.md" >}})
+
