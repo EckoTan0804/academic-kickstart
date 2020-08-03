@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 300
+weight: 310
 
 # Basic metadata
 title: "N Gram"
