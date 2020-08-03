@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 350
+weight: 360
 
 # Basic metadata
 title: "Summary (TL;DR)"
@@ -37,7 +37,7 @@ header:
 menu: 
     natural-language-processing:
         parent: LM-N-gram
-        weight: 5
+        weight: 6
 
 ---
 
