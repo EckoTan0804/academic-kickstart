@@ -144,7 +144,7 @@
   identifier = "LM-N-gram"
 
 [[natural-language-processing]]
-  name = "Naive Bayes Classification and Sentiment"
+  name = "Naive Bayes and Sentiment Classification"
   weight = 30
   identifier = "navie-bayes"
 

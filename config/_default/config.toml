@@ -226,7 +226,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "LM-N-gram"
 
 [[menu.natural-language-processing]]
-  name = "Naive Bayes Classification and Sentiment"
+  name = "Naive Bayes and Sentiment Classification"
   weight = 30
   identifier = "navie-bayes"
 
