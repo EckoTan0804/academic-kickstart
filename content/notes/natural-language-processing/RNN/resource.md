@@ -43,23 +43,26 @@ menu:
 
 ## RNN
 
-- [Illustrated Guide to Recurrent Neural Networks]()
-  - Video Tutorial: {{< youtube LHXXI4-IEns >}}
+- Tutorials
+  - [Illustrated Guide to Recurrent Neural Networks](https://towardsdatascience.com/illustrated-guide-to-recurrent-neural-networks-79e5eb8049c9) :fire::thumbsup:
+    - Video Tutorial: {{< youtube LHXXI4-IEns >}}
 
 </br>
 
-- [零基础入门深度学习(5) - 循环神经网络](https://zybuluo.com/hanbingtao/note/541458)
+- Application of RNN:
+  - [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
 
 ## LSTM
 
-- [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
-- [Illustrated Guide to LSTM’s and GRU’s: A step by step explanation](https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21)
+- [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) :fire::thumbsup:
+- [Illustrated Guide to LSTM’s and GRU’s: A step by step explanation](https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21) :fire::thumbsup:
   - Video Tutorial: {{< youtube 8HyCNIVRbSU >}}
 
 </br>
 
 - [如何从RNN起步，一步一步通俗理解LSTM](https://blog.csdn.net/v_JULY_v/article/details/89894058)
 
-- [通俗有趣地解释RNN和LSTM](https://www.zhihu.com/question/314002073/answer/613515841)
+- [通俗有趣地解释RNN和LSTM](https://www.zhihu.com/question/314002073/answer/613515841) :fire::thumbsup:
 
   
+

@@ -1,11 +1,11 @@
 ---
 # Title, summary, and position in the list
-linktitle: "Summary"
+# linktitle: ""
 summary: ""
-weight: 980
+weight: 970
 
 # Basic metadata
-title: "RNN LSTM Summary"
+title: "RNN Summary"
 date: 2020-08-03
 draft: false
 type: docs # page type
@@ -37,7 +37,7 @@ header:
 menu: 
     natural-language-processing:
         parent: sequence-processing-rnn
-        weight: 8
+        weight: 7
 
 ---
 
@@ -45,5 +45,5 @@ menu:
 
 ## RNN
 
-## LSTM
+## Problem
 
