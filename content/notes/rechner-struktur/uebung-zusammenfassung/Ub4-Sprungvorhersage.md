@@ -37,8 +37,8 @@ menu:
 weight: 141
 ---
 
-- Fu ̈llung der Pipeline sicherstellen
-- Sprung hat zwei mo ̈gliche Ausgänge
+- Füllung der Pipeline sicherstellen
+- Sprung hat zwei mögliche Ausgänge
   - Taken (T)
   - Not Taken (NT)
 - Sprungvorhersage:
