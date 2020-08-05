@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 180
+weight: 190
 
 # Basic metadata
 title: "Ub9-Vektorrechner"
@@ -37,7 +37,7 @@ header:
 menu: 
     rechner-struktur:
         parent: uebung-zusammenfassung
-        weight: 15
+        weight: 16
 
 ---
 
