@@ -230,7 +230,7 @@ Verglichen mit der Schätzung von 4 chimes ergibt sich, dass die genauere Rechnu
 
 **Wie lange dauert ein Ladebefehl eines 64-elementigen Vektors bei 16 Speicherbänken und einer Latenz von 12 Zyklen**
 
-- **mit einem Stride von 1? **
+- **mit einem Stride von 1?**
 
 - **bei einem Stride von 32?**
 
