@@ -41,9 +41,77 @@ menu:
 
 ---
 
+
+
+## Problem of Vanilla RNN
+
+Problem of Vanilla RNN:
+
+- **Short-term memory**
+
+  If a sequence is long enough, they’ll have a hard time carrying information from earlier time steps to later ones. So if you are trying to process a paragraph of text to do predictions, RNN’s may leave out important information from the beginning.
+
+- **Vanishing gradient problem**
+
+  The gradient shrinks as it back propagates through time. If a gradient value becomes extremely small, it doesn’t contribute too much learning.
+
+  In recurrent neural networks, layers that get a small gradient update stops learning. Those are usually the earlier layers. So because these layers don’t learn, RNN’s can forget what it seen in longer sequences, thus having a short-term memory.
+
+Solution: **Long Short Term Memory (LSTM)**!
+
 ## Intuition 
 
-## LSTM
+Let’s say you’re looking at reviews online to determine if you want to buy Life cereal . You’ll first read the review then determine if someone thought it was good or if it was bad.
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*YHjfAgozQaghcsEvsBEu2g.png" alt="Image for post" style="zoom: 33%;" />
+
+When you read the review, your brain subconsciously only remembers important keywords. You pick up words like “amazing” and “perfectly balanced breakfast”. You don’t care much for words like “this”, “gave“, “all”, “should”, etc. If a friend asks you the next day what the review said, you probably wouldn’t remember it word for word. You might remember the main points though like “will definitely be buying again”.
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*ygAgowqTZjR6ABzZHd8Bqg.gif" alt="Image for post" style="zoom: 50%;" />
+
+And that is essentially what an LSTM does. **It can learn to keep only relevant information to make predictions, and forget non relevant data.**
+
+## LSTM Networks
+
+LSTM is explicitly designed to avoid the long-term dependency problem. They have internal mechanisms called **gates** that can regulate the flow of information. These gates can learn which data in a sequence is important to keep or throw away. By doing that, it can pass relevant information down the long chain of sequences to make predictions.
+
+In order to achieve a solid understanding of LSTM, let's start from the standard (vanilla) RNN.
+
+### Review of vanilla RNN
+
+All recurrent neural networks have the form of a chain of repeating modules of neural network. In standard RNNs, this repeating module will have a very simple structure, such as a single tanh layer.
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/LSTM3-SimpleRNN.png" alt="img" style="zoom:30%;" />
+
+An RNN works like this
+
+1. First words get transformed into machine-readable vectors. 
+2. Then the RNN processes the sequence of vectors one by one.
+
+![Image for post](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*AQ52bwW55GsJt6HTxPDuMA.gif)
+
+While processing, it passes the previous hidden state to the next step of the sequence. **The hidden state acts as the neural networks memory. It holds information on previous data the network has seen before.**
+
+![Image for post](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*o-Cq5U8-tfa1_ve2Pf3nfg.gif)
+
+Calculate the hidden state in each cell:
+
+![Image for post](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*WMnFSJHzOloFlJHU6fVN-g.gif)
+
+1. The input and previous hidden state are combined to form a vector. (That vector now has information on the current input and previous inputs)
+2. The vector goes through the tanh activation, and the output is the new hidden state, or the memory of the network.
+
+#### Tanh activation
+
+![Image for post](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*iRlEg1GBKRzGTre5aOQUCg.gif)
+
+The tanh function squishes values to always be between -1 and 1. Therefore it is used to help regulating the values flowing through the network.
+
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*gFC2bTg3uihp1klknWU0qg.gif" title="vector transformations with tanh">}}
+
+### LSTM
+
+
 
 ## Summary
 
