@@ -226,7 +226,7 @@ Verglichen mit der Schätzung von 4 chimes ergibt sich, dass die genauere Rechnu
 
 ### (d)Parallele Speicherzugriffe
 
-**Vektorbefehle werden oft durch ein spezielles Speichersystem mit Verschränkung (memory interleaving) und mehreren Speicherbänken unterstützt. **
+**Vektorbefehle werden oft durch ein spezielles Speichersystem mit Verschränkung (memory interleaving) und mehreren Speicherbänken unterstützt.**
 
 **Wie lange dauert ein Ladebefehl eines 64-elementigen Vektors bei 16 Speicherbänken und einer Latenz von 12 Zyklen**
 
