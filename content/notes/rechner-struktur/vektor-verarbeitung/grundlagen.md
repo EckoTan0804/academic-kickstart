@@ -152,15 +152,15 @@ Analyse:
 
   durch die Stufenzahl der betrachteten Vektor-Pipeline gegeben
 
-- Mehrere Vektor-Pipelines in einer Vektoreinheit
+- **Mehrere Vektor-Pipelines in einer Vektoreinheit**
 
   - mehrere, meist funktional verschiedene Vektor-Pipelines in einer Vektoreinheit, durch Verkettung hintereinander geschaltet
 
-- Vervielfachung der Pipelines
+- **Vervielfachung der Pipelines**
 
   - Bei Ausführung eines Vektorbefehl pro Takt nicht nur ein Paar von Operanden in eine Pipeline, sondern jeweils ein Operandenpaar in zwei oder mehr parallel arbeitende gleichartige Pipelines eingespeist werden.
 
-- Mehrere Vektoreinheiten
+- **Mehrere Vektoreinheiten**
 
   die parallel zueinander nach Art eines speichergekoppelten Multiprozessors arbeiten.
 
