@@ -197,4 +197,8 @@ Technik, um die Zugriffsgeschwindigkeit auf den Hauptspeicher stärker an die V
     - etc.
 
   - $n$-fache Verschränkung: nach einer gewissen Anlaufzeit werden in jedem Speicherzyklus $n$ Speicherworte geliefert.
+  
+  - Bsp:
+  
+    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-06%2012.36.19.png" alt="截屏2020-08-06 12.36.19" style="zoom:67%;" />
 
