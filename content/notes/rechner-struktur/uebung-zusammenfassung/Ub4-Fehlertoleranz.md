@@ -90,7 +90,7 @@ weight: 140
 - Funktionsfähigkeit
   $$
   \varphi_{m}^{n}=\sum_{k=n}^{m}\left(\begin{array}{c}
-  m \\
+  m \\\\
   k
   \end{array}\right) * \varphi(K)^{k} *(1-\varphi(K))^{(m-k)}
   $$
