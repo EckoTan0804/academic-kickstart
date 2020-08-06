@@ -104,7 +104,7 @@ Anzahl der Links auf dem kürzesten Pfad zwischen zwei Knoten
 
 ## Latenz- und Bandbreitenmodell: End-to-end packet latency model
 
-![截屏2020-07-24 22.02.34](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-24 22.02.34.png)
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-24%2022.02.34-20200806221332097.png">}}
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-24%2022.04.04.png" alt="截屏2020-07-24 22.04.04" style="zoom:80%;" />
 
