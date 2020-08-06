@@ -320,6 +320,10 @@ Daraus ergibt sich:
 
   - $a$: Anteil des Programmteils, der **nur sequentiell** ausgeführt werden kann
 
+    
+  
+  - $n$: Beschleunigungsfaktor (bspw. die Anzahl der Prozessoren)
+  
 - Beschleunigung
   $$
   \begin{aligned}
