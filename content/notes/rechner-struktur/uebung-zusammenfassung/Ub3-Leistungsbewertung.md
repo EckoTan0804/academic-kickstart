@@ -39,14 +39,15 @@ weight: 130
 
 ## TL;DR
 
+- $c$: Anzahl der Zyklen
+- $i$: Anzahle der Instruktionen
 - CPI: $CPI = \frac{c}{i}$
-  - $CPI = \displaystyle \sum_{i=1}^{n}CPI_i \cdot Anteil_i$
+  - $CPI = \displaystyle \sum_{j=1}^{n}CPI\_j \cdot Anteil\_j$
 - MIPS: $MIPS = \frac{i}{t\cdot 10^6}$
 - Taktrate: $f=\frac{c}{t}$
 - CPU-Zeit: $t_{cpu}=c \cdot t_{Zyklus}$
-
 - Anzahl Instruktionen: $i = \sum i_{typ}$
-- Takyzyklen: $c=\sum i_{typ}\cdot c_{typ}$
+- Taktyklen: $c=\sum i_{typ}\cdot c_{typ}$
 - Ausführungszeit: $t_{exec}=c \cdot t_{cyc}$
 - Bedienzeit: $t_{Bedien} = t_{Zugriff} + t_{Übertragung}$
 - Maximaler Durchsatz: $D_{\max} = \frac{1}{t_{Bedien}}$
@@ -68,7 +69,7 @@ weight: 130
 
 - **Betriebssicht**: Erhöhung von Anzahl 
 
-  - durchgefu ̈hrter Jobs
+  - durchgeführter Jobs
 
   - Durchsatz
 
@@ -187,7 +188,7 @@ $$
 $$
   \qquad D_{\max} = \frac{1}{t_{\text{Bedien}}}
 $$
-  
+
   - Nur Platten mit $D_{\max}$ > Ankunftsrate können eingesetzt werden, da sonst die Festplatte nicht genügend Zeit hat, um alle Aufträge rechtzeitig zu bedienen.
   
 - **Auslastung**
