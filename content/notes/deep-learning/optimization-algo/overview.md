@@ -1,6 +1,6 @@
 ---
 # Title, summary, and position in the list
-linktitle: "Overview"
+# linktitle: ""
 summary: ""
 weight: 20
 
