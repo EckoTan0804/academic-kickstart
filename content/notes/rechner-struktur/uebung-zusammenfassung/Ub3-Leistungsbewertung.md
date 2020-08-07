@@ -41,7 +41,8 @@ weight: 130
 
 - $c$: Anzahl der Zyklen
 - $i$: Anzahle der Instruktionen
-- CPI: $CPI = \frac{c}{i}$
+- CPI: 
+  - $CPI = \frac{c}{i}$
   - $CPI = \displaystyle \sum_{j=1}^{n}CPI\_j \cdot Anteil\_j$
 - MIPS: $MIPS = \frac{i}{t\cdot 10^6}$
 - Taktrate: $f=\frac{c}{t}$
