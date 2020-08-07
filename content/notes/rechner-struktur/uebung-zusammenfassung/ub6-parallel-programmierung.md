@@ -145,7 +145,7 @@ Ausgangspunkt: ein sequentielles Programm
 - Unterstützung vom Betriebsystem notwendig
 - Explizite Synchronisation notwendig!
 - 👍 <span style="color:green">**Vorteile**: durch die Thread-Bibliothek erhält man eine detailierte Kontrolle über die Threads</span>
-- 👎 <span style="color:red">**Nachteil**: die Thread-Bibliothek erzwingt, dass man die Kontrolle u ̈ber die Threads u ̈bernimmt</span>
+- 👎 <span style="color:red">**Nachteil**: die Thread-Bibliothek erzwingt, dass man die Kontrolle über die Threads übernimmt</span>
 - Bsp: OpenMP
 
 ### Message Passing
