@@ -136,17 +136,30 @@ Ausgangspunkt: ein sequentielles Programm
 
 #### Thread-Programmierung
 
-- Parallele Programme für Shared-Memory-Systeme bestehen aus mehreren Threads
+- Parallele Programme für **Shared-Memory-Systeme** bestehen aus mehreren Threads
+
 - Alle Threads eines Prozesses teilen sich 
   - Adressraum, 
   - Daten, 
   - Filehandler, . . .
+  
 - Threads werden meist vom Betriebsystem verwaltet
+
 - Unterstützung vom Betriebsystem notwendig
+
 - Explizite Synchronisation notwendig!
+
 - 👍 <span style="color:green">**Vorteile**: durch die Thread-Bibliothek erhält man eine detailierte Kontrolle über die Threads</span>
+
 - 👎 <span style="color:red">**Nachteil**: die Thread-Bibliothek erzwingt, dass man die Kontrolle über die Threads übernimmt</span>
-- Bsp: OpenMP
+
+- Bsp: **OpenMP**
+
+  - Verwendet das **Join-Fork-Modell**
+
+    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-07%2010.44.35.png" alt="截屏2020-08-07 10.44.35" style="zoom:80%;" />
+
+  - Einsatz insbesondere im Bereich der UMA-Architekturen
 
 ### Message Passing
 
@@ -162,10 +175,11 @@ Ausgangspunkt: ein sequentielles Programm
 
 #### Message Passing Interface (MPI)
 
-- ein Standard für die nachrichtenbasierte Kommunikation in einem Multiprozessorsystem
-- Nachrichtenbasierter Ansatz gewährleistet eine gute Skalierbarkeit
+- Ein Standard für die nachrichtenbasierte Kommunikation in einem Multiprozessorsystem
+- Nachrichtenbasierter Ansatz gewährleistet eine <span style="color:green">gute Skalierbarkeit</span>
 - Bibliotheksfunktionen koordinieren die Ausführung von mehreren Prozessen, sowie Verteilung von Daten, per Default keine gemeinsamen Daten
 - **Single Program Multiple Data (SPMD)** Ansatz
+- Einsatz insbesondere im Bereich der NORMA-Architekturen
 - Bsp: `<mpi.h>`
 
 ### Shared Memory + Message Passing
