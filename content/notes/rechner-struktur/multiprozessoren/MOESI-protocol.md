@@ -92,6 +92,18 @@ This protocol, a more elaborate version of the simpler [MESI protocol](https://e
 
   
 
+### Active CPU
+
+![img](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/500px-MOESI-Zustandsdiagramm_für_aktive_CPUs.png)
+
+### Passive CPU
+
+![img](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/500px-MOESI-Zustandsdiagramm_für_passive_CPUs.png)
+
+
+
+
+
 ## Example
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-31%2012.04.44.png" alt="截屏2020-07-31 12.04.44" style="zoom:67%;" />
