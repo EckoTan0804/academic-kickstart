@@ -127,13 +127,13 @@ weight: 140
 
 - **MTTR** (Mean Time to Repair/Recover) 
   
-- mittlere Reparaturzeit
+  - mittlere Reparaturzeit
+    
+  - Für über die Zeit konstante Ausfallraten gilt außerdem:
   
-- Für über die Zeit konstante Ausfallraten gilt außerdem:
   $$
   \lambda = \frac{1}{MTTF}
   $$
-  
 
 > Source: https://limblecmms.com/blog/mttr-mtbf-mttf-guide-to-failure-metrics/
 >
