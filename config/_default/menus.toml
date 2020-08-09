@@ -110,6 +110,11 @@
   weight = 60
   identifier = "notes-von-ro"
 
+[[rechner-struktur]]
+  name = "Alte Klausur Zusammenfassung"
+  weight = 70
+  identifier = "alte-klausur-zusammenfassung"
+
 # Deep Learning
 [[deep-learning]]
   name = "Neural Network Basics"
