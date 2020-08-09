@@ -117,11 +117,11 @@ Annahmen:
 - Die Routing-Entscheidung in einem Schaltelement benötigt $R$ Netzwerkzyklen
 - Sender OH und Receiver OH sind fest
 
-|                                                              | Time of Flight | Transmission time | Routing time                                                 |
-| ------------------------------------------------------------ | -------------- | ----------------- | ------------------------------------------------------------ |
-| **Circuit Switching**                                        | $L$            | $N$               | <li>Informieren von Aufbau des Wegs zwischen Quelle und Ziel: $L$<li>Routing-Entscheidung (Routing OH) in Schaltelemente: $L \times R$<br />​<br />Insgesamt: $L + L \times R$ |
-| **Packet Switching (Store-and-forward)<br />**<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-25%2011.26.57.png" alt="截屏2020-07-25 11.26.57" style="zoom:80%;" /> | $L \times N$   | $N$               | $L \times R$                                                 |
-| **Packet Switching (cut-through)** <br /><img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-25%2011.54.56.png" alt="截屏2020-07-25 11.54.56" style="zoom:80%;" /> | $L$            | $N$               | $L \times R$                                                 |
+|                                                              | Time of Flight<br />(in Zyklus) | Transmission time<br />(in Zyklus) | Routing time<br />(in Zyklus)                                |
+| ------------------------------------------------------------ | ------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
+| **Circuit Switching**                                        | $L$                             | $N$                                | <li>Informieren von Aufbau des Wegs zwischen Quelle und Ziel: $L$<li>Routing-Entscheidung (Routing OH) in Schaltelemente: $L \times R$<br />​<br />Insgesamt: $L + L \times R$ |
+| **Packet Switching (Store-and-forward)<br />**<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-25%2011.26.57.png" alt="截屏2020-07-25 11.26.57" style="zoom:80%;" /> | $L \times N$                    | $N$                                | $L \times R$                                                 |
+| **Packet Switching (cut-through)** <br /><img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-25%2011.54.56.png" alt="截屏2020-07-25 11.54.56" style="zoom:80%;" /> | $L$                             | $N$                                | $L \times R$                                                 |
 
 
 

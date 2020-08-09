@@ -59,12 +59,12 @@ menu:
 
 ## SS18
 
-- [ ] Funktionswahrscheinlichkeit
-- [ ] MTTF
-- [ ] dynamische Redundanz
-- [ ] $k$-äre $n$-Kubus
-- [ ] e2e latency model
-- [ ] BTAC
+- [x] Funktionswahrscheinlichkeit
+- [x] MTTF
+- [x] dynamische Redundanz
+- [x] $k$-äre $n$-Kubus
+- [x] e2e latency model
+- [x] BTAC
 - [ ] (m, n)-Korrelationsprädiktor
 - [ ] Cache-Kohärenz in Multiprozessor
 - [ ] Eigenschaften von RISC
