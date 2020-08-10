@@ -141,7 +141,7 @@ $$
 
 - $4 \times 4$ Mesh Verbindungsnetzwerk
 - Ein Paket mit der Größe 100 Bytes soll vom linken oberen Knoten des Netzwerks zum rechten unteren Knoten übertragen werden
-- Größe eines Hits: 10 Bits
+- Größe eines Phits: 10 Bits
 - Frequenz des Verbindungsnetzwerks: 100 MHz
 - Routing OH: 1 Taktzyklus
 - Sender/Receiver OH: 10ns
