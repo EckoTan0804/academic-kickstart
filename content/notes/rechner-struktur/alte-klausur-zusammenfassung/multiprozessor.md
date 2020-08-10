@@ -83,3 +83,9 @@ Annahmen:
 | **Packet Switching (Store-and-forward)<br />**<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-25%2011.26.57.png" alt="截屏2020-07-25 11.26.57" style="zoom:80%;" /> | $(L-1) \times N + 1$            | $N-1$                              | $L \times R$                                                 |
 | **Packet Switching (cut-through)** <br /><img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-07-25%2011.54.56.png" alt="截屏2020-07-25 11.54.56" style="zoom:80%;" /> | $L$                             | $N-1$                              | $L \times R$                                                 |
 
+{{% alert warning %}}
+Achtung:
+
+Die Einheit der Maße in der obigen Tabelle ist **Zyklus**. Um die Ausführungszeit zu berechnen, müssen sie noch mit Zykluszeit $T\_C$ multiplizieren!
+
+{{% /alert %}}
