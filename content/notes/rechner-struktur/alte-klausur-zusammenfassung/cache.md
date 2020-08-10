@@ -43,10 +43,10 @@ menu:
 
 ## Cache Miss
 
-- Compulsory/Cold Miss
-- Capacity Miss
-- Conflict Miss
-- Coherency Miss
+- **Compulsory/Cold Miss**
+- **Capacity Miss**
+- **Conflict Miss**
+- **Coherency Miss**
   - Nur bei Multiprozessor-Systemen mit Kohärenzprotokoll
   - Unterscheidung zwischen False- und True-Sharing
   - False-Sharing, falls nicht eigentliches Wort sondern anderes Wort in Cache-Block geändert wurde (See also: [What’s false sharing and how to solve it](https://medium.com/@genchilu/whats-false-sharing-and-how-to-solve-it-using-golang-as-example-ef978a305e10))
@@ -78,3 +78,31 @@ Klassifizieren Sie die auftretenden Cache Misses. Unterscheiden Sie dabei zwis- 
 >   Variable B ist in Zeile 7 geändert. D.h. das eigentliche (dasselbe) Wort wird geändert
 >
 >   $\Rightarrow$ True-Sharing
+
+
+
+## Mehrstufiger Cache-Architektur
+
+{{% alert warning %}} 
+
+Achtung:
+
+Wie der Zugriff auf die nächste Ebene stattfindet (sequentiell oder parallel)?
+
+{{% /alert %}}
+
+- Beim **sequntiellen** Zugriffe auf die nächste Ebene
+  $$
+  t\_{a}=\underbrace{r\_{H 1} * t\_{L 1}}\_{\text{Hit L1}} + \underbrace{r\_{M1} *(\underbrace{r\_{H2} *\left(t\_{L1}+t\_{L2}\right)}\_{\text{Hit L2}}+\underbrace{r\_{M2} *(t\_{L1}+t\_{L2}+t\_{Mem})}\_{\text{Miss L2}})}\_{\text{Miss L1}}
+  $$
+  - Bsp: SS18, Aufg.3, (b)
+
+- Beim **parallelen** Zugriffe auf die nächste Ebene
+
+  - Die Zugriffszeit höherer Ebene beim Miss kann in Zugriffszeit niedrigerer Ebene verstecken.
+
+  $$
+  t\_{a}=\underbrace{r\_{H 1} * t\_{L 1}}\_{\text{Hit L1}} + \underbrace{r\_{M1} *(\underbrace{r\_{H2} *t\_{L2}}\_{\text{Hit L2}}+\underbrace{r\_{M2} *t\_{Mem}}\_{\text{Miss L2}})}\_{\text{Miss L1}}
+  $$
+
+  - Bsp: WS1819,  Aufg.3, (c)
