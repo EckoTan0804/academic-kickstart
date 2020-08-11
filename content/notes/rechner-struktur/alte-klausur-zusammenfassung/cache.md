@@ -95,6 +95,7 @@ Wie der Zugriff auf die nächste Ebene stattfindet (sequentiell oder parallel)?
   $$
   t\_{a}=\underbrace{r\_{H 1} * t\_{L 1}}\_{\text{Hit L1}} + \underbrace{r\_{M1} *(\underbrace{r\_{H2} *\left(t\_{L1}+t\_{L2}\right)}\_{\text{Hit L2}}+\underbrace{r\_{M2} *(t\_{L1}+t\_{L2}+t\_{Mem})}\_{\text{Miss L2}})}\_{\text{Miss L1}}
   $$
+
   - Bsp: SS18, Aufg.3, (b)
 
 - Beim **parallelen** Zugriffe auf die nächste Ebene
@@ -106,3 +107,15 @@ Wie der Zugriff auf die nächste Ebene stattfindet (sequentiell oder parallel)?
   $$
 
   - Bsp: WS1819,  Aufg.3, (c)
+
+
+
+## Cache Kohärenzprotokolle
+
+- Verzeichnis-/Tabellen-basierte Protokolle (directory-based protocols)
+- Snooping-Protokolle (Bus-Schnüffeln)
+  - Write-Invalid Protokoll
+    - MSI
+    - MESI
+    - MOESI
+  - Write-Update Protokoll

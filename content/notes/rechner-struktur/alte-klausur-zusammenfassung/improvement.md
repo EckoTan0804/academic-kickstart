@@ -65,19 +65,33 @@ menu:
 - [x] $k$-äre $n$-Kubus
 - [x] e2e latency model
 - [x] BTAC
-- [ ] (m, n)-Korrelationsprädiktor
-- [ ] Cache-Kohärenz in Multiprozessor
-- [ ] Eigenschaften von RISC
+- [x] (m, n)-Korrelationsprädiktor
+- [x] Cache-Kohärenz in Multiprozessor
+- [x] Kosten pro Die
+- [x] Eigenschaften von RISC
 
 
 
+## WS1819
+
+- [x] Zuverlässigkeit und Fehlertoleranz
+- [x] Strukturbaum
+- [x] Def. von Perfektionskern
+- [x] Def von Bestandteil von e2e latency modell
+- [x] Kohärenz und Konsistenz
+- [x] 3 Signale in MESI Protokoll
+- [x] Cache-Konhärenzproblem bei Multiprozessor
+- [x] Multithreading
+- [x] Pipelining Konzepte und Definition
 
 
 
+## SS19
 
-
-
-
+- [x] Ausfallrate Berechnen
+- [x] Skalierbarkeit
+- [x] Fertigungskosten pro Die
+- [x] Monitore
 
 
 
