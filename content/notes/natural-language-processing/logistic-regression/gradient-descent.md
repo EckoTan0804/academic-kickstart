@@ -178,16 +178,16 @@ It is common to begin the learning rate at a higher value, and then slowly decre
 Define the mini-batch version of the cross-entropy loss function (assuming the training examples are independent):
 $$
 \begin{aligned}
-\log p(\text {training labels}) &=\log \prod_{i=1} p\left(y^{(i)} | x^{(i)}\right) \\\\
-&=\sum_{i=1}^{m} \log p\left(y^{(i)} | x^{(i)}\right) \\\\
-&=-\sum_{i=1}^{m} L_{C E}\left(\hat{y}^{(i)}, y^{(i)}\right)
+\log p(\text {training labels}) &=\log \prod\_{i=1} p\left(y^{(i)} | x^{(i)}\right) \\\\
+&=\sum\_{i=1}^{m} \log p\left(y^{(i)} | x^{(i)}\right) \\\\
+&=-\sum\_{i=1}^{m} L\_{C E}\left(\hat{y}^{(i)}, y^{(i)}\right)
 \end{aligned}
 $$
 The cost function for the mini-batch of $m$ examples is the **average loss** for each example:
 $$
 \begin{aligned}
-\operatorname{cost}(w, b) &=\frac{1}{m} \sum_{i=1}^{m} L_{C E}\left(\hat{y}^{(i)}, y^{(i)}\right) \\\\
-&=-\frac{1}{m} \sum_{i=1}^{m} y^{(i)} \log \sigma\left(w \cdot x^{(i)}+b\right)+\left(1-y^{(i)}\right) \log \left(1-\sigma\left(w \cdot x^{(i)}+b\right)\right)
+\operatorname{cost}(w, b) &=\frac{1}{m} \sum\_{i=1}^{m} L_{C E}\left(\hat{y}^{(i)}, y^{(i)}\right) \\\\
+&=-\frac{1}{m} \sum\_{i=1}^{m} y^{(i)} \log \sigma\left(w \cdot x^{(i)}+b\right)+\left(1-y^{(i)}\right) \log \left(1-\sigma\left(w \cdot x^{(i)}+b\right)\right)
 \end{aligned}
 $$
 The mini-batch gradient is the average of the individual gradients:
