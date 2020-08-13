@@ -43,3 +43,10 @@ menu:
 {{% staticref "files/the-gradient-descent-optimization-algo.pdf" "newtab" %}}Seminar paper of gradient descent optimization algorithms{{% /staticref %}}
 
 {{% staticref "files/the-gradient-descent-optimization-algo(slide).pdf" "newtab" %}}Slide of gradient descent optimization algorithms{{% /staticref %}}
+
+
+
+## Resource
+
+- [Calculus on Computational Graphs: Backpropagation](http://colah.github.io/posts/2015-08-Backprop/)
+

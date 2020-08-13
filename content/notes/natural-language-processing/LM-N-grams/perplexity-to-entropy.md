@@ -58,7 +58,7 @@ A better n-gram model is one that assigns a higher probability to the test data,
 
 - The entropy of the random variable $X$ is
   $$
-  H(X)=-\sum_{x \in \chi} p(x) \log _{2} p(x)
+  H(X)=-\sum\_{x \in \chi} p(x) \log\_{2} p(x)
   $$
 
   - If we use log base 2, the resulting value of entropy will be measured in **bits**.
@@ -78,7 +78,7 @@ Suppose that the spread is the actual distribution of the bets placed and that w
 The entropy of the random variable *X* that ranges over horses gives us a lower bound on the number of bits and is
 $$
 \begin{aligned}
-H(X) &=-\sum_{i=1}^{i=8} p(i) \log p(i) \\\\
+H(X) &=-\sum\_{i=1}^{i=8} p(i) \log p(i) \\\\
 &=-\frac{1}{2} \log \frac{1}{2}-\frac{1}{4} \log \frac{1}{4}-\frac{1}{8} \log \frac{1}{8}-\frac{1}{16} \log \frac{1}{16}-4\left(\frac{1}{64} \log \frac{1}{64}\right) \\\\
 &=2 \text { bits }
 \end{aligned}
@@ -87,26 +87,26 @@ A code that averages 2 bits per race can be built with *short* encodings for *mo
 
 Suppose horses are equally likely. In this case each horse would have a probability of $\frac{1}{8}$. The entropy is then
 $$
-H(X)=-\sum_{i=1}^{i=8} \frac{1}{8} \log \frac{1}{8}=-\log \frac{1}{8}=3 \mathrm{bits}
+H(X)=-\sum\_{i=1}^{i=8} \frac{1}{8} \log \frac{1}{8}=-\log \frac{1}{8}=3 \mathrm{bits}
 $$
 
 ------
 
 Most of what we will use entropy for involves ***sequences***.
 
-For a grammar, for example, we will be computing the entropy of some sequence of words $W=\{w_0, w_1, w_2, \dots, w_n\}$. One way to do this is to have a variable that ranges over sequences of words. For example we can compute the entropy of a random variable that ranges over all ***finite*** sequences of words of length $n$ in some language $L$
+For a grammar, for example, we will be computing the entropy of some sequence of words $W=\{w\_0, w\_1, w\_2, \dots, w\_n\}$. One way to do this is to have a variable that ranges over sequences of words. For example we can compute the entropy of a random variable that ranges over all ***finite*** sequences of words of length $n$ in some language $L$
 $$
-H\left(w_{1}, w_{2}, \ldots, w_{n}\right)=-\sum_{W_{1}^{n} \in L} p\left(W_{1}^{n}\right) \log p\left(W_{1}^{n}\right)
+H\left(w\_{1}, w\_{2}, \ldots, w\_{n}\right)=-\sum_{W\_{1}^{n} \in L} p\left(W\_{1}^{n}\right) \log p\left(W\_{1}^{n}\right)
 $$
 **Entropy rate** (**per-word entropy**): entropy of this sequence divided by the number of word
 $$
-\frac{1}{n} H\left(W_{1}^{n}\right)=-\frac{1}{n} \sum_{W_{1}^{n} \in L} p\left(W_{1}^{n}\right) \log p\left(W_{1}^{n}\right)
+\frac{1}{n} H\left(W\_{1}^{n}\right)=-\frac{1}{n} \sum_{W\_{1}^{n} \in L} p\left(W\_{1}^{n}\right) \log p\left(W\_{1}^{n}\right)
 $$
 For sequence $L$ of ***infinite*** length, the entropy rate $H(L)$ is
 $$
 \begin{aligned}
-H(L) &=\lim _{n \rightarrow \infty} \frac{1}{n} H\left(w_{1}, w_{2}, \ldots, w_{n}\right) \\
-&=-\lim _{n \rightarrow \infty} \frac{1}{n} \sum_{W \in L} p\left(w_{1}, \ldots, w_{n}\right) \log p\left(w_{1}, \ldots, w_{n}\right)
+H(L) &=\lim \_{n \rightarrow \infty} \frac{1}{n} H\left(w\_{1}, w\_{2}, \ldots, w\_{n}\right) \\\\
+&=-\lim \_{n \rightarrow \infty} \frac{1}{n} \sum_{W \in L} p\left(w\_{1}, \ldots, w_{n}\right) \log p\left(w\_{1}, \ldots, w\_{n}\right)
 \end{aligned}
 $$
 
@@ -114,7 +114,7 @@ $$
 
 If the language is regular in certain ways (to be exact, if it is both **stationary** and **ergodic**), then
 $$
-H(L)=\lim _{n \rightarrow \infty}-\frac{1}{n} \log p\left(w_{1} w_{2} \ldots w_{n}\right)
+H(L)=\lim \_{n \rightarrow \infty}-\frac{1}{n} \log p\left(w\_{1} w\_{2} \ldots w\_{n}\right)
 $$
 I.e., we can take a single sequence that is long enough instead of summing over all possible sequences. 
 
@@ -140,14 +140,18 @@ Useful when we don’t know the actual probability distribution $p$ that generat
 It allows us to use some $m$, which is a model of $p$ (i.e., an approximation to $p$). The
 
 cross-entropy of $m$ on $p$ is defined by
+
+
 $$
-H(p, m)=\lim _{n \rightarrow \infty}-\frac{1}{n} \sum_{W \in L} p\left(w_{1}, \ldots, w_{n}\right) \log m\left(w_{1}, \ldots, w_{n}\right)
+H(p, m)=\lim\_{n \rightarrow \infty}-\frac{1}{n} \sum\_{W \in L} p\left(w\_{1}, \ldots, w\_{n}\right) \log m\left(w\_{1}, \ldots, w\_{n}\right)
 $$
+
+
 (we draw sequences according to the probability distribution $p$, but sum the log of their probabilities according to $m$)
 
 Following the Shannon-McMillan-Breiman theorem, for a stationary ergodic process: 
 $$
-H(p, m)=\lim _{n \rightarrow \infty}-\frac{1}{n} \log m\left(w_{1} w_{2} \ldots w_{n}\right)
+H(p, m)=\lim\_{n \rightarrow \infty}-\frac{1}{n} \log m\left(w\_{1} w\_{2} \ldots w\_{n}\right)
 $$
 (as for entropy, we can estimate the cross-entropy of a model $m$ on some distribution $p$ by taking a single sequence that is long enough instead of summing over all possible sequences)
 
