@@ -236,7 +236,7 @@ At the time step $t$:
   - $d \mathbf{f}\_{t}=\mathbf{c}\_{t-1} d \mathbf{c}\_{t}$
   - $d \mathbf{c}\_{t-1}+=\mathbf{f}\_{t} \circ d \mathbf{c}\_{t}$ (derivation see: [Error propagation](#error-propagation))
 
-What's more, we backpropagate activation functions over the whole sequence *(As the weights $w\_{xo}, W\_{xi}, W\_{xf}, W\_{xc}$ are shared across the whole sequence, we need to take the same summation over $t$ as in RNNs)*:
+What's more, we backpropagate activation functions over the whole sequence *(As the weights $W\_{xo}, W\_{xi}, W\_{xf}, W\_{xc}$ are shared across the whole sequence, we need to take the same summation over $t$ as in RNNs)*:
 $$
 \begin{aligned}
 d W\_{x o} &=\sum\_{t} \mathbf{o}\_{t}\left(1-\mathbf{o}\_{t}\right) \mathbf{x}\_{t} d \mathbf{o}\_{t} \\\\
@@ -378,9 +378,26 @@ $$
 \end{aligned}
 $$
 
+## Derivative of Sigmoid
 
-
-
+Sigmoid:
+$$
+\sigma(x)=\frac{1}{1+e^{-x}}
+$$
+Derivative:
+$$
+\begin{aligned}
+\frac{d}{d x} \sigma(x) &=\frac{d}{d x}\left[\frac{1}{1+e^{-x}}\right] \\\\
+&=\frac{d}{d x}\left(1+\mathrm{e}^{-x}\right)^{-1} \\\\
+&=-\left(1+e^{-x}\right)^{-2}\left(-e^{-x}\right) \\\\
+&=\frac{e^{-x}}{\left(1+e^{-x}\right)^{2}} \\\\
+&=\frac{1}{1+e^{-x}} \cdot \frac{e^{-x}}{1+e^{-x}} \\\\
+&=\frac{1}{1+e^{-x}} \cdot \frac{\left(1+e^{-x}\right)-1}{1+e^{-x}} \\\\
+&=\frac{1}{1+e^{-x}} \cdot\left(\frac{1+e^{-x}}{1+e^{-x}}-\frac{1}{1+e^{-x}}\right) \\\\
+&=\frac{1}{1+e^{-x}} \cdot\left(1-\frac{1}{1+e^{-x}}\right) \\\\
+&=\sigma(x) \cdot(1-\sigma(x))
+\end{aligned}
+$$
 
 ## Reference
 
