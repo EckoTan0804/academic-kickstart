@@ -313,7 +313,7 @@ $$
 
 3. **Backward**
 
-   Backpropage the error from $T$ to $1$ using equations in [Derivative](#derivative). Then use gradient $d\boldsymbol{\theta}$to update the parameters $\boldsymbol{\theta}=\left\\{W\_{h z}, W\_{x o}, W\_{x i}, W\_{x f}, W\_{x c}, W\_{h o}, W\_{h i}, W\_{h f}, W\_{h c}\right\\}$. For example, if we use SGD, we have:
+   Backpropage the error from $T$ to $1$ using equations in [Derivatives](#derivative). Then use gradient $d\boldsymbol{\theta}$ to update the parameters $\boldsymbol{\theta}=\left\\{W\_{h z}, W\_{x o}, W\_{x i}, W\_{x f}, W\_{x c}, W\_{h o}, W\_{h i}, W\_{h f}, W\_{h c}\right\\}$. For example, if we use SGD, we have:
    $$
    \boldsymbol{\theta}=\boldsymbol{\theta}-\eta d \boldsymbol{\theta}
    $$
