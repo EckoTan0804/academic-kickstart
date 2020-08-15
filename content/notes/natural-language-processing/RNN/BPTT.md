@@ -41,6 +41,10 @@ menu:
 
 ---
 
+Recurrent neural networks (RNNs) have attracted great attention on sequential tasks. However, compared to general feedforward neural networks, it is a little bit harder to train RNNs since RNNs have feedback loops.
+
+In this article, we dive into basics, especially the error backpropagation to compute gradients with respect to model parameters. Furthermore, we go into detail on how error backpropagation algorithm is applied on long short-term memory (LSTM) by unfolding the memory unit.
+
 ## BPTT in RNN
 
 {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-13%2021.45.04.png" title="Left: recursive description. Right: unrolled RNN in a time sequential manner" numbered="true" >}}
