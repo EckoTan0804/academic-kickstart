@@ -40,6 +40,8 @@ menu:
     python:
         parent: py-basics
         weight: 3
+
+weight: 13
 ---
 
 ### [Change Value in List Based on Conditions](/notes/python/py-basics/py-list/change-values-in-list/)

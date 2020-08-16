@@ -33,6 +33,8 @@ menu:
     python:
         parent: py-basics
         weight: 1
+
+weight: 11
 ---
 
 ## Passing multiple arguments to a function

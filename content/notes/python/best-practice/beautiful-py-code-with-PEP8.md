@@ -33,6 +33,8 @@ menu:
     python:
         parent: py-best-practice
         weight: 1
+
+weight: 21
 ---
 
 Source: [How to Write Beautiful Python Code With PEP 8](https://realpython.com/python-pep8/) 

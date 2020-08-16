@@ -40,6 +40,8 @@ menu:
     python:
         parent: py-basics
         weight: 4
+
+weight: 14
 ---
 
 ### [Get Dictionary Items with Specified Initialization](/notes/python/py-basics/py-dict/get-dict-items-with-specified-init/)

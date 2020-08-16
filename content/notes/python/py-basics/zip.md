@@ -33,6 +33,8 @@ menu:
     python:
         parent: py-basics
         weight: 2
+
+weight: 12
 ---
 
 

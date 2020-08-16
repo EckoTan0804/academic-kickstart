@@ -78,6 +78,10 @@
   weight = 20
   identifier = "py-best-practice"
 
+[[python]]
+  name = "Numpy"
+  weight = 30
+  identifier = "numpy"
 
 # Rechnerstruktur
 [[rechner-struktur]]
