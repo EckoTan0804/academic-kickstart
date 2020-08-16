@@ -49,20 +49,28 @@ menu:
 
 </br>
 
+- Implementation
+  - [min-char-rnn](https://gist.github.com/karpathy/d4dee566867f8291f086) 
+
 - Application of RNN:
   - [The Unreasonable Effectiveness of Recurrent Neural Networks](http://karpathy.github.io/2015/05/21/rnn-effectiveness/)
 
 ## LSTM
 
-- [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) :fire::thumbsup:
-- [Illustrated Guide to LSTM’s and GRU’s: A step by step explanation](https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21) :fire::thumbsup:
-  - Video Tutorial: {{< youtube 8HyCNIVRbSU >}}
+- Tutorials
 
-</br>
+  - [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) :fire::thumbsup:
+  - [Illustrated Guide to LSTM’s and GRU’s: A step by step explanation](https://towardsdatascience.com/illustrated-guide-to-lstms-and-gru-s-a-step-by-step-explanation-44e9eb85bf21) :fire::thumbsup:
+    - Video Tutorial: {{< youtube 8HyCNIVRbSU >}}
 
-- [如何从RNN起步，一步一步通俗理解LSTM](https://blog.csdn.net/v_JULY_v/article/details/89894058)
+  </br>
 
-- [通俗有趣地解释RNN和LSTM](https://www.zhihu.com/question/314002073/answer/613515841) :fire::thumbsup:
+  - [如何从RNN起步，一步一步通俗理解LSTM](https://blog.csdn.net/v_JULY_v/article/details/89894058)
+  - [通俗有趣地解释RNN和LSTM](https://www.zhihu.com/question/314002073/answer/613515841) :fire::thumbsup:
+
+- Implementation
+
+  - [Deriving LSTM Gradient for Backpropagation](https://wiseodd.github.io/techblog/2016/08/12/lstm-backprop/)
 
   
 
