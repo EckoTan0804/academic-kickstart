@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 20
+weight: 21
 
 # Basic metadata
 title: "Optimization Algorithms"
