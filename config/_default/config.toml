@@ -209,9 +209,9 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "nn-basics"
 
 [[menu.deep-learning]]
-  name = "Optimization Algorithms"
+  name = "Efficient Training"
   weight = 20
-  identifier = "optimization-algo"
+  identifier = "efficient-training"
 
 [[menu.deep-learning]]
   name = "CNN"

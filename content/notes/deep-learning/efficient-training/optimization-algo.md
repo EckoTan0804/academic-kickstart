@@ -5,12 +5,12 @@ summary: ""
 weight: 20
 
 # Basic metadata
-title: "Optimization Algorithms Overview"
+title: "Optimization Algorithms"
 date: 2020-07-31
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Deep Learning", "Optimization"]
+tags: ["Deep Learning", "Optimization", "Efficient training"]
 categories: ["Deep Learning"]
 toc: true # Show table of contents?
 
@@ -35,7 +35,7 @@ header:
 # Menu
 menu: 
     deep-learning:
-        parent: optimization-algo
+        parent: efficient-training
         weight: 1
 
 ---

@@ -126,9 +126,9 @@
   identifier = "nn-basics"
 
 [[deep-learning]]
-  name = "Optimization Algorithms"
+  name = "Efficient Training"
   weight = 20
-  identifier = "optimization-algo"
+  identifier = "efficient-training"
 
 [[deep-learning]]
   name = "CNN"
