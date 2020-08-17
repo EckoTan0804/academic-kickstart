@@ -6,7 +6,7 @@ weight: 22
 
 # Basic metadata
 title: "Batch Normalization"
-date: 2020-07-31
+date: 2020-08-16
 draft: false
 type: docs # page type
 authors: ["admin"]
