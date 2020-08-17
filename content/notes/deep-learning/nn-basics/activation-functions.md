@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 11
+weight: 12
 
 # Basic metadata
 title: "Activation Functions"
@@ -36,7 +36,7 @@ header:
 menu: 
     deep-learning:
         parent: nn-basics
-        weight: 1
+        weight: 2
 
 ---
 
@@ -163,10 +163,8 @@ $$
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-17 11.08.41.png" alt="截屏2020-08-17 11.08.41" style="zoom: 50%;" />
 $$
-f(x)=\left\{\begin{array}{ll}
-x & \text { if } x>0 \\
-\alpha(\exp (x)-1) & \text { if } x \leq 0
-\end{array}\right.
+f(x) = \begin{cases} x &\text{if }x > 0 \\\\
+\alpha(\exp (x)-1) & \text {if }x \leq 0\end{cases}
 $$
 
 - ✅ <span style="color:green">Advantages</span>
@@ -186,6 +184,22 @@ $$
   - ReLU is Maxout with $w\_1 =0$ and $b\_1 = 0$
 - ✅ <span style="color:green">Fixes the dying ReLU problem</span>
 - ⛔️ <span style="color:red">Doubles the number of parameters</span>
+
+## Softmax
+
+- Softmax: probability that feature $x$ belongs to class $c\_k$
+  $$
+  o\_k = \theta\_k^Tx \qquad \forall k = 1, \dots, j
+  $$
+
+$$
+p\left(y=c\_{k} \mid x ; \boldsymbol{\theta}\right)= p\left(c\_{k} = 1 \mid x ; \boldsymbol{\theta}\right) = \frac{e^{o\_k}}{\sum\_{j} e^{o\_j}}
+$$
+
+- Derivative:
+  $$
+  \frac{\partial p(\hat{\mathbf{y}})}{\partial o\_{j}} =y\_{j}-p\left(\hat{y}\_{j}\right)
+  $$
 
 ## Advice in Practice
 
