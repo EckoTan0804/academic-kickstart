@@ -131,13 +131,18 @@
   identifier = "efficient-training"
 
 [[deep-learning]]
-  name = "CNN"
+  name = "Unsupervised Learning"
   weight = 30
+  identifier = "unsupervised-learning"
+
+[[deep-learning]]
+  name = "CNN"
+  weight = 40
   identifier = "cnn"
 
 [[deep-learning]]
   name = "RNN"
-  weight = 40
+  weight = 50
   identifier = "rnn"
 
 
