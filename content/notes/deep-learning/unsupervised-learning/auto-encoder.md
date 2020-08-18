@@ -275,6 +275,12 @@ According to [Why Does Unsupervised Pre-training Help Deep Learning?](https://dl
 
 #### Layer-wise pretraining with RBM
 
+{{% alert note %}}
+
+See also: [Restricted Boltzman Machine]({{< relref "rbm.md" >}})
+
+ {{% /alert %}}
+
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-17%2022.43.06.png" alt="截屏2020-08-17 22.43.06" style="zoom:67%;" />
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-17%2022.43.51.png" alt="截屏2020-08-17 22.43.51" style="zoom:50%;" />
