@@ -60,7 +60,7 @@ In supervised learning, the hidden layers encapsulate the features useful for cl
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-17%2018.56.10.png" alt="截屏2020-08-17 18.56.10" style="zoom:80%;" />
 $$
 \begin{array}{l}
-H=W\_{I} I+b\_{I} \\
+H=W\_{I} I+b\_{I} \\\\
 \tilde{I}=W\_{O} H+b\_{O}
 \end{array}
 $$
@@ -74,7 +74,7 @@ $$
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-17%2018.59.24.png" alt="截屏2020-08-17 18.59.24" style="zoom:80%;" />
 $$
 \begin{array}{l}
-H=f(W\_{I} I+b\_{I}) \\
+H=f(W\_{I} I+b\_{I}) \\\\
 \tilde{I}=W\_{O} H+b\_{O}
 \end{array}
 $$
@@ -106,7 +106,7 @@ $$
 
 With auto-encoders we can do
 
-- [Compression & Reconstruction](#compresssion-and-reconstruction)
+- [Compression & Reconstruction](#compression-and-reconstruction)
 - [MLP training assistance](#unsupervised-pretraining)
 - [Feature learning](#restricted-boltzmann-machine)
 - Representation learning
@@ -144,7 +144,8 @@ With **corrupted inputs**
   - **Images**
     - Adding noise filters
     - downscaling
-    - shifting ...
+    - shifting 
+    - ...
   - **Speech**
     - simulating background noise
     - Creating high-articulation effect
@@ -254,7 +255,7 @@ According to [Why Does Unsupervised Pre-training Help Deep Learning?](https://dl
   - Visible units (Input data points $I$)
   - Hidden units ($H$)
 
-- Given input $V$, we can generate the probabilities of hidden units being *On/Off (0/1)*
+- Given input $V$, we can generate the probabilities of hidden units being *On(1)/Off (0)*
   $$
   p\left(h\_{j}=1 \mid V\right)=\sigma\left(b\_{j}+\sum\_{i=1}^{m} W\_{i j} v\_{i}\right)
   $$
@@ -405,5 +406,6 @@ According to [Why Does Unsupervised Pre-training Help Deep Learning?](https://dl
 ## Reference
 
 - [Auto-Encoder intuition](https://zhuanlan.zhihu.com/p/24813602)
+- [Autoencoders Tutorial : A Beginner’s Guide to Autoencoders](https://www.edureka.co/blog/autoencoders-tutorial/)
 
 - [A Beginner's Guide to Restricted Boltzmann Machines (RBMs)](https://wiki.pathmind.com/restricted-boltzmann-machine)
