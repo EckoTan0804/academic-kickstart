@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 31
+weight: 310
 
 # Basic metadata
 title: "Auto Encoder"

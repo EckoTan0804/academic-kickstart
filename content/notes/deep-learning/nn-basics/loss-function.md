@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 13
+weight: 130
 
 # Basic metadata
 title: "Loss Functions"

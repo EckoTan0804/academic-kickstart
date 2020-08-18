@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 14
+weight: 140
 
 # Basic metadata
 title: "Generalization"

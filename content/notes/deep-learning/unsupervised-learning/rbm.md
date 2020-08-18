@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 linktitle: "Restricted Boltzmann Machines"
 summary: ""
-weight: 32
+weight: 340
 
 # Basic metadata
 title: "Restricted Boltzmann Machines (RBMs)"
@@ -36,7 +36,7 @@ header:
 menu: 
     deep-learning:
         parent: unsupervised-learning
-        weight: 2
+        weight: 4
 
 ---
 

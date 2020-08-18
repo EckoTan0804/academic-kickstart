@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 15
+weight: 150
 
 # Basic metadata
 title: "Backward Propagation"

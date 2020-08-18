@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 12
+weight: 120
 
 # Basic metadata
 title: "Activation Functions"

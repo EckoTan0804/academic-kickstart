@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 22
+weight: 220
 
 # Basic metadata
 title: "Batch Normalization"
