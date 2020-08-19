@@ -50,3 +50,7 @@ menu:
 - [CNN Explainer](https://poloclub.github.io/cnn-explainer/#article-convolution)
 - [MINST playground](https://www.cs.ryerson.ca/~aharley/vis/conv/flat.html)
 
+## Plotting
+
+- [NN-SVG](http://alexlenail.me/NN-SVG/)
+
