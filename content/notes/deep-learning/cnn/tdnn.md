@@ -93,6 +93,10 @@ Ensure **shift-invariance**
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-19%2012.00.24.png" alt="截屏2020-08-19 12.00.24" style="zoom:50%;" />
 
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/20131123104203421.png" alt="img" style="zoom:75%;" />
+
+Connections with the same color share the same weight.
+
 ## Demo
 
 [TDNN / Convolutional Nets - Demo](https://lecture-demo.ira.uka.de/)
@@ -113,4 +117,5 @@ TDNN is equivalent to 1-dimensional CNN
 
 - [Neural Networks for Acoustic Modelling 3: Context-dependent DNNs and TDNNs](http://www.inf.ed.ac.uk/teaching/courses/asr/2018-19/asr09-dnn.pdf)
 
-- 
+- [语音识别——TDNN时延神经网络](https://blog.csdn.net/qq_14962179/article/details/87926351)
+
