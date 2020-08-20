@@ -1,11 +1,11 @@
 ---
 # Title, summary, and position in the list
-# linktitle: ""
+linktitle: "CNN Basics"
 summary: ""
 weight: 420
 
 # Basic metadata
-title: "CNN Basics"
+title: "Convolutional Neural Network (CNN) Basics"
 date: 2020-08-19
 draft: false
 type: docs # page type
@@ -280,6 +280,18 @@ The Fully Connected layer is a traditional Multi Layer Perceptron that uses a so
 The output from the convolutional and pooling layers represent high-level features of the input image. The purpose of the Fully Connected layer is to use these features for classifying the input image into various classes based on the training dataset.
 
 Apart from classification, adding a fully-connected layer is also a (usually) cheap way of learning non-linear combinations of these features. [Most of the features from convolutional and pooling layers may be good for the classification task, but combinations of those features might be even better](https://stats.stackexchange.com/questions/182102/what-do-the-fully-connected-layers-do-in-cnns/182122#182122).
+
+## ✅ Advantages of CNN (vs. MLP)
+
+- CNNs are good for translation invariance
+- CNN reduces the numbers of parameters:
+  - Locally connected, shared weights, pooling, local feature extractor 
+  - But learning power is still good or even better (generalization)
+- We can “resize” the next layer **to as we want**:
+  - By setting kernel size, number of kernel, padding, stride
+- Design of good architecture based on intuitions (or Neural architecture search)
+
+
 
 ## Reference
 

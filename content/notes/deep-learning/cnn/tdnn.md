@@ -44,6 +44,8 @@ menu:
 
 Ensure **shift-invariance**
 
+- The model should produce the same output regardless of the position of the considering object
+
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-19%2011.45.55.png" alt="截屏2020-08-19 11.45.55" style="zoom:80%;" />
 
 ## Overview
