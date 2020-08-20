@@ -180,6 +180,25 @@ Yes! With **transfer learning**!
 - **A lot of data, very different dataset:** 
   - Finetune a larger number of layers
 
-### Example
+### Example: Image Captioning
 
 ![截屏2020-08-20 12.32.22](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-20%2012.32.22.png)
+
+### Example: Face Recognition
+
+- **Siamese Networks (FaceNet)**
+
+- Distance
+  $$
+  d\left(x\_{1}, x\_{2}\right)=\left\|f\left(x\_{1}\right)-f\left(x\_{2}\right)\right\|\_{2}^{2}
+  $$
+
+  - If $d(x\_1, x\_2)$ small: same person
+  - Otherwise different person 
+
+- Training: Triplet loss
+  $$
+  L(A, P, N)=\max \left(\|f(A)-f(P)\|^{2}-\|f(A)-f(N)\|^{2}+\alpha, 0\right)
+  $$
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-20%2013.19.31.png" alt="截屏2020-08-20 13.19.31" style="zoom:67%;" />
