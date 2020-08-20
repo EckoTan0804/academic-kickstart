@@ -219,13 +219,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "unsupervised-learning"
 
 [[menu.deep-learning]]
-  name = "CNN"
-  weight = 40
-  identifier = "cnn"
+  name = "Parallelism"
+  weight = 50
+  identifier = "parallelism"
 
 [[menu.deep-learning]]
   name = "RNN"
-  weight = 50
+  weight = 60
   identifier = "rnn"
 
 

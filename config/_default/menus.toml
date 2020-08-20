@@ -141,8 +141,13 @@
   identifier = "cnn"
 
 [[deep-learning]]
-  name = "RNN"
+  name = "Parallelism"
   weight = 50
+  identifier = "parallelism"
+
+[[deep-learning]]
+  name = "RNN"
+  weight = 60
   identifier = "rnn"
 
 
