@@ -242,7 +242,34 @@ Because Pooling keeps the maximum value from each window, it **preserves the bes
 
 The result of this is that CNNs can find whether a feature is in an image without worrying about where it is. This helps solve the problem of computers being hyper-literal.
 
+### Dimension parameters computation
 
+- Inpupt size: 
+
+  $$W\_{1} \times H\_{1} \times D\_{1}$$
+
+  (usually $W\_1 = H\_1$)
+
+- Hyperparameters:
+
+  - Number of filters: $K$
+  - Filter size: $F \times F \times D\_1$
+  - Stride: $S$
+  - Typically no padding
+
+- Output size:  
+  $$
+  W\_{2} \times H\_{2} \times D\_1
+  $$
+  with
+
+  - $W_{2}=\lfloor \frac{W_{1}-F}{S}\rfloor+1 $
+
+  
+
+  - $H_{2}=\lfloor \frac{H_{1}-F}{S}\rfloor+1 $
+
+- Number of weights: **0** (since it computes a fixed function of the input)
 
 ## Fully Connected Layer
 
