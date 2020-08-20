@@ -126,7 +126,7 @@ $\Rightarrow$ The depth of the multi-channel output "image" is 6.
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-19%2021.44.04.png" alt="截屏2020-08-19 21.44.04" style="zoom: 40%;" />
 
-#### Non-linearity: ReLU 
+### Non-linearity: ReLU 
 
 For any kind of neural network to be powerful, it needs to contain non-linearity.  And CNN is no different.
 
@@ -135,6 +135,8 @@ $$
 \operatorname{ReLU}(x) = \max(0, x)
 $$
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/relu_graph.png" alt="relu graph" style="zoom: 25%;" />
+
+
 
 ### Stride and Padding
 
@@ -194,6 +196,17 @@ $\to$ **Paddings**
   \text{#weights} = \underbrace{F \cdot F}\_{\text {Filter size }} \cdot \underbrace{D\_{1}}_{\text {Filter depth }} \cdot \underbrace{K}\_{\text {#Filters }}
   $$
   
+
+### Summary of Conv-layer
+
+1. Convolution operation using filters
+2. Feed into ReLU
+
+![007 CNN One Layer of A ConvNet | Master Data Science](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/new_NN_CNN_1_1.png)
+
+
+
+
 
 ## Pooling Layer
 
