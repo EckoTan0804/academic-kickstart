@@ -47,7 +47,7 @@ All CNN models follow a similar architecture
 ![img](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/dobVrh3SGyqQraM2ogi-P3VK2K-LFsBm7RLO.png)
 
 - [Input](#input-layer)
-- [Convolutional layer (Cons-layer)](#convolutional-layer)
+- [Convolutional layer (Cons-layer)](#convolutional-layer) + ReLU
 - [Pooling layer (Pool-layer)](#pooling-layer)
 - [Fully Connected layer (FC-layer)](#fully-connected-layer)
 - Output
@@ -150,8 +150,6 @@ Stride > 1often used to **down-sample** the image
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*4wZt9G7W7CchZO-5rVxl5g@2x.gif" alt="Image for post" style="zoom:40%;" />
 
-![Image for post](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*BMngs93_rm2_BpJFH2mS0Q.gif)
-
 {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*BMngs93_rm2_BpJFH2mS0Q.gif" title="Stride 2 convolution" numbered="true" >}}
 
 What do we do with border pixels?
@@ -166,7 +164,11 @@ $\to$ **Paddings**
 
 ### Dimension parameters computation
 
-- Inpupt: $W\_{1} \times H\_{1} \times D\_{1}$ (usually $W\_1 = H\_1$)
+- Inpupt size: 
+
+  $$W\_{1} \times H\_{1} \times D\_{1}$$
+
+  (usually $W\_1 = H\_1$)
 
 - Hyperparameters:
 
@@ -175,7 +177,11 @@ $\to$ **Paddings**
   - Stride: $S$
   - Amount of padding: $P$
 
-- Output: $W\_{2} \times H\_{2} \times K$ with
+- Output size:  
+  $$
+  W\_{2} \times H\_{2} \times K
+  $$
+  with
 
   - $W_{2}=\lfloor \frac{W_{1}-F+2 P}{S}+1 \rfloor$
 
