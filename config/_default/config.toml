@@ -230,7 +230,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 
 [[menu.deep-learning]]
   name = "Encoder Decoder Model"
-  weight = 60
+  weight = 70
   identifier = "encoder-decoder"
 
 

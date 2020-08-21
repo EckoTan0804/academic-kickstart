@@ -152,7 +152,7 @@
 
 [[deep-learning]]
   name = "Encoder Decoder Model"
-  weight = 60
+  weight = 70
   identifier = "encoder-decoder"
 
 
