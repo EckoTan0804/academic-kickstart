@@ -210,8 +210,13 @@ Given a sequence data $\left\\{\mathbf{x}\_{1}, \dots,\mathbf{x}\_{T}\right\\}$,
 
 - **New cell state**
   $$
-  \mathbf{c}\_{t}=\mathbf{f}\_{t} \circ \mathbf{c}\_{t-1}+\mathbf{i}\_{t} \circ \mathbf{g}\_{t}
+  \mathbf{c}\_{t}=\mathbf{f}\_{t} \odot \mathbf{c}\_{t-1}+\mathbf{i}\_{t} \odot \mathbf{g}\_{t}
   $$
+  {{% alert note %}}
+
+  $\odot$ is a pointwise/elementwise multiplication.
+
+  {{% /alert %}}
 
 - **Output gate**
   $$
@@ -220,7 +225,7 @@ Given a sequence data $\left\\{\mathbf{x}\_{1}, \dots,\mathbf{x}\_{T}\right\\}$,
 
 - **New hidden state (and output)** 
   $$
-  \mathbf{h}\_{t}=\mathbf{o}\_{t} \circ \tanh \left(\mathbf{c}\_{t}\right), \quad  z\_{t}=\operatorname{softmax}\left(W\_{h z} \mathbf{h}\_{t}+b\_{z}\right)
+  \mathbf{h}\_{t}=\mathbf{o}\_{t} \odot \tanh \left(\mathbf{c}\_{t}\right), \quad  z\_{t}=\operatorname{softmax}\left(W\_{h z} \mathbf{h}\_{t}+b\_{z}\right)
   $$
 
 ### **Derivatives**
