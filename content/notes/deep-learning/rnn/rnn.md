@@ -39,6 +39,12 @@ menu:
         weight: 1
 ---
 
+{{% alert note %}}
+For detailed explanation and summary see: [RNN Summary]({{< relref "../../natural-language-processing/RNN/rnn-summary.md" >}})
+{{% /alert %}}
+
+## Overview
+
 - Specifically designed for long-range dependency
 - 💡 Main idea: connecting the hidden states together within a layer
 

@@ -39,6 +39,10 @@ menu:
         weight: 2
 ---
 
+{{% alert note %}}
+For detailed explanation and summary see: [LSTM Summary]({{< relref "../../natural-language-processing/RNN/lstm-summary.md" >}})
+{{% /alert %}}
+
 ## Motivation
 
 ![截屏2020-08-21 12.10.50](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-21%2012.10.50.png)
