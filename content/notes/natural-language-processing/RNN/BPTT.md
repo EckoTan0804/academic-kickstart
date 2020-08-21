@@ -212,11 +212,21 @@ Given a sequence data $\left\\{\mathbf{x}\_{1}, \dots,\mathbf{x}\_{T}\right\\}$,
   $$
   \mathbf{c}\_{t}=\mathbf{f}\_{t} \odot \mathbf{c}\_{t-1}+\mathbf{i}\_{t} \odot \mathbf{g}\_{t}
   $$
-  {{% alert note %}}
 
-  $\odot$ is a pointwise/elementwise multiplication.
-
-  {{% /alert %}}
+  > Note
+  >
+  > $\odot$ is a pointwise/elementwise multiplication.
+  >
+  > $\left[\begin{array}{l}
+  > x\_{1} \\\\
+  > x\_{2}
+  > \end{array}\right] \odot\left[\begin{array}{l}
+  > y\_{1} \\\\
+  > y\_{2}
+  > \end{array}\right]=\left[\begin{array}{l}
+  > x\_{1} y\_1 \\\\
+  > x\_{2} y\_{2}
+  > \end{array}\right]$
 
 - **Output gate**
   $$
