@@ -150,6 +150,11 @@
   weight = 60
   identifier = "rnn"
 
+[[deep-learning]]
+  name = "Encoder Decoder Model"
+  weight = 60
+  identifier = "encoder-decoder"
+
 
 # NLP
 [[natural-language-processing]]

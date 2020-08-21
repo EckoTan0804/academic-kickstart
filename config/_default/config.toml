@@ -228,6 +228,11 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   weight = 60
   identifier = "rnn"
 
+[[menu.deep-learning]]
+  name = "Encoder Decoder Model"
+  weight = 60
+  identifier = "encoder-decoder"
+
 
 # NLP
 [[menu.natural-language-processing]]
