@@ -219,3 +219,6 @@ In general
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-21%2012.05.02.png" alt="截屏2020-08-21 12.05.02" style="zoom:50%;" />
 
+## BPTT Example
+
+{{< youtube RrB605Mbpic >}}
