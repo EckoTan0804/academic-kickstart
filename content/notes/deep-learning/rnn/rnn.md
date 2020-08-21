@@ -182,7 +182,7 @@ $$
 If we wand to send signals back to step 50:
 $$
 \begin{aligned}
-\frac{\delta L}{\delta H\_{50}} &=\frac{\delta L}{\delta H\_{115}} \frac{\delta H\_{115}}{\delta H\_{114}} \ldots \frac{\delta H\_{51}}{\delta H\_{50}} \\
+\frac{\delta L}{\delta H\_{50}} &=\frac{\delta L}{\delta H\_{115}} \frac{\delta H\_{115}}{\delta H\_{114}} \ldots \frac{\delta H\_{51}}{\delta H\_{50}} \\\\ \\\\
 &=W^{O} f^{\prime}\left(H\_{115}\right) W^{H} f^{\prime}\left(H\_{114}\right) W^{H} f^{\prime}\left(H\_{113}\right) W^{H} \ldots
 \end{aligned}
 $$
