@@ -106,7 +106,7 @@ $$
 
 - $\boldsymbol{a}(\cdot)$: parametrized as a feedforward neural network that runs for all $j$ at the decoding time step $t$
 - $\alpha\_{tj} \in [0, 1]$
-- $\sum\_j \alpha{tj} = 1$
+- $\displaystyle \sum\_j \alpha\_{tj} = 1$
 - $\alpha\_{tj}$ can be visualized as the attention paid by decoder at time step $t$ to the hidden ecncoder unit $h\_j$
 
 ### Computing Context Vector
@@ -145,3 +145,7 @@ In the [paper](https://arxiv.org/pdf/1409.0473.pdf), authors have used a GRU cel
 ## Reference
 
 - [Understanding Attention Mechanism](https://medium.com/@shashank7.iitd/understanding-attention-mechanism-35ff53fc328e)
+- [Attention and Memory in Deep Learning and NLP](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
+
+
+
