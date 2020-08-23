@@ -2,10 +2,10 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 640
+weight: 630
 
 # Basic metadata
-title: "Transformer Summary"
+title: "Transformer"
 date: 2020-08-23
 draft: false
 type: docs # page type
@@ -36,7 +36,7 @@ header:
 menu: 
     deep-learning:
         parent: encoder-decoder
-        weight: 4
+        weight: 3
 
 ---
 
