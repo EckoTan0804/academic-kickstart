@@ -55,7 +55,7 @@ menu:
 
   - Mean over the batch dimension
     $$
-    \mu=\frac{1}{M} \sum\_{i=1}^{M} X\_{i}
+    \mu=\frac{1}{M} \sum\_{i=1}^{M} X\_{i,:}
     $$
 
   - Variance of the mini-batch
@@ -203,6 +203,27 @@ Ideal solution: Compute $\mu$ and $\sigma$ using the whole training set
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-20%2016.49.22.png" alt="截屏2020-05-20 16.49.22" style="zoom:40%;" />
 
 - Reduces the demand for regularization, helps preventing overfitting
+
+## Layer Normalization
+
+Batch Normalization was wonderful, but not always applicable 
+
+- When large mini-batch was not feasible
+
+- It was difficult to apply for Recurrent Neural Networks
+
+Alternative: **Layer Normalization**
+
+- Perform
+  $$
+  \begin{aligned}
+  \mu &= \frac{1}{M} \sum\_{i=1}^{M} X\_{i,:} \\\\
+  \sigma^{2} &= \frac{1}{M} \sum\_{i=1}^{M}\left(X\_{i}-\mu\right)^{2}
+  \end{aligned}
+  $$
+  over the *feature dimension*
+
+- Not as effective as Batch Normalization, but still widely used because of better efficiency.
 
 ## Reference
 
