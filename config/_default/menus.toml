@@ -156,7 +156,7 @@
   identifier = "encoder-decoder"
 
 [[deep-learning]]
-  name = "reinforcement-learning"
+  name = "Reinforcement-learning"
   weight = 80
   identifier = "rl"
 

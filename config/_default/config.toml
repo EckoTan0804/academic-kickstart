@@ -234,7 +234,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "encoder-decoder"
 
 [[menu.deep-learning]]
-  name = "reinforcement-learning"
+  name = "Reinforcement-learning"
   weight = 80
   identifier = "rl"
 
