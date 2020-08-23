@@ -59,7 +59,7 @@ A **Markov chain** is a model that tells us something about the probabilities of
 
 💡 A Markov chain makes a very strong assumption that 
 
-- if we want to predict the future in the sequence, all that matters is the current state. 
+- if we want to predict the future in the sequence, **all that matters is the current state**. 
 - All the states before the current state have NO impact on the future except via the current state.
   - *It’s as if to predict tomorrow’s weather you could examine today’s weather but you weren’t allowed to look at yesterday’s weather.*
 
@@ -78,20 +78,20 @@ A **Markov chain** is a model that tells us something about the probabilities of
 
 - specified by the following components
 
-  - $Q = {q_1, q_2, \dots, q_N}$: a set of $N$ **states**
+  - $Q = q\_1, q\_2, \dots, q\_N$: a set of $N$ **states**
 
-  - $A=a_{11} a_{12} \dots a_{n 1} \dots a_{n n}$: **transition probability matrix**
+  - $A=a\_{11} a\_{12} \dots a\_{n 1} \dots a\_{n n}$: **transition probability matrix**
 
-    - Each $a_{ij}$ represents the probability of moving from state $i$ to state $j$, s.t.
+    - Each $a\_{ij}$ represents the probability of moving from state $i$ to state $j$, s.t.
       $$
-      \sum_{j=1}^{n} a_{i j}=1 \quad \forall i
+      \sum\_{j=1}^{n} a\_{i j}=1 \quad \forall i
       $$
 
-  - $\pi=\pi_{1}, \pi_{2}, \dots, \pi_{N}$: an **initial probability distribution** over states
+  - $\pi=\pi\_{1}, \pi\_{2}, \dots, \pi\_{N}$: an **initial probability distribution** over states
 
     - $\pi_i$: probability that the Markov chain will start in state $i$
     - Some states $j$ may have $\pi_j = 0$ (meaning that the can NOT be initial states)
-    - $\displaystyle\sum_{i=1}^{n} \pi_{i}=1$ 
+    - $\displaystyle\sum\_{i=1}^{n} \pi\_{i}=1$ 
 
   
 
@@ -126,39 +126,39 @@ $\Rightarrow$ We call the tags **hidden** because they are NOT observed.
 
 - Specified by:
 
-  - $Q = {q_1, q_2, \dots, q_N}$: a set of $N$ **states**
+  - $Q = {q\_1, q\_2, \dots, q\_N}$: a set of $N$ **states**
 
-  - $A=a_{11} a_{12} \dots a_{n 1} \dots a_{n n}$: **transition probability matrix**
+  - $A=a\_{11} a\_{12} \dots a\_{n 1} \dots a\_{n n}$: **transition probability matrix**
 
     - Each $a_{ij}$ represents the probability of moving from state $i$ to state $j$, s.t.
       $$
-      \sum_{j=1}^{n} a_{i j}=1 \quad \forall i
+      \sum\_{j=1}^{n} a\_{i j}=1 \quad \forall i
       $$
 
-  - $O = {o_1, o_2, \dots, o_T}$: a set of $T$ **observations**
+  - $O = {o\_1, o\_2, \dots, o\_T}$: a set of $T$ **observations**
 
     - Each one drawn from a vocabulary $V = {v_1, v_2, \dots, v_V}$
 
   - $B=b\_{i}\left(o\_{t}\right)$: a sequence of **observation likelihoods** (also called **emission probabilities**) 
 
-    - Each expressing the probability of an observation $o_t$ being generated from a state $q_i$
+    - Each expressing the probability of an observation $o\_t$ being generated from a state $q_i$
 
   - $\pi=\pi\_{1}, \pi\_{2}, \dots, \pi\_{N}$: an **initial probability distribution** over states
 
-    - $\pi_i$: probability that the Markov chain will start in state $i$
-    - Some states $j$ may have $\pi_j = 0$ (meaning that the can NOT be initial states)
+    - $\pi\_i$: probability that the Markov chain will start in state $i$
+    - Some states $j$ may have $\pi\_j = 0$ (meaning that the can NOT be initial states)
     - $\displaystyle\sum_{i=1}^{n} \pi_{i}=1$ 
 
 - A first-order hidden Markov model instantiates two simplifying assumptions
 
   - Markov assumption: the probability of a particular state depends only on the previous state 
     $$
-    P\left(q_{i}=a | q_{1} \ldots q_{i-1}\right)=P\left(q_{i}=a | q_{i-1}\right)
+    P\left(q\_{i}=a | q\_{1} \ldots q\_{i-1}\right)=P\left(q\_{i}=a | q\_{i-1}\right)
     $$
 
   - Output independence: the probability of an output observation $o_i$ depends only on the state that produced the observation $q_i$ and NOT on any other states or any other observations 
     $$
-    P\left(o_{i} | q_{1} \ldots q_{i}, \ldots, q_{T}, o_{1}, \ldots, o_{i}, \ldots, o_{T}\right)=P\left(o_{i} | q_{i}\right)
+    P\left(o_{i} | q\_{1} \ldots q\_{i}, \ldots, q\_{T}, o\_{1}, \ldots, o\_{i}, \ldots, o\_{T}\right)=P\left(o\_{i} | q\_{i}\right)
     $$
 
 
@@ -167,13 +167,13 @@ $\Rightarrow$ We call the tags **hidden** because they are NOT observed.
 
 An HMM has two components, the $A$ and $B$ probabilities
 
-The $A$ matrix contains the tag transition probabilities $P(t_i | t_{i-1})$ which represent the probability of a tag occurring given the previous tag.
+The $A$ matrix contains the tag transition probabilities $P(t\_i | t\_{i-1})$ which represent the probability of a tag occurring given the previous tag.
 
 - E.g., modal verbs like *will* are very likely to be followed by a verb in the base form, a VB, like *race*, so we expect this probability to be high.
 
 We compute the maximum likelihood estimate of this transition probability by **counting**, out of the times we see the first tag in a labeled corpus, how often the first tag is followed by the second
 $$
-P\left(t_{i} | t_{i-1}\right)=\frac{C\left(t_{i-1}, t_{i}\right)}{C\left(t_{i-1}\right)}
+P\left(t\_{i} | t\_{i-1}\right)=\frac{C\left(t\_{i-1}, t\_{i}\right)}{C\left(t\_{i-1}\right)}
 $$
 
 - For example, in the WSJ corpus, MD occurs 13124 times of which it is followed by VB 10471. Therefore, for an MLE estimate of
@@ -185,7 +185,7 @@ $$
 
 The $B$ emission probabilities, $P(w_i|t_i)$,  represent the probability, given a tag (say MD), that it will be associated with a given word (say *will*). The MLE of the emission probability is 
 $$
-P\left(w_{i} | t_{i}\right)=\frac{C\left(t_{i}, w_{i}\right)}{C\left(t_{i}\right)}
+P\left(w\_{i} | t\_{i}\right)=\frac{C\left(t\_{i}, w\_{i}\right)}{C\left(t\_{i}\right)}
 $$
 
 - E.g.: Of the 13124 occurrences of MD in the WSJ corpus, it is associated with *will* 4046 times
@@ -203,9 +203,9 @@ Example: three states HMM POS tagger
 
 ## HMM tagging as decoding
 
-**Decoding**: Given as input an HMM $\lambda = (A, B)$ and a sequence of observations $O = o_1, o_2, \dots,o_T$, find the most probable sequence of states $Q = q_1q_2 \dots q_T$
+**Decoding**: Given as input an HMM $\lambda = (A, B)$ and a sequence of observations $O = o_1, o_2, \dots,o_T$, find the most probable sequence of states $Q = q\_1q\_2 \dots q\_T$
 
-🎯 For part-of-speech tagging, the goal of HMM decoding is to choose the tag sequence $t_1^n$ that is most probable given the observation sequence of $n$ words $w_1^n$
+🎯 For part-of-speech tagging, the goal of HMM decoding is to choose the tag sequence $t\_1^n$ that is most probable given the observation sequence of $n$ words $w\_1^n$
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/image-20200803153311832.png" alt="image-20200803153311832" style="zoom:18%;" />
 
@@ -213,12 +213,12 @@ HMM taggers make two simplifying assumptions:
 
 - the probability of a word appearing depends only on its own tag and is independent of neighboring words and tags
   $$
-  P\left(w_{1}^{n} | t_{1}^{n}\right) \approx \prod_{i=1}^{n} P\left(w_{i} | t_{i}\right)
+  P\left(w\_{1}^{n} | t\_{1}^{n}\right) \approx \prod\_{i=1}^{n} P\left(w\_{i} | t\_{i}\right)
   $$
 
 - the probability of a tag is dependent only on the previous tag, rather than the entire tag sequence (the **bigram** assumption)
   $$
-  P\left(t_{1}^{n}\right) \approx \prod_{i=1}^{n} P\left(t_{i} | t_{i-1}\right)
+  P\left(t\_{1}^{n}\right) \approx \prod\_{i=1}^{n} P\left(t\_{i} | t\_{i-1}\right)
   $$
 
 Combing these two assumptions, the most probable tag sequence from a bigram tagger is:
@@ -238,24 +238,24 @@ The Viterbi algorithm:
 
 The Viterbi algorithm first sets up a probability matrix or **lattice**
 
-- One column for each observation $o_t$
+- One column for each observation $o\_t$
 
 - One row for each state in the state graph
 
-  $\rightarrow$ Each column has a cell for each state $q_i$ in the single combined automation
+  $\rightarrow$ Each column has a cell for each state $q\_i$ in the single combined automation
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-24%2011.49.16.png" alt="截屏2020-05-24 11.49.16" style="zoom:40%;" />
 
-Each cell of the lattice $v_t(j)$
+Each cell of the lattice $v\_t(j)$
 
-- represents the probability that the HMM is in state $j$ after seeing the first $t$ observatins and passing through the most probable state sequence $q_1, \dots, q_{t-1}$, given the HMM $\lambda$
+- represents the probability that the HMM is in state $j$ after seeing the first $t$ observatins and passing through the most probable state sequence $q\_1, \dots, q\_{t-1}$, given the HMM $\lambda$
 
-- The value of each cell $v_t(j)$ is computed by recursively taking **the most probable** path that could lead us to this cell
+- The value of each cell $v\_t(j)$ is computed by recursively taking **the most probable** path that could lead us to this cell
   $$
-  v_{t}(j)=\max _{q_{1}, \ldots, q_{t-1}} P\left(q_{1} \ldots q_{t-1}, o_{1}, o_{2} \ldots o_{t}, q_{t}=j | \lambda\right)
+  v\_{t}(j)=\max \_{q_{1}, \ldots, q\_{t-1}} P\left(q\_{1} \ldots q\_{t-1}, o\_{1}, o\_{2} \ldots o\_{t}, q\_{t}=j | \lambda\right)
   $$
 
-  - Represent the most probable path by taking the maximum over all possible previous state sequences $\underset{{q_{1}, \ldots, q_{t-1}}}{\max}$
+  - Represent the most probable path by taking the maximum over all possible previous state sequences $\underset{{q\_{1}, \ldots, q\_{t-1}}}{\max}$
 
     - Viterbi fills each cell recursively (like other dynamic programming algorithms)
 
@@ -263,7 +263,7 @@ Each cell of the lattice $v_t(j)$
 
       For a given state $q_j$ at time $t$, the value $v_t(j)$ is computed as
       $$
-      v_{t}(j)=\max _{i=1}^{N} v_{t-1}(i) a_{i j} b_{j}\left(o_{t}\right)
+      v\_{t}(j)=\max \_{i=1}^{N} v\_{t-1}(i) a\_{i j} b\_{j}\left(o\_{t}\right)
       $$
 
       - $v\_{t-1}(i)$: the **previous Viterbi path** probability from the previous time step
@@ -280,11 +280,11 @@ HMM is defiend by two tables
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-24%2012.06.37.png" alt="截屏2020-05-24 12.06.37" style="zoom:50%;" />
 
-- 👆 Lists the $a_{ij}$ probabilities for transitioning betweeen the hidden states (POS tags)
+- 👆 Lists the $a\_{ij}$ probabilities for transitioning betweeen the hidden states (POS tags)
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-24%2012.08.01.png" alt="截屏2020-05-24 12.08.01" style="zoom:50%;" />
 
-- 👆 Expresses the $b_i(o_t)$ probabilities, the *observation* likelihood s of words given tags
+- 👆 Expresses the $b\_i(o\_t)$ probabilities, the *observation* likelihood s of words given tags
   - This table is (slightly simplified) from counts in WSJ corpus
 
 Computation:
