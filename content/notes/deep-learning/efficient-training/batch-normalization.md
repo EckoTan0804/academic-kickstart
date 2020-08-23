@@ -40,6 +40,39 @@ menu:
 
 ---
 
+## TL;DR
+
+- Problem: During training, updating a lower layer changes the input distribution for the next layer → next layer constantly needs to adapt to changing inputs
+- 💡Idea: mean/variance normalization step between layers
+  - Faster / more effective training
+
+  - Gradients less dependent on scale of parameters
+
+  - Allow higher learning rates
+  - Combat saturation problem
+
+- How:
+
+  - Mean over the batch dimension
+    $$
+    \mu=\frac{1}{M} \sum\_{i=1}^{M} X\_{i}
+    $$
+
+  - Variance of the mini-batch
+    $$
+    \sigma^{2}=\frac{1}{M} \sum\_{i=1}^{M}\left(X\_{i}-\mu\right)^{2}
+    $$
+
+  - Normalization
+    $$
+    \hat{X}=\frac{X-\mu}{\sqrt{\sigma^{2}+\epsilon}}
+    $$
+
+  - Scale and shift
+    $$
+    X^{N}=\gamma \circ X+\beta
+    $$
+
 ## Motivation: Feature scaling
 
 Make different features have the same scaling (normalizing the data)
@@ -78,7 +111,7 @@ A common solution is to use small learning rate, but the training would then be 
 
 ## Batch Nomalization (BN)
 
-💪 Aim: solve internal covariate shift
+💪 **Aim: solve internal covariate shift**
 
 ### Batch
 
