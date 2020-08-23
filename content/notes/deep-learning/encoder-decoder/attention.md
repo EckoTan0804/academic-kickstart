@@ -132,12 +132,13 @@ Compute the new hidden state $s\_t$ using
 - the previous output $y\_{t-1}$
 
 $$
-\begin{array}{l}
-s\_{t}=f\left(s\_{t-1}, y\_{t-1}, c\_{t}\right) \\\\
-p\left(y\_{t} \mid y\_{1}, y\_{2}, \ldots y\_{t-1}, x\right)=g\left(y\_{t-1}, s\_{t}, c\_{i}\right)
-\end{array}
+s\_{t}=f\left(s\_{t-1}, y\_{t-1}, c\_{t}\right)
 $$
 
+The output at time step $t$ is
+$$
+p\left(y\_{t} \mid y\_{1}, y\_{2}, \ldots y\_{t-1}, x\right)=g\left(y\_{t-1}, s\_{t}, c\_{i}\right)
+$$
 {{% alert note %}}
 In the [paper](https://arxiv.org/pdf/1409.0473.pdf), authors have used a GRU cell for $f$ and a similar function for $g$.
 {{% /alert %}}
@@ -146,6 +147,7 @@ In the [paper](https://arxiv.org/pdf/1409.0473.pdf), authors have used a GRU cel
 
 - [Understanding Attention Mechanism](https://medium.com/@shashank7.iitd/understanding-attention-mechanism-35ff53fc328e)
 - [Attention and Memory in Deep Learning and NLP](http://www.wildml.com/2016/01/attention-and-memory-in-deep-learning-and-nlp/)
+- [Visualizing A Neural Machine Translation Model (Mechanics of Seq2seq Models With Attention)](https://jalammar.github.io/visualizing-neural-machine-translation-mechanics-of-seq2seq-models-with-attention/) 👍
 
 
 
