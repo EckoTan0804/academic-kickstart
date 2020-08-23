@@ -118,7 +118,7 @@ $$
 
 To avoid underflow and increase speed, Naive Bayes calculations, like calculations for language modeling, are done in log space:
 $$
-c_{NB}=\underset{c \in C}{\operatorname{argmax}} \log P(c)+\sum_{i \in  \text {postiions }} \log P\left(w_{i} | c\right)
+c_{NB}=\underset{c \in C}{\operatorname{argmax}} \log P(c)+\sum_{i \in  \text {positions }} \log P\left(w_{i} | c\right)
 \label{eq:NB log}
 $$
 
