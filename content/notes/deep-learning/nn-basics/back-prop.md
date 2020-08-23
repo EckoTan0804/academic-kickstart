@@ -102,7 +102,7 @@ menu:
   ​	(<span style="color:red">Red</span>: terms previously computed)
   - Hidden layer (assuming $\widehat{H}=\operatorname{sigmoid}(H)$ )
     $$
-    \frac{\delta L}{\delta H}={\color{red}{\frac{\delta L}{\delta \hat{H}}}} \odot \widehat{\mathrm{H}} \odot(1-\widehat{H})
+    \frac{\delta L}{\delta H}={\color{red}{\frac{\delta L}{\delta \hat{H}}}} \odot \widehat{H} \odot(1-\widehat{H})
     $$
 
   - Input layer
