@@ -147,7 +147,7 @@ $$
   - follows policy $\pi$ afterwards
 
   $$
-  Q^{\pi}(\boldsymbol{s},\boldsymbol{a})=\mathbb{E}_{\pi}\left[\sum_{t=0}^{\infty} \gamma^{t} r_{t} \mid \boldsymbol{s}_{0}=\boldsymbol{s}, \boldsymbol{a}_{0}=\boldsymbol{a}\right]
+  Q^{\pi}(\boldsymbol{s},\boldsymbol{a})=\mathbb{E}\_{\pi}\left[\sum\_{t=0}^{\infty} \gamma^{t} r\_{t} \mid \boldsymbol{s}\_{0}=\boldsymbol{s}, \boldsymbol{a}\_{0}=\boldsymbol{a}\right]
   $$
 
   (**Quality metric for state-action pairs**)
