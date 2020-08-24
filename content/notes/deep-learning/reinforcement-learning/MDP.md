@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 linktitle: "MDPs"
 summary: ""
-weight: 810
+weight: 820
 
 # Basic metadata
 title: "Markov Decision Process (MDP)"
