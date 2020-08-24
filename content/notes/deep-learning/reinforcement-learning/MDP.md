@@ -69,7 +69,7 @@ $$
 
 ### Optimal Quantities
 
-- **[The (optimal) value](#solving-mdps-value-iteration) of a state $s$:**
+- **The (optimal) valueof a state $s$:**
 
   $V^*(s) = $ expected summed reward starting in $s$ and acting optimally
 
@@ -87,7 +87,7 @@ $$
 >
 > -- Richard Bellman, Dynamic Programming, 1957
 
-💡 **In order to achieve the optimal value at state s, we also must act optimally at the successor states** :muscle:
+💡 **In order to achieve the optimal value at state $s$, we also must act optimally at the successor states** :muscle:
 
 - **Act optimally at state $s$ (maximization step)**
   $$
@@ -101,7 +101,7 @@ $$
 
 $\to$ **Bellman Optimality Principle**: *Recursive* definition of optimal values
 $$
-V^{\*}(s)=\max \_{a}\left(r(s, a)+\gamma \sum_{s^{\prime}} P\left(s^{\prime} \mid s, a\right) V^{*}\left(s^{\prime}\right)\right)
+V^{\*}(s)=\max \_{a}\left(r(s, a)+\gamma \sum\_{s^{\prime}} P\left(s^{\prime} \mid s, a\right) V^{*}\left(s^{\prime}\right)\right)
 $$
 **Time-Limited Values:** **Define $V\_k(s)$ to be the optimal value of $s$ if the MDP ends in $k$ more time steps**
 
@@ -131,7 +131,7 @@ E.g., if the car is <span style="color:blue">cool</span>, and it goes <span styl
 
 - **Infinite Horizon**
   $$
-  \pi^{\*}(s)=\underset{a}{\arg \max }\left(r(s, a)+\gamma \sum\_{s^{\prime}} P\left(s^{\prime} \mid s, a\right) V^{\*}\left(s^{\prime}\right)\right)
+  \pi^{\*}(s)=\underset{a}{\arg \max }\left(r(s, a)+\gamma \sum\_{s^{\prime}} P\left(s^{\prime} | s, a\right) V^{\*}\left(s^{\prime}\right)\right)
   $$
 
   - **Note:** the infinite horizon optimal policy is **stationary**, i.e., the optimal action at state s is the **same** action at all times. (Efficient to store!)
@@ -146,7 +146,7 @@ E.g., if the car is <span style="color:blue">cool</span>, and it goes <span styl
 
 ### Convergence
 
-**Theorem:Value iteration converges** :clap:
+**Theorem: Value iteration converges** :clap:
 
  At convergence, we have found the optimal value function $V^*$ for the discounted infinite horizon problem, which satisfies the Bellman
 $$
@@ -178,7 +178,7 @@ $$
 ​	<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-24%2011.49.11.png" alt="截屏2020-08-24 11.49.11" style="zoom: 67%;" />
 
 1. **Policy evaluation**: calculate values for some **fixed policy** (not optimal values!) until convergence
-2. **Policy improvement**: update policy using one-step look- ahead with resulting converged (but not optimal!) utilities as future values
+2. **Policy improvement**: update policy using one-step look-ahead with resulting converged (but not optimal!) utilities as future values
 3. Repeat steps until policy converges
 
 ### Policy Evaluation
@@ -250,7 +250,7 @@ $$
 Q^{\pi_{\text {new }}}(\boldsymbol{s}, \boldsymbol{a}) \geq Q^{\pi}(\boldsymbol{s}, \boldsymbol{a})
 $$
 
-###Policy Iteration Algorithm
+### Policy Iteration Algorithm
 
 ![截屏2020-08-24 12.51.23](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-24%2012.51.23.png)
 
@@ -267,7 +267,7 @@ $$
   - We don’t track the policy, but taking the max over actions implicitly recomputes it
   - Extreme case of policy iteration where we stop the policy evaluation after one update
 
-## Problems
+## 🔴 Problems
 
 What we mentioned above does work. However, **Unfortunately, we can only do this in 2 cases**
 
