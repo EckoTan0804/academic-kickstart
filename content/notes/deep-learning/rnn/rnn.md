@@ -202,22 +202,35 @@ Assuming network is univariate $W^H$ has one element $w$ and $f$ is either ReLU 
 
 In general
 
-- if the maximum eigenvalue of $W^H > 1$: $\frac{\delta L}{\delta H_{T}}$ is likely to <span style="color:red">explode</span>
+- if the maximum eigenvalue of $W^H > 1$: $\frac{\delta L}{\delta H_{T}}$ is likely to <span style="color:red">explode (Gradient explosion)</span> 
 
-- if the maximum eigenvalue of $W^H < 1$: $\frac{\delta L}{\delta H_{T}}$ is likely to <span style="color:red">vanish</span>
+  > More see: [Exploding Gradient Problem](https://deepai.org/machine-learning-glossary-and-terms/exploding-gradient-problem)
 
-  ((small gradients make the RNN unable to learn the important features to solve the problem))
+  - Solution
+    - [Gradient clipping](#gradient-clipping)
+    - Weight regularization
+
+- if the maximum eigenvalue of $W^H < 1$: $\frac{\delta L}{\delta H_{T}}$ is likely to <span style="color:red">vanish (Gradient vanishing)</span> 
+
+  - small gradients make the RNN unable to learn the important features to solve the problem
 
 ### Gradient clipping
 
 - Simple solution for gradient exploding
 
-- Clip the gradient $g = \frac{\delta L}{\delta w}$ so 
+- Rescale gradients so that their norm is at most a particular value. 
+
+  - Clip the gradient $g = \frac{\delta L}{\delta w}$ so 
+
   $$
   \|g\|>\mu: g=\mu \frac{g}{\|g\|} \qquad \text{(biased gradients)}
   $$
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-21%2012.05.02.png" alt="截屏2020-08-21 12.05.02" style="zoom:50%;" />
+
+- With gradient clipping, pre-determined gradient threshold be introduced, and  then gradients norms that exceed this threshold are scaled down to match the norm.  This prevents any gradient to have norm greater than the threshold and thus the gradients are clipped.
+
+  > More see: [Gradient Clipping](https://deepai.org/machine-learning-glossary-and-terms/gradient-clipping)
 
 ## BPTT Example
 
