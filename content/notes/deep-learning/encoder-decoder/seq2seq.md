@@ -226,7 +226,7 @@ Hints:
 
   - Training objective
     $$
-    \log P\left(Y^{*} \mid X^{*}\right) \qquad \forall \left(\mathrm{Y}^{*}, \mathrm{X}^{*}\right) \in D
+    \log P\left(Y^{\*} \mid X^{\*}\right) \qquad \forall \left(\mathrm{Y}^{\*}, \mathrm{X}^{\*}\right) \in D
     $$
 
 ### Encoder-Decoder model
@@ -386,7 +386,7 @@ In general, at time step $t$:
     $$
     \hat{H}\_t = \operatorname{RNN}(C\_t, H\_t)
     $$
-     
+    
 
 ### Training
 
