@@ -197,6 +197,18 @@ $\to$ **Paddings**
   $$
   
 
+### Connections Calculation
+
+$$
+\text{#Connections} = \text{#Neurons of next layer} \times \text{filter size}
+$$
+
+Nice explanation from [cs231n](https://cs231n.github.io/convolutional-networks/#conv):
+
+![截屏2020-08-27 10.09.10](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-27%2010.09.10.png)
+
+
+
 ### Summary of Conv-layer
 
 1. Convolution operation using filters
