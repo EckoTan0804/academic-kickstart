@@ -114,3 +114,39 @@ menu:
   \end{array}
   $$
 
+
+
+## Gradients for vectorized operations
+
+When dealing with matrix and vector operations, we must pay closer attention to dimensions and transpose operations.
+
+**Matrix-Matrix multiply gradient**. Possibly the most tricky operation is the matrix-matrix multiplication (which generalizes all matrix-vector and vector-vector) multiply operations:
+
+(Example from [cs231n](https://cs231n.github.io/optimization-2/#staged))
+
+```python
+# forward pass
+W = np.random.randn(5, 10)
+X = np.random.randn(10, 3)
+D = W.dot(X)
+
+# now suppose we had the gradient on D from above in the circuit
+dD = np.random.randn(*D.shape) # same shape as D
+dW = dD.dot(X.T) #.T gives the transpose of the matrix
+dX = W.T.dot(dD)
+```
+
+{{% alert note %}}
+
+**Tip: use dimension analysis!** 
+
+*Note that you do not need to remember the expressions for `dW` and `dX` because they are easy to re-derive based on dimensions.*
+
+*For instance, we know that the gradient on the weights `dW` must be of the same size as `W` after it is computed, and that it must depend on matrix multiplication of `X` and `dD` (as is the case when both `X,W` are single numbers and not matrices). There is always exactly one way of achieving this so that the dimensions work out.*
+
+*For example, `X` is of size [10 x 3] and `dD` of size [5 x 3], so if we want `dW` and `W` has shape [5 x 10], then the only way of achieving this is with `dD.dot(X.T)`, as shown above.*
+
+{{% /alert %}}
+
+For discussion of math details see: [Not understanding derivative of a matrix-matrix product.](https://math.stackexchange.com/questions/1866757/not-understanding-derivative-of-a-matrix-matrix-product)
+
