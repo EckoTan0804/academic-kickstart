@@ -384,6 +384,19 @@ $$
 \end{aligned}
 $$
 
+$$
+\begin{aligned}
+\Rightarrow \frac{\partial \mathcal{L}}{\partial \alpha\_j} &= \frac{\partial }{\partial \alpha\_j} \left(-\sum\_{j} \frac{\partial y\_{j} \log p\left(\hat{y}\_{j} \mid \mathbf{h}\_{i} ; \Theta\right)}{\partial \alpha\_{j}}\right) \\\\
+&= -\left(y\_{j}-p\left(\hat{y}\_{j}\right)\right) \\\\
+&= p\left(\hat{y}\_{j}\right) - y\_{j}
+\end{aligned}
+$$
+
+> See also:
+>
+> - [Derivative of Softmax loss function](https://math.stackexchange.com/questions/945871/derivative-of-softmax-loss-function)
+> - [The Softmax function and its derivative](https://eli.thegreenplace.net/2016/the-softmax-function-and-its-derivative/)
+
 ## Derivative of tanh
 
 $$
