@@ -340,8 +340,10 @@ $$
 
 $z=\operatorname{softmax}\left(W\_{h z} \mathbf{h}+\mathbf{b}\_{z}\right)$: predicts the probability assigned to $K$ classes.
 
-Furthermore, we can use $1$ of $K$ (One-hot) encoding to represent the groundtruth $y$ but with probability vector to represent $z=\left[p\left(\hat{y}\_{1}\right), \ldots, p\left(\hat{y}\_{K}\right)\right]$. Then, we can consider the gradient in each dimension, and then generalize it to the vector case in the objective function $\mathcal{L}\left(W\_{h z}, \mathbf{b}\_{z}\right)=-y \log z$.
-
+Furthermore, we can use $1$ of $K$ (One-hot) encoding to represent the groundtruth $y$ but with probability vector to represent $z=\left[p\left(\hat{y}\_{1}\right), \ldots, p\left(\hat{y}\_{K}\right)\right]$. Then, we can consider the gradient in each dimension, and then generalize it to the vector case in the objective function (cross-entropy loss): 
+$$
+\mathcal{L}\left(W\_{h z}, \mathbf{b}\_{z}\right)=-y \log z
+$$
 Let
 $$
 \alpha_{j}(\Theta)=W\_{h z}(:, j) \mathbf{h}\_{t}
