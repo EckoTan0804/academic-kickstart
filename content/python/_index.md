@@ -1,6 +1,6 @@
 ---
-title: Artificial Intelligence
-layout: docs
+title: Python
+type: book
 
 # View.
 #   1 = List
@@ -11,5 +11,5 @@ view: 2
 # Optional header image (relative to `static/img/` folder).
 header:
   caption: ""
-  image: "ai.png"
+  image: "py.png"
 ---

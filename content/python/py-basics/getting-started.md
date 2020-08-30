@@ -1,24 +1,44 @@
 ---
-# Course title, summary, and position in the list.
-linktitle: Python
-weight: 5
+# Title, summary, and position in the list
+linktitle: ""
+summary: ""
+weight: 10
 
-# Page metadata.
-title: Getting Started
-date: "2020-07-06"
-draft: false  # Is this a draft? true/false
-toc: true  # Show table of contents? true/false
-type: docs  # Do not modify.
+# Basic metadata
+title: "Getting Started"
+date: 2020-08-30
+draft: false
+type: docs # page type
+authors: ["admin"]
+tags: ["Python", "Basics"]
+categories: ["Coding"]
+toc: true # Show table of contents?
 
-# Add menu entry to sidebar.
-# - name: Declare this menu item as a parent with ID `name`.
-# - weight: Position of link in menu.
-menu:
-  python:
-    name: Getting Started
-    weight: 1
+# Advanced metadata
+profile: false  # Show author profile?
+
+reading_time: true # Show estimated reading time?
+
+share: false  # Show social sharing links?
+featured: true
+
+comments: false  # Show comments?
+disable_comment: true
+commentable: false  # Allow visitors to comment? Supported by the Page, Post, and Docs content types.
+editable: false  # Allow visitors to edit the page? Supported by the Page, Post, and Docs content types.
+
+# Optional header image (relative to `static/img/` folder).
+header:
+  caption: ""
+  image: ""
+
+# Menu
+menu: 
+ python:
+        parent: py-basics
+        weight: 1
+
 ---
-
 
 
 ## Source
