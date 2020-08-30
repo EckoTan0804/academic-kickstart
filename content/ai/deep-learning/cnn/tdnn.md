@@ -10,7 +10,7 @@ date: 2020-08-16
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Deep Learning", "Optimization", "CNN"]
+tags: ["Deep Learning", "CNN"]
 categories: ["Deep Learning"]
 toc: true # Show table of contents?
 
