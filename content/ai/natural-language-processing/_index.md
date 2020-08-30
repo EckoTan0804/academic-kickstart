@@ -1,7 +1,7 @@
 ---
 # Course title, summary, and position in the list.
 linktitle: Natural Language Processing
-weight: 1
+weight: 4
 
 # Page metadata.
 title: Overview
