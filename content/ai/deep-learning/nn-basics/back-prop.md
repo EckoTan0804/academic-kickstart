@@ -10,7 +10,7 @@ date: 2020-08-17
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Deep Learning", "Optimization", "Nerual Network Basics"]
+tags: ["Deep Learning", "Nerual Network Basics"]
 categories: ["Deep Learning"]
 toc: true # Show table of contents?
 

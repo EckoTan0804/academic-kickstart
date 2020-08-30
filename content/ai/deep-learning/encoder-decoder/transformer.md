@@ -10,7 +10,7 @@ date: 2020-08-23
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Deep Learning", "Optimization", "Seq2Seq"]
+tags: ["Deep Learning", "Seq2Seq"]
 categories: ["Deep Learning"]
 toc: true # Show table of contents?
 
