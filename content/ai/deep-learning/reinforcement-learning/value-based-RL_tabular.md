@@ -13,6 +13,7 @@ authors: ["admin"]
 tags: ["Deep Learning", "Optimization", "Reinforcement Learning"]
 categories: ["Deep Learning"]
 toc: true # Show table of contents?
+draft: true
 
 # Advanced metadata
 profile: false  # Show author profile?
