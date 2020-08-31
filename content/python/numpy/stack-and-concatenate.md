@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 301
+weight: 302
 
 # Basic metadata
 title: "Stack and Concatenate"
@@ -37,7 +37,7 @@ header:
 menu: 
     python:
         parent: numpy
-        weight: 1
+        weight: 2
 
 ---
 

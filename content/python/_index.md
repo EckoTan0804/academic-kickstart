@@ -1,6 +1,6 @@
 ---
 title: Python
-type: book
+type: docs
 
 # View.
 #   1 = List
