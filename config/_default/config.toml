@@ -164,6 +164,11 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   weight = 30
   identifier = "numpy"
 
+[[menu.python]]
+  name = "Pandas"
+  weight = 40
+  identifier = "pandas"
+
 
 # Rechnerstruktur
 [[menu.rechner-struktur]]

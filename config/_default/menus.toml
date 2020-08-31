@@ -93,6 +93,11 @@
   weight = 30
   identifier = "numpy"
 
+[[python]]
+  name = "Pandas"
+  weight = 40
+  identifier = "pandas"
+
 # Rechnerstruktur
 [[rechner-struktur]]
   name = "Grundlagen"
