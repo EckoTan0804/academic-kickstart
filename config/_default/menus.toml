@@ -98,6 +98,11 @@
   weight = 40
   identifier = "pandas"
 
+[[python]]
+  name = "Matplotlib"
+  weight = 40
+  identifier = "matplotlib"
+
 # Rechnerstruktur
 [[rechner-struktur]]
   name = "Grundlagen"
