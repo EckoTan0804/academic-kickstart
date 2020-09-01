@@ -10,7 +10,7 @@ date: 2020-08-31
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Python", "Matploblib"]
+tags: ["Python", "Visualization", "Matploblib"]
 categories: ["coding"]
 toc: true # Show table of contents?
 
