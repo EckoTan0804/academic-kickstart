@@ -5,7 +5,7 @@ summary: ""
 weight: 501
 
 # Basic metadata
-title: "Cheatsheet"
+title: "Visualization Cheatsheet"
 date: 2020-08-31
 draft: false
 type: docs # page type
