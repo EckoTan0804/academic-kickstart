@@ -99,9 +99,9 @@
   identifier = "pandas"
 
 [[python]]
-  name = "Matplotlib"
+  name = "Visualization"
   weight = 50
-  identifier = "matplotlib"
+  identifier = "visualization"
 
 # Rechnerstruktur
 [[rechner-struktur]]

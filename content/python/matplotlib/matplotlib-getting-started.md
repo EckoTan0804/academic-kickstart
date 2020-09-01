@@ -36,7 +36,7 @@ header:
 # Menu
 menu: 
     python:
-        parent: matplotlib
+        parent: visualization
         weight: 1
 
 ---

@@ -170,9 +170,9 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "pandas"
 
 [[menu.python]]
-  name = "Matplotlib"
+  name = "Visualization"
   weight = 50
-  identifier = "matplotlib"
+  identifier = "visualization"
 
 
 # Rechnerstruktur
