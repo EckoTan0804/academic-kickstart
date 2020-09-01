@@ -65,7 +65,7 @@ menu:
 
   - $f$: non-linear activation function
 
-- **Output layer $O \in R^{D_{O} \times N}$**
+- **Output layer $O \in R^{D\_{O} \times N}$**
 
   - The value of the target function that the network approximates
     $$
