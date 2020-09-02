@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 linktitle: "Resources"
 summary: ""
-weight: 400
+weight: 490
 
 # Basic metadata
 title: "CNN Resources"
