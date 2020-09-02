@@ -1,11 +1,11 @@
 ---
 # Title, summary, and position in the list
-# linktitle: ""
+linktitle: "MLP and Backprop"
 summary: ""
 weight: 150
 
 # Basic metadata
-title: "Backward Propagation"
+title: "Multilayer Perceptron and Backpropagation"
 date: 2020-08-17
 draft: false
 type: docs # page type
@@ -47,12 +47,18 @@ menu:
 - **Input layer $I \in R^{D\_{I} \times N}$**
 
   - How we initially represent the features
+
   - Mini-batch processing with $N$ inputs
+
+    
 
 - **Weight matrices**
 
   - Input to Hidden: $W\_{H} \in R^{D\_{I} \times D\_{H}}$
+
   - Hidden to Output: $W\_{O} \in R^{D\_{H} \times D\_{O}}$
+
+    
 
 - **Hidden layer(s) $H \in R^{D\_{H} \times N}$**
   $$
@@ -71,6 +77,8 @@ menu:
     $$
     O = W\_O \widehat{H} + b\_O
     $$
+
+## Backpropagation
 
 - Loss function
   $$
@@ -93,7 +101,7 @@ menu:
   $$
   \begin{aligned}
   \frac{\delta L}{\delta O} &=(O-Y) \\\\ \\\\
-  \frac{\delta L}{\delta \widehat{H}} &=W\_{0}^{T} \color{red}{\frac{\delta L}{\delta O}} \\\\ \\\\
+  \frac{\delta L}{\delta \widehat{H}} &=W\_{O}^{T} \color{red}{\frac{\delta L}{\delta O}} \\\\ \\\\
   \frac{\delta L}{\delta W\_{O}} &= {\color{red}{\frac{\delta L}{\delta O} }}\widehat{H}^{T} \\\\ \\\\
   \frac{\delta L}{\delta b\_{O}} &= \color{red}{\frac{\delta L}{\delta O}}
   \end{aligned}
@@ -104,12 +112,15 @@ menu:
     $$
     \frac{\delta L}{\delta H}={\color{red}{\frac{\delta L}{\delta \hat{H}}}} \odot \widehat{H} \odot(1-\widehat{H})
     $$
-
+($\odot$: element-wise multiplication)
+    
+  
+    
   - Input layer
-
+  
   $$
   \begin{array}{l}
-  \frac{\delta L}{\delta W\_{H}}={\color{red}{\frac{\delta L}{\delta H}}} I^{T} \\\\
+  \frac{\delta L}{\delta W\_{H}}={\color{red}{\frac{\delta L}{\delta H}}} I^{T} \\\\ \\\\
   \frac{\delta L}{\delta b\_{H}}={\color{red}{\frac{\delta L}{\delta H}}}
   \end{array}
   $$
