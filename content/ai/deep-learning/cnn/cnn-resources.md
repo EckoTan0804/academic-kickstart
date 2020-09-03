@@ -54,3 +54,7 @@ menu:
 
 - [NN-SVG](http://alexlenail.me/NN-SVG/)
 
+## Papers Overview
+
+- [The 9 Deep Learning Papers You Need To Know About (Understanding CNNs Part 3)](https://adeshpande3.github.io/The-9-Deep-Learning-Papers-You-Need-To-Know-About.html)
+
