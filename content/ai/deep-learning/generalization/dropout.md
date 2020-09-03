@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 230
+weight: 152
 
 # Basic metadata
 title: "Dropout"
@@ -35,8 +35,8 @@ header:
 # Menu
 menu: 
     deep-learning:
-        parent: efficient-training
-        weight: 3
+        parent: generalization
+        weight: 2
 
 ---
 
@@ -62,6 +62,8 @@ With dropout the layer inputs become more sparse, forcing the network weights to
 
 ![截屏2020-08-23 22.06.16](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-23%2022.06.16.png)
 
+Dropout a neuron = all the inputs and outputs to this neuron will be disabled at the current iteration.
+
 ### Training
 
 - Given 
@@ -69,6 +71,7 @@ With dropout the layer inputs become more sparse, forcing the network weights to
   - input $X \in \mathbb{R}^D$ 
   - weights $W$ 
   - survival rate $p$
+    - Usually $p=0.5$
 
 - Sample mask $M \in \{0, 1\}^D$ with $M\_i \sim \operatorname{Bernoulli}(p)$
 
@@ -94,6 +97,7 @@ With dropout the layer inputs become more sparse, forcing the network weights to
 
 ## Why Dropout works?
 
+- Intuition: Dropout prevents the network to be too dependent on a small number of neurons, and forces every neuron to be able to operate independently.
 - Each of the “dropped” instance is a different network configuration
 - $2^n$ different networks sharing weights
 - The inference process can be understood as an **ensemble of $2^n$ different configuration**
