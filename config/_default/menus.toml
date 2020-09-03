@@ -146,6 +146,11 @@
   identifier = "nn-basics"
 
 [[deep-learning]]
+  name = "Generalization"
+  weight = 15
+  identifier = "generalization"
+
+[[deep-learning]]
   name = "Efficient Training"
   weight = 20
   identifier = "efficient-training"
