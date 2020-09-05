@@ -66,11 +66,18 @@ menu:
   </br>
 
   - [如何从RNN起步，一步一步通俗理解LSTM](https://blog.csdn.net/v_JULY_v/article/details/89894058)
+
   - [通俗有趣地解释RNN和LSTM](https://www.zhihu.com/question/314002073/answer/613515841) :fire::thumbsup:
+
+    
 
 - Implementation
 
   - [Deriving LSTM Gradient for Backpropagation](https://wiseodd.github.io/techblog/2016/08/12/lstm-backprop/)
 
-  
+
+
+
+- Deeper understanding
+  - [Why LSTMs Stop Your Gradients From Vanishing: A View from the Backwards Pass](https://weberna.github.io/blog/2017/11/15/LSTM-Vanishing-Gradients.html)
 
