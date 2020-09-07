@@ -307,9 +307,9 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "getting-started"
 
 [[menu.pytorch]]
-  name = "Resources"
+  name = "Recipes"
   weight = 90
-  identifier = "pytorch-resources"
+  identifier = "pytorch-recipese"
 
 ################################
 # Courses

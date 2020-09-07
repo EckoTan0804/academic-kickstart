@@ -239,9 +239,9 @@
   identifier = "getting-started"
 
 [[pytorch]]
-  name = "Resources"
+  name = "Recipes"
   weight = 90
-  identifier = "pytorch-resources"
+  identifier = "pytorch-recipese"
 
 ################################
 # Courses
