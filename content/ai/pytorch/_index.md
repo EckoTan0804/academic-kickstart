@@ -1,6 +1,6 @@
 ---
 # Course title, summary, and position in the list.
-linktitle: Pytorch
+linktitle: PyTorch
 weight: 5
 
 # Page metadata.
