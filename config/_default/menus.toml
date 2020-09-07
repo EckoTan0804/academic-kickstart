@@ -238,6 +238,11 @@
   weight = 10
   identifier = "getting-started"
 
+[[pytorch]]
+  name = "Resources"
+  weight = 90
+  identifier = "pytorch-resources"
+
 ################################
 # Courses
 ################################
