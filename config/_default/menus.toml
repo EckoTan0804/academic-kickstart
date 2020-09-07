@@ -232,6 +232,12 @@
   weight = 90
   identifier = "encoder-decoder"
 
+# pytorch
+[[pytorch]]
+  name = "Getting Started"
+  weight = 10
+  identifier = "getting-started"
+
 ################################
 # Courses
 ################################
