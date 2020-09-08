@@ -51,7 +51,7 @@ menu:
 
 - Classification: Predicting a discrete class label
 
-- **Negative log-likelihood loss (per sample $x$)**
+- **Negative log-likelihood loss (per sample $x$) / Cross-Entropy loss**
   $$
   L(\boldsymbol{x}, y)=-\sum\_{j} y_{j} \log p\left(c\_{j} \mid \boldsymbol{x}\right)
   $$
