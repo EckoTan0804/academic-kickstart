@@ -352,7 +352,7 @@ Then
 $$
 p\left(\hat{y}\_{j} \mid \mathbf{h}\_{t} ; \Theta\right)=\frac{\exp \left(\alpha\_{j}(\Theta)\right)}{\sum\_{k} \exp \left(\alpha\_{k}(\Theta)\right)}
 $$
-$\forall k = j$:
+Derivative w.r.t $\alpha\_j(\Theta)$
 $$
 \begin{array}{ll}
 &\frac{\partial}{\partial \alpha\_{j}} y\_{j} \log p\left(\hat{y}\_{j} \mid \mathbf{h}\_{t} ; \Theta\right) \\\\
@@ -365,12 +365,12 @@ $$
 =&y\_{j}\left(1-p\left(\hat{y}\_{j}\right)\right)
 \end{array}
 $$
-$\forall k \neq j$:
+Similarly, $\forall k \neq j$ and its prediction $p(\hat{y}\_k)$, we take the derivative w.r.t $\alpha\_j(\Theta)$:
 $$
 \begin{array}{ll}
-&\frac{\partial}{\partial \alpha\_{j}} y\_{j} \log p\left(\hat{y}\_{j} \mid \mathbf{h}\_{t} ; \Theta\right) \\\\ \\\\
-=&\frac{y\_{j}}{p\left(\hat{y}\_{j}\right)} \frac{-\exp \left(\alpha\_{k}(\Theta)\right) \exp \left(\alpha\_{j}(\Theta)\right)}{\left[\sum\_{s} \exp \left(\alpha\_{s}(\Theta)\right)\right]^{2}} \\\\ \\\\
-=&-y\_{k}p\left(\hat{y}\_{j}\right)
+&\frac{\partial}{\partial \alpha\_{j}} y\_{k} \log p\left(\hat{y}\_{k} \mid \mathbf{h}\_{t} ; \Theta\right)\\\\ \\\\ 
+= &\frac{y\_{k}}{p\left(\hat{y}\_{k}\right)} \frac{-\exp \left(\alpha\_{k}(\Theta)\right) \exp \left(\alpha\_{j}(\Theta)\right)}{\left[\displaystyle \sum\_{s} \exp \left(\alpha\_{s}(\Theta)\right)\right]^{2}} \\\\ \\\\
+= &-y\_{k} p\left(\hat{y}\_{j}\right)
 \end{array}
 $$
  We can yield the following gradient w.r.t. $\alpha\_j(\Theta)$:
