@@ -46,17 +46,17 @@ An ``nn.Module`` contains layers, and a method ``forward(input)`` that returns t
 
 A typical training procedure for a neural network is:
 
-1. Define the neural network that has some learnable parameters (or weights)
+1. [Define the neural network that has some learnable parameters (or weights)](#define-a-network)
 
 2. Iterate over a dataset of inputs
 
-3. Process input through the network
+3. [Process input through the network](#forward)
 
-4. Compute the loss (how far is the output from being correct)
+4. [Compute the loss (how far is the output from being correct)](#loss-function)
 
-5. Propagate gradients back into the network’s parameters
+5. [Propagate gradients back into the network’s parameters](#backpropagation)
 
-6. Update the weights of the network, typically using a simple update rule:
+6. [Update the weights of the network](#update-weights), typically using a simple update rule:
 
     ``weight = weight - learning_rate * gradient``
 
@@ -160,9 +160,9 @@ print(f"#conv1's weight: {params[0].size()}")
 #conv1's weight: torch.Size([6, 1, 3, 3])
 ```
 
-### Forward and Backward
+## Forward
 
-**Forward**: let's try a random 32x32 input (expected size of LeNet)
+Let's try a random 32x32 input (expected size of LeNet)
 
 ```python
 input = torch.randn(1, 1, 32, 32)
@@ -174,7 +174,9 @@ print(out)
 tensor([[ 0.0114,  0.1167, -0.0449, -0.0072, -0.0791, -0.0805, -0.0467,  0.0667, -0.0750,  0.0985]], grad_fn=<AddmmBackward>)
 ```
 
-**Backward**: Zero the gradient buffers of all parameters and backprops with random gradients
+## Backward
+
+Zero the gradient buffers of all parameters and backprops with random gradients
 
 ```python
 net.zero_grad()
