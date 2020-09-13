@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 140
+weight: 150
 
 # Basic metadata
 title: "Train a Classifier"
@@ -37,7 +37,7 @@ header:
 menu: 
     pytorch:
         parent: getting-started
-        weight: 4
+        weight: 5
 ---
 
 In [Neural Network Construction]({{< relref "nn-construction.md" >}}) we have seen the typical training procedure for a neural network. Now let's train an image classifier! :muscle:
