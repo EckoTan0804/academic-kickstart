@@ -40,7 +40,7 @@ menu:
         weight: 5
 ---
 
-In [Neural Network Construction]({{< relref "nn-construction.md" >}}) we have seen the typical training procedure for a neural network. Now let's train an image classifier! :muscle:
+In [Neural Network Construction]({{< relref "nn-construction.md" >}}) and [Learn PyTorch with Example]({{<relref "learn-pytorch-with-example">}}) we have seen the typical training procedure for a neural network. Now let's train a real image classifier! :muscle:
 
 ## Data
 
