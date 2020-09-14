@@ -41,17 +41,35 @@ menu:
 
 ---
 
+## TL;DR
+
+- Two ways for counting words
+  - Number of wordform types
+    - Relationship between \#Types and \#Tokens: **Heap's law**
+  - Number of lemmas
+- Text Normalization
+  1. Tokenizing (segmenting) words 
+     - Bype-pair Encoding (BPE)
+     - Wordpiece
+  2. Normalizing word formats
+     - Word normalisation
+       - case folding
+     - Lemmatization
+     - Stemming 
+       - Porter Stemmer
+  3. Segmenting sentences
+
+
+
 ## Definition
 
-**Corpus** (pl. **corpora**): a computer-readable collection of text or speech. 
+- **Corpus** (pl. **corpora**): a computer-readable collection of text or speech. 
 
-**Lemma**: a set of lexical forms having the same stem, the same major part-of-speech, and the same word sense.
+- **Lemma**: a set of lexical forms having the same stem, the same major part-of-speech, and the same word sense.
+  - E.g.: `cats` and `cat` have the same lemma `cat`
 
-- E.g.: *cats* and *cat* have the same lemma *cat*
-
-**Wordform**: full inflected or derived form of the word
-
-- E.g.: *cats* and *cat* have the same lemma *cat* but are different wordforms
+- **Wordform**: full inflected or derived form of the word
+  - E.g.: `cats` and `cat` have the same lemma `cat` but are different wordforms
 
 How many words are there in English?
 
@@ -61,26 +79,37 @@ To answer this question we need to distinguish two ways of talking about words.
 
   - **Type**:  number of distinct words in a corpus
     - if the set of words in the vocabulary is $V$ , the number of types is the vocabulary size $|V|$.
+    
     - When we speak about the number of words in the language, we are generally referring to word types.
-    - The larger the corpora we look at, the more word types we find
 
+    - The larger the corpora we look at, the more word types we find
+    
+      
+    
   - **Tokens**: total number $N$ of running words
 
     - E.g.: If we ignore punctuation, the following Brown sentence has 16 tokens and 14 types:
 
-      *They picnicked by the pool, then lay back on the grass and looked at the stars.*
+      
 
+      ```tex
+      They picnicked by the pool, then lay back on the grass and looked at the stars.
+      ```
+    
+    
+    
     - Relationship between the number of types $|V|$ and number of tokens $N$: **Herdan's Law** or **Heap's Law**
       $$
       |V|=k N^{\beta}
       $$
-
+    
       - $k$: positive constant
       - $\beta \in (0, 1)$
         - depends on the corpus size and the genre
         - for the large corpora ranges from 0.67 to 0.75 
 
 - Another way: number of lemmas
+  
   - Dictionary **entries** or **boldface** forms are a very rough upper bound on the number of lemmas
 
 
@@ -89,13 +118,13 @@ To answer this question we need to distinguish two ways of talking about words.
 
 three tasks are commonly applied as part of any normalization process:
 
-1. Tokenizing (segmenting) words 
-2. Normalizing word formats
-3. Segmenting sentences
+1. [Tokenizing (segmenting) words](#word-tokenization) 
+2. [Normalizing word formats](#word-nomalization-lemmatization-and-stemming)
+3. [Segmenting sentences](#sentence-segmentation)
 
 ### Word Tokenization
 
-**Tokenization**: taks of segmenting running text into words.
+**Tokenization**: tasks of segmenting running text into words.
 
 For most NLP applications we’ll need to keep numbers and punctuation in our tokenization
 
@@ -115,10 +144,10 @@ For most NLP applications we’ll need to keep numbers and punctuation in our to
 A tokenizer can be used to 
 
 - expand **clitic** contractions that are marked by apostrophes
-  - *what're* -> *what are*
+  - `what're` -> `what are`
 
 - **named entity detection**
-  - tokenize multiword expressions like *New York* or *rock ’n’ roll* as a single token, which requires a multiword expression dictionary of some sort.
+  - tokenize multiword expressions like `New York` or `rock ’n’ roll` as a single token, which requires a multiword expression dictionary of some sort.
 
 Commonly used tokenization standard: **Penn Treebank tokenization standard**
 
@@ -128,13 +157,13 @@ Commonly used tokenization standard: **Penn Treebank tokenization standard**
 
 **Morpheme**: smallest meaning-bearing unit of a language
 
-- E.g.: the word *unlikeliest* has the morphemes *un-*, *likely*, and *-est*
+- E.g.: the word `unlikeliest` has the morphemes `un-`, `likely`, and `-est`
 
 One reason it’s helpful to have **subword** tokens is to deal with unknown words.
 
-> Unknown words are particularly relevant for machine learning systems. Machine learning systems often learn some facts about words in one corpus (a training corpus) and then use these facts to make decisions about a separate test corpus and its words. Thus if our training corpus contains, say the words *low*, and *lowest*, but not *lower*, but then the word *lower* appears in our test corpus, our system will not know what to do with it. 🤪
+> Unknown words are particularly relevant for machine learning systems. Machine learning systems often learn some facts about words in one corpus (a training corpus) and then use these facts to make decisions about a separate test corpus and its words. Thus if our training corpus contains, say the words `low`, and `lowest`, but not `lower`, but then the word *lower* appears in our test corpus, our system will not know what to do with it. 🤪
 
-🔧 Solution: use a kind of tokenization in which most tokens are words, but some tokens are frequent morphemes or other subwords like *-er*, so that an unseen word can be represented by combining the parts.
+🔧 Solution: use a kind of tokenization in which most tokens are words, but some tokens are frequent morphemes or other subwords like `-er`, so that an unseen word can be represented by combining the parts.
 
 Simplest algorithm: **byte-pair encoding (BPE)**
 
@@ -158,15 +187,15 @@ Simplest algorithm: **byte-pair encoding (BPE)**
 
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-06-01%2011.50.28.png" alt="截屏2020-06-01 11.50.28" style="zoom:80%;" />
 
-  - We first count all pairs of symbols: the most frequent is the pair `r`  `_` because it occurs in *newer* (frequency of 6) and *wider* (frequency of 3) for a total of 9 occurrences. We then merge these symbols, treating `r_` as one symbol, and count again.
+  - We first count all pairs of symbols: the most frequent is the pair (`r`,  `_`) because it occurs in *newer* (frequency of 6) and *wider* (frequency of 3) for a total of 9 occurrences. We then merge these symbols, treating `r_` as one symbol, and count again.
 
     <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-06-01%2011.52.05.png" alt="截屏2020-06-01 11.52.05" style="zoom:80%;" />
 
-  - Now the most frequent pair is `e` `r_` , which we merge; our system has learned that there should be a token for word-final `er`, represented as `er_` 
+  - Now the most frequent pair is (`e`, `r_`) , which we merge; our system has learned that there should be a token for word-final `er`, represented as `er_` 
 
     <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-06-01%2011.53.38.png" alt="截屏2020-06-01 11.53.38" style="zoom:80%;" />
 
-  - Next `e` `w` (total count of 8) get merged to `ew`:
+  - Next (`e`, `w`) (total count of 8) get merged to `ew`:
 
     <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-06-01%2011.54.53.png" alt="截屏2020-06-01 11.54.53" style="zoom:80%;" />
 
@@ -188,21 +217,21 @@ Simplest algorithm: **byte-pair encoding (BPE)**
 
 The **wordpiece** algorithm starts with some simple tokenization (such as by whitespace) into rough words, and then breaks those rough word tokens into subword tokens.
 
-Difference from BPE:
+**Difference from BPE**:
 
 - The special word-boundary token `_` appears at the **beginning** of words (rather than at the end)
 
 - Rather than merging the pairs that are most *frequent*, wordpiece instead merges the pairs that minimizes the language model likelihood of the training data. 
 
-  (the wordpiece model chooses the two tokens to combine that would give the training corpus the highest probability )
+  (the wordpiece model chooses the two tokens to combine that would give the training corpus the **highest** probability )
 
-How it works?
+**How it works**?
 
 - An input sentence or string is first split by some simple basic tokenizer (like whitespace) into a series of rough word tokens.
 
 - Then instead of using a word boundary token, word-initial subwords are distinguished from those that do not start words by marking internal subwords with special symbols `##`
 
-  - we might split *unaffable* into ["un", "\#\#aff", "\#\#able"]
+  - we might split `unaffable` into [`un`, `##aff"`, `##able`]
 
 - Then each word token string is tokenized using a **greedy longest-match-first** algorithm.
 
@@ -215,7 +244,9 @@ How it works?
     - It chooses the longest token in the wordpiece vocabulary that matches the input at the current position, and moves the pointer past that word in the string. 
     - The algorithm is then applied again starting from the new pointer position.
 
-Example: given the token `intention` and the dictionary:
+**Example**: 
+
+Given the token `intention` and the dictionary:
 
 ```
 ["in", "tent","intent","##tent", "##tention", "##tion", "#ion"]
@@ -227,22 +258,22 @@ The tokenizer would choose `intent` (because it is longer than `in`, and then `#
 
 - **Word normalization**: task of putting words/tokens in a standard format, choosing a single normal form for words with multiple forms
   - **Case folding**: Mapping everything to lower case
-    - *Woodchuck* and *woodchuck* are represented identically
+    - `Woodchuck` and `woodchuck` are represented identically
   - For many natural language processing situations we also want two morphologically different forms of a word to behave similarly.
 
 - **Lemmatization**: task of determining that two words have the same root, despite their surface differences.
   - E.g.
-    - *am*, *are*, and *is* have the shared lemma *be*
-    - *dinner* and *dinners* both have the lemma *dinner*
-    - The lemmatized form of a sentence like *He is reading detective stories* would thus be *He be read detective story*.
+    - `am`, `are`, and `is` have the shared lemma `be`
+    - `dinner` and `dinners` both have the lemma *dinner*
+    - The lemmatized form of a sentence like `He is reading detective stories` would thus be `He be read detective story`.
   - Method: complete **morphological parsing** of the word.
     - **Morphology**: study of the way words are built up from smaller meaning-bearing units called **morphemes**.
     - Two board classes of morphemes
       - **Stems**: the central morpheme of the word, supplying the main meaning
       - **Affixes**: adding "additional" meanings of various kinds
     - E.g.: 
-      - the word *fox* consists of one morpheme (the morpheme *fox*) 
-      - the word *cats* consists of two: the morpheme *cat* and the morpheme *-s*.
+      - the word `fox` consists of one morpheme (the morpheme `fox`) 
+      - the word `cats` consists of two: the morpheme `cat` and the morpheme `-s`.
 
 - **Stemming**: naive version of morphological analysis
 
@@ -263,9 +294,15 @@ The tokenizer would choose `intent` (because it is longer than `in`, and then `#
 The most useful cues for segmenting a text into sentences are **punctuation**
 
 - Question marks and exclamation points are relatively unambiguous markers of sentence boundaries 👏
-- Periods are more ambiguous
-  - The period character “.” is ambiguous between a sentence boundary marker and a marker of abbreviations like *Mr.* or *Inc*. (the final period of *Inc.* marked both an abbreviation and the sentence boundary marker 🤪)
+- Periods are more ambiguous 🤪
+  - The period character “.” is ambiguous between a sentence boundary marker and a marker of abbreviations like `Mr.` or `Inc. (the final period of *Inc.* marked both an abbreviation and the sentence boundary marker 🤪)
 
 Sentence tokenization methods work by first deciding (based on rules or machine learning) whether a period is part of the word or is a sentence-boundary marker.
 
 - An abbreviation dictionary can help determine whether the period is part of a commonly used abbreviation
+
+
+
+## Reference
+
+- [Regular Expressions, Text Normalization, and Edit Distance](https://web.stanford.edu/~jurafsky/slp3/2.pdf)
