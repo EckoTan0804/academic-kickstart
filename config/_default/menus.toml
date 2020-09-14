@@ -234,7 +234,7 @@
 
 [[natural-language-processing]]
   name = "Lecture Notes"
-  weight = 100
+  weight = 200
   identifier = "lecture-notes"
 
 # pytorch
