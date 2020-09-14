@@ -232,6 +232,11 @@
   weight = 90
   identifier = "encoder-decoder"
 
+[[natural-language-processing]]
+  name = "Lecture Notes"
+  weight = 100
+  identifier = "lecture-notes"
+
 # pytorch
 [[pytorch]]
   name = "Getting Started"
