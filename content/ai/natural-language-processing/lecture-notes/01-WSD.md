@@ -501,12 +501,18 @@ Algorithm:
 - **Hand-annotated data** 
 
   - Precision
+
   - Recall
+
+    
 
 - **Task**:
 
   - Lexical sample: only some words need to be disambiguate 
+
   - All-words: all words need to be disambiguate
+
+    
 
 - **Baseline**:
 
