@@ -301,6 +301,11 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "encoder-decoder"
 
 [[menu.natural-language-processing]]
+  name = "Information Extraction"
+  weight = 180
+  identifier = "info-extraction"
+
+[[menu.natural-language-processing]]
   name = "Lecture Notes"
   weight = 200
   identifier = "lecture-notes"

@@ -233,6 +233,11 @@
   identifier = "encoder-decoder"
 
 [[natural-language-processing]]
+  name = "Information Extraction"
+  weight = 180
+  identifier = "info-extraction"
+
+[[natural-language-processing]]
   name = "Lecture Notes"
   weight = 200
   identifier = "lecture-notes"
