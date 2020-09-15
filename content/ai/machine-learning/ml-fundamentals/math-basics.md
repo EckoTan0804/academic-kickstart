@@ -10,7 +10,7 @@ date: 2020-08-17
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Machine Learning", "Math Basics"]
+tags: ["Machine Learning", "ML Basics", "Math"]
 categories: ["Machine Learning"]
 toc: true # Show table of contents?
 
