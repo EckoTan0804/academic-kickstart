@@ -199,7 +199,7 @@ Probabilistic tagging: Model POS tags as **Sequence labeling**
 
   - Training data
 
-    - Label sequence $\left\{\left(x^{1}, y^{1}\right),\left(x^{2}, y^{2}\right), \ldots,\left(x^{M}, y^{M}\right)\right\}$
+    - Label sequence $\left\\{\left(x^{1}, y^{1}\right),\left(x^{2}, y^{2}\right), \ldots,\left(x^{M}, y^{M}\right)\right\\}$
 
     - Learn model: $X \to Y$
 
@@ -210,8 +210,6 @@ Probabilistic tagging: Model POS tags as **Sequence labeling**
       -> Can NOT directly model $P(y|x)$ or $P(x, y)$ 🤪
 
     <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-21%2015.17.11.png" alt="截屏2020-05-21 15.17.11" style="zoom: 67%;" />
-
-### Statistical
 
 The model that includes frequency or probability (statistics) can be called **stochastic**. Any number of different approaches to the problem of part-of-speech tagging can be referred to as **stochastic tagger**.
 
