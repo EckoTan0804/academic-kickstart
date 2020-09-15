@@ -44,11 +44,17 @@ menu:
 **Sequence model/classifier**
 
 - Assign a label or class to each unit in a sequence
+
+  
+
 - mapping a sequence of observation to a sequence of labels
 
 **Hidden Markov Model (HMM)** is a probabilistic sequence model
 
 - given a sequence of units (words, letters, morphemes, sentences, whatever)
+
+  
+
 - it computes a probability distribution over possible sequences of labels and chooses the best label sequence
 
 
@@ -60,7 +66,11 @@ A **Markov chain** is a model that tells us something about the probabilities of
 💡 A Markov chain makes a very strong assumption that 
 
 - if we want to predict the future in the sequence, **all that matters is the current state**. 
+
+  
+
 - All the states before the current state have NO impact on the future except via the current state.
+  
   - *It’s as if to predict tomorrow’s weather you could examine today’s weather but you weren’t allowed to look at yesterday’s weather.*
 
 👆 **Markov assumption**
@@ -89,8 +99,14 @@ A **Markov chain** is a model that tells us something about the probabilities of
 
   - $\pi=\pi\_{1}, \pi\_{2}, \dots, \pi\_{N}$: an **initial probability distribution** over states
 
+    
+    
     - $\pi_i$: probability that the Markov chain will start in state $i$
+    
+      
+    
     - Some states $j$ may have $\pi_j = 0$ (meaning that the can NOT be initial states)
+    
     - $\displaystyle\sum\_{i=1}^{n} \pi\_{i}=1$ 
 
   
@@ -101,12 +117,16 @@ A **Markov chain** is a model that tells us something about the probabilities of
 
   - Nodes: states
 
+    
+
   - Edges: transitions, with their probabilities
 
     - The values of arcs leaving a given state must sum to 1.
 
-  - Setting start distribution $\pi = [0.1, 0.7, 0.2]$ would mean a probability 0.7 of starting in state 2 (cold), probability 0.1 of starting in state 1 (hot)
-
+      
+  
+  - Setting start distribution $\pi = [0.1, 0.7, 0.2]$ would mean a probability 0.7 of starting in state 2 (cold), probability 0.1 of starting in state 1 (hot), and 0.2 of starting in state 3 (warm)
+  
     
 
 ## Hidden Markov Model (HMM)
@@ -135,9 +155,13 @@ $\Rightarrow$ We call the tags **hidden** because they are NOT observed.
       \sum\_{j=1}^{n} a\_{i j}=1 \quad \forall i
       $$
 
+    
+
   - $O = {o\_1, o\_2, \dots, o\_T}$: a set of $T$ **observations**
 
     - Each one drawn from a vocabulary $V = {v_1, v_2, \dots, v_V}$
+
+      
 
   - $B=b\_{i}\left(o\_{t}\right)$: a sequence of **observation likelihoods** (also called **emission probabilities**) 
 
@@ -146,17 +170,21 @@ $\Rightarrow$ We call the tags **hidden** because they are NOT observed.
   - $\pi=\pi\_{1}, \pi\_{2}, \dots, \pi\_{N}$: an **initial probability distribution** over states
 
     - $\pi\_i$: probability that the Markov chain will start in state $i$
+    
+      
+    
     - Some states $j$ may have $\pi\_j = 0$ (meaning that the can NOT be initial states)
+    
     - $\displaystyle\sum_{i=1}^{n} \pi_{i}=1$ 
 
 - A first-order hidden Markov model instantiates two simplifying assumptions
 
-  - Markov assumption: the probability of a particular state depends only on the previous state 
+  - **Markov assumption**: the probability of a particular state depends only on the previous state 
     $$
     P\left(q\_{i}=a | q\_{1} \ldots q\_{i-1}\right)=P\left(q\_{i}=a | q\_{i-1}\right)
     $$
 
-  - Output independence: the probability of an output observation $o_i$ depends only on the state that produced the observation $q_i$ and NOT on any other states or any other observations 
+  - **Output independence**: the probability of an output observation $o_i$ depends only on the state that produced the observation $q_i$ and NOT on any other states or any other observations 
     $$
     P\left(o_{i} | q\_{1} \ldots q\_{i}, \ldots, q\_{T}, o\_{1}, \ldots, o\_{i}, \ldots, o\_{T}\right)=P\left(o\_{i} | q\_{i}\right)
     $$
@@ -166,6 +194,8 @@ $\Rightarrow$ We call the tags **hidden** because they are NOT observed.
 ## Components of HMM tagger
 
 An HMM has two components, the $A$ and $B$ probabilities
+
+### The A probabilities
 
 The $A$ matrix contains the tag transition probabilities $P(t\_i | t\_{i-1})$ which represent the probability of a tag occurring given the previous tag.
 
@@ -181,7 +211,7 @@ $$
   P(V B | M D)=\frac{C(M D, V B)}{C(M D)}=\frac{10471}{13124}=.80
   $$
 
-
+### The B probabilities
 
 The $B$ emission probabilities, $P(w_i|t_i)$,  represent the probability, given a tag (say MD), that it will be associated with a given word (say *will*). The MLE of the emission probability is 
 $$
