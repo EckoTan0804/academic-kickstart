@@ -275,11 +275,11 @@ Automatically learn which question to ask
 
 Model:
 $$
-p(\mathbf{y} | \mathbf{x})=\frac{1}{Z(\mathbf{x})} \prod\_{t=1}^{T} \exp \left\{\sum\_{k=1}^{K} \theta\_{k} f\_{k}\left(y\_{t}, y\_{t-1}, \mathbf{x}\_{t}\right)\right\}
+p(\mathbf{y} | \mathbf{x})=\frac{1}{Z(\mathbf{x})} \prod\_{t=1}^{T} \exp \left\\{\sum\_{k=1}^{K} \theta\_{k} f\_{k}\left(y\_{t}, y\_{t-1}, \mathbf{x}\_{t}\right)\right\\}
 $$
 
 $$
-Z(\mathrm{x})=\sum\_{\mathbf{y}} \prod\_{t=1}^{T} \exp \left\{\sum\_{k=1}^{K} \theta\_{k} f\_{k}\left(y\_{t}, y\_{t-1}, \mathbf{x}\_{t}\right)\right\}
+Z(\mathrm{x})=\sum\_{\mathbf{y}} \prod\_{t=1}^{T} \exp \left\\{\sum\_{k=1}^{K} \theta\_{k} f\_{k}\left(y\_{t}, y\_{t-1}, \mathbf{x}\_{t}\right)\right\\}
 $$
 
 ##### Feature functions
