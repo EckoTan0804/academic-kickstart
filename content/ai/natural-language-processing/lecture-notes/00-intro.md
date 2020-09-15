@@ -6,7 +6,7 @@ weight: 2010
 
 # Basic metadata
 title: "Introduction"
-date: 2020-08-02
+date: 2020-09-13
 draft: false
 type: docs # page type
 authors: ["admin"]

@@ -6,7 +6,7 @@ weight: 2020
 
 # Basic metadata
 title: "Word Sense Disambiguation"
-date: 2020-08-02
+date: 2020-09-14
 draft: false
 type: docs # page type
 authors: ["admin"]
