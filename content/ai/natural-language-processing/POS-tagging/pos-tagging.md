@@ -43,9 +43,9 @@ menu:
 
 Parts of speech (a.k.a **POS**, **word classes**, or **syntactic categories**) are useful because they reveal a lot about a word and its neighbors
 
-- Knowing whether a word is a noun or a verb tells us about likely neighboring words
+E.g.: Knowing whether a word is a noun or a verb tells us about likely neighboring words
 
-  
+
 
 ## Style Convention
 
@@ -203,9 +203,10 @@ Parts of Speech
 ## The Penn Treebank Part-of-Speech Tagset
 
 - 45-tag Penn Treebank tagset (Marcus et al., 1993)
+
 - Parts of speech are generally represented by placing the tag after each word, delimited by a slash
 
-<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-23%2015.42.40.png" alt="截屏2020-05-23 15.42.40" style="zoom:80%;" />
+  {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-23%2015.42.40.png" title="Penn Treebank Part-os-Speech Tagset" numbered="true" >}}
 
 Example: 
 
