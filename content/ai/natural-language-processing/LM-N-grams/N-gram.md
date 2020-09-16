@@ -17,13 +17,13 @@ toc: true # Show table of contents?
 # Advanced metadata
 profile: false  # Show author profile?
 
-reading_time: true # Show estimated reading time?
+reading\_time: true # Show estimated reading time?
 summary: ""
 share: false  # Show social sharing links?
 featured: true
 
 comments: false  # Show comments?
-disable_comment: true
+disable\_comment: true
 commentable: false  # Allow visitors to comment? Supported by the Page, Post, and Docs content types.
 
 editable: false  # Allow visitors to edit the page? Supported by the Page, Post, and Docs content types.
@@ -47,9 +47,9 @@ menu:
 
 ​	E.g.: *Please turn your homework ...*
 
-- **bigram (2-gram)**: two-word sequence of word
+- **bigram (2-gram)**: **two**-word sequence of word
   - *“please turn”*, *“turn your”*, or *”your homework”*
-- **trigram (3-gram)**: three-word sequence of word
+- **trigram (3-gram)**: **three**-word sequence of word
   - *“please turn your”*, or *“turn your homework”*
 
 
@@ -66,9 +66,9 @@ Suppose the history $h$ is “*its water is so transparent that*” and we want 
 
 ## **Naive way**
 
-Use **relative frequency counts** (“Out of the times we saw the history *h*, how many times was it followed by the word *w*”?)
+Use **relative frequency counts** (“Out of the times we saw the history $h$, how many times was it followed by the word $w$”?)
 
-- Take a very large corpus, count the number of times we see *its water is so transparent that*, and count the number of times this is followed by *the*. 
+- Take a very large corpus, count the number of times we see `its water is so transparent that`, and count the number of times this is followed by `the`. 
 
 $$
 P(\text {the} | \text {its water is so transparent that})=
@@ -76,49 +76,63 @@ P(\text {the} | \text {its water is so transparent that})=
 $$
 
 - With a large enough corpus, such as the web, we can compute these counts and estimate the probability
+  
   - Works fine in many cases
+  
 - 🔴 Problems
   - Even the web isn’t big enough to give us good estimates in most cases. 
-    - This is because language is creative; new sentences are created all the time, and we won’t always be able to count entire sentences.
-  - Similarly, if we wanted to know the joint probability of an entire sequence of words like *its water is so transparent*, we could do it by asking “out of all possible sequences of five words, how many of them are *its water is so transparent*?”
-    - We have to get the count of *its water is so transparent* and divide by the sum of the counts of all possible five word sequences. That seems rather a lot to estimate!
+    
+    
+    
+    - This is because language is creative; 
+    
+      - new sentences are created all the time, 
+    
+      - and we won’t always be able to count entire sentences.
+    
+        
+    
+  - Similarly, if we wanted to know the joint probability of an entire sequence of words like `its water is so transparent`, we could do it by asking “out of all possible sequences of five words, how many of them are `its water is so transparent`?”
+    
+    - We have to get the count of `its water is so transparent` and divide by the sum of the counts of all possible five word sequences. That seems rather a lot to estimate!
 
 ## Cleverer way
 
 Notation:
 
-- $P(X_i=\text{''the''})$: probability of a particular random variable $X_i$ taking on the value “the”
+- $P(X\_i=\text{''the''})$: probability of a particular random variable $X\_i$ taking on the value “the”
   - Simplification: $P(the)$
+- $w\_1\dots w\_n$ or $w\_1^n$: a sequence of $n$ words
+  - $w\_1^{n-1}$: the string $w\_1, w\_2, \dots w\_{n-1}$
+- $P(w\_1, w\_2, \dots, w\_n)$: joint probability of each word in a sequence having a particular value $P(X\_1=w\_1, X\_2=w\_2, \dots, X\_n=w\_n)$
 
-- $w_1\dots w_n$ or $w_1^n$: a sequence of $n$ words
-  - $w_1^{n-1}$: the string $w_1, w_2, \dots w_{n-1}$
-- $P(w_1, w_2, \dots, w_n)$: joint probability of each word in a sequence having a particular value $P(X_1=w_1, X_2=w_2, \dots, X_n=w_n)$
-
-Compute $P(w_1, w_2, \dots, w_n)$: Use the **chain rule of probability**
+Compute $P(w\_1, w\_2, \dots, w\_n)$: Use the **chain rule of probability**
 $$
 \begin{aligned}
-P\left(X_{1} \ldots X_{n}\right) &=P\left(X_{1}\right) P\left(X_{2} | X_{1}\right) P\left(X_{3} | X_{1}^{2}\right) \ldots P\left(X_{n} | X_{1}^{n-1}\right) \\\\
-&=\prod_{k=1}^{n} P\left(X_{k} | X_{1}^{k-1}\right)
+P\left(X\_{1} \ldots X\_{n}\right) &=P\left(X\_{1}\right) P\left(X\_{2} | X\_{1}\right) P\left(X\_{3} | X\_{1}^{2}\right) \ldots P\left(X\_{n} | X\_{1}^{n-1}\right) \\\\
+&=\prod\_{k=1}^{n} P\left(X\_{k} | X\_{1}^{k-1}\right)
 \end{aligned}
 $$
 Apply to words:
 $$
 \begin{aligned}
-P\left(w_{1}^{n}\right) &=P\left(w_{1}\right) P\left(w_{2} | w_{1}\right) P\left(w_{3} | w_{1}^{2}\right) \ldots P\left(w_{n} | w_{1}^{n-1}\right) \\\\
-&=\prod_{k=1}^{n} P\left(w_{k} | w_{1}^{k-1}\right)
+P\left(w\_{1}^{n}\right) &=P\left(w\_{1}\right) P\left(w\_{2} | w\_{1}\right) P\left(w\_{3} | w\_{1}^{2}\right) \ldots P\left(w\_{n} | w\_{1}^{n-1}\right) \\\\
+&=\prod\_{k=1}^{n} P\left(w\_{k} | w\_{1}^{k-1}\right)
 \end{aligned}
 $$
-🔴 Problem: We don’t know any way to compute the exact probability of a word given a long sequence of preceding words $P(w_n|w_1^{n-1})$
+🔴 Problem: We don’t know any way to compute the exact probability of a word given a long sequence of preceding words $P(w\_n|w\_1^{n-1})$
 
 - we can’t just estimate by counting the number of times every word occurs following every long string, because language is creative and any particular context might have never occurred before! 🤪
 
 🔧 Solution: **n-gram model**
 
+### n-gram model
+
 💡 Idea of n-gram model: instead of computing the probability of a word given its entire history, we can **approximate the history by just the last few words**.
 
-E.g.: the **bigram** model, approximates the probability of a word given all the previous words $P(w_n|w_1^{n-1})$ by using only the conditional probability of the PRECEDING word $P(w_n|w_{n-1})$:
+E.g.: the **bigram** model, approximates the probability of a word given all the previous words $P(w\_n|w\_1^{n-1})$ by using only the conditional probability of the PRECEDING word $P(w\_n|w\_{n-1})$:
 $$
-P\left(w_{n} | w_{1}^{n-1}\right) \approx P\left(w_{n} | w_{n-1}\right)
+P\left(w\_{n} | w\_{1}^{n-1}\right) \approx P\left(w\_{n} | w\_{n-1}\right)
 $$
 
 - E.g.: $P(\text { the } | \text { Walden Pond's water is so transparent that }) \approx P(\text{the}|\text{that})$
@@ -127,7 +141,7 @@ $$
 
 Generalize the bigram (which looks one word into the past) to the trigram (which looks two words into the past) and thus to the n-gram (which looks $n − 1$ words into the past):
 $$
-P\left(w_{n} | w_{1}^{n-1}\right) \approx P\left(w_{n} | w_{n-N+1}^{n-1}\right)
+P\left(w\_{n} | w\_{1}^{n-1}\right) \approx P\left(w\_{n} | w\_{n-N+1}^{n-1}\right)
 $$
 
 ## Estimate n-gram probabilities
@@ -141,12 +155,14 @@ Intuitive way: **Maximum Likelihood Estimation (MLE)**
 
 Let's start from bigram. To compute a particular bigram probability of a word $y$ given a previous word $x$, we'll compute the count of the bigram $C(xy)$ and normalize by the sum of all the bigrams that share the same first word $x$
 $$
-P\left(w_{n} | w_{n-1}\right)=\frac{C\left(w_{n-1} w_{n}\right)}{\sum_{w} C\left(w_{n-1} w\right)}
+P\left(w\_{n} | w\_{n-1}\right)=\frac{C\left(w\_{n-1} w\_{n}\right)}{\sum\_{w} C\left(w\_{n-1} w\right)}
 $$
-We can simplify this equation, since the sum of all bigram counts that start with a given word $w_{n-1}$ must be equal to the unigram count for that word $w_{n-1}$
+We can simplify this equation, since the sum of all bigram counts that start with a given word $w\_{n-1}$ must be equal to the unigram count for that word $w\_{n-1}$
 $$
-P\left(w_{n} | w_{n-1}\right)=\frac{C\left(w_{n-1} w_{n}\right)}{C\left(w_{n-1}\right)}
+P\left(w\_{n} | w\_{n-1}\right)=\frac{C\left(w\_{n-1} w\_{n}\right)}{C\left(w\_{n-1}\right)}
 $$
+
+
 **Example**: 
 
 Given a mini-corpus of three sentences
