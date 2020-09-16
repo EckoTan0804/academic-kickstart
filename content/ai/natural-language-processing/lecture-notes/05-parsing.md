@@ -41,6 +41,8 @@ menu:
 
 ---
 
+![截屏2020-09-16 23.41.41](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-16%2023.41.41.png)
+
 ## TL;DR
 
 - Representing and Analyze Sentence Structure
