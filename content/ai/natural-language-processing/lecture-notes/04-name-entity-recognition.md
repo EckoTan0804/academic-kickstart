@@ -186,7 +186,7 @@ Fred showed Sue Mengqiu Huang's new painting
 
   - Token-level
 
-    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-26%2023.51.18.png" alt="截屏2020-05-26 23.51.18" style="zoom:40%;" />
+    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-26%2023.51.18.png" alt="截屏2020-05-26 23.51.18" style="zoom: 67%;" />
 
     > In token-level, we consider these tokens: "First", "Bank", "of", "Chicago", and "\$200,000,000"
     >
@@ -347,7 +347,7 @@ Difference to POS
 
 Example
 
-<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-27%2010.36.36.png" alt="截屏2020-05-27 10.36.36" style="zoom: 67%;" />
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-27%2010.36.36.png" alt="截屏2020-05-27 10.36.36"  />
 
 ## Inference
 
@@ -474,7 +474,7 @@ Example
 
   - Use class-based bigram language model
 
-    ![截屏2020-05-27 11.09.55](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-27%2011.09.55-20200916110552353.png)
+    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-27%2011.09.55-20200916110552353.png" alt="截屏2020-05-27 11.09.55" style="zoom:150%;" />
 
   - Quality: logarithm of the probability of the training text normalized by the length of the text
     $$
