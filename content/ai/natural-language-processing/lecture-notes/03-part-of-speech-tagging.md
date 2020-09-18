@@ -17,13 +17,13 @@ toc: true # Show table of contents?
 # Advanced metadata
 profile: false  # Show author profile?
 
-reading\_time: true # Show estimated reading time?
+reading_time: true # Show estimated reading time?
 summary: ""
 share: false  # Show social sharing links?
 featured: true
 
 comments: false  # Show comments?
-disable\_comment: true
+disable_comment: true
 commentable: false  # Allow visitors to comment? Supported by the Page, Post, and Docs content types.
 
 editable: false  # Allow visitors to edit the page? Supported by the Page, Post, and Docs content types.
