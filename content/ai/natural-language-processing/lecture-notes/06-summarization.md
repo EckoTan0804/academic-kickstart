@@ -17,13 +17,13 @@ toc: true # Show table of contents?
 # Advanced metadata
 profile: false  # Show author profile?
 
-reading\\_time: true # Show estimated reading time?
+reading\\\_time: true # Show estimated reading time?
 summary: ""
 share: false  # Show social sharing links?
 featured: true
 
 comments: false  # Show comments?
-disable\\_comment: true
+disable\\\_comment: true
 commentable: false  # Allow visitors to comment? Supported by the Page, Post, and Docs content types.
 
 editable: false  # Allow visitors to edit the page? Supported by the Page, Post, and Docs content types.
@@ -186,7 +186,7 @@ Three main components
 
       - $tf(w, D)$: Number of occurrences of word $w$ in document $d$ divided by the maximum frequency of one word in $D$
         $$
-        t f(w, D)=\\#(w, D) \frac{\\#(w, D)}{\max_{w^{\prime} \in D}\left(w^{\prime}, D\right)}
+        t f(w, D)=\\#(w, D) \frac{\\#(w, D)}{\max\_{w^{\prime} \in D}\left(w^{\prime}, D\right)}
         $$
 
       - $idf(w)$: Number of documents divided by the number of documents
@@ -269,7 +269,7 @@ Three main components
 
     - ROUGE-N: Overlap of N-grams between the system and reference summaries
       $$
-      \text{ROUGH-N} = \frac{\sum_{S \in \\{\text{Reference Summaries}\\}} \sum_{gram_n \in S}\operatorname{Count}_{match}(gram_n)}{\sum_{S \in \\{\text{Reference Summaries}\\}} \sum_{gram_n \in S}\operatorname{Count}(gram_n)}
+      \text{ROUGH-N} = \frac{\sum\_{S \in \\{\text{Reference Summaries}\\}} \sum\_{gram\_n \in S}\operatorname{Count}\_{match}(gram\_n)}{\sum\_{S \in \\{\text{Reference Summaries}\\}} \sum\_{gram\_n \in S}\operatorname{Count}(gram\_n)}
       $$
 
       - Example: 
@@ -353,12 +353,12 @@ Graph:
 - Weights:
   - TextRank: Word overlap normalized to sentence length
     $$
-    \text {Similarity}\left(S_{i}, S_{j}\right)=\frac{\left|\left\\{w_{k} \mid w_{k} \in S_{i} \& w_{k} \in S_{j}\right\\}\right|}{\log \left(\left|S_{i}\right|\right)+\log \left(\left|S_{j}\right|\right)}
+    \text {Similarity}\left(S\_{i}, S\_{j}\right)=\frac{\left|\left\\{w\_{k} \mid w\_{k} \in S\_{i} \text{ & } w\_{k} \in S\_{j}\right\\}\right|}{\log \left(\left|S\_{i}\right|\right)+\log \left(\left|S\_{j}\right|\right)}
     $$
 
   - LexRank: Cosine Similarity of TF-IDF vectors
     $$
-    \text { idf-modified-cosine }(x, y)=\frac{\sum_{w \in x, y} \mathrm{tf}_{w, x} \mathrm{tf}_{w, y}\left(\mathrm{idf}_{w}\right)^{2}}{\sqrt{\sum_{x_{i} \in x}\left(\mathrm{tf}_{x_{i}, x} \mathrm{idf}_{x_{i}}\right)^{2}} \times \sqrt{\sum_{y_{i} \in y}\left(\mathrm{tf}_{y_{i}, y} \mathrm{idf}_{y_{i}}\right)^{2}}}
+    \text { idf-modified-cosine }(x, y)=\frac{\sum\_{w \in x, y} \mathrm{tf}\_{w, x} \mathrm{tf}\_{w, y}\left(\mathrm{idf}\_{w}\right)^{2}}{\sqrt{\sum\_{x\_{i} \in x}\left(\mathrm{tf}\_{x\_{i}, x} \mathrm{idf}\_{x\_{i}}\right)^{2}} \times \sqrt{\sum\_{y\_{i} \in y}\left(\mathrm{tf}\_{y\_{i}, y} \mathrm{idf}\_{y\_{i}}\right)^{2}}}
     $$
 
 
@@ -373,7 +373,7 @@ Graph:
 
 ### Sequence-to-Sequence Model
 
-<img src="https://miro.medium.com/max/3972/1*1JcHGUU7rFgtXC_mydUA_Q.jpeg" alt="Understanding Encoder-Decoder Sequence to Sequence Model | by Simeon  Kostadinov | Towards Data Science" style="zoom: 33%;" />
+<img src="https://miro.medium.com/max/3972/1*1JcHGUU7rFgtXC\_mydUA\_Q.jpeg" alt="Understanding Encoder-Decoder Sequence to Sequence Model | by Simeon  Kostadinov | Towards Data Science" style="zoom: 33%;" />
 
 - Predict words based on 
   - previous target words and 
@@ -418,33 +418,25 @@ Graph:
 
 Calculate probability “**better to generate one word from vocabulary than to copy a word from source sentence**“
 $$
-p_{g e n}=\sigma\left(w_{c}^{T} c_{t}+w_{s}^{T} s_{t}+w_{x}^{T} x_{t}+b_{p t r}\right)
+p\_{g e n}=\sigma\left(w\_{c}^{T} c\_{t}+w\_{s}^{T} s\_{t}+w\_{x}^{T} x\_{t}+b\_{p t r}\right)
 $$
 Word with the **highest probability** should be the output word
 $$
-P(w)=p_{g e n} P_{v o c a b}(w)+\left(1-p_{g e n}\right) \sum_{j: w_{j}=w} \alpha_{i j}
+P(w)=p\_{g e n} P\_{v o c a b}(w)+\left(1-p\_{g e n}\right) \sum\_{j: w\_{j}=w} \alpha\_{i j}
 $$
 
 ### Data
 
-- Training data
-
+- **Training data**
   - Documents and summary 
-
-- DUC data set
-
-  - News article
-
-  - Around 14 word summary
-
--  Giga word
-
+- **DUC data set**
+- News article
+  
+- Around 14 word summary
+- **Giga word**
   - News articles
-
   - Headline generation 
-
-- CNN/Mail Corpus
-
-  - Article
-
-  - Predict bullet points
+- **CNN/Mail Corpus**
+- Article
+  
+- Predict bullet points
