@@ -5,7 +5,7 @@ summary: ""
 weight: 2070
 
 # Basic metadata
-title: "06-Summarization"
+title: "Summarization"
 date: 2020-09-16
 draft: false
 type: docs # page type
