@@ -439,3 +439,286 @@ More see: [Deep Reinforcement Learning: Pong from Pixels](http://karpathy.github
     - Algorithm:
       - Initialized $Q$ randomly
       - $Q(s, a) \leftarrow(1-\alpha) Q(s, a)+\alpha\left(r\_{t}+\gamma \cdot \underset{a}{\max} Q\left(s\_{t+1}, a\right)\right)$
+
+## Goal-oriented Dialogs: Statistical POMDP
+
+### **POMDP : Partially Observable Markov Decision Process**
+
+- MDP --> POMDP: all states $s$ cannot observed
+
+  - POMDP based SDM --> reinforcement learning + belief state tracking
+
+    - dialog evolves as a Markov process $P(s\_t | s\_{t-1}, a\_{t-1})$
+
+    - $s\_t$ is NOT directly observable
+
+      --> belief state $b(s\_t)$: prob. distribution of all states
+
+    - SLU outputs a noisy observation $o\_t$ of the user input with prob. $P(o\_t|s\_t)$
+
+- Specified by tuple $(S, A, T, R, O, Z)$
+
+  - $S, A, T, R$ constitute an MDP
+
+  - $O$: a finite set of observations received from the environment
+
+  - $Z$: the observation function s.t. 
+    $$
+    Z(o\_t,s\_t,a\_{t-1}) = P(o\_t|s\_t,a\_{t-1})
+    $$
+
+- **Local reward** is the expected reward $\rho$ over belief states
+  $$
+  \rho(b, a)=\sum\_{s \in S} R(s, a) \cdot b(s)
+  $$
+
+- **Goal**: maximize the expected cumulative reward.
+
+- **Operation** (at each time step)
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2017.07.48.png" alt="截屏2020-09-20 17.07.48" style="zoom:80%;" />
+  - World is in unobserved state $s\_t$
+
+  - Maintain distribution over all possible states with $b\_t$
+    $$
+    b\_t(s\_t) = \text{Probability of being in state } s\_t 
+    $$
+
+  - DM selects action $a\_t$ based on $b\_t$
+
+  - Receive reward $r\_t$
+
+  - Transition to unobserved state $s\_{t+1}$ ONLY depending on $s\_t$ and $a\_t$
+
+  - Receive obserservation $o\_{t+1}$ ONLY depending on $a\_t$ and $s\_{t+1}$
+
+- Update of belief state
+  $$
+  b\_{t+1}\left(s\_{t+1}\right)=\eta P\left(o\_{t+1} \mid s\_{t+1}, a\_{t}\right) \sum\_{s\_{t}} P\left(s\_{t+1} \mid s\_{t}, a\_{t}\right) b\_{t}\left(s\_{t}\right)
+  $$
+
+- Policy $\pi$:
+  $$
+  \pi(b) \in \mathbb{A}
+  $$
+
+- Value function:
+  $$
+  V^{\pi}\left(b\_{t}\right)=\mathbb{E}\left[r\_{t}+\gamma r\_{t+1}+\gamma^{2} r\_{t+2}+\ldots\right]
+  $$
+
+### POMDP model
+
+![截屏2020-09-20 23.07.52](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2023.07.52.png)
+
+- Two stochastic models
+  - Dialogue model $M$
+    - Transition and observation probability model 
+    - In what state is the dialogue at the moment
+  - Policy Model $\mathcal{P}$
+    - What is the best next action
+- Both models are optimized jointly
+  - Maximize the expect accumulated sum of rewards
+    - Online: Interaction with user
+    - Offline: Training with corpus
+
+- Key ideas
+  - Belief tracking
+    - Represent uncertainty
+
+    - Pursuing all possible dialogue paths in parallel
+  - Reinforcement learning
+    - Use machine learning to learn parameters
+
+- 🔴 Challenges
+  - Belief tracking
+  - Policy learning 
+  - User simulation
+
+#### Belief state
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2023.21.04.png" alt="截屏2020-09-20 23.21.04" style="zoom:80%;" />
+
+- Information encoded in the state
+  $$
+  \begin{aligned}
+  b\_{t+1}\left(g\_{t+1}, u\_{t+1}, h\_{t+1}\right)=& \eta P\left(o\_{t+1} \mid u\_{t+1}\right) \\\\
+  \cdot & P\left(u\_{t+1} \mid g\_{t+1}, a\_{t}\right) \\\\
+  \cdot & \sum_{g\_{t}} P\left(g\_{t+1} \mid g\_{t}, a\_{t}\right) \\\\
+  \cdot & \sum_{h\_{t}} P\left(h\_{t+1} \mid g\_{t+1}, u\_{t+1}, h\_{t}, a\_{t}\right) \\\\
+  \cdot & b\_{t}\left(g\_{t}, h\_{t}\right)
+  \end{aligned}
+  $$
+
+  - **User goal $g\_t$**: Information from the user necessary to fulfill the task
+  - **User utterance $u\_t$**
+    - What was said
+    - Not what was recognized
+  - **Dialogue history $h\_t$**
+
+- Using independence assumptions
+
+- Observation model: Probability of observation $o$ given $u$ 
+  - Reflect speech understanding errors
+- User model: Probability of the utterance given previous output and new state
+- Goal transition model
+- History model
+- Model still too complex 🤪
+  - Solution 
+    - n-best approach
+    - Factored approach
+    - Combination is possible
+
+### Policy
+
+- Mapping between belief states and system actions
+- 🎯 **Goal**: Find optimal policy π’
+- **Problem**: State and action space very large
+- But:
+  - Small part of belief space only visited 
+  - Plausible actions at every point very restricted
+- Summary space: Simplified representation
+
+### 🔴 Disadvantages
+
+- Predefine structure of the dialog states 
+
+  - Location
+
+  - Price range 
+  - Type of cuisine
+
+- Limited to very narrow domain
+
+- Cannot encode all features/slots that might be useful
+
+## Neural Dialog Models
+
+- End-to-End training
+  - Optimize all parameters jointly
+
+- Continuous representations 
+  - No early decision
+  - No propagation of errors
+- Challenges
+  - Representation of history/context
+  - Policy- Learning 
+    - Interactive learning
+  - dIntegration of knowledge sources
+
+### Datasets
+
+- Goal oriented
+
+  - **bAbI task**
+    - Synthetic data – created by templates
+
+  - **DSTC** (Dialog State tracking challenge)
+    - Restaurant reservation
+
+    - Collected using 3 dialog managers 
+    - Annotated with dialog states
+
+- Social dialog
+
+  - Learn from human-human communication
+
+### Architecture
+
+#### Memory Networks
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2017.43.00.png" alt="截屏2020-09-20 17.43.00" style="zoom:80%;" />
+
+- Neural network model
+
+- Writing and reading from a memory component
+- Store dialog history
+  - Learn to focus on important parts
+
+#### Sequence-to-Sequence Models: Encoder-Decoder
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2022.50.42.png" alt="截屏2020-09-20 22.50.42" style="zoom: 67%;" />
+
+- **Encoder**
+  - Read in Input
+  - Represent content in hidden fix dimension vector 
+  - LSTM-based model
+
+- **Decoder**
+  - Generate Output
+  - Use fix dimension vector as input 
+  - LSTM-based model
+  - `EOS` symbol to start outputting
+
+#### Example
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2022.52.57.png" alt="截屏2020-09-20 22.52.57" style="zoom:80%;" />
+
+- Recurrent-based Encoder-Decoder Architecture
+
+- Trained end-to-end.
+
+- Encoder
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2022.54.14.png" alt="截屏2020-09-20 22.54.14" style="zoom:67%;" />
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2022.54.27.png" alt="截屏2020-09-20 22.54.27" style="zoom:67%;" />
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2022.54.47.png" alt="截屏2020-09-20 22.54.47" style="zoom:67%;" />
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2022.55.02.png" alt="截屏2020-09-20 22.55.02" style="zoom:67%;" />
+
+- Decoder
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2022.55.31.png" alt="截屏2020-09-20 22.55.31" style="zoom:67%;" />
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2022.55.54.png" alt="截屏2020-09-20 22.55.54" style="zoom:67%;" />
+
+
+
+#### Dedicated Dialog Architecture
+
+![截屏2020-09-20 22.57.55](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2022.57.55.png)
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2022.58.59.png" alt="截屏2020-09-20 22.58.59" style="zoom:67%;" />
+
+### Training 
+
+#### Supervised learning
+
+- Supervised: Learning from corpus
+- Algorithm:
+  - Input user utterance 
+  - Calculate system output 
+  - Measure error 
+  - Backpropagation error 
+  - Update weights
+
+- Problem:
+  - Error lead to different dialogue state 
+  - Compounding errors
+
+#### Imitation learning
+
+- Imitation learning
+  - Interactive learning
+
+  - Correct mistakes and demonstrate expected actions
+- Algorithm: same as supervised learning
+- Problem: costly
+
+#### Deep reinforcement learning
+
+- Imitation learning
+  - Interactive learning
+  - Feedback only at end of the dialogue 
+    - Successful/ Failed task
+
+    - Additional reward for fewer steps :clap:
+
+- Challenge:
+  - Sampling of different actions 
+  - Hugh action space
+
+
+
