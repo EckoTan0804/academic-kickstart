@@ -69,7 +69,7 @@ menu:
 
 Find mapping $A$ for word $w_i$:
 $$
-A(i) \subseteq \operatorname{Sense}_{D}\left(w_{i}\right)
+A(i) \subseteq \operatorname{Sense}\_{D}\left(w\_{i}\right)
 $$
 
 - Mostly $|A(i)|=1$
@@ -337,7 +337,6 @@ Algorithm:
     \hat{S}=\underset{S\_i \in \text{Sense}\_{D(w)}}{\operatorname{argmax}}|j: \operatorname{vote}(C\_{j})=S\_{j}|
       $$
     
-  
   - Score for all hypothesis (Probability Mixture)
   
     - Normalize scores of every classifier to get probability
@@ -349,7 +348,7 @@ Algorithm:
   
   $$
     \hat{S}=\underset{S\_i \in \operatorname{Sense}\_D(w)}{\operatorname{argmax}}\sum\_{j=1}^{m}P\_{c\_j}(S\_i)
-    $$
+  $$
   
   - Ranking of all hypothesis (Rank-based Combination)
     $$
