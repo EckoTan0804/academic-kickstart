@@ -249,6 +249,11 @@
   identifier = "getting-started"
 
 [[pytorch]]
+  name = "fastai"
+  weight = 20
+  identifier = "fastai"
+
+[[pytorch]]
   name = "Recipes"
   weight = 90
   identifier = "pytorch-recipes"

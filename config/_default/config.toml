@@ -317,6 +317,11 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "getting-started"
 
 [[menu.pytorch]]
+  name = "fastai"
+  weight = 20
+  identifier = "fastai"
+
+[[menu.pytorch]]
   name = "Recipes"
   weight = 90
   identifier = "pytorch-recipes"
