@@ -284,7 +284,7 @@ menu:
 - Framework
 - **[aspect/feature identification](#aspectfeature-identification)**
   - find important topics 
-- **[sentiment prediction](#sentiment prediction)**
+- **[sentiment prediction](#sentiment-prediction)**
   - determine the sentiment orientation
   - is the aspect judged positive/negative?
 
@@ -329,7 +329,7 @@ Generate and present the opinion summaries
   - Show statistics and text selection
 
 -  Summary with timeline
-  - show opinion trends over a timeline
+  - Show opinion trends over a timeline
 
 Example:
 
