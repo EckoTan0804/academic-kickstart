@@ -267,16 +267,15 @@ menu:
 
 - 💡 **Divide input text into aspect/features/subtopics**
 
-- *E.g.:*
-
-  - *Review on iPod*
-
-  -  *Features:*
+  - *E.g.: Review on iPod*
 
     - *battery life*
 
     - *design* 
+
     - *price*
+
+      
 
 - Show structured details
 
