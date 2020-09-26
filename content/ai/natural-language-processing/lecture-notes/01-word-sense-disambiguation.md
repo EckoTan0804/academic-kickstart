@@ -283,7 +283,7 @@ Model as classification problem:
 
 - Example:
 
-  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-11%2022.45.57.png" alt="截屏2020-05-11 22.45.57" style="zoom:67%;" />
+  {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-05-11%2022.45.57.png" title="Example of naive bayes classfier" numbered="true" >}}
 
 #### Instance-based Learning
 
