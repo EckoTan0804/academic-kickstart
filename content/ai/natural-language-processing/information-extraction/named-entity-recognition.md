@@ -172,18 +172,18 @@ One common approach is to **make repeated rule-based passes over a text, allowin
 3. Consult application-specific name lists to identify likely name entity mentions from the given domain.
 4. Finally, apply probabilistic sequence labeling techniques that make use of the tags from previous stages as additional features.
 
-The intuition behind this staged approach is twofold. 
+The intuition behind this staged approach is two fold. 
 
 - First, some of the entity mentions in a text will be more clearly indicative of a given entity’s class than others. 
 - Second, once an unambiguous entity mention is introduced into a text, it is likely that subsequent shortened versions will refer to the same entity (and thus the same type of entity).
 
 ## Evaluation of NER
 
-The familiar metrics of **recall**, precision, and $F\_1$ measure are used to evaluate NER systems.
+The familiar metrics of **recall**, **precision**, and **$F\_1$ measure** are used to evaluate NER systems.
 
-- Recall: the ratio of the number of correctly labeled responses to the total that should have been labeled
-- Precision: ratio of the number of correctly labeled responses to the total labeled
-- *F*-measure: the harmonic mean of the two.
+- **Recall**: the ratio of the number of correctly labeled responses to the total that should have been labeled
+- **Precision**: ratio of the number of correctly labeled responses to the total labeled
+- ***F*-measure**: the harmonic mean of the two.
 
 {{% alert note %}} 
 
@@ -197,7 +197,7 @@ For named entities, the *entity* rather than the word is the unit of response.
 
   ![截屏2020-09-16 11.26.42](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-16%2011.26.42-20200916121336851.png)
 
-   The two entities `Tim Wagner` and `AMR Corp.` and the non-entity `said` would each count as a single response.
+  The two entities `Tim Wagner` and `AMR Corp.` and the non-entity `said` would each count as a single response.
 
 ### Problem of Evaluation
 

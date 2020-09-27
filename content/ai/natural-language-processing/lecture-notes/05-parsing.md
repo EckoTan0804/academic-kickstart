@@ -71,7 +71,7 @@ P\left(w_{1}, \ldots, w_{n}\right) \\
 \approx P\left(w_{n} \mid w_{n-2} w_{n-1}\right)
 \end{array}
 $$
-**<span style="color:red">Problems of Language Models</span>**
+<span style="color:red">Problems of Language Models</span>
 
 - <span style="color:red">Generalization: even with very long context there are sentence you cannot model with a n-gram language model</span>
 - <span style="color:red">Overall sentence structure</span>
@@ -83,7 +83,9 @@ How can we model what a grammatically correct sentence is?
 
 ## Phrase structure grammar 
 
-**Describe sentence structure by grammar**
+**Describe sentence structure by grammar** (Constituency relation)
+
+Phrase structure organizes words into nested constituents (can represent the grammar with [CFG](#context-free-grammar) rules)
 
 Units in the grammar: **Constituency**
 
@@ -95,16 +97,34 @@ Units in the grammar: **Constituency**
   - *I saw <u>him</u>*
   - *I saw <u>the old boy*</u>
 
+> [Wiki](https://en.wikipedia.org/wiki/Constituent_(linguistics))
+>
+> In syntactic analysis, a **constituent** is a word or a group of words that function **as a single unit** within a hierarchical structure. The constituent structure of sentences is identified using tests for constituents.
+>
+> A phrase is a sequence of one or more words (in some theories two or more) built around a head lexical item and working as a unit within a sentence. A word sequence is shown to be a phrase/constituent if it exhibits one or more of the behaviors discussed below. 
+
 ### Phrase structure rules
 
 - Describe syntax of language
 - Example
   - `s` -->`NP` `VP` (Sentence consists of a noun phrase and a verb phrase) 
   - `NP` --> `Det` `N` (A noun phrase consists of a determiner and a noun)
-- Only looking at the syntax 
-- No semantics
+- **Only looking at the syntax** 
+- **No semantics**
+
+> [Wiki](https://en.wikipedia.org/wiki/Phrase_structure_grammar):
+>
+> In linguistics, phrase structure grammars are all those grammars that are based on the **constituency relation**, as opposed to the dependency relation associated with **dependency grammars**; hence, phrase structure grammars are also known as **constituency grammars**
+>
+> The fundamental trait that these frameworks all share is that they view sentence structure in terms of the constituency relation. 
+>
+> Example: Constituency relation Vs. Dependency relation
+>
+> ![Constituency and dependency relations](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/Thistreeisillustratingtherelation%28PSG%29.png)
 
 ### Context Free Grammar
+
+**Constituency = phrase structure grammar = context-free grammars (CFGs)**
 
 - Introduced by Chomsky
 
@@ -124,17 +144,35 @@ Units in the grammar: **Constituency**
     - E.g.: `s` -->`NP` `VP`
   - $S$: start symbol
 
-### Dependency Structure
+*Example*
+
+![截屏2020-09-27 16.05.45](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-27%2016.05.45.png)
+
+## Dependency Structure
 
 - Different approach to describe sentence structure
+
+- Identify semantic relations!
+
 - Idea:
   - Which words depend on which words 
   - Which word modifies which word
+  
+- Example:
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-27%2016.20.20.png" alt="截屏2020-09-27 16.20.20" style="zoom: 67%;" />
+
+> [Wiki](https://en.wikipedia.org/wiki/Dependency_grammar)
+>
+> The (finite) verb is taken to be the structural center of clause structure. All other syntactic units (words) are either directly or indirectly connected to the verb in terms of the directed links, which are called dependencies.
+>
+> A dependency structure is determined by the relation between a word (a head) and its dependents. Dependency structures are flatter than phrase structures in part because they lack a finite verb phrase constituent, and they are thus well suited for the analysis of languages with free word order, such as Czech or Warlpiri.
 
 ## Difficulties
+
 **<span style="color:red">Ambiguities!!!</span>**
 
-E.g.: PP attachment
+E.g.: Prepositional phrase attachment ambiguity
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-16%2016.34.55.png" alt="截屏2020-09-16 16.34.55" style="zoom:67%;" />
 
@@ -261,10 +299,10 @@ Use **machine learning techniques** to distinguish probable and less probable tr
 
   - Bottom up
 
-    - Shift reduce algorithm
+    - **Shift reduce** algorithm
 
-      - Shift: advances in the input stream by one symbol. That shifted symbol becomes a new single-node parse tree.
-      - Reduce: applies a completed grammar rule to some of the recent parse trees, joining them together as one tree with a new root symbol.
+      - **Shift**: advances in the input stream by one symbol. That shifted symbol becomes a new single-node parse tree.
+      - **Reduce**: applies a completed grammar rule to some of the recent parse trees, joining them together as one tree with a new root symbol.
 
     - Example
 
@@ -309,8 +347,6 @@ Use **machine learning techniques** to distinguish probable and less probable tr
 
       <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-16%2021.32.16.png" alt="截屏2020-09-16 21.32.16" style="zoom:67%;" />
 
-      <img src="/Users/EckoTan/Library/Application Support/typora-user-images/截屏2020-09-16 21.32.27.png" alt="截屏2020-09-16 21.32.27" style="zoom:67%;" />
-
       
 
   - Remove unaries
@@ -321,6 +357,20 @@ Use **machine learning techniques** to distinguish probable and less probable tr
 
   - Very strong indepedence assumption
   - Label is bottleneck
+  
+- [Example](https://en.wikipedia.org/wiki/CYK_algorithm)
+
+  - Grammar
+
+    ![截屏2020-09-27 23.40.08](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-27%2023.40.08.png)
+
+  - Analyse the sentence "*she eats a fish with a fork*" with the CYK algorithm:
+
+    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/440px-CYK_algorithm_animation_showing_every_step_of_a_sentence_parsing.gif" alt="img" style="zoom:80%;" />
+
+    result:
+
+    ![截屏2020-09-27 23.41.25](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-27%2023.41.25.png)
 
 ### Transition-based Dependency Parsing
 
@@ -457,3 +507,5 @@ Predict transition sequence: Transition between configuration
   - [Wiki](https://en.wikipedia.org/wiki/Shift-reduce_parser)
 - [Transition-based dependency parsing](https://cl.lingfil.uu.se/~sara/kurser/5LN455-2014/lectures/5LN455-F8.pdf)
 
+- [[CS224n笔记] L5 Dependency Parsing](https://zhuanlan.zhihu.com/p/110532288)
+- [CS224n, Linguistic Structure: Dependency Parsing](http://web.stanford.edu/class/cs224n/slides/cs224n-2020-lecture05-dep-parsing.pdf)
