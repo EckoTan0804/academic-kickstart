@@ -185,9 +185,9 @@ Probabilistic tagging: Model POS tags as **Sequence labeling**
 > A common example of a sequence labeling task is [part of speech tagging](https://en.wikipedia.org/wiki/Part\_of\_speech\_tagging), which seeks to assign a [part of speech](https://en.wikipedia.org/wiki/Part\_of\_speech) to each word in an input sentence or document. Sequence labeling can be treated as a set of independent [classification](https://en.wikipedia.org/wiki/Classification\_(machine\_learning)) tasks, one per member of the sequence. However, accuracy is generally improved by making the optimal label for a given element dependent on the choices of nearby elements, using special algorithms to choose the *globally* best set of labels for the entire sequence at once.
 
 - Sequence labeling
-  - Input: sequence $x\\_1, \dots, x\\_n$
+  - Input: sequence $x\_1, \dots, x\_n$
 
-  - Output: Sequence $y\\_1, \dots, y\\_n$
+  - Output: Sequence $y\_1, \dots, y\_n$
 
   - Example
 
@@ -310,7 +310,7 @@ $$
 
 - Task: How to find the best weight $\theta$ ?
 
-- 💡**Maximum (Log-)Likelihood estimation**
+- 💡 **Maximum (Log-)Likelihood estimation**
 
   - Maximize probability of the training data
 
@@ -350,7 +350,7 @@ $$
   - Words ending on *phoby* will be `noun`s 
   - Words ending on *ly* are often `adverb`s
 
-#####Structure
+##### Structure
 
 - First layer: Word representation
   - CNN

@@ -76,7 +76,7 @@ Parts of Speech
 
   - Important closed class in English:
 
-    - **Prepositions**
+    - **Prepositions** *(介词)*
       - *on, under, over, near, by, at, from, to, with*
       - Occur before noun phrases
       - Often indicate spatial or temporal relations
@@ -84,18 +84,18 @@ Parts of Speech
         - metaphorical (*on time*, *with gusto*, *beside herself*)
       - Also indicate other relations
         - *Hamlet was written <u>by</u> Shakespeare*
-    - **Particle**
+    - **Particle** *（小品词）*
       - *up, down, on, off, in, out, at, by*
       - Resembles a preposition or an adverb 
       - Used in combination with a verb
       - Particles often have extended meanings that aren’t quite the same as the prepositions they resemble
-    - **Determiner**
+    - **Determiner** （*限定词*）
       - Occurs with nouns, often marking the beginning of a noun phrase
-        - **article**
+        - **article** *（冠词）*
           - indefinite: *a, an*
           - definite: *the*
         - Other determiner: *this, that* (*this chapter, that page*)
-    - **Conjunctions**: join two phrases, clauses, or sentences
+    - **Conjunctions** *（连词）*: join two phrases, clauses, or sentences 
       - **Coordinating conjunctions**: join two elements of equal status
         - *and, or, but*
       - **Subordinating conjunctions**: when one of the elements has some embedded status
@@ -103,23 +103,23 @@ Parts of Speech
           - main clause: *I thought*
           - subordinate clause: *you might like some milk*
           - Subordinating conjunctions like *that* which link a verb to its argument in this way are also called **complementizers**.
-    - **Pronouns**: often act as a kind of shorthand for referring to some noun phrase or entity or event
-      - **Personal pronouns**: refer to persons or entities 
+    - **Pronouns** *（代词）*: often act as a kind of shorthand for referring to some noun phrase or entity or event
+      - **Personal pronouns** *（人称代词）*: refer to persons or entities 
         - *you*, *she*, *I*, *it*, *me*, etc 
-      - **Possessive pronouns**: forms of personal pronouns that indicate either actual possession or more often just an abstract relation between the person and some object 
+      - **Possessive pronouns ** *（物主代词）*: forms of personal pronouns that indicate either actual possession or more often just an abstract relation between the person and some object 
         - *my, your, his, her, its, one’s, our, their*
       - **Wh-pronouns**: are used in certain question forms
         - *what, who, whom, whoever*
         - may also act as complementizers
           - *Frida, who married Diego. . .*
 
-    - **auxiliary verbs**
+    - **auxiliary verbs** *（助动词）*
       - mark semantic features of a main verb
         - whether an action takes place in the present, past, or future (tense)
         - whether it is completed (aspect)
         - whether it is negated (polarity)
         - whether an action is necessary, possible, suggested, or desired (mood)
-      - **Copula verb**: 
+      - **Copula verb** *（系动词）*: 
         - *be*
           - connects subjects with certain kinds of predicate nominals and adjectives
             - *He <u>is</u> a duck*
@@ -128,7 +128,7 @@ Parts of Speech
           - mark the perfect tenses
             - *I <u>have</u> gone*
             - *I <u>had</u> gone*
-      - **Modal verbs**: mark the mood associated with the event depicted by the main verb
+      - **Modal verbs ** *（情态动词）*: mark the mood associated with the event depicted by the main verb
         - *can*: indicates ability or possibility
         - *may*: indicates permission or possibility
         - *must*: indicates necessity
