@@ -5,7 +5,7 @@ summary: ""
 weight: 2050
 
 # Basic metadata
-title: "Name Entity Recognition"
+title: "Named Entity Recognition"
 date: 2020-09-15
 draft: false
 type: docs # page type

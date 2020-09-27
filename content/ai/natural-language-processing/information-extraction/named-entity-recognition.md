@@ -165,7 +165,7 @@ The following figure shows a sketch of the algorithm:
 
 Commercial approaches to NER are often based on **pragmatic combinations of lists and rules**, with some smaller amount of supervised machine learning.
 
-One common approach is to **make repeated rule-based passes over a text, allow- ing the results of one pass to influence the next**. The stages typically first involve the use of rules that have extremely high precision but low recall. Subsequent stages employ more error-prone statistical methods that take the output of the first pass into account.
+One common approach is to **make repeated rule-based passes over a text, allowing the results of one pass to influence the next**. The stages typically first involve the use of rules that have extremely high precision but low recall. Subsequent stages employ more error-prone statistical methods that take the output of the first pass into account.
 
 1. First, use high-precision rules to tag unambiguous entity mentions.
 2. Then, search for substring matches of the previously detected names.
