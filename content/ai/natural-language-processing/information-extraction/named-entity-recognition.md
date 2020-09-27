@@ -169,7 +169,7 @@ One common approach is to **make repeated rule-based passes over a text, allowin
 
 1. First, use high-precision rules to tag unambiguous entity mentions.
 2. Then, search for substring matches of the previously detected names.
-3. Consultapplication-specificnameliststoidentifylikelynameentitymentions from the given domain.
+3. Consult application-specific name lists to identify likely name entity mentions from the given domain.
 4. Finally, apply probabilistic sequence labeling techniques that make use of the tags from previous stages as additional features.
 
 The intuition behind this staged approach is twofold. 
