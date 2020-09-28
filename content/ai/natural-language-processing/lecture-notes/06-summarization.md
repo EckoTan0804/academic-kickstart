@@ -167,51 +167,66 @@ Three main components
   - All uni-, bi-, and trigrams (except punctuation) 
   - restrict to certain POS sets
 
-- 🔴 Problem:
+- 🔴 **Problem**:
 
   - Enough examples to generate all/most key phrases
 
   - Too many examples -> low performance of classifier
 
-- Features
+- **Features**
 
   - Term frequency
 
-  - TF-IDF (Term frequency–inverse document frequency)
+  - **TF-IDF (Term Frequency–Inverse Document Frequency)**
 
     - Reflect importance of a word in a document
       $$
       \text{TF-IDF} = tf * idf
       $$
 
-      - $tf(w, D)$: Number of occurrences of word $w$ in document $d$ divided by the maximum frequency of one word in $D$
-        $$
-        t f(w, D)=\\#(w, D) \frac{\\#(w, D)}{\max\_{w^{\prime} \in D}\left(w^{\prime}, D\right)}
-        $$
+      - $tf(w, D)$: 
+        
+        - Term Frequency, measures how frequently a term occurs in a document.
+        - Number of occurrences of word $w$ in document $d$ divided by the maximum frequency of one word in $D$
 
-      - $idf(w)$: Number of documents divided by the number of documents
-
-        which contain $w$
+        $$
+      t f(w, D)=\\#(w, D) \frac{\\#(w, D)}{\max\_{w^{\prime} \in D}\left(w^{\prime}, D\right)}
+        $$
+        
+        > Alternative definition:
+        > $$
+        > tf(w, D) = \frac{\text{count of } w \text{ in } D}{\text{number of words in } D}
+        > $$
+        > 
+        
+      - $idf(w)$: 
+      
+        - Inverse Document Frequency, measures how important a term is
+        - Idea: Words which occur in less documents are more important
+        - Number of documents divided by the number of documents which contain $w$
+        
         $$
         i d f(w)=\log \frac{|D|}{|\\{d \in D: w \in d\\}|}
         $$
+      
+    - [Example](http://www.tfidf.com/):
+
+      - *Consider a document containing 100 words wherein the word cat appears 3 times. The term frequency (i.e., tf) for cat is then (3 / 100) = 0.03. Now, assume we have 10 million documents and the word cat appears in one thousand of these. Then, the inverse document frequency (i.e., idf) is calculated as log(10,000,000 / 1,000) = 4. Thus, the Tf-idf weight is the product of these quantities: 0.03 * 4 = 0.12.*
 
   - Length of the example
-
   - Relative position of the first occurrence
-
   - Boolean syntactic features 
 
     - contains all caps
 
-- Learning algorithm
+- **Learning algorithm**
 
   - Decision trees,
 
   - Naive Bayes classifier 
   - ...
 
-- Evaluation
+- **Evaluation**
 
   - Compare results to reference
 
@@ -231,7 +246,7 @@ Three main components
     - Humans do not only extract key words, but also abstract 
     - Normally not all key words are reachable
 
-####Sentence extraction
+#### Sentence extraction
 
 - Use statistic heuristics to select sentences 
 
@@ -373,7 +388,7 @@ Graph:
 
 ### Sequence-to-Sequence Model
 
-<img src="https://miro.medium.com/max/3972/1*1JcHGUU7rFgtXC\_mydUA\_Q.jpeg" alt="Understanding Encoder-Decoder Sequence to Sequence Model | by Simeon  Kostadinov | Towards Data Science" style="zoom: 33%;" />
+<img src="https://miro.medium.com/max/1986/1*1JcHGUU7rFgtXC_mydUA_Q.jpeg" alt="Image for post" style="zoom: 33%;" />
 
 - Predict words based on 
   - previous target words and 
@@ -431,12 +446,17 @@ $$
   - Documents and summary 
 - **DUC data set**
 - News article
-  
 - Around 14 word summary
 - **Giga word**
   - News articles
   - Headline generation 
 - **CNN/Mail Corpus**
 - Article
-  
 - Predict bullet points
+
+
+
+## Reference
+
+- TF-IDF:
+  - [TF-IDF算法详解](https://blog.csdn.net/zhaomengszu/article/details/81452907)
