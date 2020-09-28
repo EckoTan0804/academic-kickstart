@@ -101,7 +101,7 @@ menu:
 
 ### Initiative
 
-- **System Initiative **
+- **System Initiative**
 
   - Command & control
 
@@ -143,14 +143,14 @@ menu:
 
 ### Development
 
-- **Rule-based**
+- [**Rule-based**](#rule-based-systems)
   - Create management by templates/rules
 
-- **Statistical**
+- [**Statistical**](#statistical-dm)
   - Train model to predict answer given input 
   - POMDP
 
-- **End-to-End Neural Models**
+- [**End-to-End Neural Models**](#neural-model-models)
   - No separation into NLU/DM/NLG
 
 ### Components
