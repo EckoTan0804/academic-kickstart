@@ -45,7 +45,7 @@ menu:
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-20%2011.55.10.png" alt="截屏2020-09-20 11.55.10" style="zoom:80%;" />
 
-## Dialog ModelingDialog Modeling
+## Dialog Modeling
 
 ###  Dialog manager
 
@@ -246,6 +246,7 @@ menu:
   - User can provide over-informative answers 
   - Allows more natural dialogues
 - 👎 Disadvantages
+  
   - Cannot handle complex dialogues
 
 ### Agent-based
@@ -265,8 +266,10 @@ menu:
 - Allow complex communication between the system, the user and the underlying application to solve some problem/task
 - Many variants depends on particular aspects of intelligent behavior included
 - Tends to be mixed-initiative
+  
   - User can control the dialog, introduce new topics, or make contribution
 - 👍 Advantages
+  
   - Allow natural dialogue in complex domains
 - 👎 Disadvantages
   - Such agents are usually very complex 
@@ -559,6 +562,7 @@ More see: [Deep Reinforcement Learning: Pong from Pixels](http://karpathy.github
 - Using independence assumptions
 
 - Observation model: Probability of observation $o$ given $u$ 
+  
   - Reflect speech understanding errors
 - User model: Probability of the utterance given previous output and new state
 - Goal transition model

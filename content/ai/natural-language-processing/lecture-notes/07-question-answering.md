@@ -358,6 +358,7 @@ Combine both
 
   - Generative: Answers are free text (NLG)
 - Rank the candidate answers
+  
   - E.g. overlap between answer and question 
 - **Return result(s) with best overall score**
 
@@ -395,7 +396,9 @@ Combine both
 
 ### Neural Answer Extraction
 
-Encoder-decoder model
+**Encoder-decoder model**
+
+Encoder
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-18%2019.06.22.png" alt="截屏2020-09-18 19.06.22" style="zoom:80%;" />
 
@@ -419,4 +422,12 @@ Solution: Use MORE information from the question
 - Calculates weighted sum of question encodings
 - Weight is based on similarity between question encoding and context encoding
 - Different similarity metrics
+
+{{% alert note %}} 
+
+Review of models see: [基于深度神经网络的自动问答系统概述](https://zhuanlan.zhihu.com/p/41217854)
+
+{{% /alert %}}
+
+
 
