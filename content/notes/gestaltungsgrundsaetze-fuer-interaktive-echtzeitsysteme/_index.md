@@ -19,5 +19,14 @@ menu:
     weight: 1
 ---
 
-- Language: German
-- Semester: SS20
+## Overview
+
+|                 |                                                              |
+| --------------- | ------------------------------------------------------------ |
+| **Name**        | Gestaltungsgrundsätze für interaktive Echtzeitsysteme        |
+| **Semester**    | SS20                                                         |
+| **Language**    | German                                                       |
+| **Lecturer(s)** | Elisabeth Peinsipp-Byma, Olaf Sauer                          |
+| **Credits**     | 3                                                            |
+| **Homepage**    | [Gestaltungsgrundsätze für interaktive Echtzeitsysteme](https://ies.anthropomatik.kit.edu/lehre_mensch_maschine_automatisierungstechnik.php) |
+
