@@ -258,6 +258,17 @@
   weight = 90
   identifier = "pytorch-recipes"
 
+# gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme
+[[gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme]]
+  name = "Teil 1"
+  weight = 10
+  identifier = "teil-1"
+
+[[gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme]]
+  name = "Teil 2"
+  weight = 20
+  identifier = "teil-2"
+
 ################################
 # Courses
 ################################

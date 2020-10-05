@@ -1,7 +1,7 @@
 ---
 # Course title, summary, and position in the list.
 linktitle: Rechnerstruktur
-weight: 6
+weight: 1
 
 # Page metadata.
 title: Overview
