@@ -30,3 +30,18 @@ menu:
 | **Credits**     | 3                                                            |
 | **Homepage**    | [Gestaltungsgrundsätze für interaktive Echtzeitsysteme](https://ies.anthropomatik.kit.edu/lehre_mensch_maschine_automatisierungstechnik.php) |
 
+
+
+## Structure
+
+- **Einführung in die Vorlesung & Mensch-Maschine-Systeme**
+- **Mensch-Maschine-Systeme & Mensch-Maschine-Interaktion**
+  - Aufbau und Charakteristik
+  - Gestaltung mit Hauptaugenmerk Mensch
+  - Entwicklungsphasen
+  - Neuartige Eingabegeräte: Überblick und Integration
+- **Automatisierte Fertigungssysteme / IT-Lösungen in der Fertigung**
+  - Die Fabrik und ihre Funktionen
+  - Digitalisierung der Fertigung („Industrie 4.0“)
+  - Aufbau industrieller Automatisierungssysteme
+  - Produktionsnahe IT-Systeme – von der Feldebene bis zum MES

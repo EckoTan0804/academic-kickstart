@@ -260,14 +260,9 @@
 
 # gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme
 [[gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme]]
-  name = "Teil 1"
+  name = "Vorlesung"
   weight = 10
-  identifier = "teil-1"
-
-[[gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme]]
-  name = "Teil 2"
-  weight = 20
-  identifier = "teil-2"
+  identifier = "vorlesung"
 
 ################################
 # Courses

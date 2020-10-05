@@ -328,9 +328,9 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 
 # gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme
 [[menu.gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme]]
-  name = "Teil 1"
+  name = "Vorlesung"
   weight = 10
-  identifier = "teil-1"
+  identifier = "vorlesung"
 
 [[menu.gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme]]
   name = "Teil 2"
