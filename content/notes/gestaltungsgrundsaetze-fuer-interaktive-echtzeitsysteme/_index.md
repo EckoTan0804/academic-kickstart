@@ -30,7 +30,15 @@ menu:
 | **Credits**     | 3                                                            |
 | **Homepage**    | [Gestaltungsgrundsätze für interaktive Echtzeitsysteme](https://ies.anthropomatik.kit.edu/lehre_mensch_maschine_automatisierungstechnik.php) |
 
+## Ziel
 
+Vermittlung von Gestaltungsgrundsätzen
+
+- zum Entwurf
+- zur Umsetzung
+- zur Bewertung
+
+von interaktiven Echtzeitsystemen
 
 ## Structure
 
