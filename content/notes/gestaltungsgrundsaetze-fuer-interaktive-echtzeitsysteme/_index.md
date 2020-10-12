@@ -53,3 +53,8 @@ von interaktiven Echtzeitsystemen
   - Digitalisierung der Fertigung („Industrie 4.0“)
   - Aufbau industrieller Automatisierungssysteme
   - Produktionsnahe IT-Systeme – von der Feldebene bis zum MES
+
+## Mindmap
+
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme.xmind%20-%20画布%201.png" title="Mindmap" numbered="true" >}}
+
