@@ -249,8 +249,13 @@
   identifier = "getting-started"
 
 [[pytorch]]
-  name = "fastai"
+  name = "Deep Learning wiht PyTorch"
   weight = 20
+  identifier = "dl-with-pytorch"
+
+[[pytorch]]
+  name = "fastai"
+  weight = 40
   identifier = "fastai"
 
 [[pytorch]]
