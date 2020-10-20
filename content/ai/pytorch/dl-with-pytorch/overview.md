@@ -58,8 +58,11 @@ menu:
   import numpy as np
   import torch
   import torch.nn as nn
-  import torch.nn.functional as F import torch.optim as optim
-  torch.set_printoptions(edgeitems=2) torch.manual_seed(123)
+  import torch.nn.functional as F 
+  import torch.optim as optim
+  
+  torch.set_printoptions(edgeitems=2) 
+  torch.manual_seed(123)
   ```
 
 - Convention
