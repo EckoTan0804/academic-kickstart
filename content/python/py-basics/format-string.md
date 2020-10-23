@@ -254,3 +254,7 @@ for index, value in enumerate(a):
 
 - We will use a width of 4-character to print `value`
 - The precision of `value` is 4: we will keep 4 decimal places
+
+## Reference
+
+- [Python f-string tutorial](http://zetcode.com/python/fstring/)
