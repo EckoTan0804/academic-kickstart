@@ -6,7 +6,7 @@ weight: 205
 
 # Basic metadata
 title: "The Mechanics of Learning"
-date: 2020-10-21
+date: 2020-10-24
 draft: false
 type: docs # page type
 authors: ["admin"]

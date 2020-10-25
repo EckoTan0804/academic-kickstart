@@ -6,7 +6,7 @@ weight: 203
 
 # Basic metadata
 title: "PyTorch Tensor"
-date: 2020-10-18
+date: 2020-10-19
 draft: false
 type: docs # page type
 authors: ["admin"]

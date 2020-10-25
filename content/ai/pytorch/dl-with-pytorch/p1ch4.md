@@ -6,7 +6,7 @@ weight: 204
 
 # Basic metadata
 title: "Real-world Data Representation Using Tensors"
-date: 2020-10-18
+date: 2020-10-21
 draft: false
 type: docs # page type
 authors: ["admin"]

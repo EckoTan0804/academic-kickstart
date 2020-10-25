@@ -6,7 +6,7 @@ weight: 206
 
 # Basic metadata
 title: "Using Neural Network to Fit Data"
-date: 2020-10-21
+date: 2020-10-26
 draft: false
 type: docs # page type
 authors: ["admin"]
@@ -37,7 +37,6 @@ header:
 menu: 
     pytorch:
         parent: dl-with-pytorch
-
         weight: 6
 ---
 
