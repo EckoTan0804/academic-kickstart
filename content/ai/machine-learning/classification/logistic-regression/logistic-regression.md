@@ -109,3 +109,4 @@ $\begin{aligned} J(\boldsymbol{\theta}) &=-\frac{1}{m} \sum_{i=1}^{m}\left[y^{(i
     \frac{\partial}{\partial \theta_{j}} J(\boldsymbol{\theta})=\frac{1}{m} \displaystyle \sum_{i=1}^{m}\left(\sigma\left(\boldsymbol{\theta}^{T} \mathbf{x}^{(l)}\right)-y^{(i)}\right) x_{j}^{(i)}
     $$
     
+
