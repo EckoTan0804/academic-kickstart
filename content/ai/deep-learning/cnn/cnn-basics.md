@@ -104,8 +104,6 @@ Convolution using a single filter:
 
 {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/3d-conv.png" title="Convolution using a single filter" numbered="true" >}}
 
-![3d-conv](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/3d-conv.png)
-
 Each filter actually happens to be a *collection of kernels*, with there being **one kernel for every single input channel** to the layer, and each kernel being unique. As the input image has 3 channels (RGB), our filter consists of also 3 kernels.
 
 Each of the kernels of the filter “slides” over their respective input channels, producing a processed version of each.
