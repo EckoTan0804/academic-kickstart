@@ -61,9 +61,11 @@ $\sigma(t)=\frac{1}{1+\exp (-t)}$
 
 3. Prediction: 
 
-    $\hat{y}=\left\{\begin{array}{ll}0 & \hat{p}<0.5\left(\Leftrightarrow h_{\theta}(\mathbf{x})<0\right) \\ 1 & \hat{p} \geq 0.5\left(\Leftrightarrow h_{\theta}(\mathbf{x}) \geq 0\right)\end{array}\right.$
-
-
+    $$
+    \hat{y} = \begin{cases} 0 & \text{ if } \hat{p}<0.5\left(\Leftrightarrow h_{\theta}(\mathbf{x})<0\right) \\\\
+    1 & \text{ if }\hat{p} \geq 0.5\left(\Leftrightarrow h_{\theta}(\mathbf{x}) \geq 0\right)\end{cases}
+    $$
+    
 
 ## Train and cost function
 
@@ -73,7 +75,12 @@ Objective of training: to set the parameter vector $\boldsymbol{\theta}$ so that
 
 ### Cost function of a single training instance:
 
-$c(\boldsymbol{\theta})=\left\{\begin{array}{cc}-\log (\hat{p}) & y=1 \\ -\log (1-\hat{p}) & y=0\end{array}\right.$
+$$
+c(\boldsymbol{\theta}) = \begin{cases} -\log (\hat{p}) & \text{ if } y=1 \\\\
+-\log (1-\hat{p}) & \text{ if } y=0\end{cases}
+$$
+
+
 
 > <img src="https://miro.medium.com/max/1621/1*_NeTem-yeZ8Pr9cVUoi_HA.png" style="zoom:30%; background-color:white">
 >
