@@ -5,7 +5,7 @@ summary: ""
 weight: 420
 
 # Basic metadata
-title: "Convolutional Neural Network (CNN) Basics"
+title: "👍 Convolutional Neural Network (CNN) Basics"
 date: 2020-08-19
 draft: false
 type: docs # page type

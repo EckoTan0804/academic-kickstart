@@ -5,7 +5,7 @@ summary: ""
 weight: 425
 
 # Basic metadata
-title: "CNN Intuition and Visualization"
+title: "👍 CNN Intuition and Visualization"
 date: 2020-08-19
 draft: false
 type: docs # page type

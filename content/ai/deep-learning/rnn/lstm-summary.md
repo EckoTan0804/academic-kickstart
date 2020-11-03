@@ -5,7 +5,7 @@ summary: ""
 weight: 640
 
 # Basic metadata
-title: "LSTM Summary"
+title: "👍 LSTM Summary"
 date: 2020-08-03
 draft: false
 type: docs # page type

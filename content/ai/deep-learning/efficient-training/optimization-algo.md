@@ -5,7 +5,7 @@ summary: ""
 weight: 210
 
 # Basic metadata
-title: "Optimization Algorithms"
+title: "👍 Optimization Algorithms"
 date: 2020-07-31
 draft: false
 type: docs # page type

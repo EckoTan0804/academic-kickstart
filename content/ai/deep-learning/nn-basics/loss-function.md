@@ -5,7 +5,7 @@ summary: ""
 weight: 130
 
 # Basic metadata
-title: "Loss Functions"
+title: "👍 Loss Functions"
 date: 2020-08-17
 draft: false
 type: docs # page type

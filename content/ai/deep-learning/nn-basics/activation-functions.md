@@ -5,7 +5,7 @@ summary: ""
 weight: 120
 
 # Basic metadata
-title: "Activation Functions"
+title: "👍 Activation Functions"
 date: 2020-08-17
 draft: false
 type: docs # page type

@@ -5,7 +5,7 @@ summary: ""
 weight: 153
 
 # Basic metadata
-title: "Data Augmentation"
+title: "👍 Data Augmentation"
 date: 2020-08-16
 draft: false
 type: docs # page type

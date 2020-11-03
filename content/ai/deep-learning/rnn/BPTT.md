@@ -5,7 +5,7 @@ summary: ""
 weight: 650
 
 # Basic metadata
-title: "Backpropagation Through Time (BPTT)"
+title: "👍 Backpropagation Through Time (BPTT)"
 date: 2020-08-13
 draft: false
 type: docs # page type

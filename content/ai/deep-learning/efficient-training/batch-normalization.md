@@ -5,7 +5,7 @@ summary: ""
 weight: 220
 
 # Basic metadata
-title: "Batch Normalization"
+title: "👍 Batch Normalization"
 date: 2020-08-16
 draft: false
 type: docs # page type

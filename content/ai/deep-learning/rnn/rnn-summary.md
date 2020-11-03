@@ -5,7 +5,7 @@ summary: ""
 weight: 630
 
 # Basic metadata
-title: "RNN Summary"
+title: "👍 RNN Summary"
 date: 2020-08-03
 draft: false
 type: docs # page type
