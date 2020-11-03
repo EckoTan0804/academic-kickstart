@@ -7,7 +7,7 @@ weight: 810
 # Basic metadata
 title: "Reinforcement Learning Basics"
 date: 2020-08-23
-draft: false
+draft: true
 type: docs # page type
 authors: ["admin"]
 tags: ["Deep Learning", "Optimization", "Reinforcement Learning"]

@@ -7,7 +7,7 @@ weight: 830
 # Basic metadata
 title: "RL Resources"
 date: 2020-08-23
-draft: false
+draft: true
 type: docs # page type
 authors: ["admin"]
 tags: ["Deep Learning", "Reinforcement Learning"]

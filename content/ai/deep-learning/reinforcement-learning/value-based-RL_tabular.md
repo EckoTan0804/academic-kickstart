@@ -7,7 +7,7 @@ weight: 830
 # Basic metadata
 title: "Value-based RL : The Tabular Case"
 date: 2020-08-24
-draft: false
+draft: true
 type: docs # page type
 authors: ["admin"]
 tags: ["Deep Learning", "Optimization", "Reinforcement Learning"]

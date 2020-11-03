@@ -7,7 +7,7 @@ weight: 820
 # Basic metadata
 title: "Markov Decision Process (MDP)"
 date: 2020-08-24
-draft: false
+draft: true
 type: docs # page type
 authors: ["admin"]
 tags: ["Deep Learning", "Optimization", "Reinforcement Learning"]
