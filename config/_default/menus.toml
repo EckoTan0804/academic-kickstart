@@ -269,6 +269,14 @@
   weight = 10
   identifier = "vorlesung"
 
+
+# computer vision
+[[compuetr-vision]]
+  name = "Object detection"
+  weight = 10
+  identifier = "object-detection"
+
+
 ################################
 # Courses
 ################################

@@ -15,6 +15,6 @@ type: docs  # Do not modify.
 # - weight: Position of link in menu.
 menu:
   computer-vision:
-    name: Overview
-    weight: 3
+    name: CV Overview
+    weight: 1
 ---
