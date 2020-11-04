@@ -71,3 +71,7 @@ menu:
 
 - [Deep Learning with PyTorch](https://pytorch.org/assets/deep-learning/Deep-Learning-with-PyTorch.pdf): Official book from PyTorch
 
+- [Dive into Deep Learning](https://d2l.ai/): A Deep Learning book including 
+  - concepts
+  - context
+  - code (mainly in MxNet, but also with Tensorflow and PyTorch version)
