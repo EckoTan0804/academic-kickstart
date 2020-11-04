@@ -343,7 +343,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "teil-2"
 
 # computer vision
-[[menu.compuetr-vision]]
+[[menu.computer-vision]]
   name = "Object detection"
   weight = 10
   identifier = "object-detection"
