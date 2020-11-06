@@ -35,12 +35,15 @@
 #    url = "files/cv.pdf"
 #    weight = 70
   
-################################
-# Notes
-################################
 
-# ML
+################################################################
+# AI                                                           #
+################################################################
 
+
+################################
+# ML                           #
+################################
 [[machine-learning]]
   name = "ML Fundamentals"
   weight = 20
@@ -77,7 +80,9 @@
   identifier = "non-parametric"
 
 
-# Python 
+################################
+# Python                       #
+################################
 [[python]]
   name = "Python Basics"
   weight = 10
@@ -103,43 +108,10 @@
   weight = 50
   identifier = "visualization"
 
-# Rechnerstruktur
-[[rechner-struktur]]
-  name = "Grundlagen"
-  weight = 10
-  identifier = "grundlagen"
 
-[[rechner-struktur]]
-  name = "Prozessortechniken"
-  weight = 20
-  identifier = "prozessor-techniken"
-
-[[rechner-struktur]]
-  name = "Multiprozessoren"
-  weight = 30
-  identifier = "multiprozessoren"
-
-[[rechner-struktur]]
-  name = "Vektorverarbeitung"
-  weight = 40
-  identifier = "vektor-verarbeitung"
-
-[[rechner-struktur]]
-  name = "Übung Zusammenfassung"
-  weight = 50
-  identifier = "uebung-zusammenfassung"
-
-[[rechner-struktur]]
-  name = "Notes von Rechnerorganisation"
-  weight = 60
-  identifier = "notes-von-ro"
-
-[[rechner-struktur]]
-  name = "Alte Klausur Zusammenfassung"
-  weight = 70
-  identifier = "alte-klausur-zusammenfassung"
-
-# Deep Learning
+################################
+# DL                           #
+################################
 [[deep-learning]]
   name = "Neural Network Basics"
   weight = 10
@@ -186,7 +158,9 @@
   identifier = "rl"
 
 
-# NLP
+################################
+# NLP                          #
+################################
 [[natural-language-processing]]
   name = "Regular Expressions, Text Normalization, and Edit Distance"
   weight = 10
@@ -242,7 +216,10 @@
   weight = 200
   identifier = "lecture-notes"
 
-# pytorch
+
+################################
+# PyTorch                      #
+################################
 [[pytorch]]
   name = "Getting Started"
   weight = 10
@@ -263,6 +240,26 @@
   weight = 90
   identifier = "pytorch-recipes"
 
+################################
+# CV                           #
+################################
+[[computer-vision]]
+  name = "Lecture"
+  weight = 10
+  identifier = "cv-lecture"
+  
+[[computer-vision]]
+  name = "Object detection"
+  weight = 100
+  identifier = "object-detection"
+
+
+
+
+################################################################
+# Notes                                                        #
+################################################################
+
 # gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme
 [[gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme]]
   name = "Vorlesung"
@@ -270,15 +267,46 @@
   identifier = "vorlesung"
 
 
-# computer vision
-[[compuetr-vision]]
-  name = "Object detection"
+# Rechnerstruktur
+[[rechner-struktur]]
+  name = "Grundlagen"
   weight = 10
-  identifier = "object-detection"
+  identifier = "grundlagen"
+
+[[rechner-struktur]]
+  name = "Prozessortechniken"
+  weight = 20
+  identifier = "prozessor-techniken"
+
+[[rechner-struktur]]
+  name = "Multiprozessoren"
+  weight = 30
+  identifier = "multiprozessoren"
+
+[[rechner-struktur]]
+  name = "Vektorverarbeitung"
+  weight = 40
+  identifier = "vektor-verarbeitung"
+
+[[rechner-struktur]]
+  name = "Übung Zusammenfassung"
+  weight = 50
+  identifier = "uebung-zusammenfassung"
+
+[[rechner-struktur]]
+  name = "Notes von Rechnerorganisation"
+  weight = 60
+  identifier = "notes-von-ro"
+
+[[rechner-struktur]]
+  name = "Alte Klausur Zusammenfassung"
+  weight = 70
+  identifier = "alte-klausur-zusammenfassung"
+
 
 
 ################################
-# Courses
+# Courses                       
 ################################
 [[example]]
   name = "Example Topic"
@@ -289,3 +317,5 @@
   name = "Another Topic"
   weight = 20
   identifier = "another-topic"
+
+  
