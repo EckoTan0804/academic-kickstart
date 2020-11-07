@@ -46,7 +46,7 @@
 ################################
 [[machine-learning]]
   name = "ML Fundamentals"
-  weight = 20
+  weight = 10
   identifier = "ml-fundamentals"
 
 [[machine-learning]]
@@ -76,9 +76,13 @@
 
 [[machine-learning]]
   name = "Non-Parametric"
-  weight = 60
+  weight = 70
   identifier = "non-parametric"
 
+[[machine-learning]]
+  name = "Unsupervised Learning"
+  weight = 80
+  identifier = "unsupervised"
 
 ################################
 # Python                       #
@@ -247,7 +251,7 @@
   name = "Lecture"
   weight = 10
   identifier = "cv-lecture"
-  
+
 [[computer-vision]]
   name = "Object detection"
   weight = 100

@@ -115,7 +115,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 
 [[menu.machine-learning]]
   name = "ML Fundamentals"
-  weight = 20
+  weight = 10
   identifier = "ml-fundamentals"
 
 [[menu.machine-learning]]
@@ -145,8 +145,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 
 [[menu.machine-learning]]
   name = "Non-Parametric"
-  weight = 60
+  weight = 70
   identifier = "non-parametric"
+
+[[machine-learning]]
+  name = "Unsupervised Learning"
+  weight = 80
+  identifier = "unsupervised"
 
 # Python 
 [[menu.python]]
