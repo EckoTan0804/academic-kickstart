@@ -156,6 +156,10 @@
   weight = 50
   identifier = "visualization"
 
+[[python]]
+  name = "IPython"
+  weight = 60
+  identifier = "ipython"
 
 ################################
 # DL                           #
