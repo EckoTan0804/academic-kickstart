@@ -274,7 +274,7 @@ With the idea of **anchor boxes**, we are going to
 
 - and associate them in the class labels
   $$
-  \mathbf{y} = \left(\underbrace{P\_c, b\_x, b\_y, b\_h, b\_w, c\_1, c\_2, c\_3}\_{\text{anchor box 1}} , \underbrace{P\_c, b\_x, b\_y, b\_h, b\_w, c\_1, c\_2, c\_3}\_{\text{anchor box 2}}\right)^T \in \mathbb{R}^16
+  \mathbf{y} = \left(\underbrace{P\_c, b\_x, b\_y, b\_h, b\_w, c\_1, c\_2, c\_3}\_{\text{anchor box 1}} , \underbrace{P\_c, b\_x, b\_y, b\_h, b\_w, c\_1, c\_2, c\_3}\_{\text{anchor box 2}}\right)^T \in \mathbb{R}^{16}
   $$
   
 
