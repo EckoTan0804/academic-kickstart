@@ -57,7 +57,7 @@ $$
 
 Decision for classification
 $$
-\hat{y} = \begin{cases} 1 &\text{if } g(x) > 0 \\ -1 &\text{else}\end{cases}
+\hat{y} = \begin{cases} 1 &\text{if } g(x) > 0 \\\\ -1 &\text{else}\end{cases}
 $$
 
 ## Update Rule
