@@ -10,7 +10,7 @@ date: 2020-10-27
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["ML", "Classification", "Decision Tree"]
+tags: ["ML", "Classification", "Regression", "Decision Tree"]
 categories: ["Machine Learning"]
 toc: true # Show table of contents?
 

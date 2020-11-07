@@ -10,7 +10,7 @@ date: 2020-11-07
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["ML", "Classification", "Ensemble Learning"]
+tags: ["ML", "Ensemble Learning"]
 categories: ["Machine Learning"]
 toc: true # Show table of contents?
 
