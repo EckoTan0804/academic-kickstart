@@ -16,12 +16,56 @@
 [[main]]
   name = "AI"
   url = "/ai/"
+  identifier = "ai"
   weight = 3
 
 [[main]]
-  name = "Python"
-  url = "/python/"
+  name = "Machine Learning"
+  url = "/ai/machine-learning/"
+  weight = 1
+  identifier = "ml"
+  parent = "ai"
+
+[[main]]
+  name = "Deep Learning"
+  url = "/ai/deep-learning/"
+  weight = 2
+  identifier = "dl"
+  parent = "ai"
+
+[[main]]
+  name = "Computer Vision"
+  url = "/ai/computer-vision/"
+  weight = 3
+  identifier = "cv"
+  parent = "ai"
+
+[[main]]
+  name = "Nature Language Processing"
+  url = "/ai/natural-language-processing/"
   weight = 4
+  identifier = "nlp"
+  parent = "ai"
+
+[[main]]
+  name = "PyTorch"
+  url = "/ai/pytorch/"
+  weight = 5
+  identifier = "pytorch"
+  parent = "ai"
+
+[[main]]
+  name = "Programming"
+  url = "/programming/"
+  weight = 4
+  identifier = "programming"
+
+[[main]]
+  name = "Python"
+  url = "/programming/python/"
+  weight = 1
+  identifier = "python"
+  parent = "programming"
 
 [[main]]
   name = "Notes"

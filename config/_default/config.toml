@@ -108,11 +108,81 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
     weight = 20.0
 
 ################################
-# Notes
+# Menu
 ################################
 
-# ML
+# main menu
+[[menu.main]]
+  name = "Home"
+  url = "#about"
+  weight = 1
 
+[[menu.main]]
+  name = "Posts"
+  url = "/post/"
+  weight = 2
+
+[[menu.main]]
+  name = "AI"
+  url = "/ai/"
+  weight = 3
+  identifier = "ai"
+
+[[menu.main]]
+  name = "Machine Learning"
+  url = "/ai/machine-learning/"
+  weight = 1
+  identifier = "ml"
+  parent = "ai"
+
+[[menu.main]]
+  name = "Deep Learning"
+  url = "/ai/deep-learning/"
+  weight = 2
+  identifier = "dl"
+  parent = "ai"
+
+[[menu.main]]
+  name = "Computer Vision"
+  url = "/ai/computer-vision/"
+  weight = 3
+  identifier = "cv"
+  parent = "ai"
+
+[[menu.main]]
+  name = "Nature Language Processing"
+  url = "/ai/natural-language-processing/"
+  weight = 4
+  identifier = "nlp"
+  parent = "ai"
+
+[[menu.main]]
+  name = "PyTorch"
+  url = "/ai/pytorch/"
+  weight = 5
+  identifier = "pytorch"
+  parent = "ai"
+
+[[menu.main]]
+  name = "Programming"
+  url = "/programming/"
+  weight = 4
+  identifier = "programming"
+
+[[menu.main]]
+  name = "Python"
+  url = "/programming/python/"
+  weight = 1
+  identifier = "python"
+  parent = 'programming'
+
+[[menu.main]]
+  name = "Notes"
+  url = "/notes/"
+  weight = 5
+
+
+# ML
 [[menu.machine-learning]]
   name = "ML Fundamentals"
   weight = 10
@@ -148,7 +218,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   weight = 70
   identifier = "non-parametric"
 
-[[machine-learning]]
+[[menu.machine-learning]]
   name = "Unsupervised Learning"
   weight = 80
   identifier = "unsupervised"
