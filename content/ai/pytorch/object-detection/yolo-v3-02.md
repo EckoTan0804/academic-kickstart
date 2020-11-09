@@ -92,6 +92,8 @@ activation=linear
 ...
 ```
 
+{{< figure src="https://europepmc.org/articles/PMC6695703/bin/sensors-19-03371-g010.jpg" title="YOLO v3 structure" numbered="true" >}}
+
 There're **5** types of layers that are used in YOLO:
 
 - **Convolutional**
@@ -155,6 +157,8 @@ layers = -1, 61
     - In our example, it is **-4**, so the layer will output feature map from the **4th layer backwards** from the *Route*layer.
   - When `layers` has **two** values, it returns the concatenated feature maps of the layers indexed by it's values.
     - In our example it is -1 and 61, and the layer will output feature maps **from the previous layer (-1) and the 61st layer, concatenated along the depth dimension**.
+
+> More see: https://github.com/AlexeyAB/darknet/issues/487#issuecomment-374902735
 
 ### YOLO
 
