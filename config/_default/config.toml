@@ -397,7 +397,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "getting-started"
 
 [[pytorch]]
-  name = "Deep Learning wiht PyTorch"
+  name = "Deep Learning with PyTorch"
   weight = 20
   identifier = "dl-with-pytorch"
 
@@ -405,6 +405,11 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "fastai"
   weight = 40
   identifier = "fastai"
+
+[[menu.pytorch]]
+  name = "Object Detection"
+  weight = 50
+  identifier = "object-detection"
 
 [[menu.pytorch]]
   name = "Recipes"
