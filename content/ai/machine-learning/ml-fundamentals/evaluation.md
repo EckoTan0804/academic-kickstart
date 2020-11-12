@@ -45,7 +45,6 @@ menu:
 
 {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/Confusion_Matrix_and_ROC.png" title="Confusion matrix, ROC, and AUC" numbered="true" >}}
 
-![Confusion_Matrix_and_ROC](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/Confusion_Matrix_and_ROC.png)
 
 
 
