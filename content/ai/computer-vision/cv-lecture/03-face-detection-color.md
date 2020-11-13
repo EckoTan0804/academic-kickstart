@@ -5,7 +5,7 @@ summary: ""
 weight: 13
 
 # Basic metadata
-title: "Face Detection: Color"
+title: "Face Detection: Color-Based"
 date: 2020-11-06
 draft: false
 type: docs # page type
