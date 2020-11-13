@@ -68,6 +68,13 @@
   parent = "programming"
 
 [[main]]
+  name = "Software Engineering"
+  url = "/programming/software-engineering/"
+  weight = 2
+  identifier = "software-engineering"
+  parent = "programming"
+
+[[main]]
   name = "Notes"
   url = "/notes/"
   weight = 5
@@ -359,6 +366,13 @@
   name = "Alte Klausur Zusammenfassung"
   weight = 70
   identifier = "alte-klausur-zusammenfassung"
+
+
+# Software engineering
+[[software-engineering]]
+  name = "Design Patterns"
+  weight = 10
+  identifier = "design-patterns"
 
 
 

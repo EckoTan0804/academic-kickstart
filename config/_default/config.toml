@@ -177,9 +177,17 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   parent = "programming"
 
 [[menu.main]]
+  name = "Python"
+  url = "/programming/software-engineering/"
+  weight = 2
+  identifier = "software-engineering"
+  parent = "programming"
+
+[[menu.main]]
   name = "Notes"
   url = "/notes/"
   weight = 5
+  
 
 
 # ML
@@ -437,6 +445,15 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "Object detection"
   weight = 100
   identifier = "object-detection"
+
+
+
+
+
+[[menu.software-engineering]]
+  name = "Design Patterns"
+  weight = 10
+  identifier = "design-patterns"
 
 
 
