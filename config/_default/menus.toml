@@ -374,6 +374,11 @@
   weight = 10
   identifier = "design-patterns"
 
+[[software-engineering]]
+  name = "Implementing High Quality Systems"
+  weight = 20
+  identifier = "implementing-high-quality-systems"
+
 
 
 ################################
