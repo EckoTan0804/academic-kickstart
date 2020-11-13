@@ -375,10 +375,14 @@
   identifier = "design-patterns"
 
 [[software-engineering]]
-  name = "Implementing High Quality Systems"
+  name = "High Quality Systems: Implementation"
   weight = 20
   identifier = "implementing-high-quality-systems"
 
+[[software-engineering]]
+  name = "High Quality Systems: Design"
+  weight = 30
+  identifier = "designing-high-quality-systems"
 
 
 ################################
