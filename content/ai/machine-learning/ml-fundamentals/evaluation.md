@@ -90,10 +90,11 @@ A confusion matrix tells you what your ML algorithm did right and what it did wr
   </tr>
   <tr>
     <td class="tg-0lax" colspan="2"></td>
-    <td class="tg-0lax">Sensitivity (Recall) = TP / (TP + FN)</td>
-    <td class="tg-0lax">Specificity = TN / (FP+TN)</td>
+    <td class="tg-0lax">TPR = Sensitivity = Recall <br> = TP / (TP + FN)</td>
+    <td class="tg-0lax">Specificity = TN / (FP+TN) <br> FPR = FP / (FP + TN) = 1 - Specificity </td>
   </tr>
 </table>
+
 
 
 - Row: Prediction
@@ -110,21 +111,23 @@ Each cell:
 
 
 
-## Precision and Recall
+## Definition
 
 ### **Precision** 
 
 Percentage of retrieved documents that are relevant 
 $$
-\text{ Recall }=\frac{\\# \text{ relevant item retrieved }}{\\# \text{ of relevant items in collection }}
+\text{ Precision } = \frac{TP}{TP + FP}
+=\frac{\\# \text{ relevant item retrieved }}{\\# \text{ of items retrieved }}
 $$
 
 
-### **Recall**
+### **Recall / True Positive Rate (TPR) / Sensitivity**
 
 Percentage of all relevant documents that are retrieved 
 $$
-\text { Recall }=\frac{\\# \text { relevant item retrieved }}{\\# \text { of relevant items in collection }}
+\text { Recall }  = \frac{TP}{TP + FN}
+=\frac{\\# \text { relevant item retrieved }}{\\# \text { of relevant items in collection }}
 $$
 
 ### **$F$ / $F_1$ measure**
@@ -133,7 +136,19 @@ $$
 F=\frac{2 \cdot \text {precison} \cdot \text {recall}}{\text {precision}+\text {recall}}
 $$
 
-### Example
+### Specificity
+
+$$
+\text{Specifity} = \frac{TN}{FP + TN}
+$$
+
+### False Positive Rate (FPR)
+
+$$
+\text{FPR} = \frac{FP}{FP + TN} \left(= 1- \frac{TN}{FP + TN} = 1- \text{Specifity}\right)
+$$
+
+## Example
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-15%2011.51.38.png" alt="截屏2020-09-15 11.51.38" style="zoom: 33%;" />
 
@@ -147,9 +162,44 @@ $$
 
 
 
-## 🎥 Explaination
+## Relation between Sensitivity, Specificity, FPR and Threshold
 
-- [Machine Learning Fundamentals: The Confusion Matrix](http://https://www.youtube.com/watch?v=Kdsp6soqA7o&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=3)
-- [Machine Learning Fundamentals: Sensitivity and Specificity](http://https://www.youtube.com/watch?v=vP06aMoz4v8&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=4)
-- [ROC and AUC, Clearly Explained!](http://https://www.youtube.com/watch?v=4jRBRDbJemM&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&index=6)
+Assuming that the distributions of the actual postive and negative classes looks like this:
 
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/evaluation-metrics-Page-1.png" alt="evaluation-metrics-Page-1" style="zoom:67%;" />
+
+And we have already defined our threshold. What greater than the threshold will be predicted as positive, and smaller than the threshold will be predicted as negative. 
+
+If we set a lower threshold, we'll get the following diagram:
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/evaluation-metrics-2.png" alt="evaluation-metrics-2" style="zoom:67%;" />
+
+We can notice that FP ⬆️ , and FN ⬇️ .
+
+Therefore, we have the relationship:
+
+- Threshold ⬇️
+  - FP ⬆️ , FN ⬇️ 
+  - $\text{Sensitivity} (= TPR) = \frac{TP}{TP + FN}$ ⬆️ , $\text{Specificity} = \frac{TN}{TN + FP}$ ⬇️ 
+  - $FPR (= 1 - \text{Specificity})$⬆️
+- And vice versa
+
+## 🎥 Video tutorials
+
+### The confusion matrix
+
+{{< youtube Kdsp6soqA7o >}}
+
+### Sensitivity and specificity
+
+{{< youtube vP06aMoz4v8 >}}
+
+### ROC and AUC
+
+{{< youtube 4jRBRDbJemM >}}
+
+
+
+## Reference
+
+- [Understanding AUC - ROC Curve](https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5)
