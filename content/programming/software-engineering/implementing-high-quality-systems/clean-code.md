@@ -554,8 +554,32 @@ Example
     - so-called continuous integration
     - reduces fear of breaking code
 
+### Static Code Analyses
 
+- Classes of metrics
 
+  - Duplication (detection of DRY violation)
 
+  - Unit tests (test coverage should be > 90%) 
+  - Complexity (avg. LoC per class)
 
-  
+  - Potential bugs
+
+  - Coding rules
+
+  - Comments 
+  - Architecture & design
+
+  ### Code Reviews
+
+- **Explaining** your code to others helps... 
+  - **Detecting errors** and unclean passages 
+  - **Spreading knowledge** through a team,
+  - esp. to less experienced colleagues
+    - about design principles
+
+    - about further aspects of the system under development
+
+- **Refactoring** helps to **instantly apply** suggestions, so follow-up ideas can be given in one session
+  - Works only in small groups with few opinions
+  - In larger groups, **design reviews** are better suitable
