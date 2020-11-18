@@ -239,11 +239,22 @@ If the hierarchy is correctly implemented, the client class has to be able to wo
 
 
 
+**TIP:** This training could take several hours depending on how many iterations you chose in the .cfg file. You will want to let this run as you sleep or go to work for the day, etc. However, Colab Cloud Service kicks you off it's VMs if you are idle for too long (30-90 mins).
 
+To avoid this hold (CTRL + SHIFT + i) at the same time to open up the inspector view on your browser.
 
+Paste the following code into your console window and hit **Enter**
 
-
-
+```
+function ClickConnect(){
+console.log("Working"); 
+document
+  .querySelector('#top-toolbar > colab-connect-button')
+  .shadowRoot.querySelector('#connect')
+  .click() 
+}
+setInterval(ClickConnect,60000)
+```
 
 
 
