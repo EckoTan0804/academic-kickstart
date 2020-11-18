@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 linktitle: YOLO
 summary: ""
-weight: 1001
+weight: 1002
 
 # Basic metadata
 title: "You Only Look Once (YOLO)"
@@ -37,7 +37,7 @@ header:
 menu: 
     computer-vision:
         parent: object-detection
-        weight: 1
+        weight: 2
 ---
 
 The problem of sliding windows method is that it does not output the most accuracte bounding boxes. A good way to get this output more accurate bounding boxes is with the **YOLO (You Only Look Once)** algorithm. 

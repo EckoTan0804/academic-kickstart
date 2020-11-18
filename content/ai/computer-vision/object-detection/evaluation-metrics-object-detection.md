@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 linktitle: Evaluation Metrics
 summary: ""
-weight: 1009
+weight: 1001
 
 # Basic metadata
 title: "Evaluation Metrics for Object Detection"
@@ -37,7 +37,7 @@ header:
 menu: 
     computer-vision:
         parent: object-detection
-        weight: 9
+        weight: 1
 ---
 
 ## Precision & Recall
