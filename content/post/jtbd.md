@@ -13,7 +13,7 @@ toc: true # Show table of contents?
 profile: false  # Show author profile?
 
 reading_time: true # Show estimated reading time?
-summary: "Gestalt priciples of visual perception"
+summary: "A framework to understand consumers"
 share: false  # Show social sharing links?
 featured: true
 lastmod: true
