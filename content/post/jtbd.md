@@ -5,7 +5,7 @@ date: 2020-11-21
 draft: false
 # type: docs # page type
 authors: ["admin"]
-tags: ["Startup", "JTBD"]
+tags: ["Startup", "JTBD", "Business"]
 categories: ["Startup"]
 toc: true # Show table of contents?
 
