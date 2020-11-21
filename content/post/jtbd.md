@@ -105,3 +105,5 @@ The “Done” part of Jobs to be Done illustrates the idea that a JTBD is a pro
 
 - [Article: What is Jobs to be Done (JTBD)?](https://jtbd.info/2-what-is-jobs-to-be-done-jtbd-796b82081cca)
 - [Article: Why Is It Called “Jobs to be Done”? (And Why Is This Important?)](https://jtbd.info/why-is-it-called-jobs-to-be-done-and-why-is-this-important-7febc880289b)
+- Video tutorial:
+    {{< youtube -FbvCA6bg14 >}}
