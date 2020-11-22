@@ -69,4 +69,6 @@ print(x1.shape)
 
 ## Reference
 
-{{< youtube 9BjmmK61pjI >}}
+- [numpy tile documentation](https://numpy.org/doc/stable/reference/generated/numpy.tile.html)
+
+- {{< youtube 9BjmmK61pjI >}}
