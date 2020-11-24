@@ -287,21 +287,9 @@ Common rules of thumb for navigating the 4 major scenarios:
 
 
 
+## Google Colab Notebook
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[Colab Notebook](https://colab.research.google.com/drive/1pCckg5u_8tnJ1lHVThFHsUnDsD999PPd?authuser=1)
 
 ## Reference
 
