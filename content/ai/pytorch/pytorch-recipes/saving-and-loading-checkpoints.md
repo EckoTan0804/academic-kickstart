@@ -142,6 +142,10 @@ loss = checkpoint['loss']
 
 
 
+## Google Colab Notebook
+
+[Colab Notebook](https://colab.research.google.com/drive/1PlsftZnPEvyWkJUXIoM5M3a-UA1RTXhl?authuser=1) 
+
 
 
 
