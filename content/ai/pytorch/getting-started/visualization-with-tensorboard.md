@@ -100,9 +100,14 @@ menu:
 
    
 
-## Notebook
+## Google Colab Notebook
 
-[04-visualize-with-tensorboard.ipynb](https://github.com/EckoTan0804/summay-pytorch/blob/master/pytorch-quick-start/04-visualize-with-tensorboard.ipynb)
+[Colab Notebook](https://colab.research.google.com/drive/16Qsog13Ehj6CWFb4q5VP5GFoKfeoFIlb?authuser=1)
+
+## Resource
+
+- [tensorboardX documentation](https://tensorboardx.readthedocs.io/en/latest/index.html)
+- [Pytorch深度学习实战教程（四）：必知必会的炼丹法宝](https://cuijiahua.com/blog/2020/05/dl-17.html)
 
 ## Reference
 
