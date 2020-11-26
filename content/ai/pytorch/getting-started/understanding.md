@@ -219,8 +219,6 @@ During training, we will update the weights and biases based on the gradient and
 
 When we do so, we have to tell PyTorch not to take the gradient of this step too—otherwise things will get very confusing when we try to compute the derivative at the next batch! 
 
-There're two ways to do this:
-
 ### Assign to tensor's `data` attribute
 
 If we assign to the `data` attribute of a tensor then PyTorch will not take the gradient of that step.
@@ -242,11 +240,21 @@ with torch.no_grad():
     p -= p.grad * lr
 ```
 
+## Enable/Disabel gradient tracking dynamically
+
+Use `torch.set_grad_enabled (mode: bool)` ([Documentation](https://pytorch.org/docs/stable/generated/torch.set_grad_enabled.html))
+
+```python
+with torch.set_grad_enabled(flag):
+    // do something
+    pass
+```
+
+
+
 ## Zero the Gradient
 
 In PyToch, after updating the parameters using their gradients in one iteration, the gradients need to be zeroed. Otherwise they'll be accumulated in the next iteration!
-
-There're two ways to zero the gradient:
 
 ### `zero_()`
 
@@ -265,4 +273,22 @@ E.g.
 for p in model.parameters():
   p.grad = None
 ```
+
+### Use `optimizer.zero_grad()`
+
+
+
+## Running loss
+
+ `loss.item()` returns the average loss for each sample within the batch, i.e. loss of entire mini-batch but divided by the batch size. Therefore, to get the running loss of the mini-batch, we need to do:
+
+```python
+running_loss += loss.item() * batch_size
+```
+
+Reference
+
+- [What is running loss in PyTorch and how is it calculated](https://stackoverflow.com/questions/61092523/what-is-running-loss-in-pytorch-and-how-is-it-calculated)
+
+- [How to calculate running loss/training loss while training a CNN model](https://discuss.pytorch.org/t/how-to-calculate-running-loss-training-loss-while-training-a-cnn-model/49301)
 
