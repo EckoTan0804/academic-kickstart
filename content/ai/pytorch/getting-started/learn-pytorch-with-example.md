@@ -144,8 +144,6 @@ menu:
 
 {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/pytorch_train.png" title="Training in PyTorch overview" numbered="true" >}}
 
-![pytorch_train]()
-
 ## From `numpy` to `pytorch`
 
 View in [nbviewer](https://nbviewer.jupyter.org/github/EckoTan0804/summay-pytorch/blob/master/pytorch-quick-start/05-learn-pytorch-with-examples.ipynb)
