@@ -214,3 +214,5 @@ my_mnist = MyMNIST(csv_file=CSV_PATH,
 
 - [WRITING CUSTOM DATASETS, DATALOADERS AND TRANSFORMS](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html#compose-transforms)
 
+- [pytorch-custom-dataset-examples](https://github.com/utkuozbulak/pytorch-custom-dataset-examples)
+
