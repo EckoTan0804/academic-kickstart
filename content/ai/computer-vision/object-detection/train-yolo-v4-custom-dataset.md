@@ -236,11 +236,32 @@ Do all the same steps as for the full yolo model as described above. With the ex
   ./darknet detector train data/obj.data yolov4-tiny-obj.cfg yolov4-tiny.conv.29
   ```
 
-  
-
 ## Google Colab Notebook
 
 [Colab Notebook](https://colab.research.google.com/drive/1aIc5xS8vVukVg-FiUA3aw0PUqYrXs8aO?authuser=1#scrollTo=Zz8v67_2kgWh)
+
+### Small hacks to keep colab notebook training
+
+1. Open up the inspector view on Chrome
+
+2. Switch to the console window
+
+3. Paste the following code
+
+   ```javascript
+   function ClickConnect(){
+   console.log("Working"); 
+   document
+     .querySelector('#top-toolbar > colab-connect-button')
+     .shadowRoot.querySelector('#connect')
+     .click() 
+   }
+   setInterval(ClickConnect,60000)
+   ```
+
+   and hit **Enter**.
+
+ It will click the screen every 10 minutes so that you don't get kicked off for being idle!
 
 ## Reference
 
