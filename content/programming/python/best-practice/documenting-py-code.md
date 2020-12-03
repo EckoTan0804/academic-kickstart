@@ -34,7 +34,7 @@ menu:
         parent: py-best-practice
         weight: 2
 
-weight: 22
+weight: 202
 ---
 
 Source: [Documenting Python Code: A Complete Guide](https://realpython.com/documenting-python-code/)
