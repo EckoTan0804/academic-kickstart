@@ -5,7 +5,7 @@ summary: ""
 weight: 1005
 
 # Basic metadata
-title: "COCO Dataset Format for Object Detection"
+title: "COCO JSON Format for Object Detection"
 date: 2020-12-02
 draft: false
 type: docs # page type
