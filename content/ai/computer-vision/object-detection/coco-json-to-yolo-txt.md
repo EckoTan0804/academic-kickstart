@@ -42,7 +42,7 @@ menu:
 
 
 
-## Bounding box convertion
+## Bounding box formats comparison and conversion
 
 In COCO Json, the format of bounding box is:
 
