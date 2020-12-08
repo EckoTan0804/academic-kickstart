@@ -10,7 +10,7 @@ date: 2020-12-02
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Computer Vision", "Object Detection", "YOLOv4"]
+tags: ["Computer Vision", "Object Detection", "COCO"]
 categories: ["Computer Vision"]
 toc: true # Show table of contents?
 
