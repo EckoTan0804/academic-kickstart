@@ -184,6 +184,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   parent = "programming"
 
 [[menu.main]]
+  name = "Docker"
+  url = "/programming/docker/"
+  weight = 3
+  identifier = "docker"
+  parent = "programming"
+
+[[menu.main]]
   name = "Notes"
   url = "/notes/"
   weight = 5
@@ -460,6 +467,22 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "High Quality Systems: Design"
   weight = 30
   identifier = "designing-high-quality-systems"
+
+# Docker
+[[menu.docker]]
+  name = "Getting Started"
+  weight = 10
+  identifier = "docker-getting-started"
+
+[[menu.docker]]
+  name = "Best Practices"
+  weight = 20
+  identifier = "docker-best-practices"
+
+[[menu.docker]]
+  name = "Docker Recipes"
+  weight = 30
+  identifier = "docker-recipes"
 
 
 

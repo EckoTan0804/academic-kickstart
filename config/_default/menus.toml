@@ -75,6 +75,13 @@
   parent = "programming"
 
 [[main]]
+  name = "Docker"
+  url = "/programming/docker/"
+  weight = 3
+  identifier = "docker"
+  parent = "programming"
+
+[[main]]
   name = "Notes"
   url = "/notes/"
   weight = 5
@@ -135,38 +142,7 @@
   weight = 80
   identifier = "unsupervised"
 
-################################
-# Python                       #
-################################
-[[python]]
-  name = "Python Basics"
-  weight = 10
-  identifier = "py-basics"
 
-[[python]]
-  name = "Best Practice"
-  weight = 20
-  identifier = "py-best-practice"
-
-[[python]]
-  name = "Numpy"
-  weight = 30
-  identifier = "numpy"
-
-[[python]]
-  name = "Pandas"
-  weight = 40
-  identifier = "pandas"
-
-[[python]]
-  name = "Visualization"
-  weight = 50
-  identifier = "visualization"
-
-[[python]]
-  name = "IPython"
-  weight = 60
-  identifier = "ipython"
 
 ################################
 # DL                           #
@@ -317,6 +293,81 @@
   weight = 100
   identifier = "object-detection"
 
+################################################################
+# Programming                                                  #
+################################################################
+
+################################
+# Python                       #
+################################
+[[python]]
+  name = "Python Basics"
+  weight = 10
+  identifier = "py-basics"
+
+[[python]]
+  name = "Best Practice"
+  weight = 20
+  identifier = "py-best-practice"
+
+[[python]]
+  name = "Numpy"
+  weight = 30
+  identifier = "numpy"
+
+[[python]]
+  name = "Pandas"
+  weight = 40
+  identifier = "pandas"
+
+[[python]]
+  name = "Visualization"
+  weight = 50
+  identifier = "visualization"
+
+[[python]]
+  name = "IPython"
+  weight = 60
+  identifier = "ipython"
+
+
+################################
+# Software Engineering         #
+################################
+[[software-engineering]]
+  name = "Design Patterns"
+  weight = 10
+  identifier = "design-patterns"
+
+[[software-engineering]]
+  name = "High Quality Systems: Implementation"
+  weight = 20
+  identifier = "implementing-high-quality-systems"
+
+[[software-engineering]]
+  name = "High Quality Systems: Design"
+  weight = 30
+  identifier = "designing-high-quality-systems"
+
+################################
+# Docker                       #
+################################
+[[docker]]
+  name = "Getting Started"
+  weight = 10
+  identifier = "docker-getting-started"
+
+[[docker]]
+  name = "Best Practices"
+  weight = 20
+  identifier = "docker-best-practices"
+
+[[docker]]
+  name = "Docker Recipes"
+  weight = 30
+  identifier = "docker-recipes"
+
+
 
 
 
@@ -366,23 +417,6 @@
   name = "Alte Klausur Zusammenfassung"
   weight = 70
   identifier = "alte-klausur-zusammenfassung"
-
-
-# Software engineering
-[[software-engineering]]
-  name = "Design Patterns"
-  weight = 10
-  identifier = "design-patterns"
-
-[[software-engineering]]
-  name = "High Quality Systems: Implementation"
-  weight = 20
-  identifier = "implementing-high-quality-systems"
-
-[[software-engineering]]
-  name = "High Quality Systems: Design"
-  weight = 30
-  identifier = "designing-high-quality-systems"
 
 
 ################################
