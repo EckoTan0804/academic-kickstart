@@ -5,7 +5,7 @@ summary: ""
 weight: 12
 
 # Basic metadata
-title: "Docker Container"
+title: "Container"
 date: 2020-12-12
 draft: false
 type: docs # page type
@@ -169,8 +169,6 @@ docker stop <container-ID>
 ```bash
 docker rm -f <container-ID>
 ```
-
-
 
 ## Reference
 
