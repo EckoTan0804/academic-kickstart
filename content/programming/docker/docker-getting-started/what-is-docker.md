@@ -101,7 +101,9 @@ By contrast, a **virtual machine** (VM) runs a full-blown “guest” operating 
 
 See: [Get Docker](https://docs.docker.com/get-docker/)
 
+## Workflow overview
 
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/docker-stages.png" alt="Docker for the busy researcher · Erick Matsen" style="zoom:67%;" />
 
 ## Reference
 
