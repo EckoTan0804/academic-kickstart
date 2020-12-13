@@ -61,6 +61,28 @@ menu:
 - [`docker kill`](https://docs.docker.com/engine/reference/commandline/kill) sends a SIGKILL to a running container.
 - [`docker attach`](https://docs.docker.com/engine/reference/commandline/attach) will connect to a running container.
 
+**Info**
+
+- [`docker ps`](https://docs.docker.com/engine/reference/commandline/ps) shows running containers.
+  - `docker ps -a` shows running and stopped containers.
+- [`docker logs`](https://docs.docker.com/engine/reference/commandline/logs) gets logs from container. (You can use a custom log driver, but logs is only available for `json-file` and `journald` in 1.10).
+- [`docker inspect`](https://docs.docker.com/engine/reference/commandline/inspect) looks at all the info on a container (including IP address).
+- [`docker events`](https://docs.docker.com/engine/reference/commandline/events) gets events from container.
+- [`docker port`](https://docs.docker.com/engine/reference/commandline/port) shows public facing port of container.
+- [`docker top`](https://docs.docker.com/engine/reference/commandline/top) shows running processes in container.
+- [`docker stats`](https://docs.docker.com/engine/reference/commandline/stats) shows containers' resource usage statistics.
+  - `docker stats --all` shows a list of all containers, default shows just running.
+- [`docker diff`](https://docs.docker.com/engine/reference/commandline/diff) shows changed files in the container's FS.
+
+**Import/Export**
+
+- [`docker cp`](https://docs.docker.com/engine/reference/commandline/cp) copies files or folders between a container and the local filesystem.
+- [`docker export`](https://docs.docker.com/engine/reference/commandline/export) turns container filesystem into tarball archive stream to STDOUT.
+
+**Executing commands**
+
+- [`docker exec`](https://docs.docker.com/engine/reference/commandline/exec) to execute a command in container.
+
 ## What is Docker container?
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/docker-containerized-appliction-blue-border_2.png" alt="img" style="zoom: 40%;" />
