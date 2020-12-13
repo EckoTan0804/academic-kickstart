@@ -46,6 +46,8 @@ menu:
 - Docker enables you to **separate your applications from your infrastructure** so you can deliver software quickly. 
 - With Docker, you can manage your infrastructure in the same ways you manage your applications. By taking advantage of Docker’s methodologies for shipping, testing, and deploying code quickly, you can significantly reduce the delay between writing code and running it in production. :clap:
 
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*NXZYK4_f0lFJ8gpgcE5tHA.png" alt="Docker for Dummies, Literally. Yes, those days are long gone when you… | by  Saad A Akash | Medium" style="zoom: 67%;" />
+
 ## Docker architecture
 
 ### Docker engine
