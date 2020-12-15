@@ -44,4 +44,4 @@ menu:
 weight: 13
 ---
 
-### [Change Value in List Based on Conditions](/notes/python/py-basics/py-list/change-values-in-list/)
+### [Change Value in List Based on Conditions]({{< relref "/change-values-in-list.md" >}})
