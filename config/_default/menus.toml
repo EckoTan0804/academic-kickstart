@@ -82,6 +82,13 @@
   parent = "programming"
 
 [[main]]
+  name = "Linux"
+  url = "/programming/linux/"
+  weight = 4
+  identifier = "linux"
+  parent = "programming"
+
+[[main]]
   name = "Notes"
   url = "/notes/"
   weight = 5
@@ -368,6 +375,23 @@
   identifier = "docker-recipes"
 
 
+################################
+# Linux                        #
+################################
+[[linux]]
+  name = "Getting Started"
+  weight = 10
+  identifier = "linux-getting-started"
+
+[[linux]]
+  name = "Linux Learn"
+  weight = 10
+  identifier = "linux-learn"
+
+[[linux]]
+  name = "Linux Recipes"
+  weight = 10
+  identifier = "linux-recipes"
 
 
 

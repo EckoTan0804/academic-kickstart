@@ -191,6 +191,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   parent = "programming"
 
 [[menu.main]]
+  name = "Linux"
+  url = "/programming/linux/"
+  weight = 4
+  identifier = "linux"
+  parent = "programming"
+
+[[menu.main]]
   name = "Notes"
   url = "/notes/"
   weight = 5
@@ -483,6 +490,24 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "Docker Recipes"
   weight = 30
   identifier = "docker-recipes"
+
+################################
+# Linux                        #
+################################
+[[menu.linux]]
+  name = "Getting Started"
+  weight = 10
+  identifier = "linux-getting-started"
+
+[[menu.linux]]
+  name = "Linux Learn"
+  weight = 10
+  identifier = "linux-learn"
+
+[[menu.linux]]
+  name = "Linux Recipes"
+  weight = 10
+  identifier = "linux-recipes"
 
 
 
