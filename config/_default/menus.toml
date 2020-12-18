@@ -287,6 +287,11 @@
   weight = 90
   identifier = "pytorch-recipes"
 
+[[pytorch]]
+  name = "Training"
+  weight = 100
+  identifier = "training"
+
 ################################
 # CV                           #
 ################################
