@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 906
+weight: 1001
 
 # Basic metadata
 title: "Use tmux"
@@ -36,8 +36,8 @@ header:
 # Menu
 menu: 
     pytorch:
-        parent: pytorch-recipes
-        weight: 6
+        parent: training
+        weight: 1
 ---
 
 ## What is tmux?

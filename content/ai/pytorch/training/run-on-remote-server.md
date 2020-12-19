@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 905
+weight: 1002
 
 # Basic metadata
 title: "Running Jupyter Notebook/Lab on a remote server"
@@ -36,8 +36,8 @@ header:
 # Menu
 menu: 
     pytorch:
-        parent: pytorch-recipes
-        weight: 5
+        parent: training
+        weight: 2
 ---
 
 ## **SSH Tunneling**
