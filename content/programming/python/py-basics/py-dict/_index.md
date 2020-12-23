@@ -45,3 +45,5 @@ weight: 14
 ---
 
 ### [Get Dictionary Items with Specified Initialization]({{< relref "/get-dict-items-with-specified-init.md" >}})
+
+### [Remove Key from Python Dictionary]({{< relref "/remove-key-from-dict.md" >}})
