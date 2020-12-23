@@ -1,6 +1,4 @@
 ---
-
-
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
@@ -12,7 +10,7 @@ date: 2020-12-09
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Python", "Basics"]
+tags: ["Python", "Basics", "JSON"]
 categories: ["Coding"]
 toc: true # Show table of contents?
 
