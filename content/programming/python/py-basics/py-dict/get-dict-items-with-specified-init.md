@@ -6,7 +6,7 @@ date: 2020-07-08
 draft: false
 # type: docs # page type
 authors: ["admin"]
-tags: ["Python", "Basics"]
+tags: ["Python", "Basics", "dict"]
 categories: ["Coding"]
 toc: true # Show table of contents?
 
@@ -14,7 +14,7 @@ toc: true # Show table of contents?
 profile: false  # Show author profile?
 
 reading_time: true # Show estimated reading time?
-summary: "Examples for conditionally changing values in Python list"
+summary: "Get python dict items with specified initialization"
 share: false  # Show social sharing links?
 featured: true
 
