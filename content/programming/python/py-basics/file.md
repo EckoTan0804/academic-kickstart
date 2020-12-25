@@ -10,7 +10,7 @@ date: 2020-11-19
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Python", "Basics"]
+tags: ["Python", "Basics", "File"]
 categories: ["Coding"]
 toc: true # Show table of contents?
 
