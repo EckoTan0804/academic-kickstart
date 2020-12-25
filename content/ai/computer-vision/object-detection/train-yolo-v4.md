@@ -5,7 +5,7 @@ summary: ""
 weight: 1003
 
 # Basic metadata
-title: "YOLO v4 on COCO Dataset"
+title: "YOLOv4: Run Pretrained YOLOv4 on COCO Dataset"
 date: 2020-11-04
 draft: false
 type: docs # page type

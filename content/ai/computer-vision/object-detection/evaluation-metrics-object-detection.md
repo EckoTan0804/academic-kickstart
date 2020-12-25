@@ -10,7 +10,7 @@ date: 2020-11-12
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Computer Vision", "Object Detection"]
+tags: ["Computer Vision", "Object Detection", "Evaluation Metrics"]
 categories: ["Computer Vision"]
 toc: true # Show table of contents?
 

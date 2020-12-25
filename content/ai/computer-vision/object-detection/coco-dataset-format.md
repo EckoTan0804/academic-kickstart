@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: 
 summary: ""
-weight: 1005
+weight: 1002
 
 # Basic metadata
 title: "COCO JSON Format for Object Detection"
@@ -37,7 +37,7 @@ header:
 menu: 
     computer-vision:
         parent: object-detection
-        weight: 5
+        weight: 2
 ---
 
 The COCO dataset is formatted in [JSON](https://www.w3schools.com/js/js_json_syntax.asp) and is a collection of “info”, “licenses”, “images”, “annotations”, “categories” (in most cases), and “segment info” (in one case).

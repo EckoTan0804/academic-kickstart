@@ -5,7 +5,7 @@ summary: ""
 weight: 1004
 
 # Basic metadata
-title: "Train YOLO v4 on Custom Dataset"
+title: "YOLOv4: Train on Custom Dataset"
 date: 2020-11-04
 draft: false
 type: docs # page type

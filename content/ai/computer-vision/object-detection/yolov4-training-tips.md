@@ -5,7 +5,7 @@ summary: ""
 weight: 1007
 
 # Basic metadata
-title: "YOLOv4 Training Tips"
+title: "YOLOv4: Training Tips"
 date: 2020-12-19
 draft: false
 type: docs # page type

@@ -1,6 +1,6 @@
 ---
 # Title, summary, and position in the list
-linktitle: YOLO
+linktitle: YOLO Basics
 summary: ""
 weight: 1002
 
