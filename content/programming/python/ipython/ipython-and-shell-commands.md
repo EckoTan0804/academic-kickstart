@@ -115,7 +115,7 @@ name = 'Ben'
 hello Ben
 ```
 
-## Shell-Related agic Commands
+## Shell-Related ,agic Commands
 
 Shell commands in the notebook are executed in a **temporary subshell**. If we'd like to execute the shell commands in a more enduring way, we can use the `%` magic command.
 
@@ -134,6 +134,7 @@ Useful magic commands:
 - `%run`: runs a Python script from within IPython shell
 - `%time`: displays time required by IPython environment to execute a Python expression.
 - `%timeit`: uses the Python [timeit module](https://docs.python.org/3.5/library/timeit.html) which runs a statement 100,000 times (by default) and then provides the mean of the fastest three times.
+- `%%writefile`: Write the contents of the cell to a file. The file will be overwritten unless the `-a` (–append) flag is specified.
 
 ## Reference
 
