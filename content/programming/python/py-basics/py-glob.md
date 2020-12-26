@@ -5,7 +5,7 @@ summary: ""
 weight: 23
 
 # Basic metadata
-title: "Glob: Unix style pathname pattern expansion"
+title: "glob"
 date: 2020-12-25
 draft: false
 type: docs # page type
@@ -205,6 +205,16 @@ for py_file in path.glob("**/*.py"):
     print(py_file)
 ```
 
+```
+src/demo.py
+src/code/test1.py
+src/code/test-prod.py
+src/code/test-env.py
+src/code/main.py
+src/code/test2.py
+src/code/test0.py
+```
+
 {{% alert note %}} 
 
 The “`**`” pattern means “this directory and all subdirectories, recursively”. In other words, it enables recursive globbing. However, using the “`**`” pattern in large directory trees may consume an inordinate amount of time.
@@ -212,6 +222,29 @@ The “`**`” pattern means “this directory and all subdirectories, recursive
 {{% /alert%}}
 
 `Path.glob()` is similar to `os.glob()` discussed above. As you can see, `pathlib` combines many of the best features of the `os`, `os.path`, and `glob` modules into one single module, which makes it a joy to use.
+
+#### `pathlib.Path.rglob()` [^3]
+
+This is like calling [`Path.glob()`](https://docs.python.org/3/library/pathlib.html#pathlib.Path.glob) with “`**/`” added in front of the given relative *pattern*.
+
+E.g. list all python file:
+
+```python
+for py_file in Path("src").rglob("*.py"):
+    print(py_file)
+```
+
+```
+src/demo.py
+src/code/test1.py
+src/code/test-prod.py
+src/code/test-env.py
+src/code/main.py
+src/code/test2.py
+src/code/test0.py
+```
+
+
 
 ## Summary
 
@@ -221,6 +254,7 @@ The “`**`” pattern means “this directory and all subdirectories, recursive
 | `glob.glob()`                        | Returns a list of filenames that match a pattern             |
 | `glob.iglob()`                       | Returns an iterator of filenames that match a pattern        |
 | `pathlib.Path.glob()`                | Finds patterns in path names and returns a generator object  |
+| `pathlib.Path.rglob()`               | Finds patterns in path names recursively and returns a generator object |
 
 ## Reference
 
@@ -235,3 +269,4 @@ The “`**`” pattern means “this directory and all subdirectories, recursive
 [^1]: [`fnmatch`](https://docs.python.org/3/library/fnmatch.html#module-fnmatch)
 [^2]: https://docs.python.org/3/library/pathlib.html#pathlib.Path.glob
 
+[^3]: https://docs.python.org/3/library/pathlib.html#pathlib.Path.rglob
