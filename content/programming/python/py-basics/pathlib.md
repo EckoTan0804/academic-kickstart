@@ -136,6 +136,12 @@ Directories and files can be deleted using `.rmdir()` and `.unlink()` respective
   - `Path.glob()`
   - `Path.rglob()` (recursive glob)
 
+## Moving files
+
+```python
+Path(current_location).rename(new_location)
+```
+
 ## Correspondence to tools in the [`os`](https://docs.python.org/3/library/os.html#module-os) module
 
 | os and os.path                                               | pathlib                                                      |
