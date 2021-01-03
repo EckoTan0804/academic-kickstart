@@ -121,42 +121,41 @@ Dataset in [YOLO darknet format](https://github.com/AlexeyAB/Yolo_mark/issues/60
       |- test
   ```
 
-###YOLO darknet format --> YOLOv5 format
+### YOLO darknet format --> YOLOv5 format
 
 Assuming we have a dataset in YOLO darknet format, we want to convert it to YOLOv5 format.
 
 ```python
-import os
 from pathlib import Path
-from shutil import rmtree, copy2
-from glob import iglob
+from shutil import rmtree
 
-def copy_files(src_dir, dest_dir, ext="jpg"):
+def move_files(src_dir, dest_dir, ext="jpg"):
     """
-    Copy the same type of files from source folder to destination folder
+    Move the same type of files from source folder to destination folder
     """
-    for file in iglob(os.path.join(src_dir, f"*.{ext}")):
-        copy2(file, dest_dir)
+    for file in Path(src_dir).glob(f"*.{ext}"):
+        file.rename(Path(dest_dir).joinpath(file.name))
 
 
 def convert_dataset_darknet_to_yolov5(src_dir_darknet, dest_dir_yolov5, dataset_types=["train", "valid", "test"]):
     """
     Convert dataset from YOLO darknet format to YOLOv5 format
     """
-    if os.path.exists(dest_dir_yolov5):
+    dest_dir_yolov5 = Path(dest_dir_yolov5)
+    if dest_dir_yolov5.exists():
         rmtree(dest_dir_yolov5)
 
-    os.mkdir(dest_dir_yolov5)
+    dest_dir_yolov5.mkdir()
 
     for dir in ["images", "labels"]:
         for dataset_type in dataset_types:
-            dest_dir = os.path.join(dest_dir_yolov5, f"{dir}", f"{dataset_type}")
-            os.makedirs(dest_dir)
+            dest_dir = dest_dir_yolov5.joinpath(f"{dir}", f"{dataset_type}")
+            dest_dir.mkdir(parents=True)
 
-            src_dir = os.path.join(src_dir_darknet, f"{dataset_type}")
+            src_dir = Path(src_dir_darknet).joinpath(f"{dataset_type}")
         
             ext = "jpg" if dir == "images" else "txt"
-            copy_files(src_dir, dest_dir, ext=ext)
+            move_files(src_dir, dest_dir, ext=ext)
 
             print(f"Copy {dir} from {src_dir} to {dest_dir} done!")
 ```
@@ -173,7 +172,7 @@ For training we need to configure a `.yaml` file which specifies
 - number of classes
 - classes names
 
-and put this `.yaml` file in `yolov5/data/`.
+and **put this `.yaml` file in `yolov5/data/`.**
 
 For example, let's say we have `custom-dataset` folder in YOLOv5 format next to `yolov5`. This custom dataset containes 3 object classes: "cat", "dog", "monkey". 
 
@@ -193,7 +192,7 @@ names: ["cat", "dog", "monkey"]
 
 Select a pretrained model to start training from [^ 2]:
 
-![YOLOv5 Models](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/97808084-edfcb100-1c64-11eb-83eb-ffed43a0859f.png)
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/97808084-edfcb100-1c64-11eb-83eb-ffed43a0859f.png" alt="YOLOv5 Models" style="zoom: 50%;" />
 
 | Model                                                     | APval    | APtest   | AP50     | SpeedGPU  | FPSGPU  |      | params | GFLOPS |
 | --------------------------------------------------------- | -------- | -------- | -------- | --------- | ------- | ---- | ------ | ------ |
@@ -204,7 +203,7 @@ Select a pretrained model to start training from [^ 2]:
 
 For example, we select YOLOv5s, the smallest and fastest model available. (YOLOv5m, YOLOv5l, YOLOv5x work similarly.)
 
-In order to use YOLOv5s for training on custom dataset, we need to adjust `models/yolov5s.yaml`: change number of class `nc` according to our custom dataset. Following the example above, the value of `nc` is 3.
+In order to use YOLOv5s for training on custom dataset, we need to adjust `models/yolov5s.yaml`: **change number of class `nc` according to our custom dataset.** Following the example above, the value of `nc` is 3.
 
 ```python
 models_dir = "yolov5/models"
@@ -254,12 +253,25 @@ To kick off training, we execute `train.py` with the following options:
 
 - **cache:** cache images for faster training
 
+```bash
+python train.py --img 416 --batch 16 --epochs 1000 --data ./data/masks.yaml  --cfg ./models/yolov5s_masks.yaml --weights yolov5s.pt --cache-images 
+```
+
 
 
 ## Training logging
 
 - All training results are saved to `runs/train/` with incrementing run directories, i.e. `runs/train/exp`, `runs/train/exp1`, `runs/train/exp2`, etc.
-- We can view training losses and performance metrics using Tensorboard
+
+- We can view training losses and performance metrics using **Tensorboard**
+
+  - If training on Google Colab:
+
+    ```bash
+    %load_ext tensorboard
+    %tensorboard --logdir runs
+    ```
+
 - Training losses and performance metrics are also saved to a logfile. 
   - If given no name, it defaults to `results.txt`. We can also specify the name with `--name` flag when we train.
   - `results.png` contains plotting of different metrics
@@ -269,10 +281,14 @@ To kick off training, we execute `train.py` with the following options:
 ## Run inference with trained weights
 
 - Trained weights are saved by default in `runs/train/exp/weights` folder.
+  
   - The best weights `best.pt` and the last weights `last.pt` are saved
+  
 - For inference we use `detect.py`
 
-
+  ```bash
+  python detect.py --weights ./runs/train/exp/weights/best.pt --img 416 --conf-thres 0.5 --source <path-to-test-set>
+  ```
 
 ## Export a trained YOLOv5 model
 
