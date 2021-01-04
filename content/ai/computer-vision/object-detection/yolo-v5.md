@@ -99,6 +99,8 @@ Dataset in [YOLO darknet format](https://github.com/AlexeyAB/Yolo_mark/issues/60
 
 ### YOLOv5 format
 
+[YOLOv5 format](https://github.com/ultralytics/yolov5/wiki/Train-Custom-Data):
+
 - If no objects in image, no `*.txt` file is required
 
 - YOLOv5 locates labels automatically for each image by replacing the last instance of **/images/** in the images directory with **/labels/**. Therefore, folder structure of dataset should look like below:
@@ -127,19 +129,38 @@ Assuming we have a dataset in YOLO darknet format, we want to convert it to YOLO
 
 ```python
 from pathlib import Path
-from shutil import rmtree
+from shutil import rmtree, copy2
+from tqdm import tqdm
 
-def move_files(src_dir, dest_dir, ext="jpg"):
+def copy_files(src_dir, dest_dir, ext="jpg"):
     """
-    Move the same type of files from source folder to destination folder
+    Copy files with the same extension from source directory to destination directory
+
+    Parameters
+    ----------
+    src_dir : str
+        source directory 
+    dest_dir : str
+        destination directory 
+    ext : str, optional
+        extension of files to be moved, by default "jpg"
     """
-    for file in Path(src_dir).glob(f"*.{ext}"):
-        file.rename(Path(dest_dir).joinpath(file.name))
+    for file in tqdm(Path(src_dir).glob(f"*.{ext}"), desc=f"Copying .{ext} files from {src_dir} to {dest_dir}"):
+        copy2(file, dest_dir)
 
 
 def convert_dataset_darknet_to_yolov5(src_dir_darknet, dest_dir_yolov5, dataset_types=["train", "valid", "test"]):
     """
-    Convert dataset from YOLO darknet format to YOLOv5 format
+    Convert dataset from YOLO darknet format to scaled YOLOv4 format
+
+    Parameters
+    ----------
+    src_dir_darknet : str
+        source dataset in YOLO darknet format
+    dest_dir_scaled_yolov4 : str
+        destination dataset in scaled YOLOv4 format
+    dataset_types : list, optional
+        types of dataset, by default ["train", "valid"]
     """
     dest_dir_yolov5 = Path(dest_dir_yolov5)
     if dest_dir_yolov5.exists():
@@ -155,7 +176,7 @@ def convert_dataset_darknet_to_yolov5(src_dir_darknet, dest_dir_yolov5, dataset_
             src_dir = Path(src_dir_darknet).joinpath(f"{dataset_type}")
         
             ext = "jpg" if dir == "images" else "txt"
-            move_files(src_dir, dest_dir, ext=ext)
+            copy_files(src_dir, dest_dir, ext=ext)
 
             print(f"Copy {dir} from {src_dir} to {dest_dir} done!")
 ```
@@ -308,6 +329,7 @@ Open in [Colab](https://colab.research.google.com/drive/1lu3sSPWUzuxJTMqcwdFTC-i
 - YOLOv5 repo: [ultralytics](https://github.com/ultralytics)/**[yolov5](https://github.com/ultralytics/yolov5)**
 
   - Developed actively
+  - [Tutorials](https://github.com/ultralytics/yolov5/wiki)
 
 - Tutorials
 
