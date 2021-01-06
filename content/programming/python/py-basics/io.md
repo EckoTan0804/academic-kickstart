@@ -124,13 +124,14 @@ with open(d_path, 'r') as reader, open(d_r_path, 'w') as writer:
     writer.writelines(reversed(dog_breeds))
 ```
 
+### Get rid of `\n` when reading lines
 
+Reference: [How to read a file without newlines?](https://stackoverflow.com/questions/12330522/how-to-read-a-file-without-newlines)
 
-
-
-
-
-
+```python
+with open(filename) as f:
+    mylist = f.read().splitlines() 
+```
 
 
 
