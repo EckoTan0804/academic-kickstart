@@ -7,7 +7,7 @@ weight: 110
 # Basic metadata
 title: "fastai Understanding"
 date: 2020-09-25
-draft: false
+draft: true
 type: docs # page type
 authors: ["admin"]
 tags: ["Deep Learning", "fastai"]

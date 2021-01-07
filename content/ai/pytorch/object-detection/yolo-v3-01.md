@@ -7,7 +7,7 @@ weight: 501
 # Basic metadata
 title: "YOLOv3 (1): How YOLO works"
 date: 2020-11-08
-draft: false
+draft: true
 type: docs # page type
 authors: ["admin"]
 tags: ["Deep Learning", "PyTorch", "Object Detection", "YOLO"]

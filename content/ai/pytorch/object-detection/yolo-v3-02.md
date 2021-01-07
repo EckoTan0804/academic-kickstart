@@ -7,7 +7,7 @@ weight: 502
 # Basic metadata
 title: "YOLOv3 (2): Creating the layers of the network"
 date: 2020-11-09
-draft: false
+draft: true
 type: docs # page type
 authors: ["admin"]
 tags: ["Deep Learning", "PyTorch", "Object Detection", "YOLO"]
