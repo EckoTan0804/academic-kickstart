@@ -5,7 +5,7 @@ summary: ""
 weight: 190
 
 # Basic metadata
-title: "PyTorch Resources"
+title: "📚 PyTorch Resources"
 date: 2020-09-07
 draft: false
 type: docs # page type

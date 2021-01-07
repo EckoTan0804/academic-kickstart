@@ -5,7 +5,7 @@ summary: ""
 weight: 904
 
 # Basic metadata
-title: "Custom Datasets and Transforms"
+title: "🔥 Custom Datasets and Transforms"
 date: 2020-11-26
 draft: false
 type: docs # page type

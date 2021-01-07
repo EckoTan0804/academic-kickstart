@@ -5,7 +5,7 @@ summary: ""
 weight: 150
 
 # Basic metadata
-title: "Train a Classifier"
+title: "👨‍🏫 Tutorial: Train a Classifier"
 date: 2020-09-10
 draft: false
 type: docs # page type

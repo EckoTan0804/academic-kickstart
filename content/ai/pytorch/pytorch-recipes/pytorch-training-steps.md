@@ -5,7 +5,7 @@ summary: ""
 weight: 905
 
 # Basic metadata
-title: "General Training Steps Using PyTorch"
+title: "🔥🧾 General Training Steps Using PyTorch"
 date: 2020-11-26
 draft: false
 type: docs # page type

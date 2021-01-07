@@ -5,7 +5,7 @@ summary: ""
 weight: 901
 
 # Basic metadata
-title: "Transfer Learning for Computer Vision"
+title: "🔥 Transfer Learning for Computer Vision"
 date: 2020-11-03
 draft: false
 type: docs # page type

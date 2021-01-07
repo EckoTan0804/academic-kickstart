@@ -5,7 +5,7 @@ summary: ""
 weight: 180
 
 # Basic metadata
-title: "PyTorch Understanding"
+title: "🤔 PyTorch Understanding"
 date: 2020-09-25
 draft: false
 type: docs # page type
