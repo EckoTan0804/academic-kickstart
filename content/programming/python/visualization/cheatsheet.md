@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 501
+weight: 509
 
 # Basic metadata
 title: "Visualization Cheatsheet"
