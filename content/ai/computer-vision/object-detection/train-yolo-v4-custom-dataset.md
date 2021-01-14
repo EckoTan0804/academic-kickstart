@@ -208,6 +208,24 @@ To see the mAP & loss0chart during training on remote server:
 
 After training is complete, you can get weights from `backu/`
 
+{{% alert note %}} 
+
+If you want the training to output only main information (e.g loss, mAP, remaining training time) instead of full logging, you can use this command
+
+```bash
+./darknet detector train data/obj.data custom-yolov4-detector.cfg yolov4.conv.137 -dont_show -map 2>&1 | tee log/train.log | grep -E "hours left|mean_average"
+```
+
+Then the output will look like followings:
+
+```
+ 1189: 1.874030, 2.934438 avg loss, 0.002610 rate, 2.930427 seconds, 76096 images, 3.905244 hours left
+```
+
+{{% /alert%}}
+
+
+
 ### Notes
 
 - If during training you see `nan` values for `avg` (loss) field - then training goes wrong! ​🤦‍♂️​
@@ -224,11 +242,37 @@ Do all the same steps as for the full yolo model as described above. With the ex
 
    ```bash
   wget https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-tiny.conv.29
-   ```
+  ```
 
   (Or get this file from yolov4-tiny.weights file by using command: `./darknet partial cfg/yolov4-tiny-custom.cfg yolov4-tiny.weights yolov4-tiny.conv.29 29`)
 
 - Make your custom model `yolov4-tiny-obj.cfg` based on `cfg/yolov4-tiny-custom.cfg` instead of `yolov4.cfg`
+
+   ```python
+   import re
+   
+   # num_classes: number of object classes
+   max_batches = max(num_classes * 2000, num_train_images, 6000)
+   steps1 = .8 * max_batches
+   steps2 = .9 * max_batches
+   num_filters = (num_classes + 5) * 3
+   
+   # Assuming that we have already defined the following hyperparameters:
+   # - TINY_CONFIG_FILE: config file we're gonna use for training
+   # - WIDTH, HEIGHT: width and height of image
+   with open("cfg/yolov4-tiny-custom.cfg", "r") as reader, open(TINY_CONFIG_FILE, "w") as writer:
+       content = reader.read()
+       
+       content = re.sub("subdivisions=\d*", f"subdivisions={SUBDIVISION}", content)
+       content = re.sub("width=\d*", f"width={WIDTH}", content)
+       content = re.sub("height=\d*", f"height={HEIGHT}", content)
+       content = re.sub("max_batches = \d*", f"max_batches = {max_batches}", content)
+       content = re.sub("steps=\d*,\d*", f"steps={steps1},{steps2}", content)
+       content = re.sub("classes=\d*", f"classes={num_classes}", content)
+       content = re.sub("pad=1\nfilters=\d*", f"pad=1\nfilters={num_filters}", content)
+       
+       writer.write(content)
+   ```
 
 - Start training: 
 
