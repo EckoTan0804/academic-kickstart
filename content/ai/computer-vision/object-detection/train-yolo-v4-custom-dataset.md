@@ -325,6 +325,8 @@ Do all the same steps as for the full yolo model as described above. With the ex
 
     - [YOLOv4 - Ten Tactics to Build a Better Model](https://blog.roboflow.com/yolov4-tactics/)
 
+  - Train YOLOv4-tiny on custom dataset: [Train YOLOv4-tiny on Custom Data - Lightning Fast Object Detection](https://blog.roboflow.com/train-yolov4-tiny-on-custom-data-lighting-fast-detection/)
+
   - YOLOv4 in the CLOUD: Build and Train Custom Object Detector (FREE GPU)
 
     - [Colab Notebook](https://colab.research.google.com/drive/1_GdoqCJWXsChrOiY8sZMr_zbr_fH-0Fg#scrollTo=O2w9w1Ye_nk1)
@@ -338,7 +340,7 @@ Do all the same steps as for the full yolo model as described above. With the ex
     - [Colab Notebook](https://colab.research.google.com/drive/1eoa2_v6wVlcJiDBh3Tb_umhm7a09lpIE?usp=sharing#scrollTo=J1oTF_YRoGSZ)
 
   - [TensorRT YOLOv4](https://jkjung-avt.github.io/tensorrt-yolov4/)
-
+  
   - [YOLOv4 on Jetson Nano](https://jkjung-avt.github.io/yolov4/) 
 
 
