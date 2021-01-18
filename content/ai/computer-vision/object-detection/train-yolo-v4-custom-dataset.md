@@ -206,7 +206,7 @@ To see the mAP & loss0chart during training on remote server:
 - use command `./darknet detector train data/obj.data yolo-obj.cfg yolov4.conv.137 -dont_show -mjpeg_port 8090 -map`
 - then open URL `http://ip-address:8090` in Chrome/Firefox browser)
 
-After training is complete, you can get weights from `backu/`
+After training is complete, you can get weights from `backup/`
 
 {{% alert note %}} 
 
