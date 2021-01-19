@@ -103,7 +103,7 @@ E.g.: Pull `ubuntu` image
 docker pull ubuntu
 ```
 
-### Running a ontainer
+### Running a container
 
 Running of containers is managed with the Docker `run` command. 
 
