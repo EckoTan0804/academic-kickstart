@@ -204,7 +204,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   
 
 
-# ML
+################# ML #################
 [[menu.machine-learning]]
   name = "ML Fundamentals"
   weight = 10
@@ -245,7 +245,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   weight = 80
   identifier = "unsupervised"
 
-# Python 
+################# Python #################
 [[menu.python]]
   name = "Python Basics"
   weight = 10
@@ -277,7 +277,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "ipython"
 
 
-# Rechnerstruktur
+################# Rechnerstruktur #################
 [[menu.rechner-struktur]]
   name = "Grundlagen"
   weight = 10
@@ -314,7 +314,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "alte-klausur-zusammenfassung"
 
 
-# Deep Learning
+################# Deep Learning #################
 [[menu.deep-learning]]
   name = "Neural Network Basics"
   weight = 10
@@ -356,7 +356,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "rl"
 
 
-# NLP
+################# NLP #################
 [[menu.natural-language-processing]]
   name = "Regular Expressions, Text Normalization, and Edit Distance"
   weight = 10
@@ -412,7 +412,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   weight = 200
   identifier = "lecture-notes"
 
-# pytorch
+################# pytorch #################
 [[menu.pytorch]]
   name = "Getting Started"
   weight = 10
@@ -443,7 +443,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   weight = 100
   identifier = "training"
 
-# gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme
+################# gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme #################
 [[menu.gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme]]
   name = "Vorlesung"
   weight = 10
@@ -454,7 +454,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   weight = 20
   identifier = "teil-2"
 
-# computer vision
+################# computer vision #################
 [[menu.computer-vision]]
   name = "Lecture"
   weight = 10
@@ -465,6 +465,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   weight = 100
   identifier = "object-detection"
 
+[[menu.computer-vision]]
+  name = "Segmentation"
+  weight = 110
+  identifier = "segmentation"
+
+
+################# software engineering #################
 [[menu.software-engineering]]
   name = "Design Patterns"
   weight = 10
@@ -480,7 +487,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   weight = 30
   identifier = "designing-high-quality-systems"
 
-# Docker
+################# Docker #################
 [[menu.docker]]
   name = "Getting Started"
   weight = 10
@@ -496,9 +503,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   weight = 30
   identifier = "docker-recipes"
 
-################################
-# Linux                        #
-################################
+################# Linux #################
 [[menu.linux]]
   name = "Getting Started"
   weight = 10

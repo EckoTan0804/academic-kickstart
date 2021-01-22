@@ -305,6 +305,11 @@
   weight = 100
   identifier = "object-detection"
 
+[[computer-vision]]
+  name = "Segmentation"
+  weight = 110
+  identifier = "segmentation"
+
 ################################################################
 # Programming                                                  #
 ################################################################
