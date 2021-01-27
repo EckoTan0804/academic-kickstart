@@ -133,7 +133,7 @@ $$
 ### **$F$ / $F_1$ measure**
 
 $$
-F=\frac{2 \cdot \text {precison} \cdot \text {recall}}{\text {precision}+\text {recall}}
+F=\frac{2 \cdot \text {precison} \cdot \text {recall}}{\text {precision}+\text {recall}} = \frac{2TP}{2TP + FP + FN}
 $$
 
 ### Specificity
