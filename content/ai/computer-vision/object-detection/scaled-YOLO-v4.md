@@ -44,7 +44,7 @@ Chien-Yao Wang, Alexey Bochkovskiy, and Hong-Yuan Mark Liao (more commonly known
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/image.png" alt="img" style="zoom:80%;" />
 
-## Train scaled YOLOv4
+## Train scaled YOLOv4 (PyTorch)
 
 The Scaled-YOLOv4 implementation is written in the YOLOv5 PyTorch framework. Training scaled YOLOv4 is similar to [training YOLOv5]({{< relref "yolov5.md">}}). 
 
@@ -61,6 +61,14 @@ Tutorials from Roboflow:
 - [Google Colab Notebook](https://colab.research.google.com/drive/1LDmg0JRiC2N7_tx8wQoBzTB0jUZhywQr?usp=sharing)
 
 My Colab Notebook: [yolov4_scaled.ipynb](https://colab.research.google.com/drive/1GfOzuMCpIcg1luILv7rehfY3Hk4p4SWc)
+
+## Train scaled YOLOv4 (Darknet)
+
+YOLOv4-csp training is also supported by [Darknet](https://github.com/AlexeyAB/darknet#pre-trained-models). Training yolov4-csp is similar to training yolov4 and yolov4-tiny. Slight difference:
+
+- For config file, use [yolov4-csp.cfg](https://raw.githubusercontent.com/AlexeyAB/darknet/master/cfg/yolov4-csp.cfg)
+- For pretrained weights, use [yolov4-csp.weights](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-csp.weights)
+- For pretrained convolutional layer weights, use [yolov4-csp.conv.142](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v4_pre/yolov4-csp.conv.142)
 
 ## Reference
 
