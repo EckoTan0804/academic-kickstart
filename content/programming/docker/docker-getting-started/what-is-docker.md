@@ -105,8 +105,13 @@ See: [Get Docker](https://docs.docker.com/get-docker/)
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/docker-stages.png" alt="Docker for the busy researcher · Erick Matsen" style="zoom:67%;" />
 
-## Reference
+## Tutorials
 
-- [Docker Tutorial for Beginners](https://www.guru99.com/docker-tutorial.html)
+- 🔥 [Docker Tutorial for Beginners](https://www.guru99.com/docker-tutorial.html)
+- [30 分钟快速入门 Docker 教程](https://juejin.cn/post/6844903815729119245)
+
+- [Docker tutorial for beginners through examples - a step by step tutorial](https://takacsmark.com/getting-started-with-docker-in-your-project-step-by-step-tutorial/)
+
+## Reference
 
 - [Docker overview](https://docs.docker.com/get-started/overview/)
