@@ -307,6 +307,16 @@ Do all the same steps as for the full yolo model as described above. With the ex
 
  It will click the screen every 10 minutes so that you don't get kicked off for being idle!
 
+## Convert YOLOv4 to TensorRT through ONNX
+
+To convert YOLOv4 to TensorRT engine through ONNX, I used the code from [TensorRT_demos](https://github.com/jkjung-avt/tensorrt_demos) following its [step-by-step instructions](https://github.com/jkjung-avt/tensorrt_demos#demo-5-yolov4). For more details about the code, check out this [blog post](https://jkjung-avt.github.io/tensorrt-yolov4/).
+
+Note that the Code in this repo was designed to run on [Jetson platforms](https://developer.nvidia.com/embedded-computing). In my case, conversion from YOLOv4 to TensorRT engine was conducted on Jetson Nano.
+
+### Convert YOLOv4 for custom trained models
+
+To apply the conversion for custom trained models, see [TensorRT YOLOv3 For Custom Trained Models](https://jkjung-avt.github.io/trt-yolov3-custom/). You need to stick to the naming convention `{yolo_version}-{custom_name}-{image_size}`. Otherwise you'll get errors during conversion.
+
 ## Reference
 
 - Guide from [AlexeyAB](https://github.com/AlexeyAB)/**[darknet](https://github.com/AlexeyAB/darknet)** repo: [How to train (to detect your custom objects)](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects)
