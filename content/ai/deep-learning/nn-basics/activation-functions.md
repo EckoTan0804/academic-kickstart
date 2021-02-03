@@ -45,6 +45,12 @@ Activation functions should be
 - **non-linear**
 - **differentiable** (since training with Backpropagation)
 
+{{% alert note %}}
+Q: Why can’t the mapping between layers be linear?
+
+A: Compositions of linear functions is still linear, whole network collapses to regression.
+{{% /alert %}}
+
 ## Sigmoid
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-17%2011.07.47.png" alt="截屏2020-08-17 11.07.47" style="zoom:50%;" />

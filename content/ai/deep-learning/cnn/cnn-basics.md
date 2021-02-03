@@ -122,7 +122,7 @@ For example, assuming that
 
 - filter size is $5 \times 5 \times 3$
 
-- and we have 6 different $5 \times 5$ filters 
+- and we have 6 different filters 
 
   $\to$ we’ll get 6 separate activation maps and stack it together
 
