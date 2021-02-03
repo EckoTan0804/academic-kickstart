@@ -66,13 +66,13 @@ menu:
 
 ## Color-based face detection overview
 
-💡Idea: human skin has consistent color, which is distinct from many objects
+💡 **Idea: human skin has consistent color, which is distinct from many objects**
 
 ![截屏2020-11-10 14.57.37](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-11-10%2014.57.37.png)
 
 Possible approach:
-1. find skin colored pixels
-2. Groupskincoloredpixels
+1. Find skin colored pixels
+2. Group skin colored pixels
 - (and apply some heuristics) to find the face
 
 ## Color
@@ -140,13 +140,13 @@ Different representations exist --> „Color Spaces“
 
 ## How to model skin color?
 
-- Non-parametric models: typically histograms
+- [Non-parametric models: typically histograms](#histogram-as-skin-color-model)
 
-- Parametric models 
+- [Parametric models](#parametric-models) 
   - Gaussian Model
   - Gaussian Mixture Model
 
-- Or just learn decision boundaries between classes (discriminative model)
+- Or just learn decision boundaries between classes ([discriminative model](#discriminative-models--classifiers))
   - ANN, SVM, ...
 
 ### Histogram as skin color model
@@ -293,7 +293,7 @@ $$
 
 ### Skin-color: Analysis and Comparison
 
-Conclusions
+Conclusions [^1]
 
 - Bayesian approach and MLP worked best
   - Bayesian approach needs much more memory
@@ -391,3 +391,5 @@ Conclusions
   - Facial Feature Detection
 
   - ...
+
+[^1]: S. L. Phung, A. Bouzerdoum and D. Chai, "Skin segmentation using color pixel classification: analysis and comparison," in IEEE Transactions on Pattern Analysis and Machine Intelligence, vol. 27, no. 1, pp. 148-154, Jan. 2005, doi: 10.1109/TPAMI.2005.17.
