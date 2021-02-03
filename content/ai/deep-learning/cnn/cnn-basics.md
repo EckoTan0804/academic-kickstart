@@ -1,6 +1,6 @@
 ---
 # Title, summary, and position in the list
-linktitle: "CNN Basics"
+linktitle: "👍 CNN Basics"
 summary: ""
 weight: 420
 
