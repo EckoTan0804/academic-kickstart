@@ -307,9 +307,13 @@
 
 [[computer-vision]]
   name = "Segmentation"
-  weight = 110
+  weight = 200
   identifier = "segmentation"
 
+[[computer-vision]]
+  name = "Face"
+  weight = 300
+  identifier = "face"
 ################################################################
 # Programming                                                  #
 ################################################################
