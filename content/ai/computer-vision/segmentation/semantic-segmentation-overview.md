@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: 
 summary: ""
-weight: 1101
+weight: 201
 
 # Basic metadata
 title: "Semantic Segmentation Overview"
