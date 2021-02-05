@@ -292,3 +292,23 @@ Reference
 
 - [How to calculate running loss/training loss while training a CNN model](https://discuss.pytorch.org/t/how-to-calculate-running-loss-training-loss-while-training-a-cnn-model/49301)
 
+
+
+## Number of model's parameters
+
+Sum the number of elements for every parameter group:
+
+```python
+def get_num_params(model):
+    sum(p.numel() for p in model.parameters())
+```
+
+Calculate only the *trainable* parameters:
+
+```python
+def get_num_trainable_params(model):
+    return sum(p.numel() for p in model.parameters() if p.requires_grad)
+```
+
+Reference: [How do I check the number of parameters of a model?](https://discuss.pytorch.org/t/how-do-i-check-the-number-of-parameters-of-a-model/4325)
+
