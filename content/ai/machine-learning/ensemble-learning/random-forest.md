@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-# weight: 
+weight: 630
 
 # Basic metadata
 title: "Random Forest"

@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-# weight: 
+weight: 810
 
 # Basic metadata
 title: "Gaussian Mixture Model"

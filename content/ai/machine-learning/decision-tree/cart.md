@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 linktitle: "CART"
 summary: ""
-# weight: 
+weight: 510
 
 # Basic metadata
 title: "Classification And Regression Tree (CART)"
@@ -13,6 +13,7 @@ authors: ["admin"]
 tags: ["ML", "Classification", "Regression", "Decision Tree"]
 categories: ["Machine Learning"]
 toc: true # Show table of contents?
+
 
 # Advanced metadata
 profile: false  # Show author profile?

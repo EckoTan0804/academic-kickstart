@@ -10,6 +10,8 @@ tags: ["ML", "Classification"]
 categories: ["Machine Learning"]
 toc: true # Show table of contents?
 
+weight: 430
+
 # Advanced settings
 profile: false  # Show author profile?
 

@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-# weight: 
+weight: 710
 
 # Basic metadata
 title: "Linear Discriminant Functions"

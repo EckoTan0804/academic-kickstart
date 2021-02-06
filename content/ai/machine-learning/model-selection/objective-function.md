@@ -9,6 +9,8 @@ tags: ["ML", "Model Selection"]
 categories: ["Machine Learning"]
 toc: true
 
+weight: 210
+
 # Advanced settings
 profile: false  # Show author profile?
 

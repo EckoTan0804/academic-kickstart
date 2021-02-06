@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-# weight: 
+weight: 640
 
 # Basic metadata
 title: "Ensemble Learners"

@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-# weight: 
+weight: 660
 
 # Basic metadata
 title: "Bagging and Pasting"

@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-# weight: 
+weight: 610
 
 # Basic metadata
 title: "Why ensemble learning?"
@@ -13,6 +13,7 @@ authors: ["admin"]
 tags: ["ML", "Ensemble Learning"]
 categories: ["Machine Learning"]
 toc: true # Show table of contents?
+
 
 # Advanced metadata
 profile: false  # Show author profile?

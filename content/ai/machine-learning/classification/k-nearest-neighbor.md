@@ -9,6 +9,8 @@ tags: ["ML", "Classification", "Non-Parametric"]
 categories: ["Machine Learning"]
 toc: true # Show table of contents?
 
+weight: 410
+
 # Advanced settings
 profile: false  # Show author profile?
 

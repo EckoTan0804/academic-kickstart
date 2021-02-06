@@ -10,6 +10,8 @@ tags: ["ML", "Regression"]
 categories: ["Machine Learning"]
 toc: true # Show table of contents?
 
+weight: 320
+
 # Advanced settings
 profile: false  # Show author profile?
 
