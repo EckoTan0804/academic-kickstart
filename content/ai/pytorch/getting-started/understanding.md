@@ -300,7 +300,7 @@ Sum the number of elements for every parameter group:
 
 ```python
 def get_num_params(model):
-    sum(p.numel() for p in model.parameters())
+    return sum(p.numel() for p in model.parameters())
 ```
 
 Calculate only the *trainable* parameters:
