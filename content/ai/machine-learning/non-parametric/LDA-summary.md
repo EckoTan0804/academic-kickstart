@@ -45,7 +45,7 @@ menu:
 - also called **Fisher’s Linear Discriminant**
 
 - reduces dimension (like PCA)
-- but forcuses on maximizing seperability among known categories
+- but focuses on **maximizing seperability among known categories**
 
 
 
