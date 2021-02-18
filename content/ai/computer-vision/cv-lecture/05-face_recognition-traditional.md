@@ -37,7 +37,7 @@ header:
 menu: 
     computer-vision:
         parent: cv-lecture
-        weight: 4
+        weight: 5
 ---
 
 ## Face Recognition for Human-Computer Interaction (HCI)
