@@ -10,7 +10,7 @@ date: 2021-02-15
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Computer Vision", "Lecture", "Face Recognition"]
+tags: ["Computer Vision", "Lecture", "Face", Face Recognition"]
 categories: ["Computer Vision"]
 toc: true # Show table of contents?
 
