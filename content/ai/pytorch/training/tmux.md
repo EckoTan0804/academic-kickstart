@@ -10,7 +10,7 @@ date: 2020-11-29
 draft: false
 type: docs # page type
 authors: ["admin"]
-tags: ["Deep Learning", "PyTorch", "PyTorch Recipe"]
+tags: ["Deep Learning", "PyTorch", "NN Training"]
 categories: ["Deep Learning"]
 toc: true # Show table of contents?
 
