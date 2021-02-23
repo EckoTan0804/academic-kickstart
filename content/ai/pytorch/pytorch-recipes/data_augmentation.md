@@ -87,13 +87,29 @@ They are pictures of the same car, but our target application may NEVER see cars
 
 ### 🔥 Use [`albumentations`](https://github.com/albumentations-team/albumentations)
 
-
-
 #### Demo
 
 [Demo](https://albumentations-demo.herokuapp.com/) for viewing different augmentation transformations
 
+## When will data augmentation be applied in PyTorch?
 
+In any epoch the dataloader will apply a fresh set of random operations **“on the fly”.**  I.e. the augmentation happens inside of this line:
+
+```python
+for (data, target) in dataloader:
+```
+
+Instead of showing the exact same items at every epoch, you are showing a variant that has been changed in a different way. So after three epochs, you would have seen three random variants of each item in a dataset.
+
+Note that each image will be transformed randomly on-the-fly, thus NO images will be generated and the length of `Dataset` stays the SAME.
+
+If you want to perferm more augmentation and bring more varaibility for the dataset, just increase the number of epochs.
+
+> Reference:
+>
+> - [Data augmentation in PyTorch](https://discuss.pytorch.org/t/data-augmentation-in-pytorch/7925)
+> - [Transform and Image Data Augmentation](https://discuss.pytorch.org/t/transform-and-image-data-augmentation/71942)
+> - [Basic question about torchvision.transforms](https://discuss.pytorch.org/t/basic-question-about-torchvision-transforms/40213)
 
 ## Reference
 
