@@ -118,6 +118,6 @@ os.environ['CUDA_LAUNCH_BLOCKING'] = "1"
 
 > Reference: 
 >
-> - https://towardsdatascience.com/cuda-error-device-side-assert-triggered-c6ae1c8fa4c3
+> - [CUDA error 59: Device-side assert triggered](https://towardsdatascience.com/cuda-error-device-side-assert-triggered-c6ae1c8fa4c3)
 > - [Debugging CUDA device-side assert in PyTorch](https://lernapparat.de/debug-device-assert/)
 
