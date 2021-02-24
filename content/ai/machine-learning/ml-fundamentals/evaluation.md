@@ -115,7 +115,7 @@ Each cell:
 
 ### **Precision** 
 
-Percentage of retrieved documents that are relevant 
+How many selected items are relevant?
 $$
 \text{ Precision } = \frac{TP}{TP + FP}
 =\frac{\\# \text{ relevant item retrieved }}{\\# \text{ of items retrieved }}
@@ -124,17 +124,46 @@ $$
 
 ### **Recall / True Positive Rate (TPR) / Sensitivity**
 
-Percentage of all relevant documents that are retrieved 
+How many relevant items are selected?
 $$
 \text { Recall }  = \frac{TP}{TP + FN}
 =\frac{\\# \text { relevant item retrieved }}{\\# \text { of relevant items in collection }}
 $$
 
-### **$F$ / $F_1$ measure**
+![img](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/350px-Precisionrecall.svg.png)
 
+
+<details>
+<summary>Example</summary>
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-15%2011.51.38.png" alt="截屏2020-09-15 11.51.38" style="zoom: 33%;" />
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-15%2011.51.43.png" alt="截屏2020-09-15 11.51.43" style="zoom:33%;" />
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-15%2011.51.46.png" alt="截屏2020-09-15 11.51.46" style="zoom:33%;" />
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-15%2011.51.49.png" alt="截屏2020-09-15 11.51.49" style="zoom:33%;" />
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-15%2011.51.52.png" alt="截屏2020-09-15 11.51.52" style="zoom:33%;" />
+</details>
+
+### **F-score / F-measure**
+
+#### $F\_1$ score
+
+The traditional F-measure or balanced F-score (**$F\_1$ score**) is the [harmonic mean](https://en.wikipedia.org/wiki/Harmonic_mean#Harmonic_mean_of_two_numbers) of precision and recall:
 $$
-F=\frac{2 \cdot \text {precison} \cdot \text {recall}}{\text {precision}+\text {recall}} = \frac{2TP}{2TP + FP + FN}
+F\_1=\frac{2 \cdot \text {precison} \cdot \text {recall}}{\text {precision}+\text {recall}} = \frac{2TP}{2TP + FP + FN}
 $$
+
+#### $F\_\beta$ score
+
+$F\_\beta$ uses a positive real factor $\beta$, where $\beta$ is chosen such that **recall is considered $\beta$ times as important as precision**
+$$
+F\_{\beta}=\left(1+\beta^{2}\right) \cdot \frac{\text { precision } \cdot \text { recall }}{\left(\beta^{2} \cdot \text { precision }\right)+\text { recall }}
+$$
+Two commonly used values for $\beta$:
+
+- $2$: weighs recall **higher** than precision
+- $0.5$: weighs recall **lower** than precision
 
 ### Specificity
 
@@ -148,17 +177,8 @@ $$
 \text{FPR} = \frac{FP}{FP + TN} \left(= 1- \frac{TN}{FP + TN} = 1- \text{Specifity}\right)
 $$
 
-## Example
 
-<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-15%2011.51.38.png" alt="截屏2020-09-15 11.51.38" style="zoom: 33%;" />
 
-<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-15%2011.51.43.png" alt="截屏2020-09-15 11.51.43" style="zoom:33%;" />
-
-<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-15%2011.51.46.png" alt="截屏2020-09-15 11.51.46" style="zoom:33%;" />
-
-<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-15%2011.51.49.png" alt="截屏2020-09-15 11.51.49" style="zoom:33%;" />
-
-<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-09-15%2011.51.52.png" alt="截屏2020-09-15 11.51.52" style="zoom:33%;" />
 
 
 
@@ -184,6 +204,39 @@ Therefore, we have the relationship:
   - $FPR (= 1 - \text{Specificity})$⬆️
 - And vice versa
 
+
+
+## AUC-ROC curve
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/evaluation-metrics-ROC-AUC.png" alt="evaluation-metrics-ROC-AUC" style="zoom:80%;" />
+
+AUC (**Area Under The Curve**)-ROC (**Receiver Operating Characteristics**) curve
+
+- Performance measurement for the classification problems at various threshold settings. 
+  - ROC is a probability curve 
+  - AUC represents the degree or measure of separability
+
+- Tells how much the model is capable of distinguishing between classes.
+- Higher the AUC, the better the model is at predicting 0s as 0s and 1s as 1s
+
+### How to speculate about the performance of the model?
+
+- An **excellent** model has **AUC near to the 1** which means it has a good measure of separability. 
+
+  {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-02-24%2021.02.34.png" title="Ideal situation: two curves don’t overlap at all means model has an ideal measure of separability. It is perfectly able to distinguish between positive class and negative class." numbered="true" >}}
+
+- When two distributions overlap, we introduce type 1 and type 2 errors. Depending upon the threshold, we can minimize or maximize them. When AUC is 0.7, it means there is a 70% chance that the model will be able to distinguish between positive class and negative class.
+
+  ![截屏2021-02-24 21.09.30](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-02-24%2021.09.30.png)
+
+- When AUC is 0.5, it means the model has no class separation capacity whatsoever.![截屏2021-02-24 21.05.28](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-02-24%2021.05.28.png)
+
+  
+
+- A **poor** model has **AUC near to the 0** which means it has the worst measure of separability.
+
+  {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-02-24%2021.05.54.png" title="When AUC is approximately 0, the model is actually reciprocating the classes. It means the model is predicting a negative class as a positive class and vice versa." numbered="true" >}}
+
 ## 🎥 Video tutorials
 
 ### The confusion matrix
@@ -203,3 +256,4 @@ Therefore, we have the relationship:
 ## Reference
 
 - [Understanding AUC - ROC Curve](https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5)
+- [What is the F-score?](https://deepai.org/machine-learning-glossary-and-terms/f-score): very nice explanation with examples
