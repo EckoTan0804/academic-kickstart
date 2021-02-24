@@ -122,6 +122,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   url = "/post/"
   weight = 2
 
+# main.AI
 [[menu.main]]
   name = "AI"
   url = "/ai/"
@@ -163,6 +164,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "pytorch"
   parent = "ai"
 
+# main.Programming
 [[menu.main]]
   name = "Programming"
   url = "/programming/"
@@ -197,10 +199,32 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "linux"
   parent = "programming"
 
+# main.Notes
 [[menu.main]]
   name = "Notes"
   url = "/notes/"
   weight = 5
+
+[[menu.main]]
+  name = "Gestaltungsgrundsätze für interaktive Echtzeitsysteme"
+  url = "/notes/gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme/"
+  weight = 1
+  identifier = "gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme"
+  parent = "notes"
+
+[[menu.main]]
+  name = "Rechnerstruktur"
+  url = "/notes/rechner-struktur/"
+  weight = 2
+  identifier = "rechner-struktur"
+  parent = "notes"
+
+[[menu.main]]
+  name = "Thesis"
+  url = "/notes/thesis/"
+  weight = 3
+  identifier = "thesis"
+  parent = "notes"
   
 
 
@@ -522,6 +546,23 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "Linux Recipes"
   weight = 10
   identifier = "linux-recipes"
+
+
+################# Thesis #################
+[[menu.thesis]]
+  name = "Read Papers"
+  weight = 10
+  identifier = "read-papers"
+
+[[menu.thesis]]
+  name = "Write Papers"
+  weight = 20
+  identifier = "write-papers"
+
+[[menu.thesis]]
+  name = "Presentation"
+  weight = 30
+  identifier = "presentation"
 
 
 

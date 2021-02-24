@@ -13,6 +13,7 @@
   url = "/post/"
   weight = 2
 
+# main.AI
 [[main]]
   name = "AI"
   url = "/ai/"
@@ -54,6 +55,7 @@
   identifier = "pytorch"
   parent = "ai"
 
+# main.Programming
 [[main]]
   name = "Programming"
   url = "/programming/"
@@ -88,10 +90,33 @@
   identifier = "linux"
   parent = "programming"
 
+# main.Notes
 [[main]]
   name = "Notes"
   url = "/notes/"
+  identifier = "notes"
   weight = 5
+
+[[main]]
+  name = "Gestaltungsgrundsätze für interaktive Echtzeitsysteme"
+  url = "/notes/gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme/"
+  weight = 1
+  identifier = "gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme"
+  parent = "notes"
+
+[[main]]
+  name = "Rechnerstruktur"
+  url = "/notes/rechner-struktur/"
+  weight = 2
+  identifier = "rechner-struktur"
+  parent = "notes"
+
+[[main]]
+  name = "Thesis"
+  url = "/notes/thesis/"
+  weight = 3
+  identifier = "thesis"
+  parent = "notes"
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -456,6 +481,21 @@
   weight = 70
   identifier = "alte-klausur-zusammenfassung"
 
+# thesis
+[[thesis]]
+  name = "Read Papers"
+  weight = 10
+  identifier = "read-papers"
+
+[[thesis]]
+  name = "Write Papers"
+  weight = 20
+  identifier = "write-papers"
+
+[[thesis]]
+  name = "Presentation"
+  weight = 30
+  identifier = "presentation"
 
 ################################
 # Courses                       
