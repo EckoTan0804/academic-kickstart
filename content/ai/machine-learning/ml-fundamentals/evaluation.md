@@ -219,15 +219,43 @@ AUC (**Area Under The Curve**)-ROC (**Receiver Operating Characteristics**) curv
 - Tells how much the model is capable of distinguishing between classes.
 - Higher the AUC, the better the model is at predicting 0s as 0s and 1s as 1s
 
+### How is ROC plotted?
+
+```python
+for threshold in thresholds: # iterate over all thresholds
+    TPR, FPR = classify(threshold) # calculate TPR and FPR based on threshold
+    plot_point(FPR, TPR) # plot coordinate (FPR, TPR) in the diagram
+    
+connect_points() # connect all plotted points to get ROC curve
+```
+
+Example:
+
+Suppose that the probability of a series of samples being classified into positive classes has been derived and we sort them descendingly:
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-02-24%2022.05.59.png" alt="截屏2021-02-24 22.05.59" style="zoom: 50%;" />
+
+- Class: actual label of test sample 
+- Score: probability of classifying test sample as positive
+
+Next, we use the "Score" value as the threshold (from high to low). 
+
+- When the probability that the test sample is a positive sample is greater than or equal to this threshold, we consider it a positive sample, otherwise it is a negative sample. 
+  - For example, for the 4-th sample, its "Score" has value 0.6. So Sample 1, 2, 3, 4 will be considered as positive, because their "Score" values are $\geq$ 0.6. Other samples are classified as negative.
+
+- By picking a different threshold each time, we can get a set of FPR and TPR, i.e., a point on the ROC curve. In this way, we get a total of 20 sets of FPR and TPR values. We plot them in the diagram:
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/081955100088586.jpg" alt="img" style="zoom:80%;" />
+
 ### How to speculate about the performance of the model?
 
 - An **excellent** model has **AUC near to the 1** which means it has a good measure of separability. 
 
   {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-02-24%2021.02.34.png" title="Ideal situation: two curves don’t overlap at all means model has an ideal measure of separability. It is perfectly able to distinguish between positive class and negative class." numbered="true" >}}
 
-- When two distributions overlap, we introduce type 1 and type 2 errors. Depending upon the threshold, we can minimize or maximize them. When AUC is 0.7, it means there is a 70% chance that the model will be able to distinguish between positive class and negative class.
+- When $0.5 < \text{AUC} < 1$, there is a high chance that the classifier will be able to distinguish the positive class values from the negative class values. This is because the classifier is able to detect more numbers of True positives and True negatives than False negatives and False positives.
 
-  ![截屏2021-02-24 21.09.30](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-02-24%2021.09.30.png)
+  {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-02-24%2021.09.30.png" title="When AUC is 0.7, it means there is a 70% chance that the model will be able to distinguish between positive class and negative class." numbered="true" >}}
 
 - When AUC is 0.5, it means the model has no class separation capacity whatsoever.![截屏2021-02-24 21.05.28](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-02-24%2021.05.28.png)
 
