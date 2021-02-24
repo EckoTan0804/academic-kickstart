@@ -285,3 +285,5 @@ Next, we use the "Score" value as the threshold (from high to low).
 
 - [Understanding AUC - ROC Curve](https://towardsdatascience.com/understanding-auc-roc-curve-68b2303cc9c5)
 - [What is the F-score?](https://deepai.org/machine-learning-glossary-and-terms/f-score): very nice explanation with examples
+- [机器学习之分类器性能指标之ROC曲线、AUC值](http://www.cnblogs.com/dlml/p/4403482.html)
+
