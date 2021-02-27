@@ -2,10 +2,10 @@
 # Title, summary, and position in the list
 # linktitle: 
 summary: ""
-weight: 21
+weight: 22
 
 # Basic metadata
-title: "Tools for Writing Papers"
+title: "Tools for Writing Paper"
 date: 2021-02-26
 draft: false
 type: docs # page type
