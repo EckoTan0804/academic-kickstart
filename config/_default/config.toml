@@ -226,6 +226,12 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "thesis"
   parent = "notes"
   
+[[menu.main]]
+  name = "Telematics"
+  url = "/notes/telematics/"
+  weight = 4
+  identifier = "telematics"
+  parent = "notes"
 
 
 ################# ML #################
@@ -563,6 +569,18 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "Presentation"
   weight = 30
   identifier = "presentation"
+
+
+################# Telematics ###############
+[[menu.telematics]]
+  name = "Lecture Notes"
+  weight = 10
+  identifier = "TM-lecture-note"
+
+[[menu.telematics]]
+  name = "Understanding"
+  weight = 20
+  identifier = "TM-understanding"
 
 
 

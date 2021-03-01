@@ -118,6 +118,13 @@
   identifier = "thesis"
   parent = "notes"
 
+[[main]]
+  name = "Telematics"
+  url = "/notes/telematics/"
+  weight = 4
+  identifier = "telematics"
+  parent = "notes"
+
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # [[main]]
@@ -496,6 +503,21 @@
   name = "Presentation"
   weight = 30
   identifier = "presentation"
+
+
+# telematics
+[[telematics]]
+  name = "Lecture Notes"
+  weight = 10
+  identifier = "TM-lecture-note"
+
+[[telematics]]
+  name = "Understanding"
+  weight = 20
+  identifier = "TM-understanding"
+
+
+
 
 ################################
 # Courses                       
