@@ -1,4 +1,5 @@
 ---
+
 # Title, summary, and position in the list
 # linktitle: 
 summary: ""
@@ -40,6 +41,8 @@ menu:
         weight: 2
 
 ---
+
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/Router.png" caption="Schematic view and generic architecture of router" numbered="true" >}}
 
 ## Basic Functionalities
 
@@ -241,7 +244,7 @@ Requirements
 - Optimization
 
   - [Path compression](#path-compression)
-  - Multibit-Tries
+  - [Multibit-Tries](#multibit-trie)
 
 #### Path Compression
 
