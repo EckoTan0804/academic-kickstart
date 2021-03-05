@@ -42,7 +42,7 @@ menu:
 
 ## TL;DR
 
-{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/transformer.png" title="Transformer" numbered="true" >}}
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/transformer_improved.png" title="Transformer" numbered="true" >}}
 
 ## High-Level Look
 
@@ -52,7 +52,7 @@ Let’s begin by looking at the model as a single black box. In a machine transl
 
 The transformer consists of 
 
-- an encoding componen
+- an encoding component
 - a decoding component
 - connections between them
 
@@ -119,7 +119,7 @@ Say the following sentence is an input sentence we want to translate:
 
 What does “it” in this sentence refer to? Is it referring to the street or to the animal? It’s a simple question to a human, but not as simple to an algorithm.
 
-As the model processes each word (each position in the input sequence), self attention allows it to look at other positions in the input sequence for clues that can help lead to a better encoding for this word. Therefore, when the model is processing the word “it”, self-attention allows it to associate “it” with “animal”. 
+As the model processes each word (each position in the input sequence), **self attention allows it to look at other positions in the input sequence for clues that can help lead to a better encoding for this word**. Therefore, when the model is processing the word “it”, self-attention allows it to associate “it” with “animal”. 
 
 We can think of how maintaining a hidden state allows an RNN to incorporate its representation of previous words/vectors it has processed with the current one it’s processing. **Self-attention is the method the Transformer uses to bake the “understanding” of other relevant words into the one we’re currently processing.**
 
@@ -178,10 +178,11 @@ In the following steps we will keep using the first word "Thinking" as example.
 
    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/self-attention_softmax.png" alt="img" style="zoom:80%;" />
 
-5. **Multiply each value vector by the softmax score** (in preparation to sum them up)
+5. **Multiply each <span style="color:#5CBCE9">value vector</span> by the softmax score** (in preparation to sum them up)
+   
    - Keep intact the values of the word(s) we want to focus on
-   - drown-out irrelevant words *(by multiplying them by tiny numbers like 0.001, for example)*
-
+- drown-out irrelevant words *(by multiplying them by tiny numbers like 0.001, for example)*
+   
 6. **Sum up the weighted value vectors**
 
    - This produces the output of the self-attention layer at this position (for the first word).
@@ -198,7 +199,7 @@ In the actual implementation, the above calculation is done in matrix form for f
    ![截屏2020-08-23 13.03.34](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-08-23%2013.03.34.png)
 
    - Pack our embeddings into a matrix <span style="color:#70BF41">X</span>
-   - Multiplying it by the weight matrices we’ve trained (<span style="color:#B36AE2">WQ</span>, <span style="color:#F39019">WK</span>, <span style="color:#5CBCE9">WV</span>)
+   - Multiplying it by the weight matrices we’ve trained (<span style="color:#B36AE2">$W^Q$</span>, <span style="color:#F39019">$W^K$</span>, <span style="color:#5CBCE9">$W^V$</span>)
 
 2. **Calculate the outputs of the self-attention layer**
 
@@ -219,13 +220,13 @@ The paper further refined the self-attention layer by adding a mechanism called 
   - Each of these sets is randomly initialized.
   - After training, each set is used to project the input embeddings (or vectors from lower encoders/decoders) into a different representation subspace.
 
-  {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/transformer_attention_heads_qkv.png" title="With multi-headed attention, we maintain separate Q/K/V weight matrices for each head resulting in different Q/K/V matrices. As we did before, we multiply X by the WQ/WK/WV matrices to produce Q/K/V matrices." numbered="true" >}}
+  {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/transformer_attention_heads_qkv.png" title="With multi-headed attention, we maintain separate $Q$/$K$/$V$ weight matrices for each head resulting in different $Q$/$K$/$V$ matrices. As we did before, we multiply $X$ by the $W^Q$/$W^K$/$W^V$ matrices to produce $Q$/$K$/$V$ matrices." numbered="true" >}}
 
 If we do the same self-attention calculation as above, just eight different times with different weight matrices, we end up with eight different Z matrices
 
 ![img](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/transformer_attention_heads_z.png)
 
-Since the feed-forward layer is expecting a single matrix (a vector for each word), we concat the matrices then multiple them by an additional weights matrix WO.
+Since the feed-forward layer is expecting a single matrix (a vector for each word), we concat the matrices then multiple them by an additional weights matrix $W^O$.
 
 ![img](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/transformer_attention_heads_weight_matrix_o.png)
 
@@ -238,7 +239,7 @@ Since the feed-forward layer is expecting a single matrix (a vector for each wor
 In order to represent the order of the words in the input sequence, the transformer adds a vector to each input embedding.
 
 - These vectors follow a specific pattern that the model learns, which helps it determine the position of each word, or the distance between different words in the sequence.
-- Intuition: adding these values to the embeddings provides meaningful distances between the embedding vectors once they’re projected into Q/K/V vectors and during dot-product attention.
+- Intuition: adding these values to the embeddings provides meaningful distances between the embedding vectors once they’re projected into $Q$/$K$/$V$ vectors and during dot-product attention.
 
 {{< figure src="http://jalammar.github.io/images/t/transformer_positional_encoding_vectors.png" title="To give the model a sense of the order of the words, we add positional encoding vectors -- the values of which follow a specific pattern." numbered="true" >}}
 
@@ -276,7 +277,7 @@ If we’re to think of a Transformer of 2 stacked encoders and decoders, it woul
 {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/transformer_decoding_1.gif" title="After finishing the encoding phase, we begin the decoding phase. Each step in the decoding phase outputs an element from the output sequence (the English translation sentence in this case)." numbered="true" >}}
 
 - The encoder start by processing the input sequence. 
-- The output of the top encoder is then transformed into a set of attention vectors K and V. 
+- The output of the top encoder is then transformed into a set of attention vectors $K$ and $V$. 
 - These are to be used by each decoder in its “encoder-decoder attention” layer which helps the decoder focus on appropriate places in the input sequence
 
 The following steps repeat the process until a special symbol is reached indicating the transformer decoder has completed its output. 	![img](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/transformer_decoding_2-20200823133024688.gif)
@@ -307,7 +308,7 @@ The final Linear layer + Softmax layer: **Turn a vector of floats (the output of
 
 During training, an untrained model would go through the exact same forward pass. Since we are training it on a labeled training dataset, we can compare its output with the actual correct output.
 
-To visualize this, let’s assume our output vocabulary only contains six words(“a”, “am”, “i”, “thanks”, “student”, and “`<eos>`” (short for ‘end of sentence’)).
+To visualize this, let’s assume our output vocabulary only contains six words: “a”, “am”, “i”, “thanks”, “student”, and “`<eos>`” (short for ‘end of sentence’).
 
 {{< figure src="http://jalammar.github.io/images/t/vocabulary.png" title="The output vocabulary of our model is created in the preprocessing phase before we even begin training." numbered="true" >}}
 
@@ -354,7 +355,7 @@ Now, because the model produces the outputs one at a time, we can assume that th
 
 ## Reference
 
-- [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/)
+- [The Illustrated Transformer](http://jalammar.github.io/illustrated-transformer/) - great explanation with a number of illustrations 👍🔥
 - Paper: [Attention is All You Need](https://arxiv.org/abs/1706.03762)
 - Pytorch implementation: [guide annotating the paper with PyTorch implementation](http://nlp.seas.harvard.edu/2018/04/03/attention.html)
 

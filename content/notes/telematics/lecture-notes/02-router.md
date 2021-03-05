@@ -289,6 +289,48 @@ Requirements
   </details>
   
 
+#### Multibit Trie
+
+<details>
+<summary>Example: Homework 03</summary>
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-05%2012.03.23.png" alt="截屏2021-03-05 12.03.23" style="zoom:67%;" />
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-05%2012.03.52.png" alt="截屏2021-03-05 12.03.52" style="zoom:67%;" />
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-05%2012.04.11.png" alt="截屏2021-03-05 12.04.11" style="zoom:67%;" />
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Hash Tables
 
@@ -363,7 +405,7 @@ Requirements
 
 - An extension that supports a **„Don‘t Care“ State x** (matching both a 0 and a 1 in that position)
   - Allows longest prefix matching
-  - Prefixes are stored in the CAM sorted by prefix length
+  - Prefixes are stored in the CAM **sorted by prefix length** (from long to short)
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-02%2021.57.54.png" alt="截屏2021-03-02 21.57.54" style="zoom:80%;" />
 
