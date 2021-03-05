@@ -379,7 +379,7 @@ Requirements
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-01%2023.54.40.png" alt="截屏2021-03-01 23.54.40" style="zoom: 67%;" />
 
 <details>
-<summary>How does CAM work?</summary>
+<summary><b>How does CAM work?</b></summary>
 
 
 ![截屏2021-03-01 23.56.34](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-01%2023.56.34.png)
@@ -419,6 +419,20 @@ Requirements
   - Longest matching prefix requires strict ordering of prefixes in the TCAM
     - New entries can require the TCAM to be „re-ordered“
       $\rightarrow$ This can take a significant amount of time!
+
+<details>
+<summary><b>Example: Homework 04</b></summary>
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-05%2019.42.57.png" alt="截屏2021-03-05 19.42.57" style="zoom:67%;" />
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-05%2019.43.53.png" alt="截屏2021-03-05 19.43.53" style="zoom:67%;" />
+
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-05%2019.44.17.png" alt="截屏2021-03-05 19.44.17" style="zoom:67%;" />
+
+</details>
+
+
 
 ## Router Architecture
 
