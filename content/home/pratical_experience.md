@@ -19,22 +19,32 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
-  title = "Real World Person Detection on Jetson GPU"
-  company = "Institute of Anthropomatics and Robotics (IAR), Vision and Fusion Laboratory (IES), Karlsruhe Institute of Technology (KIT)"
-  company_url = "https://ies.anthropomatik.kit.edu/english/index.php"
+  title = "Hand Gesture Recognition"
+  company = "Institute of Anthropomatics and Robotics (IAR), Interactive Systems Lab (ISL), Karlsruhe Institute of Technology (KIT)"
+  company_url = "http://isl.anthropomatik.kit.edu/english/8903.php"
   location = "Karlsruhe, Germany"
     date_start = "2020-11-01"
   date_end = "2021-02-18"
   description = """
-  * Development of end-to-end person detection pipeline
-  * Training of Single-Stage Detector: YOLO, RetinaNet, SSD
-  * Deployment on Jetson Nano and Jetson AGX
-  * Optimization using Nvidia Nsight
-  * Model evaluation on Jetson platform
+  * Development of hand gesture recognition application
+  * Building and training of neural networks using PyTorch
+  * Dataset preprocessing and data augmentation using albumentations
+  * Hyperparameter tuning using Ray-Tune
   """
 
-
-
+[[experience]]
+  title = "Real World Person Detection on Jetson GPU"
+  company = "Institute of Anthropomatics and Robotics (IAR), Vision and Fusion Laboratory, Karlsruhe Institute of Technology (KIT)"
+  company_url = "https://ies.anthropomatik.kit.edu/english/index.php"
+  location = "Karlsruhe, Germany"
+    date_start = "2020-11-01"
+  date_end = "2021-03-20"
+  description = """
+  * Training of Single-Stage Detectors: YOLO, RetinaNet, SSD
+  * Deployment of end-to-end person detection pipeline on Jetson Nano and Jetson AGX
+  * Optimization using Nvidia Nsight
+  * Model evaluation on Jetson platforms
+  """
 
 [[experience]]
   title = "Lego Mindstorms"

@@ -41,18 +41,19 @@ menu:
 
 ---
 
-| Acronym | Full Name                               |
-| ------- | --------------------------------------- |
-| **ISP** | **I**nternet **S**ervice **P**rovider   |
-| **IXP** | **I**nternet **E**xchange **P**oint     |
-| **FIB** | **F**orwarding **I**nformation **B**ase |
-| **CAM** | **C**ontent-**A**ddressable **M**emory  |
-| **AS**  | **A**utonomous **S**ystems              |
-| **IGP** | **I**nterior **G**ateway **P**rotocol   |
-| **EGP** | **E**xterior **G**ateway **P**rotocol   |
-| **ASN** | **A**utonomous **S**ystems **N**umber   |
-| **CDN** | **C**ontent **D**elivery Network        |
-|         |                                         |
+| Acronym  | Full Name                                |
+| -------- | ---------------------------------------- |
+| **ISP**  | **I**nternet **S**ervice **P**rovider    |
+| **IXP**  | **I**nternet **E**xchange **P**oint      |
+| **FIB**  | **F**orwarding **I**nformation **B**ase  |
+| **CAM**  | **C**ontent-**A**ddressable **M**emory   |
+| **AS**   | **A**utonomous **S**ystems               |
+| **IGP**  | **I**nterior **G**ateway **P**rotocol    |
+| **EGP**  | **E**xterior **G**ateway **P**rotocol    |
+| **ASN**  | **A**utonomous **S**ystems **N**umber    |
+| **CDN**  | **C**ontent **D**elivery Network         |
+| **OSBF** | **O**pen **S**hortest **P**ath **F**irst |
+| **LSA**  | **L**ink **S**tate **A**dvertisement     |
 
 
 
