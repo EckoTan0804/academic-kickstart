@@ -822,19 +822,27 @@ Re-compute routes if content of link state database changed
 
 ![截屏2021-03-08 17.02.36](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-08%2017.02.36.png)
 
-
-
-
-
-
-
-
-
 ### RIP vs. OSPF
 
+**RIP**: based on distance vector
 
+- 🔴 Problems
+  - Limited in metric selection and size  
+    - Only one metric (hop count)
 
+    - Maximum path length of 15 hops
+  - Periodic updates every 30 seconds, even without changes
+  - Slow convergence, count-to-infinity $\rightarrow$ Not suitable for large networks 🤪
 
+- 👍 Advantage: easier and requires less resources than OSPF 
+  - Still sometimes used in small networks
+
+**OSPF**: based on link-state
+
+- Addresses shortcomings of RIP
+  - Faster convergence, no count-to-infinity, lower signaling overhead ... 👏
+- Large networks can be divided into areas 
+- Standard in large ASes (together with IS-IS)
 
 ## BGP: Border Gateway Protocol
 
