@@ -19,6 +19,12 @@ subtitle = ""
   icon_pack = "fab"
   name = "Python"
   description = "90%"
+
+[[feature]]
+  icon = "pytorch"
+  icon_pack = "custom"
+  name = "PyTorch"
+  description = "90%"
   
 [[feature]]
   icon = "java"
@@ -42,6 +48,12 @@ subtitle = ""
   icon = "CSharp"
   icon_pack = "custom"
   name = "C#"
+  description = "80%"
+
+[[feature]]
+  icon = "ros"
+  icon_pack = "custom"
+  name = "ROS"
   description = "80%"
 
 # [[feature]]
