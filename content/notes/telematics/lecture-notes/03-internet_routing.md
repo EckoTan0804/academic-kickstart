@@ -41,6 +41,8 @@ menu:
 
 ---
 
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/Internet_Routing.png" caption="Summary" numbered="true" >}}
+
 ## Baiscs
 
 Internet: network of networks
@@ -116,7 +118,7 @@ Example
 
 
 
-##Autonomous Systems
+## Autonomous Systems
 
 ### Structuring into autonomous systems
 
@@ -290,8 +292,9 @@ Basic concepts
       - DECIX (the world’s biggest IXP)
 
   - Members / customers: Monthly fixed charges per network port
-    - Necessary for operation and maintenance of IXP‘s switching platform
-
+  
+- Necessary for operation and maintenance of IXP‘s switching platform
+  
   - Different peering policies
     - **Open**: AS is open for peering with all other ASes
     - **Selective**: Peering only under given terms and conditions
@@ -617,7 +620,7 @@ Each LSA is associated with a lifetime (**LS `Age`**)
   - If known, hello message contains `router ID` of neighboring router 
     - *“my neighbor on this link is R2”*
 
-  ![截屏2021-03-07 13.17.49](/Users/EckoTan/Library/Application Support/typora-user-images/截屏2021-03-07 13.17.49.png)
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2011.40.56.png" alt="截屏2021-03-09 11.40.56" style="zoom:80%;" />
 
 - If no hello message is received for a pre-defined period of time $\rightarrow$ the link is considered to be down 🤪
   - Standard value for periodic hello messages: every 10-30 seconds 
@@ -627,7 +630,7 @@ Each LSA is associated with a lifetime (**LS `Age`**)
 
 #### **Header** of OSPF messages
 
-<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-07%2013.27.37.png" alt="截屏2021-03-07 13.27.37" style="zoom:67%;" />
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-07 13.27.37.png" alt="截屏2021-03-07 13.27.37" style="zoom:67%;" />
 
 - **Version**: OSPF Version, currently 2 for IPv4 and 3 for IPv6
 - **Type**
@@ -738,6 +741,7 @@ Following actions are needed
     
 
 - If R stores the LSA, it forwards it to its neighbors 
+  
   - Uses multicast address `224.0.0.5` with hop limit of 1
 
 #### LSA Flooding Example
@@ -814,8 +818,9 @@ Re-compute routes if content of link state database changed
 
   - Segment between ABR of target area and destination
 - Routers within an area select ABRs so that resulting end-to-end path is a **shortest** path
-  - Based on path costs of ABRs
-
+  
+- Based on path costs of ABRs
+  
 - Example
 
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-08%2017.02.09.png" alt="截屏2021-03-08 17.02.09" style="zoom:80%;" />
@@ -845,4 +850,309 @@ Re-compute routes if content of link state database changed
 - Standard in large ASes (together with IS-IS)
 
 ## BGP: Border Gateway Protocol
+
+> Good explanation:
+>
+> - [BGP for Humans: Making Sense of Border Gateway Protocol](https://www.imperva.com/blog/bgp-routing-explained/)
+
+### Exterior Gateway Protocols
+
+In aforementioned section, we have devided a large networks into different autonomous systems (ASes). In order to make autonomous systems to be able to communicate with each other, there should be at least one special intermediate system that serves as an **interface to other ASes**.
+
+👍 Advantages:
+
+- **Scalability**
+  - Size of routing tables depends on size of AS
+
+  - Changes in routing tables are only propagated within an AS
+- **Autonomy**
+  - Internet = network of networks
+  - Routing can be controlled in the own network
+    - Uniform interior routing protocol within the AS
+
+    - Interior routing protocols of different ASes do not have to be identical
+
+### Border Gateway Protocol
+
+- The most important **exterior** gateway protocol
+- **Path vector** protocol
+  - Extension of distance vector approach
+  - BGP distributed **paths**, not metrics like costs etc. 
+    - With paths it is easy to guarantee that no loops exist
+  - Based on policies of network operator
+
+### BGP in a Nutshell
+
+- What exactly is being distributed?
+  - **Paths** (also called **routes**) that consist of
+    - Target: **prefixes** (also called: network, network prefixes, IP address ranges)
+    - Attributes: path, next hop
+      - Each traversed AS adds its own AS number to the path
+
+- Traffic "follows" UPDATE messages in opposite direction
+
+  ![截屏2021-03-08 22.01.15](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-08%2022.01.15.png)
+
+
+
+<details>
+<summary><b>Example: HW07</b></summary>
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2022.53.41.png" alt="截屏2021-03-09 22.53.41" style="zoom:67%;" />
+
+AS 100 announces prefix `1.6.17.0/24`. Describe how the routing information is distributed in the network.
+
+![截屏2021-03-09 22.54.30](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2022.54.30.png)
+
+![截屏2021-03-09 22.54.41](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2022.54.41.png)
+
+![截屏2021-03-09 22.54.58](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2022.54.58.png)
+
+
+
+![截屏2021-03-09 22.55.12](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2022.55.12.png)
+
+![截屏2021-03-09 22.55.45](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2022.55.45.png)
+
+
+
+![截屏2021-03-09 22.55.57](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2022.55.57.png)
+
+![截屏2021-03-09 22.56.15](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2022.56.15.png)
+
+![截屏2021-03-09 22.58.43](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2022.58.43.png)
+
+![截屏2021-03-09 22.59.08](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2022.59.08.png)
+
+The other two UPDATE messages (sent from R1 to R31 and R21) are handled in a similar way.
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### BGP Structure
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-08%2022.02.02.png" alt="截屏2021-03-08 22.02.02" style="zoom:80%;" />
+
+- **External BGP (EBGP)**
+  - Spoken between BGP routers of **neighboring** ASes 
+  - Announcement and forwarding of path information 
+  - Internal details of AS are NOT exchanged
+
+- **Internal BGP (IBGP)**
+  - Between BGP routers **within** an AS
+  - Synchronization of BGP routers of an AS
+  - Establishment of transit routes
+
+### Categorization of Routing Protocols
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-08%2022.05.46.png" alt="截屏2021-03-08 22.05.46" style="zoom: 67%;" />
+
+### Interplay of the Routing Approaches
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-08%2022.07.37.png" alt="截屏2021-03-08 22.07.37" style="zoom:80%;" />
+
+### Routing with BGP and IGPs
+
+![截屏2021-03-08 22.09.40](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-08%2022.09.40.png)
+
+Assume Alice wants to sent a packet to an external target ( not part of the local IGP domain, e.g., `2.3.4.5`).
+
+How does IGP router know what to do with this packet?
+
+- Is not strictly prescribed by BGP
+
+- Network operators can configure this freely
+- Different approaches possible
+
+#### Approach 1: IGP distributes "default" routes
+
+- Unknown address/prefix packets are routed to **default BGP** router via shortest path
+  - Good option for stub ASes
+  - Not practicable for transit ASes
+
+- Example
+
+  ![截屏2021-03-08 22.14.45](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-08%2022.14.45.png)
+
+#### Approach 2: Publication of external routes via IGP
+
+- Allows more fine-grained control such as *„all Google traffic goes this way“* 
+
+- Cannot be done with all external routes (scalability!)
+
+- Usually combined with default route
+
+- Example
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2014.59.38.png" alt="截屏2021-03-09 14.59.38" style="zoom:80%;" />
+
+#### Approach 3: IGP router also speaks BGP
+
+- Forwarding table is build from two routing tables (BGP + IGP) 
+
+- Often the case with big backbone providers
+
+- Example
+
+  ![截屏2021-03-08 22.25.22](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-08%2022.25.22.png)
+
+### BGP-Sessions
+
+- **Point-to-point**
+
+  ![截屏2021-03-08 22.33.53](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-08%2022.33.53.png)
+
+  - Usually only between **directly connected routers**
+    - Neighbors are called "**peers**"
+    - BGP uses TCP connections between these routers
+
+- How to establish TCP connection without working IP routing?
+
+  - IBGP: IGP of AS can be used
+  - EBGP
+    - Usually direct physical connection $\rightarrow$ no routing required 
+    - Manual configuration at both ends of connection
+
+### IBGP Connections
+
+- Simplest case: all BGP routers are fully meshed and connected directly to each other
+  - BGP sessions must be kept active all the time 
+  - Bad scalability 👎
+
+- Alternative: Concentrate IBGP traffic in a single router 
+  - Called **route reflector**
+  - Only route reflector has to maintain sessions with everyone else
+  - More than one reflector used in practice for reliability reasons
+- Alternative: Form hierarchies of sub ASes
+  - Called **AS confederations**
+
+  - Can also be used to implement more complex policies 
+  - Confederation appears to outside as single AS
+
+### BGP Messages
+
+- **OPEN**
+
+  - Establishment of BGP connection to peer BGP router 
+    - Important: TCP connection must already exist!
+
+  - Authentication
+
+- **UPDATE**
+
+  - Announcement of new or withdrawal of outdated path
+  - Attention: Only sent if new, better paths available
+
+- **KEEPALIVE**
+  - Keeps connection alive in absence of UDPATE messages 
+  - Acknowledgment for an OPEN request
+
+  - Recommended KeepAliveTimer: 30 s
+
+- **NOTIFICATION**
+  - Error message and tear down of BGP connection
+
+### Routing Information Base
+
+- BGP provides mechanisms for distributing path information
+  - Does NOT dictate how routes should be chosen
+  - No predefined routing metric
+- BGP uses **policies**
+
+- BGP instance of a router collects received and dispatched routing information in various internal tables
+  - **Routing Information Base (RIB)**
+  - Mainly for logical structuring
+
+- Structure
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-08%2022.48.36.png" alt="截屏2021-03-08 22.48.36" style="zoom:80%;" />
+
+  - **Adj-RIB-In (Adjacency RIB Incoming)**
+
+    - Exists per peer
+    - Stores information received from this peer
+
+  - **Loc-RIB (Local RIB, Routing Information Base)**
+
+    - „Actual routing table“
+      - Only preferred (= best) routes to destination networks are included here 
+      - Forwarding Information Base (FIB) is build based on Loc-RIB
+
+  - **Adj-RIB-Out (Adjacency RIB Outgoing)** 
+
+    - Exists per peer
+- Contains routes published to this peer
+
+<details>
+<summary><b>Routing Table example: HW08</b></summary>
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-09%2022.53.41.png" alt="截屏2021-03-09 22.53.41" style="zoom:67%;" />
+
+AS 100 announces prefix `1.6.17.0/24`. Fill out the simplified routing table of R5
+
+![截屏2021-03-10 11.02.53](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-10%2011.02.53.png)
+
+![截屏2021-03-10 11.02.56](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-10%2011.02.56.png)
+
+![截屏2021-03-10 11.03.24](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-10%2011.03.24.png)
+
+![截屏2021-03-10 11.03.43](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-10%2011.03.43.png)
+
+![截屏2021-03-10 11.04.07](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-10%2011.04.07.png)
+
+![截屏2021-03-10 11.04.27](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-10%2011.04.27.png)
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### 🔴 Challenges
+
+BGP "struggles" with many challenges and problems, e.g., 
+
+- Maintaining scalability
+
+- Security problems
 

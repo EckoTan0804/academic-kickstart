@@ -54,6 +54,9 @@ menu:
 | **CDN**  | **C**ontent **D**elivery Network         |
 | **OSBF** | **O**pen **S**hortest **P**ath **F**irst |
 | **LSA**  | **L**ink **S**tate **A**dvertisement     |
+| **ABR**  | **A**rea **B**order **R**outer           |
+| **BGP**  | **B**order **G**ateway **P**rotocol      |
+| **RIB**  | **R**outing **I**nformation **B**ase     |
 
 
 
