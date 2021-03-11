@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: 
 summary: ""
-weight: 11
+weight: 101
 
 # Basic metadata
 title: "Glossary"
@@ -41,12 +41,19 @@ menu:
 
 ---
 
+## Router
+
+| Acronym | Full Name                               |
+| ------- | --------------------------------------- |
+| **ISP** | **I**nternet **S**ervice **P**rovider   |
+| **IXP** | **I**nternet **E**xchange **P**oint     |
+| **FIB** | **F**orwarding **I**nformation **B**ase |
+| **CAM** | **C**ontent-**A**ddressable **M**emory  |
+
+## Internet Routing
+
 | Acronym  | Full Name                                |
 | -------- | ---------------------------------------- |
-| **ISP**  | **I**nternet **S**ervice **P**rovider    |
-| **IXP**  | **I**nternet **E**xchange **P**oint      |
-| **FIB**  | **F**orwarding **I**nformation **B**ase  |
-| **CAM**  | **C**ontent-**A**ddressable **M**emory   |
 | **AS**   | **A**utonomous **S**ystems               |
 | **IGP**  | **I**nterior **G**ateway **P**rotocol    |
 | **EGP**  | **E**xterior **G**ateway **P**rotocol    |
@@ -58,5 +65,13 @@ menu:
 | **BGP**  | **B**order **G**ateway **P**rotocol      |
 | **RIB**  | **R**outing **I**nformation **B**ase     |
 
+## Label Switching
 
-
+| Acronym  | Full Name                                     |
+| -------- | --------------------------------------------- |
+| **MPLS** | **M**ulti**p**rotocol **L**abel **S**witching |
+| **LSR**  | **L**abel-**s**witching **r**outer            |
+| **LER**  | **L**abel **e**dge **r**outer                 |
+| **FEC**  | **F**orwarding **e**quivalency **cl**ass      |
+| **RSVP** | Resource ReserVation Protocol                 |
+| **VPN ** | **V**irtual **P**rivate **N**etworks          |
