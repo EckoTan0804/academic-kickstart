@@ -42,7 +42,9 @@ menu:
 
 ---
 
-{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/Router.png" caption="Schematic view and generic architecture of router" numbered="true" >}}
+
+
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/Router%20%281%29.png" caption="Schematic view and generic architecture of router" numbered="true" >}}
 
 ## Basic Functionalities
 
