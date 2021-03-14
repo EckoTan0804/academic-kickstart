@@ -78,3 +78,15 @@ menu:
 
 ## Software Defined Network (SDN)
 
+
+
+## Network Function Virtualization (NFV)
+
+| Acronym  | Full Name                                      |
+| -------- | ---------------------------------------------- |
+| **NAT**  | **N**etwork **A**ddress **T**ranslation        |
+| **NFVI** | Network Function Virtualization Infrastructure |
+| **VNF**  | **V**irtualized **N**etwork **F**unctions      |
+| **MANO** | Management and Orchestration                   |
+| **SFC**  | **S**ervice **F**unction **C**haining          |
+
