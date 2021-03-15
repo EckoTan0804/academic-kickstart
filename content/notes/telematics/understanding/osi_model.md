@@ -43,6 +43,18 @@ menu:
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-14%2015.16.23.png" alt="截屏2021-03-14 15.16.23" style="zoom:80%;" />
 
+| Layer Nr | Layer Name   |
+| -------- | ------------ |
+| 7        | Application  |
+| 6        | Presentation |
+| 5        | Session      |
+| 4        | Transport    |
+| 3        | Network      |
+| 2        | Data Link    |
+| 1        | Physical     |
+
+
+
 ## Mnemonic
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-14%2015.18.03.png" alt="截屏2021-03-14 15.18.03" style="zoom:67%;" />
@@ -63,10 +75,6 @@ The OSI model also addresses another aspect how data flows on a **logical path**
 
 ![截屏2021-03-14 15.39.23](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-14%2015.39.23.png)
 
-- The sender's **Application layer** generates data, while the receiver's Application layer raise data
-
-
-
 | Layers       | Sender                      | Receiver                    |
 | ------------ | --------------------------- | --------------------------- |
 | Application  | generate data               | read data                   |
@@ -84,7 +92,7 @@ The OSI model also addresses another aspect how data flows on a **logical path**
 ### Application Layer
 
 - Non-technical: **user's application** (E.g. Chrome, Firefox )
-- Technical: put segments together
+- Technical: refers to application protocols
   - E.g. HTTP, SMTP, POP3, IMAP4, ...
   - Facilitate communications between application and operation system
 
