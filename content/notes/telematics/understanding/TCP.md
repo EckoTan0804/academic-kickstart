@@ -253,7 +253,11 @@ UDP might never get a beer...Well, he's UDP. He doesn't care.
 
 
 
+## TCP Details
 
+### Round Trip Time (RTT)
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/round_trip_time.png" alt="round_trip_time" style="zoom:80%;" />
 
 
 
