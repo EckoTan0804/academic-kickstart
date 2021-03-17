@@ -90,3 +90,17 @@ menu:
 | **MANO** | Management and Orchestration                   |
 | **SFC**  | **S**ervice **F**unction **C**haining          |
 
+
+
+## Congestion Control
+
+| Acronym  | Full Name                                                    |
+| -------- | ------------------------------------------------------------ |
+| **RTT**  | **R**ound **T**rip **T**ime                                  |
+| **EWMA** | **E**xponential **W**eighted **M**oving **A**verage          |
+| **RTO**  | **R**etransmission **T**ime**O**ut                           |
+| **AIMD** | **A**dditively **I**ncrease **M**ultiplicatively **D**ecrease |
+| **AQM**  | **A**ctive **Q**ueue **M**anagement                          |
+| **ECN**  | Explicit Congestion Notification                             |
+| **RED**  | **R**andom **E**arly **D**etection                           |
+
