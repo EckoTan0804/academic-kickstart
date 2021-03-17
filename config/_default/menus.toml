@@ -125,6 +125,13 @@
   identifier = "telematics"
   parent = "notes"
 
+[[main]]
+  name = "Mensch-Maschine-Wechselwirkung in der Anthropomatik: Basiswissen"
+  url = "/notes/mmwab/"
+  weight = 5
+  identifier = "mmwab"
+  parent = "notes"
+
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # [[main]]
@@ -515,6 +522,12 @@
   name = "Understanding"
   weight = 20
   identifier = "TM-understanding"
+
+# telematics
+[[telematics]]
+  name = "Lecture Notes"
+  weight = 10
+  identifier = "mmwab-lecture-note"
 
 
 

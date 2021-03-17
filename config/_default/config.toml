@@ -233,6 +233,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "telematics"
   parent = "notes"
 
+[[menu.main]]
+  name = "Mensch-Maschine-Wechselwirkung in der Anthropomatik: Basiswissen"
+  url = "/notes/mmwab/"
+  weight = 5
+  identifier = "mmwab"
+  parent = "notes"
+
 
 ################# ML #################
 [[menu.machine-learning]]
@@ -581,6 +588,12 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "Understanding"
   weight = 20
   identifier = "TM-understanding"
+
+################# MMWAB ###############
+[[mmwab]]
+  name = "Lecture Notes"
+  weight = 10
+  identifier = "mmwab-lecture-note"
 
 
 
