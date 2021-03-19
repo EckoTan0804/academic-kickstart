@@ -590,7 +590,7 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "TM-understanding"
 
 ################# MMWAB ###############
-[[mmwab]]
+[[menu.mmwab]]
   name = "Lecture Notes"
   weight = 10
   identifier = "mmwab-lecture-note"

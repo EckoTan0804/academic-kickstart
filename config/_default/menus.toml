@@ -524,7 +524,7 @@
   identifier = "TM-understanding"
 
 # telematics
-[[telematics]]
+[[mmwab]]
   name = "Lecture Notes"
   weight = 10
   identifier = "mmwab-lecture-note"
