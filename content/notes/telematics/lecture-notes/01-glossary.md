@@ -116,3 +116,18 @@ menu:
 | **STP**  | **S**panning **T**ree **P**rotocol                  |
 | **RSTP** | **R**apid **S**panning **T**ree **P**rotocol (RSTP) |
 
+## Data Center
+
+| Acronym   | Full Name                                                    |
+| --------- | ------------------------------------------------------------ |
+| **PFC**   | **P**riority-based **F**low **C**ontrol                      |
+| **PCP**   | **P**riority **C**ode **P**oint                              |
+| **ETS**   | **E**nhanced **T**ransmission **S**election                  |
+| **PG**    | **P**riority **G**roups                                      |
+| **QCN**   | **Q**uantized **C**ongestion **N**otification                |
+| **SPB**   | **S**hortest **P**ath **B**ridging                           |
+| **TRILL** | **Tr**ansparent **I**nterconnection of **L**ots of **L**inks |
+| **IS-IS** | **I**ntermediate-**S**ystem-to-**I**ntermediate-**S**ystem   |
+| **DCTCP** | Data Center TCP                                              |
+| **ECN**   | **E**xplicit **C**ongestion **N**otification                 |
+
