@@ -104,3 +104,15 @@ menu:
 | **ECN**  | Explicit Congestion Notification                             |
 | **RED**  | **R**andom **E**arly **D**etection                           |
 
+## Ethernet
+
+| Acronym  | Full Name                                           |
+| -------- | --------------------------------------------------- |
+| **CSMA** | **C**arrier **S**ense **M**ultiple **A**ccess       |
+| **CD**   | **C**ollision **D**etection                         |
+| **CA**   | **C**ollision **A**voidance                         |
+| **IFS**  | **I**nter **F**rame **S**pace                       |
+| **BPDU** | **B**ridge **P**rotocol **D**ata **U**nits          |
+| **STP**  | **S**panning **T**ree **P**rotocol                  |
+| **RSTP** | **R**apid **S**panning **T**ree **P**rotocol (RSTP) |
+
