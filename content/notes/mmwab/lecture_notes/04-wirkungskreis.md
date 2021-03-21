@@ -116,7 +116,9 @@ menu:
 
   Momentane Lastaufnahmekapazität aus dem Aktivitätsniveau: **Yerkes-Dodson-Kurve**
 
-  ![截屏2020-10-06 12.57.42](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-10-06 12.57.42.png)
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-10-06%2012.57.42-20210321120852674.png" alt="截屏2020-10-06 12.57.42" style="zoom:67%;" />
+
+  > Das Gesetz besagt, dass zwischen **Erregung und Leistung eine umgekehrte U-förmige Beziehung** herrscht. Das bedeutet, bei niedrigem oder hohem Erregungsniveau erbringen wir schlechtere Leistungen als bei einem mittlerem Erregungsniveau. Sind wir mittelmäßig aktiviert, zeigen wir unser Leistungsoptimum!
 
 - Abhängigkeit der Leistung von der Beanspruchung
 

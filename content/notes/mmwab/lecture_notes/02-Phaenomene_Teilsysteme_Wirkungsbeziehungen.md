@@ -43,7 +43,7 @@ menu:
 
 ## Aufgabenteilung zwischen Mensch und Maschine
 
-**Aufgabenteilung** zwischen dem **Menschen** (als **Nutzer** bzw. **Bediener**) und der **technischen Anlage (Maschine)**
+Technische Anlagen und Dienstleistungen werden heute überwiegend **rechnergestützt** betrieben.  Das heißt mit einer **Aufgabenteilung** zwischen dem Menschen als **Nutzer** bzw. **Bediener** und der technischen Anlage, kurz Maschine.
 
 Die technische Anlage führt also selbsttätig Funktionen aus, die 
 
@@ -55,18 +55,18 @@ Die technische Anlage führt also selbsttätig Funktionen aus, die
 
 Die besondere Rolle der Aufgabenteilung ergibt sich aus dem Zweck des Einsatzes von Rechnern, dass diese komplexe **Teilaufgaben automatisch bearbeiten**.
 
-> Zehn Ebenen der überwachten Automatisierung
->
-> 1. Bietet keine Unterstützung an: Der Mensch muss alles selbst machen.
-> 2. Bietet eine vollständige Menge von Alternativen an und
-> 3. schränkt diese auf wenige ein oder
-> 4. schlägt die geeignetste davon vor oder
-> 5. führt diesen Vorschlag aus, wenn der Mensch zustimmt oder
-> 6. gesteht dem Menschen zu, bis zu einem bestimmten Zeitpunkt vor der automatischen Ausführung ein Veto einzulegen oder
-> 7. führt die vorgeschlagene Handlung aus und benachrichtigt den Menschen darüber oder
-> 8. benachrichtigt ihn nur, wenn er es wünscht oder
-> 9. benachrichtigt ihn nach der Ausführung, wenn der Nachgeordnete sich dafür entscheidet.
-> 10. Entscheidet immer und handelt autonom, ignoriert den Menschen als Kontrollinstanz.
+**10 Ebenen der überwachten Automatisierung**
+
+1. Bietet keine Unterstützung an: Der Mensch muss alles selbst machen.
+2. Bietet eine vollständige Menge von Alternativen an und
+3. schränkt diese auf wenige ein oder
+4. schlägt die geeignetste davon vor oder
+5. führt diesen Vorschlag aus, wenn der Mensch zustimmt oder
+6. gesteht dem Menschen zu, bis zu einem bestimmten Zeitpunkt vor der automatischen Ausführung ein Veto einzulegen oder
+7. führt die vorgeschlagene Handlung aus und benachrichtigt den Menschen darüber oder
+8. benachrichtigt ihn nur, wenn er es wünscht oder
+9. benachrichtigt ihn nach der Ausführung, wenn der Nachgeordnete sich dafür entscheidet.
+10. Entscheidet immer und handelt autonom, ignoriert den Menschen als Kontrollinstanz.
 
 ### Die Rollen von Nutzer, Benutzer und Bediener/Betätiger
 
@@ -174,11 +174,11 @@ Schwerpunkte für die Mensch-Maschine-Wechselwirkung in der Anthropomatik
 
 ![截屏2021-03-20 00.16.57](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-20%2000.16.57.png)
 
-![截屏2021-03-20 00.17.53](/Users/EckoTan/Library/Application Support/typora-user-images/截屏2021-03-20 00.17.53.png)
+![截屏2021-03-21 13.09.39](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-21%2013.09.39.png)
 
 > 💡 **Ausreichendes Training macht den Menschen sicherer und schneller**
 >
-> ![截屏2020-10-06 13.05.00](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-10-06 13.05.00.png)
+> ![截屏2020-10-06 13.05.00](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-10-06%2013.05.00-20210321130832072.png)
 
 ### Das Wahrnehmen
 

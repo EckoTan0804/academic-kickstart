@@ -97,3 +97,16 @@ Bestmögliche Gestaltung der Funktionseinheit Mensch-Maschine(-Systems) hinsich
 ### Methoden, Techniken und Ausrüstungen in der Ergonomie
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-17%2023.30.33.png" alt="截屏2021-03-17 23.30.33" style="zoom:67%;" />
+
+### Gestaltungsdimensionen der Anthropotechnik
+
+- **Assistenz**
+  - Unterstützung durch Automatisierung von Teilfunktionen
+  - Wirkt auf die **Maschine**
+- **Design**
+  - Gestaltung der Mensch-Maschine-Verbindungs-elemente
+  - Wirkt auf das **Mensch-Maschine-Verbindungselement (Interface)**
+  - Befasst sich das Gebiet der Anthropotechnik/Ergonomie besonders
+- **Training**
+  - Anpassung des Menschen
+  - Soll bei einer gut gestalteten Mensch-Maschine-Verbindung möglichst wenig Aufwand verwendet werden

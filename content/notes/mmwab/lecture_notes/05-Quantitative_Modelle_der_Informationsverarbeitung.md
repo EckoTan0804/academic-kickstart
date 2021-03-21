@@ -45,7 +45,7 @@ menu:
 
 ## Der "Model Human Processor" (MHP) nach Card, Moran & Newell (1983)
 
-![截屏2021-03-20 15.06.17](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-20%2015.06.17.png)
+![截屏2021-03-21 15.39.01](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-21%2015.39.01.png)
 
 >  ![截屏2020-10-15 10.40.53](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2020-10-15%2010.40.53-20210320214746248.png)
 
