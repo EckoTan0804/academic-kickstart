@@ -131,3 +131,17 @@ menu:
 | **DCTCP** | Data Center TCP                                              |
 | **ECN**   | **E**xplicit **C**ongestion **N**otification                 |
 
+## TCP Evolution
+
+| Acronym | Full Name                     |
+| ------- | ----------------------------- |
+| **TLV** | **T**ype-**L**ength-**V**alue |
+|         |                               |
+|         |                               |
+|         |                               |
+|         |                               |
+|         |                               |
+|         |                               |
+|         |                               |
+|         |                               |
+|         |                               |

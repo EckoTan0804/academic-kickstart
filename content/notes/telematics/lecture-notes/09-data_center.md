@@ -211,7 +211,70 @@ Example: IP address assignment for pod 0
 
 
 
-## Ethernet within Data Centers
+<details>
+<summary><b>Example: HW17</b></summary>
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-22%2017.03.08.png" alt="截屏2021-03-22 17.03.08" style="zoom: 67%;" />
+
+
+
+Solution for (a):
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-22%2017.04.18.png" alt="截屏2021-03-22 17.04.18" style="zoom: 67%;" />
+
+Solution for (b):
+
+Use the following short-hand notation for the TCAM-based routing tables
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-22%2017.05.21.png" alt="截屏2021-03-22 17.05.21" style="zoom:67%;" />
+
+x --> a: 
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-22%2017.06.32.png" alt="截屏2021-03-22 17.06.32" style="zoom:67%;" />
+
+> **💡 Idea: if `x.x.x.2`, then choose left; if `x.x.x.3` then choose right**
+>
+> 
+>
+> Switch `10.1.0.1` is connected with 
+>
+> - Server x (`10.1.0.2`)
+> - Server a (`10.1.0.3`)
+> - Aggregation switch `10.1.2.1`
+> - Aggregation switch `10.1.3.1`
+>
+> In TCAM table
+>
+> - For `10.1.0.2` and `10.1.0.3`, there's only ONE way to go
+> - For `x.x.x.2` (which is the first/left server connected to the edge switch), next hop will be the first/left connected aggregation switch (in this case, `10.1.2.1`)
+> - For `x.x.x.3` (which is the second/right server connected to the edge switch), next hop will be the second/right connected aggregation switch (in this case, `10.1.3.1`)
+
+
+
+x --> b:
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-22%2017.15.37.png" alt="截屏2021-03-22 17.15.37" style="zoom:67%;" />
+
+
+
+x --> c:
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-22%2017.15.57.png" alt="截屏2021-03-22 17.15.57" style="zoom:67%;" />
+
+</details>
+
+
+
+
+
+
+
+
+
+
+
+## Ethernet
+
+##  within Data Centers
 
 🎯 Goal
 
@@ -518,6 +581,7 @@ Relevant Properties
 
 - Handling of congestion window growth as in conventional TCP
 - Apply as usual
+  
   - Slow start, additive increase, recovery from lost packets
 
 👍 **Benefits of DCTCP**
