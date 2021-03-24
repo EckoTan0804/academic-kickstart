@@ -136,7 +136,7 @@ menu:
 | Acronym | Full Name                     |
 | ------- | ----------------------------- |
 | **TLV** | **T**ype-**L**ength-**V**alue |
-|         |                               |
+| **TFO** | **T**CP **F**ast **O**pen     |
 |         |                               |
 |         |                               |
 |         |                               |
