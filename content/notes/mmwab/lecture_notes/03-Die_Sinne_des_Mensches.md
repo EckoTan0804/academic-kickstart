@@ -55,6 +55,35 @@ Stufen der Wahrnehmung: physiologisch
 
 ## Der Sehsinn
 
+### Verteilung der Rezeptoren (Sehzellen) im Auge
+
+![截屏2021-03-23 17.49.13](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-23%2017.49.13.png)
+
+- Die **Zapfen** 
+  - sind **in der** **Fovea** konzentriert. 
+  - Sie können **Farben unterscheiden**, brauchen aber viel Licht (photopisch) 
+    - Bevorzugte Farbe in Dunkelräumen: **blau**, in Hellräumen: **gelb**
+  - sprechen eher träge auf Helligkeitsänderungen an.
+- Die **Stäbchen** 
+  - auf die Peripherie der Netzhaut **außerhalb der Fovea** verteilt. 
+  - Sie können **nur Helligkeitswerte (Grauwerte) unterscheiden**, brauchen dafür aber wenig Licht (**skotopisch**) 
+  - sprechen schnell auf Helligkeitsänderungen an.
+
+|              | Wo?                                                          | Farbesehen?                                               | Licht Brauchen?              | Helligkeitsänderungen ansprechen? | Wahrnehmung                                                  |
+| ------------ | ------------------------------------------------------------ | --------------------------------------------------------- | ---------------------------- | --------------------------------- | ------------------------------------------------------------ |
+| **Zapfen**   | **in der** **Fovea** konzentriert                            | können **Farben unterscheiden**                           | viel Licht (**photopisch**)  | langsam                           | **Detailwahrnehmung** (hochauflösend, schmalwinklig, träge)  |
+| **Stäbchen** | auf die Peripherie der Netzhaut **außerhalb der Fovea** verteilt | können **nur Helligkeitswerte (Grauwerte) unterscheiden** | wenig Licht (**skotopisch**) | schnell                           | **Umfeldwahrnehmung** (niedrigauflösend, weitwinklig, flink) |
+
+### Hell-/Dunkeladaption des menschlichen Auges
+
+- Der **Pupillenreflex** sorgt für eine schnelle Adaption.
+- Der Hauptteil der Adaption geschieht aber in den **Sehzellen**. "Hell --> dunkel" ist wesentlich langsamer als "dunkel --> hell"
+
+- Hell-/Dunkeladaption in der Fovea (Zapfen).
+  - Bevorzugte Farbe in Dunkelräumen: blau, in Hellräumen: gelb.
+
+
+
 ### Umfelderkundung durch Blickbewegung
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-20%2009.28.55.png" alt="截屏2021-03-20 09.28.55" style="zoom:80%;" />
@@ -100,7 +129,30 @@ Das horizontale Umblick-Gesichtsfeld
 
 ## Der Hörsinn
 
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-23%2019.05.57.png" alt="截屏2021-03-23 19.05.57" style="zoom:67%;" />
 
+
+
+### Hörfläche
+
+**SPL: Sound Pressure Level (Schalldruckpegel)**
+
+- angegeben in **db (Dezibel)**: $20 \log\_10 \frac{p}{p\_0}$ ($p\_0 = 20 \mu Pa$)
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-23%2019.09.14.png" alt="截屏2021-03-23 19.09.14" style="zoom:67%;" />
+
+
+
+### Gehörminderung im Alter
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-23%2019.10.43.png" alt="截屏2021-03-23 19.10.43" style="zoom:67%;" />
+
+### Richtungshören
+
+Frequenzabhängigkeit des Richtungshörens (interauraler Pegelunterschied)
+![截屏2021-03-23 19.14.55](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-23%2019.14.55.png)
+
+Grund für das **schlechtere Richtungshören bei niederer Frequenz**: vermutlich die stärkere Schallleitung durch den Schädelknochen bei tiefereren Tönen, aber auch die großen Wellenlängen.
 
 ## Weitere Sinne: Tastsinn und Propriozeption
 
