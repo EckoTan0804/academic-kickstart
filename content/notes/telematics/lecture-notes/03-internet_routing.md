@@ -1100,7 +1100,7 @@ How does IGP router know what to do with this packet?
   - **Loc-RIB (Local RIB, Routing Information Base)**
 
     - „Actual routing table“
-      - Only preferred (= best) routes to destination networks are included here 
+      - Only p**referred (= best=shortest)** routes to destination networks are included here 
       - Forwarding Information Base (FIB) is build based on Loc-RIB
 
   - **Adj-RIB-Out (Adjacency RIB Outgoing)** 

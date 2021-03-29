@@ -133,16 +133,9 @@ Network services combine multiple network functions
 
 👍 Benefits
 
-- **Resource sharing**
-  Single platform for different applications and users
-
-- **Agility and flexibility**
-  Services can scale to address changing demands
-
-- **Rapid deployment and innovation cycles**
-
-  Providers can easily trial and evolve services
-
+- **Resource sharing**: Single platform for different applications and users
+- **Agility and flexibility**: Services can scale to address changing demands
+- **Rapid deployment and innovation cycles**: Providers can easily trial and evolve services
 - **Reduced costs**
 
 Consider the caching example above: Networks provide infrastructure for executing software-based network functions (**NFV Infrastructure, NFVI**)

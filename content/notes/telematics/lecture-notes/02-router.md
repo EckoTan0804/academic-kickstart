@@ -166,6 +166,7 @@ Different approaches for fast prefix search (in software)
 
 - [Binary trie]($binary-trie$) 
 - [Path-compressed trie](#path-compression) 
+- [Multibit-Tries](#multibit-trie)
 - [Hash tables](#hash-tables)
 
 ### Efficient data structures
@@ -307,36 +308,6 @@ Requirements
 
 </details>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Hash Tables
 
 - 🎯 Obejctives
@@ -355,6 +326,21 @@ Requirements
   - Works well if addresses show **„locality“** characteristics
     - I.e., most IP packets are covered by a small set of prefixes
     - Not applicable in the Internet backbone
+
+### Comparsion between Binary Trie, Path Compression, and Multibit Trie
+
+- $N$ = number of prefixes
+- $W$ = length of a prefix (e.g., $W=32$ for full IPv4 addresses) 
+  - $N \gg W$
+- $k$ = length of a stride (only for multibit tries)
+
+|                  | Lookup Speed | Memory Requirement | Update |
+| ---------------- | ------------ | ------------------ | ------ |
+| Binary trie      | $O(W)$       | $O(NW)$            | $O(W)$ |
+| Path compression | $O(W)$       | $O(N)$             | $O(W)$ |
+| Multibit trie    |              |                    |        |
+
+
 
 ### Longest Prefix Matching in Hardware
 
@@ -429,6 +415,12 @@ Requirements
 <summary><b>Example: Homework 04</b></summary>
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-05%2019.42.57.png" alt="截屏2021-03-05 19.42.57" style="zoom:67%;" />
+
+**💡 Idea:** 
+
+- **Sort prefixes from according to their length (longest to shortest)**
+- **CAM part: (prefix, index) pair**
+- **RAM part: (index, egress port) pair**
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-05%2019.43.53.png" alt="截屏2021-03-05 19.43.53" style="zoom:67%;" />
 

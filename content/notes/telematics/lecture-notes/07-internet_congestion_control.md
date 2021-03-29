@@ -42,7 +42,7 @@ menu:
 
 ---
 
-{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/TCP_congestion_control%20%282%29.png" caption="TCP congestion control summary" numbered="true" >}}
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/TCP_congestion_control%20%283%29.png" caption="TCP congestion control summary" numbered="true" >}}
 
 Focus on
 
@@ -684,15 +684,16 @@ We just perform the same handling as above.
   - Strategy to adjust traffic load: **AIMD**
 
     - **Additively increase** load if no congestion signal is experienced
-      - On acknowledgement received: $𝐶𝑊𝑛𝑑 += 1/𝐶𝑊𝑛𝑑$
-
-    - **Multiplicatively decrease** load in case a congestion signal was experienced
-
+      
+- On acknowledgement received: $𝐶𝑊𝑛𝑑 += 1/𝐶𝑊𝑛𝑑$
+      
+- **Multiplicatively decrease** load in case a congestion signal was experienced
+    
       - On retransmission timeout
         $$
         CWnd = \gamma * CWnd, \quad 0< \gamma < 1
-        $$
-
+    $$
+    
       - In TCP Tahoe: $\gamma = 1/2
 
 

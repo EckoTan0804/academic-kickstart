@@ -439,9 +439,9 @@ Here we use a simple **pseudo programming language**
 
     2. Use `onPacketIn()` to create and install flow rules on demand
 
-  <details>
-  <summary>Details</summary>
-  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-12%2015.41.49.png" alt="截屏2021-03-12 15.41.49" style="zoom:80%;" />
+<details>
+<summary>Details</summary>
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-12%2015.41.49.png" alt="截屏2021-03-12 15.41.49" style="zoom:80%;" />
   
   
 
@@ -989,8 +989,9 @@ Grout entry:
   - Each meter has a unique meter identifier
 
 - Meters are invoked from flow table entries through the meter action 
-  - When invoked, each meter keeps track of the measured rate of packets
-
+  
+- When invoked, each meter keeps track of the measured rate of packets
+  
 - One of several **meter bands** is triggered when the measured rate exceeds that bands target rate
 
 - Meter bands

@@ -157,6 +157,17 @@ Requirements
 
   $\Rightarrow$ Overall $2 \cdot (k \cdot \frac{k}{2}) \cdot \frac{k}{2} = \frac{k^3}{2}$ links (links to servers not included)
 
+> Summary: $k$-pod fat-tree
+>
+> | Component              | number            |
+> | ---------------------- | ----------------- |
+> | pod                    | $k$               |
+> | edge switch            | $\frac{k^2}{2}$   |
+> | aggregation switch     | $\frac{k^2}{2}$   |
+> | core switch            | $(\frac{k}{2})^2$ |
+> | server                 | $\frac{k^3}{4}$   |
+> | links between switches | $\frac{k^3}{2}$   |
+
 - Every link is in fact a physical cable $\rightarrow$ high cabling complexity 🤪
 
 - *Example: $k(=4)$-Pod Fat-Tree*
@@ -168,6 +179,7 @@ Requirements
 
   - Cheap commodity switches can be used 
   - Multiple equal cost paths between any hosts
+  
 - 🔴 Disadvantages: High cabling complexity
 
 ### Routing Paths
@@ -439,11 +451,23 @@ Detection of capabilities and configuration of neighbors
   - **Outer Ethernet**
     - MAC addresses for point-to-point forwarding 
     - Change on every hop
+    
+    > Current source and destination Bridge MAC addresses
+    
   - **TRILL header includes among others**
     - Nickname fo ingress RBridge
     - Nickname of egress RBridge 
     - Hop count
+    
+    > Nicknames of overall source (ingress) and destination (egress) bridges
+    
   - **Inner Ethernet**: Source and destination MAC addresses of communicating end systems
+  
+    > MAC addresses of source and destination end systems
+  
+  Example
+  
+  ![截屏2021-03-28 21.26.25](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-28%2021.26.25.png)
 
 ## TCP within Data Centers
 
@@ -527,7 +551,7 @@ Relevant Properties
 
 - Very simple active queue management using a threshold parameter $K$
 
-  - If $\#\text{elements in  queue}  > K$: Set CE codepint
+  - If $\text{\# elements in  queue}  > K$: Set CE codepint
   - Marking based on instantaneous rather than average queue length
 
   ![截屏2021-03-19 16.27.08](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-03-19%2016.27.08.png)
@@ -567,7 +591,7 @@ Relevant Properties
 
     - $M$: fraction of bytes sent that encountered congestion during previous observation window (approximately $RTT$)
       $$
-      \mathrm{M}=\frac{\# \text { marked bytes }}{\# \text { Bytes acked (total) }}
+      \mathrm{M}=\frac{ \text{ \# marked bytes }}{ \text { \# Bytes acked (total) }}
       $$
       
 
