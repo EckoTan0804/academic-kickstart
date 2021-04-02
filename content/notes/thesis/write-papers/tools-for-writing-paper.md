@@ -70,7 +70,11 @@ menu:
 
 - [DeepL](https://www.deepl.com/translator) - professional translator
 
-  
+
+## Phrasebank
+
+- [Academic Phrasebank](https://www.phrasebank.manchester.ac.uk/) 👍🔥
+- [Useful Phrases and Sentences for Academic & Research Paper Writing]()
 
 ## Latex
 
