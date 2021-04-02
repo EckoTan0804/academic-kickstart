@@ -259,6 +259,53 @@ UDP might never get a beer...Well, he's UDP. He doesn't care.
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/round_trip_time.png" alt="round_trip_time" style="zoom:80%;" />
 
+### Stop-and-Wait ARQ Protocol
+
+- After transmitting one frame, the sender waits for an acknowledgement before transmitting the next frame
+- If the acknowledgement does NOT arrive after a certain period of time, the sender times out and retransmits the original frame
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-04-01%2015.47.23.png" alt="截屏2021-04-01 15.47.23" style="zoom:67%;" />
+
+- Drawbacks
+  - One frame at a time
+  - Poor utilization of bandwidth
+  - Poor performance
+
+### Sliding Window Protocol
+
+- Send multiple frames at a time
+- Number of frames to be sent is based on **Window size** 
+  - Window size = \# frames that can be sent before expecting ACK
+- Each frame is numbered (called **sequence number**)
+
+Example
+
+- The sender wants to send 11 frames (Frame 0 to 10)
+
+- Window size is set to 4
+
+The receiver sends 4 frames at the same time
+
+![截屏2021-04-01 15.50.54](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-04-01%2015.50.54.png)
+
+Now the receiver sends back an ACK for frame 0. Once frame 0 is acknowledged, the sender can send frame 4. Now look at the sliding window, it slides a little bit to the left.
+
+![截屏2021-04-01 15.52.17](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-04-01%2015.52.17.png)
+
+Now frame 2 is acknowledged.
+
+![截屏2021-04-01 15.55.17](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-04-01%2015.55.17.png)
+
+The process works similarly. Frame 0 and 1 is acknowledged. Frame 2 - 5 are in the sliding window, meaning that they're already sent, but not acknowledged.
+
+Summary:
+
+![截屏2021-04-01 15.58.26](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-04-01%2015.58.26-20210401155858796.png)
+
+> Reference: Sliding Window Protocol
+>
+> {{< youtube LnbvhoxHn8M>}}
+
 
 
 
