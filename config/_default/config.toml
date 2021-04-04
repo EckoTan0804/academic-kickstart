@@ -199,6 +199,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "linux"
   parent = "programming"
 
+[[menu.main]]
+  name = "Algorithm"
+  url = "/programming/algorithm/"
+  weight = 5
+  identifier = "algo"
+  parent = "programming"
+
 # main.Notes
 [[menu.main]]
   name = "Notes"
@@ -559,6 +566,27 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "Linux Recipes"
   weight = 10
   identifier = "linux-recipes"
+
+################# Algo #################
+[[menu.algo]]
+  name = "Algo Basics"
+  weight = 10
+  identifier = "algo-basics"
+
+[[menu.algo]]
+  name = "Sorting"
+  weight = 20
+  identifier = "sort"
+
+[[menu.algo]]
+  name = "Graph"
+  weight = 30
+  identifier = "graph"
+
+[[menu.algo]]
+  name = "Leetcode"
+  weight = 100
+  identifier = "leetcode"
 
 
 ################# Thesis #################

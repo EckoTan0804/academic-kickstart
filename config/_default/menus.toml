@@ -90,6 +90,13 @@
   identifier = "linux"
   parent = "programming"
 
+[[main]]
+  name = "Algorithm"
+  url = "/programming/algorithm/"
+  weight = 5
+  identifier = "algo"
+  parent = "programming"
+
 # main.Notes
 [[main]]
   name = "Notes"
@@ -446,7 +453,28 @@
   weight = 10
   identifier = "linux-recipes"
 
+################################
+# Algo                         #
+################################
+[[algo]]
+  name = "Algo Basics"
+  weight = 10
+  identifier = "algo-basics"
 
+[[algo]]
+  name = "Sorting"
+  weight = 20
+  identifier = "sort"
+
+[[algo]]
+  name = "Graph"
+  weight = 30
+  identifier = "graph"
+
+[[algo]]
+  name = "Leetcode"
+  weight = 100
+  identifier = "leetcode"
 
 ################################################################
 # Notes                                                        #
