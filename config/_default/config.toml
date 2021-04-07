@@ -574,8 +574,13 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "algo-basics"
 
 [[menu.algo]]
-  name = "Sorting"
+  name = "Data Structure"
   weight = 20
+  identifier = "data-structure"
+
+[[menu.algo]]
+  name = "Sorting"
+  weight = 30
   identifier = "sort"
 
 [[menu.algo]]

@@ -462,13 +462,18 @@
   identifier = "algo-basics"
 
 [[algo]]
-  name = "Sorting"
+  name = "Data Structure"
   weight = 20
+  identifier = "data-structure"
+
+[[algo]]
+  name = "Sorting"
+  weight = 30
   identifier = "sort"
 
 [[algo]]
   name = "Graph"
-  weight = 30
+  weight = 40
   identifier = "graph"
 
 [[algo]]

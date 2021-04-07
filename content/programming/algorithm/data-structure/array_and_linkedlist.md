@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 103
+weight: 201
 
 # Basic metadata
 title: "Array and Linked List"
@@ -36,8 +36,8 @@ header:
 # Menu
 menu: 
     algo:
-        parent: algo-basics
-        weight: 3
+        parent: data-structure
+        weight: 1
 ---
 
  ## TL;DR

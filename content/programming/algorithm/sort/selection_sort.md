@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 201
+weight: 301
 
 # Basic metadata
 title: "Selection Sort"
