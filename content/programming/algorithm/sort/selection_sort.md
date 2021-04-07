@@ -40,6 +40,11 @@ menu:
         weight: 1
 ---
 
+## TL;DR
+
+- Key idea: repeatedly selecting the smallest remaining item
+- Time complexity: $O(n^2)$
+
 ## Idea
 
 The idea of **selection sort** is pretty simple:
@@ -48,7 +53,7 @@ The idea of **selection sort** is pretty simple:
 - Then, find the next smallest item and exchange it with the sec- ond entry.
 - Continue in this way until the entire array is sorted.
 
- This method is called *selection sort* because it works by repeatedly selecting the smallest remaining item.
+This method is called *selection sort* because it works by repeatedly selecting the smallest remaining item.
 
 ## Pseudocode
 

@@ -40,6 +40,12 @@ menu:
         weight: 2
 ---
 
+## TL;DR
+
+- Divide and Conquer (D&C)
+- Partition the array with the selected pivot: `[elements <= pivot, pivot, elements > pivot]`. Recursively apply quick sort on left and right sub-arrays.
+- Average time complexity: $O(n \log n)$
+
 ## 💡 Idea
 
 1. Pick a pivot
@@ -205,7 +211,7 @@ O(n) \cdot O(\log n) = O(n \log n).
 $$
 In the worst case, there are $O(n)$ levels, so the algorithm will take $O(n) \cdot  O(n) = O(n^2)$ time.
 
-Actually, the best case is also the average case. If we always choose a **random** element in the array as the pivot, quicksort will complete in $ O(n \log n)$ time on average.
+Actually, the best case is also the average case. If we always choose a **random** element in the array as the pivot, quicksort will complete in $O(n \log n)$ time on average.
 
 ## Reference
 
