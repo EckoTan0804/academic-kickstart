@@ -183,11 +183,13 @@ arr
 
 ## Complexity Analysis
 
+### Time Complexity
+
 Quick sort is unique because its performance depends on the pivot choice.
 
 - **Worst case**
 
-  Suppose we always choose the first element as the pivot. And we call quicksort with an array that is *already sorted.* Quicksort doesn’t check to see whether the input array is already sorted. So it will still try to sort it.
+  It occurs when the pivot element picked is either the greatest or the smallest element. This condition leads to the case in which the pivot element lies in an extreme end of the sorted array. One sub-array is always empty and another sub-array contains `n - 1` elements. Thus, quicksort is called only on this sub-array.
 
   ![截屏2021-04-07 15.50.29](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-04-07%2015.50.29.png)
 
@@ -212,6 +214,10 @@ $$
 In the worst case, there are $O(n)$ levels, so the algorithm will take $O(n) \cdot  O(n) = O(n^2)$ time.
 
 Actually, the best case is also the average case. If we always choose a **random** element in the array as the pivot, quicksort will complete in $O(n \log n)$ time on average.
+
+### Space Complexity
+
+The space complexity for quicksort is $O(\log n)$
 
 ## Reference
 
