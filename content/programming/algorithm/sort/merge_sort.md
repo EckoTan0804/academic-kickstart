@@ -40,6 +40,14 @@ menu:
         weight: 3
 ---
 
+## TL;DR
+
+- Merge sort use Divide and Conquer strategy
+  - Repeatedly divides the array into two subarrays until subarrays of size 1
+  - Merge two sorted array to achieve a bigger sorted array
+- Time complexity is $O(n \log n)$
+- Space complexity is $O(n)$ (non-inplace)
+
 ## How Merge Sort Works?
 
 ### Divide and Conquer Strategy
