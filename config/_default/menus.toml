@@ -347,11 +347,6 @@
   identifier = "cv-lecture"
 
 [[computer-vision]]
-  name = "Object detection"
-  weight = 100
-  identifier = "object-detection"
-
-[[computer-vision]]
   name = "Segmentation"
   weight = 200
   identifier = "segmentation"
@@ -360,6 +355,18 @@
   name = "Face"
   weight = 300
   identifier = "face"
+
+[[computer-vision]]
+  name = "CV Transformer"
+  weight = 400
+  identifier = "cv-transformer"
+
+[[computer-vision]]
+  name = "Object detection"
+  weight = 1000
+  identifier = "object-detection"
+
+
 ################################################################
 # Programming                                                  #
 ################################################################

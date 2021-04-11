@@ -505,11 +505,6 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "cv-lecture"
 
 [[menu.computer-vision]]
-  name = "Object detection"
-  weight = 100
-  identifier = "object-detection"
-
-[[menu.computer-vision]]
   name = "Segmentation"
   weight = 200
   identifier = "segmentation"
@@ -518,6 +513,16 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   name = "Face"
   weight = 300
   identifier = "face"
+
+[[menu.computer-vision]]
+  name = "CV Transformer"
+  weight = 400
+  identifier = "cv-transformer"
+
+[[menu.computer-vision]]
+  name = "Object detection"
+  weight = 1000
+  identifier = "object-detection"
 
 ################# software engineering #################
 [[menu.software-engineering]]
