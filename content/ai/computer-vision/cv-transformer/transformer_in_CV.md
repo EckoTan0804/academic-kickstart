@@ -5,7 +5,7 @@ summary: ""
 weight: 403
 
 # Basic metadata
-title: "Transformer"
+title: "Visual Transformer"
 date: 2021-04-13
 draft: false
 type: docs # page type
