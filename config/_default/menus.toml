@@ -70,13 +70,6 @@
   parent = "programming"
 
 [[main]]
-  name = "Software Engineering"
-  url = "/programming/software-engineering/"
-  weight = 2
-  identifier = "software-engineering"
-  parent = "programming"
-
-[[main]]
   name = "Docker"
   url = "/programming/docker/"
   weight = 3
@@ -90,19 +83,34 @@
   identifier = "linux"
   parent = "programming"
 
+
+# main.cs
+[[main]]
+  name = "CS"
+  url = "/cs/"
+  identifier = "cs"
+  weight = 5
+
 [[main]]
   name = "Algorithm"
-  url = "/programming/algorithm/"
-  weight = 5
+  url = "/cs/algorithm/"
+  weight = 1
   identifier = "algo"
-  parent = "programming"
+  parent = "cs"
+
+[[main]]
+  name = "Software Engineering"
+  url = "/cs/software-engineering/"
+  weight = 2
+  identifier = "software-engineering"
+  parent = "cs"
 
 # main.Notes
 [[main]]
   name = "Notes"
   url = "/notes/"
   identifier = "notes"
-  weight = 5
+  weight = 6
 
 [[main]]
   name = "Gestaltungsgrundsätze für interaktive Echtzeitsysteme"

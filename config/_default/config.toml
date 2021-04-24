@@ -179,13 +179,6 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   parent = "programming"
 
 [[menu.main]]
-  name = "Software Engineering"
-  url = "/programming/software-engineering/"
-  weight = 2
-  identifier = "software-engineering"
-  parent = "programming"
-
-[[menu.main]]
   name = "Docker"
   url = "/programming/docker/"
   weight = 3
@@ -199,12 +192,26 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "linux"
   parent = "programming"
 
+# main.cs
+[[menu.main]]
+  name = "CS"
+  url = "/cs/"
+  identifier = "cs"
+  weight = 5
+
 [[menu.main]]
   name = "Algorithm"
-  url = "/programming/algorithm/"
-  weight = 5
+  url = "/cs/algorithm/"
+  weight = 1
   identifier = "algo"
-  parent = "programming"
+  parent = "cs"
+
+[[menu.main]]
+  name = "Software Engineering"
+  url = "/cs/software-engineering/"
+  weight = 2
+  identifier = "software-engineering"
+  parent = "cs"
 
 # main.Notes
 [[menu.main]]
