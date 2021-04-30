@@ -101,6 +101,8 @@ Common corner cases are
     - When `fast` reaches the end, `slow` reaches n-th node from the end
 
 - Leetcode problems
+  - [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
+  - [142. Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/)
 
 
 
