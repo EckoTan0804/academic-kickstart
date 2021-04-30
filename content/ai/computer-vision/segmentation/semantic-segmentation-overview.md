@@ -172,7 +172,7 @@ Dice(A, B) = \frac{2 \|A \cap B\|}{\|A\|+\|B\|}, \qquad Jaccard(A, B) = \frac{\|
 $$
 
 - $A, B$: two segmentation masks for a given class (but the formulas are general, that is, you could calculate this for anything, e.g. a circle and a square)
-- $\|\cdot\|$: norm (for images, the area in pixels)\
+- $\|\cdot\|$: norm (for images, the area in pixels)
 - $\cap, \cup$: intersection and union operators.
 
 Both the Dice and Jaccard indices are bounded between 0 (when there is no overlap) and 1 (when A and B match perfectly). The Jaccard index is also known as **Intersection over Union (IoU)**.
@@ -181,7 +181,7 @@ Here is an illustration of the Dice and IoU metrics given two circles representi
 
 ![IoU, Dice example](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/metrics_iou_dice.png)
 
-n terms of the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix), the metrics can be rephrased in terms of true/false positives/negatives:
+In terms of the [confusion matrix](https://en.wikipedia.org/wiki/Confusion_matrix), the metrics can be rephrased in terms of true/false positives/negatives:
 $$
 Dice = \frac{2 TP}{2TP+FP+FN}, \qquad Jaccard = IoU =  \frac{TP}{TP+FP+FN}
 $$
