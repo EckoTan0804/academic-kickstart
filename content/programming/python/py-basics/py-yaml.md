@@ -1,6 +1,6 @@
 ---
 # Title, summary, and position in the list
-# linktitle: ""
+linktitle: "YAML"
 summary: ""
 weight: 22
 
