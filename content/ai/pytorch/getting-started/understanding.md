@@ -296,6 +296,8 @@ Reference
 
 ## Number of model's parameters
 
+### Use `model.parameters()`
+
 Sum the number of elements for every parameter group:
 
 ```python
@@ -311,4 +313,33 @@ def get_num_trainable_params(model):
 ```
 
 Reference: [How do I check the number of parameters of a model?](https://discuss.pytorch.org/t/how-do-i-check-the-number-of-parameters-of-a-model/4325)
+
+### Use [`model.named_paramters()`](https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.named_parameters) 
+
+To get the parameter count of each layer, PyTorch has [model.named_paramters()](https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.named_parameters) that returns an iterator of both the parameter name and the parameter itself.
+
+Example
+
+```python
+from prettytable import PrettyTable
+
+def count_parameters(model):
+    table = PrettyTable(["Modules", "Parameters"])
+    total_params = 0
+    
+    for name, parameter in model.named_parameters():
+        if parameter.requires_grad:
+            param = parameter.numel()
+            table.add_row([name, param])
+            total_params+=param
+            
+    print(table)
+    print(f"Total Trainable Params: {total_params}")
+    
+    return total_params
+    
+count_parameters(net)
+```
+
+Reference: [Check the total number of parameters in a PyTorch model](https://stackoverflow.com/questions/49201236/check-the-total-number-of-parameters-in-a-pytorch-model)
 
