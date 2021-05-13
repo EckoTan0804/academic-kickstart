@@ -137,6 +137,9 @@ from config import get_cfg_defaults
 
 if __name__ == "__main__":
     cfg = get_cfg_defaults()
+    
+    cfg.defrost()
+    
     cfg.merge_from_file("experiment.yaml")
 
     # Override from a list
@@ -166,6 +169,8 @@ We can also use global singleton usage pattern:
 from config import cfg
 
 if __name__ == "__main__":
+    cfg.defrost()	
+    
     cfg.merge_from_file("experiment.yaml")
 
     # Override from a list
@@ -183,3 +188,6 @@ if __name__ == "__main__":
 ## Reference
 
 - [rbgirshick](https://github.com/rbgirshick)/**[yacs](https://github.com/rbgirshick/yacs)**
+
+- [Building A Flexible Configuration System For Deep Learning Models](https://julienbeaulieu.github.io/2020/03/16/building-a-flexible-configuration-system-for-deep-learning-models/) - A good guideline for organizing Deep Learning projects 👍
+
