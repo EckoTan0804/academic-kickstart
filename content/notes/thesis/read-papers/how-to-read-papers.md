@@ -59,11 +59,18 @@ Feel free to stop reading the article at any point
 - Look at the **tables and figures** (including captions)
   - This is really what was done in the work
   - It will help you decide, whether you want to dig in or not
-- Read the **introduction**
+- Read the **introduction** carefully
   - This is the background needed and why the study was done.
+  - Introduction in research paper is one of the most important point.
+    - It often formulates in words what the paper is about, and what contribution the paper makes. (like a longer abstract)
+    - It is informative and help us to understand the paper in a high level.
 - Read the **results and discussion**
-  - This is the real heart of the paper. Here you will gonna spend most of the time
-
+  - This is the real heart of the paper. Here you will spend most of the time
+  - Keep asking: "Are the authors demonstrating that their proposal/solution work?"
+    - Try to prove them wrong or get convinced that solution works
+  
+  > Note: Sometimes **Results** section is included in **Experiments** section.
+  
 - Read the **experimental**
   - This is how they did the work
   - You only get to this point if you are really interested and need to understand exactly what was done to better understand the meaning of the data and its interpretation.
@@ -81,4 +88,6 @@ The faintest writing is better than the best memory! 好记性不如烂笔头！
   {{< youtube IeaD0ZaUJ3Y>}}
   
 - [如何高效读论文？](http://blog.sciencenet.cn/blog-377709-1106732.html)
+
+- [How I Read a Paper: Facebook's DETR (Video Tutorial)](https://www.youtube.com/watch?v=Uumd2zOOz60&ab_channel=YannicKilcher)
 
