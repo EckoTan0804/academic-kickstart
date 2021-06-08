@@ -370,6 +370,11 @@
   identifier = "cv-transformer"
 
 [[computer-vision]]
+  name = "Human Pose Estimation"
+  weight = 500
+  identifier = "cv-HPE"
+
+[[computer-vision]]
   name = "Object detection"
   weight = 1000
   identifier = "object-detection"

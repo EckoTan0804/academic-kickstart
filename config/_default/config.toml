@@ -527,6 +527,11 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   identifier = "cv-transformer"
 
 [[menu.computer-vision]]
+  name = "Human Pose Estimation"
+  weight = 500
+  identifier = "cv-HPE"
+
+[[menu.computer-vision]]
   name = "Object detection"
   weight = 1000
   identifier = "object-detection"
