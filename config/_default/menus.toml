@@ -326,15 +326,15 @@
   weight = 20
   identifier = "dl-with-pytorch"
 
-[[pytorch]]
-  name = "fastai"
-  weight = 40
-  identifier = "fastai"
+# [[pytorch]]
+#   name = "fastai"
+#   weight = 40
+#   identifier = "fastai"
 
-[[pytorch]]
-  name = "Object Detection"
-  weight = 50
-  identifier = "object-detection"
+# [[pytorch]]
+#   name = "Object Detection"
+#   weight = 50
+#   identifier = "object-detection"
 
 [[pytorch]]
   name = "Recipes"
