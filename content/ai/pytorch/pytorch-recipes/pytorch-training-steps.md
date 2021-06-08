@@ -40,7 +40,7 @@ menu:
         weight: 5
 ---
 
-Open in [Google Colab](https://colab.research.google.com/drive/1OWujzsbTVMrSL-HhKy98abhbf4-y23SD?authuser=1#scrollTo=uasa8V9DWKmF)
+Open in [Google Colab](https://colab.research.google.com/drive/1OWujzsbTVMrSL-HhKy98abhbf4-y23SD?usp=sharing)
 
 General steps:
 
