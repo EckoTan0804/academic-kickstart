@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 160
+weight: 140
 
 # Basic metadata
 title: "torch.nn"
@@ -37,7 +37,7 @@ header:
 menu: 
     pytorch:
         parent: getting-started
-        weight: 6
+        weight: 4
 ---
 
 ## TL;DR
