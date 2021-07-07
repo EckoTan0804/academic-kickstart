@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: 
 summary: ""
-weight: 19
+weight: 109
 
 # Basic metadata
 title: "Facial Expression Recognition"

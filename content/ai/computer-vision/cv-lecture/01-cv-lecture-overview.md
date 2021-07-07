@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: 
 summary: ""
-weight: 11
+weight: 101
 
 # Basic metadata
 title: "Lecture Overview"

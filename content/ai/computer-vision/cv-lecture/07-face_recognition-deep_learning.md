@@ -2,7 +2,7 @@
 # Title, summary, and position in the list
 # linktitle: 
 summary: ""
-weight: 17
+weight: 107
 
 # Basic metadata
 title: "Face Recognition: Deep Learning"
