@@ -206,10 +206,11 @@ menu:
 
 ## HOG people detector [^1]
 
+> More see: [Histogram of Oriented Gradients (HOG)]({{< relref "../object-detection/HOG.md" >}})
+
 - Gradient-based feature descriptor developed for people detection 
 - Global descriptor for the complete body
 - High-dimensional (typically ~4000 dimensions)
-
 - Very promising results on challenging data sets
 
 ### Phases
