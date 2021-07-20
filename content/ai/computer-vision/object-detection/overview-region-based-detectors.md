@@ -59,7 +59,7 @@ System flow:
 Pseudo-code:
 
 ```python
-for window in windows
+for window in windows:
     patch = get_patch(image, window)
     results = detector(patch)
 ```
@@ -100,7 +100,7 @@ The figure below illustrates this process:
 
 ```python
 ROIs = region_proposal(image) # RoI from a proposal method (~2k)
-for ROI in ROIs
+for ROI in ROIs:
     patch = get_patch(image, ROI)
     results = detector(patch)
 ```
@@ -128,7 +128,7 @@ How does Fast R-CNN work?
 ```python
 feature_maps = process(image)
 ROIs = region_proposal(image)
-for ROI in ROIs
+for ROI in ROIs:
     patch = roi_pooling(feature_maps, ROI)
     results = detector2(patch)
 ```
@@ -166,7 +166,7 @@ Fast R-CNN depends on an external region proposal method like selective search. 
 ```python
 feature_maps = process(image)
 ROIs = region_proposal(image) # Expensive!
-for ROI in ROIs
+for ROI in ROIs:
     patch = roi_pooling(feature_maps, ROI)
     results = detector2(patch)
 ```
@@ -193,7 +193,7 @@ The network flow is similar but the region proposal is now replaced by a interna
 ```python
 feature_maps = process(image)
 ROIs = region_proposal(feature_maps) # use RPN
-for ROI in ROIs
+for ROI in ROIs:
     patch = roi_pooling(feature_maps, ROI)
     class_scores, box = detector(patch)
     class_probabilities = softmax(class_scores)
@@ -293,7 +293,7 @@ R-FCN improves speed by **reducing the amount of work needed for each ROI.** The
 feature_maps = process(image)
 ROIs = region_proposal(feature_maps)         
 score_maps = compute_score_map(feature_maps)
-for ROI in ROIs
+for ROI in ROIs:
     V = region_roi_pool(score_maps, ROI)     
     class_scores, box = average(V)                   # Much simpler!
     class_probabilities = softmax(class_scores)
@@ -352,3 +352,4 @@ After calculating all the values for the position-sensitive ROI pool, **the clas
 [^2]: Girshick, R. (2015). Fast R-CNN. *Proceedings of the IEEE International Conference on Computer Vision*, *2015 International Conference on Computer Vision*, *ICCV 2015*, 1440–1448. https://doi.org/10.1109/ICCV.2015.169
 [^3]: Ren, S., He, K., Girshick, R., & Sun, J. (2017). Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks. *IEEE Transactions on Pattern Analysis and Machine Intelligence*, *39*(6), 1137–1149. https://doi.org/10.1109/TPAMI.2016.2577031
 [^4]: Dai, J., Li, Y., He, K., & Sun, J. (2016). R-FCN: Object detection via region-based fully convolutional networks. *Advances in Neural Information Processing Systems*, 379–387.
+
