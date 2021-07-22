@@ -161,8 +161,13 @@ Different representations exist --> „Color Spaces“
 #### Histogram Backprojection
 
 - The simplest (and fastest) way to utilize histogram information
+
 - Each pixel in the backprojection is set to the value of the (skin-color) histogram bin indexed by the color of the respective pixel
   - A color $x$ is considered as skin color if $H\_{+}(x) > \theta$
+  
+- E.g.
+
+  ![截屏2021-07-22 22.20.33](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-07-22%2022.20.33.png)
 
 #### Histogram Matching
 

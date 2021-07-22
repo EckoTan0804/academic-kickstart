@@ -135,7 +135,7 @@ menu:
 
 - Approximate true density function using a **weighted sum** of several Gaussians
   $$
-  \mathrm{p}(\mathbf{x})=\sum\_{i} \mathrm{w}\_{i} \frac{1}{(2 \pi)^{\mathrm{d} 2}|\mathbf{\Sigma}|^{1 / 2}} \exp \left[-\frac{1}{2}(\mathbf{x}-\mathbf{\mu})^{\top} \boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})\right] \qquad \text{with} \sum\_i w\_i = 1
+  \mathrm{p}(\mathbf{x})=\sum\_{i} \mathrm{w}\_{i} \frac{1}{(2 \pi)^{\mathrm{d}/2}|\mathbf{\Sigma}|^{1 / 2}} \exp \left[-\frac{1}{2}(\mathbf{x}-\mathbf{\mu})^{\top} \boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})\right] \qquad \text{with} \sum\_i w\_i = 1
   $$
 
 - Any density can be approximated this way with arbitrary precision
@@ -180,8 +180,6 @@ menu:
   - 👍 Advantage: Work well for all types of distributions
 
   - 👎 disadvantage: Need more data to correctly estimate distribution
-
-    VL - Computer Vision for Human-Computer Interaction
 
   - Examples: Parzen windows, k-nearest neighbors
 
@@ -310,7 +308,7 @@ More see: [k-NN]({{< relref "../../machine-learning/classification/k-nearest-nei
 - Many intuitions about linear algebra are no longer valid in high-dimensional spaces 🤪
   - Classifiers often work better in low-dimensional spaces
 
-- These problems are called “**curse of dimensionality**”" :imp:
+- These problems are called “**curse of dimensionality**" :imp:
 
 ### Example
 
