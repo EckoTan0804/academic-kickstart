@@ -73,6 +73,10 @@ menu:
 
 ### 3D to 2D projection: Pinhole Camera Model
 
+Summary:
+
+![截屏2021-07-24 18.49.45](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-07-24%2018.49.45.png)
+
 ![截屏2021-07-20 17.19.45](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-07-20%2017.19.45.png)
 $$
 z^{\prime} = -f

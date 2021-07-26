@@ -409,7 +409,7 @@ Learning linear relation matrix $\mathbf{R}$ using multi-variate linear regressi
   - Each patch is represented by appearance features $I$, and displacement vectors $D$ (offsets) to each of the facial fiducial feature point. I.e. $P = \\{I, D\\}$
   - A simple patch comparison is used as Tree-node splitting criterion
 
-###Regression forests testing
+### Regression forests testing
 
 - Given: a random face image
 - Extract densely set of patches from the image
@@ -455,7 +455,7 @@ Learning linear relation matrix $\mathbf{R}$ using multi-variate linear regressi
 
 - Results
 
-  ![截屏2021-02-19 16.35.41](/Users/EckoTan/Library/Application Support/typora-user-images/截屏2021-02-19 16.35.41.png)
+  ![result](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/result.png)
 
 
 

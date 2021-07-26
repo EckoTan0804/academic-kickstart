@@ -91,12 +91,20 @@ menu:
 
 ## The Implicit Shape Model (ISM) [^2]
 
-💡 Main ideas
+**💡 Main ideas**
 
 - Automatically learn a large number of local parts that occur on the object (referred to as visual vocabulary, bag of words or codebook)
 - Learn a star-topology structural model
   - features are considered independent given the objects’ center 
   - likely relative positions are learned from data
+
+**5 steps**
+
+1. [Part detection/localization](#part-detectionlocalization)
+2. [Part description](#part-description)
+3. [Learning part appearance](#learning-part-appearances)
+4. [Learning theh spatial layout of parts](#learning-the-spatial-layout-of-parts)
+5. [Combination of part detections](#combination-of-part-detections)
 
 ### Part Detection/Localization
 
@@ -230,6 +238,37 @@ Distinctly describe local keypoints and achieve orientation invariance
     - 4x4 regions (2x2 in image) = 16 histograms (concatenated)
     - histograms: 8 orientation bins, gradients weighted by gradient magnitude
     - final descriptor has 128 dimensions and is normalized to compensate for illumination differences
+
+> A brief introduction: [SIFT - 5 Minutes with Cyrill](https://youtu.be/4AvTMVD9ig0)
+>
+> A nice explanation: (source: https://gilscvblog.com/2013/08/18/a-short-introduction-to-descriptors/)
+>
+> SIFT was presented in 1999 by David Lowe and includes both a keypoint detector and descriptor. SIFT is computed as follows:
+>
+> 1. First, detect keypoints using the SIFT detector, which also detects scale and orientation of the keypoint.
+> 2. Next, for a given keypoint, warp the region around it to canonical orientation and scale and resize the region to 16X16 pixels.
+>
+> [![SIFT  - warping the region around the keypoint](https://gilscvblog.files.wordpress.com/2013/08/figure3.jpg?w=600&h=192)](https://gilscvblog.files.wordpress.com/2013/08/figure3.jpg)
+>
+> 3. Compute the gradients for each pixels (orientation and magnitude).
+>
+> 4. Divide the pixels into 16, 4X4 pixels squares.
+>
+> [![SIFT  - dividing to squares and calculating orientation](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/figure4.jpg)](https://gilscvblog.files.wordpress.com/2013/08/figure4.jpg)
+>
+> 5. For each square, compute gradient direction histogram over 8 directions
+>
+> [![SIFT - calculating histograms of gradient orientation](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/figure5.jpg)](https://gilscvblog.files.wordpress.com/2013/08/figure5.jpg)
+>
+> 6. concatenate the histograms to obtain a 128 (16*8) dimensional feature vector:
+>
+> [![SIFT - concatenating histograms from different squares](https://gilscvblog.files.wordpress.com/2013/08/figure6.jpg?w=600&h=50)](https://gilscvblog.files.wordpress.com/2013/08/figure6.jpg)
+>
+> SIFT descriptor illustration:
+>
+> [![SIFT descriptors illustration](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/figure7.jpg)](https://gilscvblog.files.wordpress.com/2013/08/figure7.jpg)
+>
+> SIFT is invariant to illumination changes, as gradients are invariant to light intensity shift. It’s also somewhat invariant to rotation, as histograms do not contain any geometric information.
 
 **Shape Context Descriptor**
 

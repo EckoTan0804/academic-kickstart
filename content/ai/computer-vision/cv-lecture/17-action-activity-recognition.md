@@ -212,6 +212,22 @@ Inspired by **Bag-of-Words (BoW)** model for object classification
 
 - Histogram can be used to classify objects (wth. SVM)
 
+> Bag of Visual Words ([Stanford CS231 slides](http://vision.stanford.edu/teaching/cs231a_autumn1112/lecture/lecture15_bow_part-based_cs231a_marked.pdf))
+>
+> 1. Feature detection and representation
+>
+>    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-07-26%2000.30.18.png" alt="截屏2021-07-26 00.30.18" style="zoom:67%;" />
+>
+> 2. Codewords dictionary formation
+>
+>    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-07-26%2000.30.38.png" alt="截屏2021-07-26 00.30.38" style="zoom:67%;" />
+>
+> 3. Bag of word representation
+>
+>    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-07-26%2000.31.41.png" alt="截屏2021-07-26 00.31.41" style="zoom:67%;" />
+>
+>    <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-07-26%2000.31.55.png" alt="截屏2021-07-26 00.31.55" style="zoom:67%;" />
+
 #### **Space-Time Features: Detector**
 
 **Space-Time Interest Points (STIP)**

@@ -102,7 +102,7 @@ $$
 - $S = \\{s\_1, s\_2, \dots, s\_n\\}$: set of **states**
 - $\pi$: the **initial probability** distribution
   - $\pi(s\_i)$ = probability of $s\_i$ being the first state of a state sequence
-- $\mathbf{A} = (a\_{ij})$$: the matrix of **state transition probabilities**
+- $\mathbf{A} = (a\_{ij})$: the matrix of **state transition probabilities**
   - $(a\_{ij})$: probability of state $s\_j$ following $s\_i$
 - $B = \\{b\_1, b\_2, \dots, b\_n\\}$: the set of **emission probability** distributions/densities
   - $b\_i(x)$: probability of observing $x$ when the system is in state $s\_i$

@@ -40,11 +40,39 @@ menu:
         weight: 15
 ---
 
+## Kinect
+
+### What is Kinect?
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-07-24%2021.16.14.png" alt="截屏2021-07-24 21.16.14" style="zoom:80%;" />
+
+- Fusion of two groundbreaking new technologies
+  - A cheap and fast **RGB-D sensor**
+  - A reliable Skeleton Tracking
+
+### Structured light
+
+- Kinect uses Structured Light to simulate a stereo camera system
+- Kinect provides an unique texture for every point of the image, therefore only Block-Matching is required
+
+## Pose Recognition for User Interaction
+
+Few constrains:
+
+- Extremely low latency.
+- Low computational power.
+- High recognition rate, without false positives. 
+- Any personalized training step.
+- Few people at once.
+- Complex poses will be usual.
+
 ## Pose Recognition[^1]
 
 ![截屏2021-07-07 23.38.56](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-07-07%2023.38.56.png)
 
-### **Speed** is the key
+### 1st step: Pixel classification
+
+**Speed** is the key
 
 - Uses only one disparity image.
 
@@ -173,6 +201,16 @@ $$
 
 In each stage, the computed beliefs provide an increasingly refined estimate for the location of each part.
 
+### Confidence maps generation 
+
+**Fully Convolutional Network (FCN)**
+
+- Does not have Fully Connected Layers.
+- The same network can be applied to arbitrary image sizes. 
+- Similar to a sliding window approach, but more efficient
+
+
+
 ### CPM
 
 The prediction and image feature computation modules of a pose machine can be replaced by a deep convolutional architecture allowing for both image and contextual feature representations to be learned directly from data.
@@ -203,7 +241,6 @@ Solution
   $$
   \mathcal{F}=\sum\_{t=1}^{T} f\_{t}
   $$
-  
 
 [^1]: J. Shotton et al., "Real-time human pose recognition in parts from single depth images," CVPR 2011, 2011, pp. 1297-1304, doi: 10.1109/CVPR.2011.5995316.
 [^2]: Shih-En Wei, Varun Ramakrishna, Takeo Kanade, and Yaser Sheikh. Convolutional pose machines. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), pages 4724–4732, 2016

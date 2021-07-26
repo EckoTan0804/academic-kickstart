@@ -62,7 +62,7 @@ menu:
     - **False reject**: An individual is rejected even though he/she is present in the database.
     - **False classify**: An individual in the database is correctly accepted but misclassified as one of the other individuals in the training data
 
-###Authentication/Verification
+### Authentication/Verification
 
 A person claims to be a particular member. The system decides if the test image and the training image is the same person: Is he who he claims he is?
 
@@ -302,7 +302,7 @@ Classification using fiducial regions instead of using entire face [^2].
 
 - PCA is applied on each of these sub-images
 
-  ![截屏2021-02-09 13.01.08](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-02-09 13.01.08.png)
+  ![截屏2021-02-09 13.01.08](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-02-09%2013.01.08-20210723110742829.png)
 
 - Performed **better** than global PCA on large variations of illumination and expression
 

@@ -74,9 +74,7 @@ Backpropagation with gradient descent
 
 
 
-## Neural Network Based Face Detection
-
-*Neural Network Based Face Detection, by Henry A. Rowley, Shumeet Baluja, and Takeo Kanade. IEEE Transactions on Pattern Analysis and Machine Intelligence, volume 20, number 1, pages 23-38, January 1998.*
+## Neural Network Based Face Detection[^1]
 
 - Idea: Use an artifical neural network to detect upright frontal faces
   - Network receives as input a 20x20 pixel region of an image
@@ -194,3 +192,8 @@ Backpropagation with gradient descent
     > Also called **Intersection over Union (IoU)**
 
   - Often used as threshold: Overlap>50%
+
+
+
+[^1]: *Neural Network Based Face Detection, by Henry A. Rowley, Shumeet Baluja, and Takeo Kanade. IEEE Transactions on Pattern Analysis and Machine Intelligence, volume 20, number 1, pages 23-38, January 1998.*
+

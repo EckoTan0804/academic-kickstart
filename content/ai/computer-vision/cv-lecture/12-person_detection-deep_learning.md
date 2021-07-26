@@ -233,10 +233,9 @@ Speed:
   $\rightarrow$ Convert to classification problem
 
 - RPN multitask loss:
-  $$
-  L\left(\left\{p\_{i}\right\},\left\{t\_{i}\right\}\right)=\frac{1}{N\_{c l s}} \sum\_{i} L\_{c l s}\left(p\_{i}, p\_{i}^{*}\right) + \lambda \frac{1}{N\_{\text {reg }}} \sum\_{i} p\_{i}^{*} L\_{r e g}\left(t\_{i}, t\_{i}^{*}\right)
-  $$
-
+  
+  ![截屏2021-07-23 23.39.45](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2021-07-23%2023.39.45.png)
+  
   - $N\_{cls}$: Batch size (256)
   - $N\_{reg}$: number of window positions ($\approx$ 2400)
   - $\lambda = 10$

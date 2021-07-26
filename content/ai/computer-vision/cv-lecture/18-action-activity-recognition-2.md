@@ -229,7 +229,7 @@ Evaluation
 
 - Inception-V1 architecture extended to 3D
 - Filters and pooling kernels inflated with the time dimension ($N \times N \rightarrow N \times N \times N$)
-- Pre-training on Image-Net possible
+- 👍 Advantage: Pre-training on Image-Net possible (Learned weights of 2-D filters repeated N times along the time dimension)
 
 - Note: the 3-D extension is not fully symmetric in respect to pooling (Time dimension is different from the space dimensions)
   - First two max-pooling layers **do not perform temporal pooling**
