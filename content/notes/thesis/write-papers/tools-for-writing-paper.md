@@ -74,7 +74,7 @@ menu:
 ## Phrasebank
 
 - [Academic Phrasebank](https://www.phrasebank.manchester.ac.uk/) 👍🔥
-- [Useful Phrases and Sentences for Academic & Research Paper Writing]()
+- [Useful Phrases and Sentences for Academic & Research Paper Writing](https://www.ref-n-write.com/trial/how-to-write-a-research-paper-academic-phrasebank-vocabulary/)
 
 ## Latex
 

@@ -40,7 +40,7 @@ menu:
         weight: 2
 ---
 
-{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/transformer-stey_by_step%20%283%29.png" caption="Transformer architecture" numbered="true" >}}
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/transformer-stey_by_step%20%285%29.png" caption="Transformer architecture" numbered="true" >}}
 
 ## Reference
 

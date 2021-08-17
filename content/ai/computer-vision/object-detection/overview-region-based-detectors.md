@@ -340,11 +340,10 @@ After calculating all the values for the position-sensitive ROI pool, **the clas
 ## Reference
 
 - [What do we learn from region based object detectors (Faster R-CNN, R-FCN, FPN)?](https://jonathan-hui.medium.com/what-do-we-learn-from-region-based-object-detectors-faster-r-cnn-r-fcn-fpn-7e354377a7c9) - A nice and clear comprehensive tutorial for region-based object detectors
-
 - [Stanford CS231n slides](http://cs231n.stanford.edu/slides/2020/lecture_12.pdf)
-
 - [關於影像辨識，所有你應該知道的深度學習模型](https://medium.com/cubo-ai/%E7%89%A9%E9%AB%94%E5%81%B5%E6%B8%AC-object-detection-740096ec4540)
 - [一文读懂目标检测：R-CNN、Fast R-CNN、Faster R-CNN、YOLO、SSD](https://blog.csdn.net/v_JULY_v/article/details/80170182)
+- RoI pooling: [Understanding Region of Interest — (RoI Pooling)](https://towardsdatascience.com/understanding-region-of-interest-part-1-roi-pooling-e4f5dd65bb44)
 
 
 

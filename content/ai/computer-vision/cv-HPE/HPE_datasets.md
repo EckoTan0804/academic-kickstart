@@ -46,27 +46,7 @@ menu:
 
 17 Keypoints:
 
-![ ](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/c3a73bf51c47252f4a33566327e30a87.png)
-
-| id   | Name           |
-| ---- | -------------- |
-| 0    | nose           |
-| 1    | left_eye       |
-| 2    | right_eye      |
-| 3    | left_ear       |
-| 4    | right_ear      |
-| 5    | left_shoulder  |
-| 6    | right_shoulder |
-| 7    | left_elbow     |
-| 8    | right_elbow    |
-| 9    | left_wrist     |
-| 10   | right_wrist    |
-| 11   | left_hip       |
-| 12   | right_hip      |
-| 13   | left_knee      |
-| 14   | right_knee     |
-| 15   | left_ankle     |
-| 16   | right_ankle    |
+![img](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/fix-overlay-issue.jpg)
 
 Keypoint detection format:
 

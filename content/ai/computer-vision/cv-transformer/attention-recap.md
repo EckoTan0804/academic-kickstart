@@ -218,13 +218,11 @@ The required input of self-attention is a vector set. An image can also be consi
 
 
 
-- CNN
-
-  - Self-attention can only only attends in a **fixed** local receptive field
+- CNN: Self-attention can only only attends in a **fixed** local receptive field
 
   $\Rightarrow$ CNN is **simplified** self-attention 
 
-- Self-attention 
+- Self-attention: CNN with learnable receptive field 
 
   - Can consider information of the whole image $\Rightarrow$ More flexible than CNN
   - The receptive field is **learnable**. 
