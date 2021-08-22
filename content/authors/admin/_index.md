@@ -21,9 +21,9 @@ organizations:
 bio: Keep It Simple Stupid!
 
 interests:
-- Machine Learning
 - Deep Learning
-- Robotics
+- Computer Vision
+- Machine Learning
 
 education:
   courses:

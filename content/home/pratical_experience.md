@@ -3,7 +3,7 @@
 widget = "experience"  # See https://sourcethemes.com/academic/docs/page-builder/
 headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
-weight = 30  # Order that this section will appear.
+weight = 60  # Order that this section will appear.
 
 title = "Practical Experience"
 subtitle = ""
@@ -19,8 +19,23 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
+  title = "Walkable Path Discovery Utilizing Drones"
+  company = "CV:HCI lab, Institute of Anthropomatics and Robotics (IAR), Karlsruhe Institute of Technology (KIT)"
+  company_url = "http://isl.anthropomatik.kit.edu/english/8903.php"
+  location = "Karlsruhe, Germany"
+  date_start = "2021-04-12"
+  date_end = "2021-07-31"
+  description = """
+  * Development of "flying guide dog" prototype for the visually impaired using drone and street view semantic segmentation
+  * Train SegFormer model on Mapillay Vistas dataset using PyTorch
+  * Build Pedestrian and Vehicle Traffic Lights (PVTL) dataset dedicated for traffic light recognition
+  * Design and train traffic light recognition model using PyTorch
+  * 
+  """
+
+[[experience]]
   title = "Hand Gesture Recognition"
-  company = "Institute of Anthropomatics and Robotics (IAR), Interactive Systems Lab (ISL), Karlsruhe Institute of Technology (KIT)"
+  company = "Interactive Systems Lab (ISL), Institute of Anthropomatics and Robotics (IAR),  Karlsruhe Institute of Technology (KIT)"
   company_url = "http://isl.anthropomatik.kit.edu/english/8903.php"
   location = "Karlsruhe, Germany"
     date_start = "2020-11-01"
@@ -34,7 +49,7 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Real World Person Detection on Jetson GPU"
-  company = "Institute of Anthropomatics and Robotics (IAR), Vision and Fusion Laboratory, Karlsruhe Institute of Technology (KIT)"
+  company = "Vision and Fusion Laboratory, Institute of Anthropomatics and Robotics (IAR), Karlsruhe Institute of Technology (KIT)"
   company_url = "https://ies.anthropomatik.kit.edu/english/index.php"
   location = "Karlsruhe, Germany"
     date_start = "2020-11-01"
@@ -48,7 +63,7 @@ date_format = "Jan 2006"
 
 [[experience]]
   title = "Lego Mindstorms"
-  company = "Institute of Anthropomatics and Robotics (IAR), High Performance Humanoid Technologies (H2T), Karlsruhe Institute of Technology (KIT)"
+  company = "High Performance Humanoid Technologies (H2T), Institute of Anthropomatics and Robotics (IAR), Karlsruhe Institute of Technology (KIT)"
   company_url = "https://h2t.anthropomatik.kit.edu/english/index.php"
   location = "Karlsruhe, Germany"
   date_start = "2017-10-01"
