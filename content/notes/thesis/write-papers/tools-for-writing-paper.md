@@ -51,6 +51,8 @@ menu:
 
 - [ESODA 易搜达](http://www.esoda.org/) - English Essay Writing Assistant 🔥👍
 
+- [Wordhippo](https://www.wordhippo.com/): Thesaurus and word tools 🔥👍
+
 - [Linggle](https://linggle.com/) - English grammar and linguistic search engine 🔥👍
 
   - Find suitable word(s): `_` (single word), `*` (zero or more words)

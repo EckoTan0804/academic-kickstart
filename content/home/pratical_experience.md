@@ -30,7 +30,6 @@ date_format = "Jan 2006"
   * Train SegFormer model on Mapillay Vistas dataset using PyTorch
   * Build Pedestrian and Vehicle Traffic Lights (PVTL) dataset dedicated for traffic light recognition
   * Design and train traffic light recognition model using PyTorch
-  * 
   """
 
 [[experience]]
