@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Computer Science Student
+role: Computer Science Master Student
 
 # Organizations/Affiliations
 organizations:
@@ -28,10 +28,10 @@ interests:
 education:
   courses:
   - course: MSc in Computer Science
-    institution: Karlsruhe Institute of Technology
+    institution: Karlsruhe Institute of Technology (KIT)
     year: Now
   - course: BSc in Computer Science
-    institution: Karlsruhe Institute of Technology
+    institution: Karlsruhe Institute of Technology (KIT)
     year: 2019
 
 # Social/Academic Networking
@@ -41,18 +41,28 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: "mailto:haobin.tan@outlook.com" # For a direct email link, use "mailto:test@example.org".
+
+- icon: linkedin-in
+  icon_pack: fab
+  link: "https://www.linkedin.com/in/haobin-tan-6bb201160/"
+
+# Link to a PDF of your resume/CV from the About widget.
+# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
+- icon: cv
+  icon_pack: ai
+  link: files/CV-Haobin_Tan.pdf
+
 - icon: github
   icon_pack: fab
   link: https://github.com/EckoTan0804
-# Link to a PDF of your resume/CV from the About widget.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+
+- icon: twitter
+  icon_pack: fab
+  link: "https://twitter.com/Eckooo_Tan"
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
-email: ""
+email: "haobin.tan@outlook.com"
 
 # Organizational groups that you belong to (for People widget)
 #   Set this to `[]` or comment out if you are not using People widget.
@@ -64,4 +74,5 @@ user_groups:
 # blablabla
 ---
 
+I am a master student of Computer Science at Karlsruhe Institute of Technology (KIT), Germany. Having great interest in Artificial Intelligence (AI), I am a passionate deep learning practitioner in the field of Computer Vision. I am also a huge fan of the Keep It Simple Stupid (KISS) principle.
 
