@@ -74,5 +74,5 @@ user_groups:
 # blablabla
 ---
 
-I am a master student of Computer Science at Karlsruhe Institute of Technology (KIT), Germany. Having great interest in Artificial Intelligence (AI), I am a passionate deep learning practitioner in the field of Computer Vision. I am also a huge fan of the Keep It Simple Stupid (KISS) principle.
+I am a master student of Computer Science at Karlsruhe Institute of Technology (KIT), Germany. Having great interest in Artificial Intelligence (AI), I am a curious and passionate deep learning practitioner in the field of Computer Vision. I am also a huge fan of the Keep It Simple Stupid (KISS) principle.
 
