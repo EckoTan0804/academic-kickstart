@@ -394,7 +394,7 @@ if __name__ == "__main__":
 
 Some of the most common formats are the following:
 
-| Formatting Type                                              | Description                                                  | Supported by Sphynx | Formal Specification |
+| Formatting Type                                              | Description                                                  | Supported by Sphinx | Formal Specification |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------- | -------------------- |
 | [Google docstrings](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings) | Google’s recommended form of documentation                   | Yes                 | No                   |
 | [reStructured Text](http://docutils.sourceforge.net/rst.html) | Official Python documentation standard; Not beginner friendly but feature rich | Yes                 | Yes                  |
