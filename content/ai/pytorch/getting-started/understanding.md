@@ -343,3 +343,67 @@ count_parameters(net)
 
 Reference: [Check the total number of parameters in a PyTorch model](https://stackoverflow.com/questions/49201236/check-the-total-number-of-parameters-in-a-pytorch-model)
 
+## Split tensors
+
+- [`torch.split()`](https://pytorch.org/docs/stable/generated/torch.split.html): Splits the tensor into chunks of specified sizes
+- [`torch.chunk()`](https://pytorch.org/docs/stable/generated/torch.chunk.html#torch.chunk): Attempts to split a tensor into the specified number of chunks.
+
+### `torch.split()`
+
+Split tensor evenly:
+
+```python
+import torch
+
+tensor = torch.rand((4, 6, 2, 2))
+tensor.shape
+```
+
+```txt
+torch.Size([4, 6, 2, 2])
+```
+
+```python
+tensor_split = tensor.split(1, dim=1) # split tensor into chunks of size 1 along dimension 1
+print(f"#chunks: {len(tensor_split)}; chunk size: {tensor_split[0].shape}")
+```
+
+```txt
+#chunks: 6; chunk size: torch.Size([4, 1, 2, 2])
+```
+
+You can also split the tensor into chunks of different specific sizes (i.e. not evenly):
+
+```python
+chunk_sizes = [1, 2, 3]
+tensor_split = tensor.split(chunk_sizes, dim=1) # split a into chunks of size 1 along dimension 1
+print(f"#chunks: {len(tensor_split)}")
+for idx, chunk in enumerate(tensor_split):
+    print(f"Shape of chunk {idx}: {chunk.shape}")
+```
+
+```txt
+#chunks: 3
+Shape of chunk 0: torch.Size([4, 1, 2, 2])
+Shape of chunk 1: torch.Size([4, 2, 2, 2])
+Shape of chunk 2: torch.Size([4, 3, 2, 2])
+```
+
+### `torch.chunk()`
+
+Split a tensor into the specified number of chunks
+
+```python
+tensor_chunks = tensor.chunk(3, dim=1) # split tensor into 3 chunks along dimension 1
+print(f"#chunks: {len(tensor_chunks)}")
+for idx, chunk in enumerate(tensor_chunks):
+    print(f"Shape of chunk {idx}: {chunk.shape}")
+```
+
+```txt
+#chunks: 3
+Shape of chunk 0: torch.Size([4, 2, 2, 2])
+Shape of chunk 1: torch.Size([4, 2, 2, 2])
+Shape of chunk 2: torch.Size([4, 2, 2, 2])
+```
+
