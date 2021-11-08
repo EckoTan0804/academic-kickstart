@@ -127,7 +127,7 @@ repos:
 
 #### `hooks`
 
-The hook mapping configures which hook from the repository is used and allows for customization. 
+The [hook mapping](https://pre-commit.com/#pre-commit-configyaml---hooks) configures which hook from the repository is used and allows for customization. 
 
 - The necessary key is `id`, telling which hook from the repository to use. Other keys are optional.
 
@@ -208,11 +208,9 @@ line_length = 88
 profile = black
 ```
 
-{{% alert%}} 
+{{% alert note%}} 
 
-Sometimes the skip options do not work well, to skip some file for some reasons, check: 
-
-[Action Comments](https://pycqa.github.io/isort/docs/configuration/action_comments.html).
+Sometimes the skip options do not work well, to skip some file for some reasons, check: [Action Comments](https://pycqa.github.io/isort/docs/configuration/action_comments.html).
 
 {{% /alert%}}
 
