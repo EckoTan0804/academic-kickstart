@@ -90,8 +90,8 @@ Suppose we are doing text classification, and instead of binary classification o
 The loss function for a single example $x$ is the sum of the logs of the $K$ output classes:
 $$
 \begin{aligned}
-L_{C E}(\hat{y}, y) &=-\sum_{k=1}^{K} 1\{y=k\} \log p(y=k | x) \\\\
-&=-\sum_{k=1}^{K} 1\{y=k\} \log \frac{e^{w_{k} \cdot x+b_{k}}}{\sum_{j=1}^{K} e^{w_{j} \cdot x+b_{j}}}
+L_{C E}(\hat{y}, y) &=-\sum_{k=1}^{K} \mathbb{1}\\{y=k\\} \log p(y=k | x) \\\\
+&=-\sum_{k=1}^{K} \mathbb{1}\\{y=k\\} \log \frac{e^{w_{k} \cdot x+b_{k}}}{\sum_{j=1}^{K} e^{w_{j} \cdot x+b_{j}}}
 \end{aligned}
 $$
 
@@ -100,8 +100,8 @@ $$
 Gradient:
 $$
 \begin{aligned}
-\frac{\partial L_{C E}}{\partial w_{k}} &=-(1\\{y=k\\}-p(y=k | x)) x_{k} \\\\
-&=-\left(1\\{y=k\\}-\frac{e^{w_{k} \cdot x+b_{k}}}{\sum_{j=1}^{K} e^{w_{j} \cdot x+b_{j}}}\right) x_{k}
+\frac{\partial L_{C E}}{\partial w_{k}} &=-(\mathbb{1}\\{y=k\\}-p(y=k | x)) x_{k} \\\\
+&=-\left(\mathbb{1}\\{y=k\\}-\frac{e^{w_{k} \cdot x+b_{k}}}{\sum_{j=1}^{K} e^{w_{j} \cdot x+b_{j}}}\right) x_{k}
 \end{aligned}
 $$
 
