@@ -88,7 +88,7 @@ $$
 1. SVM optimization:
    $$
    \begin{array}{ll}
-   &\underset{\boldsymbol{w}}{\operatorname{argmin}} \quad &\|\boldsymbol{w}\|^2 \\
+   &\underset{\boldsymbol{w}}{\operatorname{argmin}} \quad &\|\boldsymbol{w}\|^2 \\\\
    &\text{ s.t. } \quad &y_i(\boldsymbol{w}^T\phi(\mathbf{x}_i) + b) \geq 1
    \end{array}
    $$
@@ -199,10 +199,10 @@ $$
 $$
   
 - **Dual optimization problem**
-  $$
+$$
   \begin{array}{ll}\underset{\boldsymbol{\alpha}}{\min} \quad & \sum_{i} \alpha_{i}-\frac{1}{2} \sum_{i} \sum_{j} \alpha_{i} \alpha_{j} y_{i} y_{j} \boldsymbol{k}(\boldsymbol{x}_i, \boldsymbol{x}_j ) \\\\ \text{ s.t } \quad & \color{CornflowerBlue}{C \geq} \alpha_i \geq 0 \quad \forall i = 1, \dots, N \\\\ & \sum_i \alpha_i y_i = 0\end{array}
   $$
-  
+
     <span style="color:CornflowerBlue">Add upper bound of </span> $\color{CornflowerBlue}{C}$ <span style="color:CornflowerBlue">on</span> $\color{CornflowerBlue}{\alpha_i}$
 
   - Without slack, $\alpha_i \to \infty$ when constraints are violated (points misclassified)

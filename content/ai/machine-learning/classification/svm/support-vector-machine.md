@@ -107,7 +107,7 @@ This is the **hard margin SVM**.
 
 Optimization problem
 $$
-\begin{array}{lll} \underset{\mathbf{w}}{\operatorname{argmin}} \quad &\|\mathbf{w}\|^{2} + \color{blue}{C \sum_i^N \xi_i} \qquad \qquad & \text{(Punish large slack variables)}\\
+\begin{array}{lll} \underset{\mathbf{w}}{\operatorname{argmin}} \quad &\|\mathbf{w}\|^{2} + \color{blue}{C \sum_i^N \xi_i} \qquad \qquad & \text{(Punish large slack variables)}\\\\
 \text { s.t. } \quad & y_{i}\left(\mathbf{w}^{T} \mathbf{x}_{i}+b\right) \geq 1 -\color{blue}{\xi_i}, \quad \xi_i \geq 0 \qquad \qquad & \text{(Condition for soft-margin)}\end{array}
 $$
 
@@ -210,7 +210,7 @@ $$
 \mathcal{L}\left(\mathbf{x}\_{i}, y\_{i} ; \mathbf{w}\right)=\max \left(0,1-y\_{i} f\left(\mathbf{x}\_{i}\right)\right) \quad f\left(\mathbf{x}\_{i}\right)=\mathbf{w}^{\top} \mathbf{x}\_{i}+b
 $$
 
-<img src="/Users/EckoTan/Dropbox/KIT/Master/Sem2/Maschinelles_Lernen/Zusammenfassung/markdown/L05-SVMs.assets/image-20200304175930294.png" alt="image-20200304175930294" style="zoom:33%;" />
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/image-20200304175930294.png" alt="image-20200304175930294" style="zoom:33%;" />
 
 #### Sub-gradient descent for SVMs
 
