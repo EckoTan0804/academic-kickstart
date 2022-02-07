@@ -16,7 +16,7 @@ subtitle = ""
 
 [[feature]]
   icon = "python"
-  icon_pack = "fab"
+  icon_pack = "custom"
   name = "Python"
   description = "90%"
 
@@ -28,9 +28,21 @@ subtitle = ""
   
 [[feature]]
   icon = "java"
-  icon_pack = "fab"
+  icon_pack = "custom"
   name = "Java"
   description = "90%"  
+
+[[feature]]
+  icon = "markdown"
+  icon_pack = "custom"
+  name = "Markdown"
+  description = "90%" 
+
+[[feature]]
+  icon = "latex"
+  icon_pack = "custom"
+  name = "LaTex"
+  description = "90%" 
 
 [[feature]]
   icon = "js"
