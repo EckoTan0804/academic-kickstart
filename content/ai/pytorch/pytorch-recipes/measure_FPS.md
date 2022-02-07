@@ -42,7 +42,7 @@ menu:
 
 
 
-##Main Issues of Time Measurement
+## Main Issues of Time Measurement
 
 ### GPU Execution Mechanism: Asynchronous Execution
 
