@@ -63,7 +63,10 @@ menu:
 
   > Usage guide check: https://libguides.lb.polyu.edu.hk/online-tools-for-assignment/linggle#sthash.u143sHTt.dpbs
 
-- [Thesaurus](https://www.thesaurus.com/) - synonym
+- Synonym
+
+  - [power thesaurus](https://www.powerthesaurus.org/)
+  - [Thesaurus](https://www.thesaurus.com/) 
 
 - Grammar
 
