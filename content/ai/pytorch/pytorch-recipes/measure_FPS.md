@@ -226,6 +226,31 @@ throughput = (MEASURE_REPETITION * optimal_batch_size) / total_time
 print(f"Final Throughput: {throughput}")
 ```
 
+
+
+## Compute FLOPs
+
+ Firstly, we have to clearly distinguish between **FLOPS** and **FLOPs**
+
+- **FLOPS**: floating point operations per second, is a measure of computer (hardware) performance, useful in fields of scientific computations that require floating-point calculations.
+- **FLOPs**: floating point operations, is the amount of floating point operations, which is a metric for measurement of the complexity of a model or an algorithm.
+
+To compute FLOPS, we can use [`fvcore`](https://github.com/facebookresearch/fvcore). (More details see: [Flop Counter for PyTorch Models](https://github.com/facebookresearch/fvcore/blob/main/docs/flop_count.md))
+
+Code example:
+
+```python
+from fvcore.nn import FlopCountAnalysis
+
+def get_FLOPs(model, dummy_input):
+    flops = FlopCountAnalysis(model, dummy_input)
+    return flops.total()
+```
+
+
+
 ## Reference
 
 - [The Correct Way to Measure Inference Time of Deep Neural Networks](https://deci.ai/the-correct-way-to-measure-inference-time-of-deep-neural-networks/)
+
+- [CNN 模型所需的计算力flops是什么？怎么计算？](https://zhuanlan.zhihu.com/p/137719986)
