@@ -346,6 +346,11 @@
   weight = 100
   identifier = "training"
 
+[[pytorch]]
+  name = "Issues&Gotchas"
+  weight = 110
+  identifier = "pytorch-issues"
+
 ################################
 # CV                           #
 ################################
