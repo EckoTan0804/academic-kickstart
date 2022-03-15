@@ -2,7 +2,7 @@
 # Basic info
 title: "Business Model Canvas (BMC) for Technology startup"
 date: 2020-11-27
-draft: false
+draft: true
 # type: docs # page type
 authors: ["admin"]
 tags: ["Startup", "Business", "Business Model"]

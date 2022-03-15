@@ -2,7 +2,7 @@
 # Basic info
 title: "Simple Problem Statement Example"
 date: 2020-11-21
-draft: false
+draft: true
 # type: docs # page type
 authors: ["admin"]
 tags: ["Startup", "Business", "Problem Statement"]

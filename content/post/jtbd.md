@@ -2,7 +2,7 @@
 # Basic info
 title: "Job To Be Done (JTBD)"
 date: 2020-11-21
-draft: false
+draft: true
 # type: docs # page type
 authors: ["admin"]
 tags: ["Startup", "JTBD", "Business"]
