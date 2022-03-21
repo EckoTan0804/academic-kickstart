@@ -470,12 +470,12 @@
 
 [[linux]]
   name = "Linux Learn"
-  weight = 10
+  weight = 20
   identifier = "linux-learn"
 
 [[linux]]
   name = "Linux Recipes"
-  weight = 10
+  weight = 30
   identifier = "linux-recipes"
 
 ################################
