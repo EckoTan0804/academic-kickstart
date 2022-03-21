@@ -58,7 +58,7 @@ $ ls -l
 - `EckoTan` : owner/creator of the file
 - `staff` : the group to which that owner belongs to 
 - `Jan  5 18:02` : date of creation
-- `hello-world.txt` : 
+- `hello-world.txt` : the file
 
 ## Permissions
 
