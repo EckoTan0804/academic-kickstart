@@ -83,6 +83,13 @@
   identifier = "linux"
   parent = "programming"
 
+[[main]]
+  name = "Git"
+  url = "/programming/git/"
+  weight = 4
+  identifier = "git"
+  parent = "programming"
+
 
 # main.cs
 [[main]]
@@ -477,6 +484,19 @@
   name = "Linux Recipes"
   weight = 30
   identifier = "linux-recipes"
+
+################################
+# Git                          #
+################################
+[[git]]
+  name = "Git Operations"
+  weight = 10
+  identifier = "git-operations"
+
+[[git]]
+  name = "Git Recipes"
+  weight = 20
+  identifier = "git-recipes"
 
 ################################
 # Algo                         #
